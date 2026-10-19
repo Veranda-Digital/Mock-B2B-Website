@@ -1,0 +1,17 @@
+{#
+  Variants: "primary" (glowing green), "dark" (ink pill), "arrow" (ink pill + arrow chip).
+  Usage: {% from "components/button.njk" import button %} {{ button("Learn More", "#usecases", "dark") }}
+#}
+{% from "components/icon.njk" import icon %}
+
+{% macro button(label, href, variant = "primary", attrs = {}) -%}
+{%- set external = href and (href.startsWith("http://") or href.startsWith("https://")) -%}
+<a class="btn btn--{{ variant }}" href="{{ href }}"{% if external %} target="_blank" rel="noopener"{% endif %}{% for key, value in attrs %} {{ key }}="{{ value }}"{% endfor %}>
+  <span class="btn__label">{{ label }}</span>
+  {%- if variant == "arrow" %}<span class="btn__chip">{{ icon("arrow-right", 14, 2) }}</span>{% endif %}
+</a>
+{%- endmacro %}
+
+{% macro submitButton(label) -%}
+<button class="btn btn--primary btn--block" type="submit"><span class="btn__label">{{ label }}</span></button>
+{%- endmacro %}

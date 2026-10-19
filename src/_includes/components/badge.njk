@@ -1,0 +1,13 @@
+{#
+  pillBadge: white pill with an icon ("Veranda Smart Lock").
+  tag: small coloured label. tones: green | yellow | pink. size: "sm" (uppercase) | "md".
+#}
+{% from "components/icon.njk" import icon %}
+
+{% macro pillBadge(label, iconName) -%}
+<span class="pill-badge">{% if iconName %}{{ icon(iconName, 16) }}{% endif %}<span>{{ label }}</span></span>
+{%- endmacro %}
+
+{% macro tag(label, tone = "green", size = "md") -%}
+<span class="tag tag--{{ tone }} tag--{{ size }}">{{ label }}</span>
+{%- endmacro %}

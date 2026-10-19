@@ -1,0 +1,19 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/cards.njk" import metricCard %}
+{%- set s = home.opportunity -%}
+<section class="opportunity" id="{{ s.id }}">
+  <div class="container">
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body }) }}
+
+    <div class="opportunity__grid">
+      <div class="opportunity__metrics">
+        {%- for metric in s.metrics %}
+        {{ metricCard(metric) }}
+        {%- endfor %}
+      </div>
+      <figure class="opportunity__image" data-reveal>
+        <img src="{{ s.image.src }}" alt="{{ s.image.alt }}" width="{{ s.image.width }}" height="{{ s.image.height }}" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>

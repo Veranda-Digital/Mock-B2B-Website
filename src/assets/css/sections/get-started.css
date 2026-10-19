@@ -1,0 +1,32 @@
+.get-started {
+  padding: 120px 0 150px;
+}
+
+.cta-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  max-width: 1000px;
+  min-height: 340px;
+  margin-inline: auto;
+  padding: 40px 60px;
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(323deg, var(--color-green-900) 0%, rgba(28, 81, 65, 0.8) 37%, rgba(0, 0, 0, 0.8) 103%),
+    var(--cta-bg) center / cover no-repeat;
+  color: var(--text-on-dark);
+  text-align: center;
+}
+
+.cta-banner__body {
+  max-width: 440px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 809px) {
+  .cta-banner {
+    padding: 48px 24px;
+  }
+}

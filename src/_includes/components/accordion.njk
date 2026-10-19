@@ -1,0 +1,13 @@
+{% from "components/icon.njk" import icon %}
+
+{% macro accordionItem(item, name = "accordion") -%}
+<details class="accordion-item" name="{{ name }}">
+  <summary class="accordion-item__summary">
+    <h3 class="accordion-item__title">{{ item.title }}</h3>
+    <span class="accordion-item__icon">{{ icon("plus", 22, 1.5) }}</span>
+  </summary>
+  <div class="accordion-item__panel">
+    <p>{{ item.body }}</p>
+  </div>
+</details>
+{%- endmacro %}

@@ -1,0 +1,26 @@
+.benefits {
+  padding: 120px 0 200px;
+  background: var(--color-stone);
+}
+
+.benefits__inner {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  align-items: start;
+  gap: 0;
+}
+
+.benefits__inner > .eyebrow {
+  padding-top: 8px;
+}
+
+@media (max-width: 809px) {
+  .benefits__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .accordion-item__title {
+    font-size: 24px;
+  }
+}

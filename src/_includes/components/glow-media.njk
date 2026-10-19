@@ -1,0 +1,10 @@
+{#
+  Product image floating over a glowing green disc.
+  variant: "lock" (image spills left of the disc) | "phone" (image rises out of the disc).
+#}
+{% macro glowMedia(image, variant = "lock") -%}
+<figure class="glow-media glow-media--{{ variant }}" data-reveal>
+  <span class="glow-media__disc" aria-hidden="true"></span>
+  <img class="glow-media__image" src="{{ image.src }}" alt="{{ image.alt }}" width="{{ image.width }}" height="{{ image.height }}" loading="lazy">
+</figure>
+{%- endmacro %}

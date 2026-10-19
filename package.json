@@ -1,0 +1,14 @@
+{
+  "name": "veranda-web",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "license": "ISC",
+  "description": "Veranda Digital marketing site (Eleventy)",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7"
+  },
+  "type": "module"
+}

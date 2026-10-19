@@ -1,0 +1,27 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/badge.njk" import pillBadge %}
+{% from "components/cards.njk" import featureCard %}
+{% from "components/glow-media.njk" import glowMedia %}
+{%- set s = home.solution -%}
+<section class="solution theme-dark" id="{{ s.id }}">
+  <div class="container">
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, tone: "dark" }) }}
+
+    {%- for item in s.showcases %}
+    <div class="showcase{% if item.reverse %} showcase--reverse{% endif %}">
+      <div class="showcase__text" data-reveal>
+        {{ pillBadge(item.badge.label, item.badge.icon) }}
+        <h3 class="showcase__title">{{ item.title }}</h3>
+        <p class="showcase__body">{{ item.body }}</p>
+      </div>
+      {{ glowMedia(item.image, item.media) }}
+    </div>
+
+    <div class="feature-grid">
+      {%- for feature in item.features %}
+      {{ featureCard(feature) }}
+      {%- endfor %}
+    </div>
+    {%- endfor %}
+  </div>
+</section>

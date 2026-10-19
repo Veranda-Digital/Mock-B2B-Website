@@ -1,0 +1,33 @@
+.site-footer {
+  padding: 40px 0 120px;
+  background: var(--bg-page);
+}
+
+.site-footer__logo img {
+  width: 100%;
+  height: auto;
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 110px;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--color-ink);
+}
+
+.site-footer__bottom p {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.site-footer__bottom a {
+  color: var(--color-green-500);
+}
+
+.site-footer__bottom a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,34 @@
+{
+  "id": "cta",
+  "eyebrow": "an untapped opportunity",
+  "title": "Optimize your last mile operations",
+  "body": "You've optimized your logistics operations, but what about the aspect that costs many carriers a significant amount of revenue?",
+  "metrics": [
+    {
+      "tag": "Dwell time",
+      "tone": "green",
+      "body": "850M hours B2B, 160M hours B2C, every year. 1–1.5 avoidable hours per truck per day; $6 billion in lost carrier revenue. An unattended endpoint takes dwell to zero because nobody waits for anybody.",
+      "prefix": "$",
+      "value": 6,
+      "suffix": "B"
+    },
+    {
+      "tag": "Re-delivery and loss",
+      "tone": "yellow",
+      "body": "1 in 6 US deliveries fails first attempt; 1 in 9 because nobody was there. Of 23 billion US parcels, 15% are re-delivered and 1.5% lost or stolen; McKinsey attributes 10.75 points of that 16.5% to blind handoffs, about 2.5 billion parcels a year. Re-delivery alone costs carriers 1–3% of revenue.",
+      "prefix": "+",
+      "value": 17,
+      "suffix": "%"
+    },
+    {
+      "tag": "Human cost of coordination",
+      "tone": "pink",
+      "wide": true,
+      "body": "70% of dispatcher and service time spent on handoff failures. Around 56,000 US dispatchers and agents; driver apps run $20–45 per driver per month. Veranda's requirement of no driver app and no key is the answer to McKinsey's \"minimum personnel time\" criterion.",
+      "prefix": "+",
+      "value": 70,
+      "suffix": "%"
+    }
+  ],
+  "image": { "src": "/assets/images/courier.jpg", "alt": "Courier carrying a parcel on a city street", "width": 1920, "height": 2880 }
+}

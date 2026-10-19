@@ -1,0 +1,13 @@
+{% from "components/section-heading.njk" import eyebrow %}
+{% from "components/accordion.njk" import accordionItem %}
+{%- set s = home.benefits -%}
+<section class="benefits" id="{{ s.id }}">
+  <div class="container benefits__inner">
+    {{ eyebrow(s.eyebrow) }}
+    <div class="accordion" data-reveal>
+      {%- for item in s.items %}
+      {{ accordionItem(item, "benefits") }}
+      {%- endfor %}
+    </div>
+  </div>
+</section>

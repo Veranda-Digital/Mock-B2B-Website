@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "eyebrow": "make unattended handoff issues a thing of the past",
+    "title": "See how Veranda bridges the physical & digital to save your enterprise money.",
+    "body": "Request our Evaluation Kit to see the whole system in action.",
+    "image": { "src": "/assets/images/evaluation-kit.png", "alt": "The Dream Box", "width": 925, "height": 656 },
+    "phone": { "src": "/assets/images/dashboard-app.png", "alt": "Veranda Dashboard app", "width": 887, "height": 1825 }
+  },
+  "form": {
+    "submitLabel": "Submit",
+    "fields": [
+      { "name": "name", "label": "Name", "type": "text", "placeholder": "Jane Smith", "required": true, "half": true, "autocomplete": "name" },
+      { "name": "company", "label": "Company/Firm / Fund", "type": "text", "placeholder": "Company/Firm/Fund name", "half": true, "autocomplete": "organization" },
+      { "name": "email", "label": "Work email", "type": "email", "placeholder": "jane@business.com", "required": true, "autocomplete": "email" },
+      { "name": "evaluating", "label": "What are you evaluating?", "type": "textarea", "placeholder": "Stage, check size, and what would help you decide" }
+    ]
+  },
+  "report": {
+    "title": "Unsecured, unattended, 24/7 delivery that accounts for 50% of all supply chain costs.",
+    "body": "$12 billion has gone into visibility platforms and AI dispatch since 2012, and 80% of US carriers already run one. The waste is still there because none of them change what happens at the door. They make a blind handoff better narrated. Veranda makes it not blind.",
+    "button": { "label": "Read the full McKinsey Report" }
+  },
+  "platform": {
+    "title": "A platform business, built on your exact needs.",
+    "body": "While the modularity of the Veranda system ensures the solution works “out of the box,” our highly experienced technical team builds precise solutions to meet the specific requirements of your operations.",
+    "features": [
+      { "icon": "box", "title": "Hardware", "body": "Proprietary modular lock technology, adaptable to every delivery scenario." },
+      { "icon": "cloud-check", "title": "Software", "body": "Custody records, condition data, and enterprise integrations sold as a recurring platform fee to carriers, retailers, and distributors." },
+      { "icon": "signal", "title": "Per-handoff fees", "body": "A transaction fee on every confirmed handoff — the layer that scales with volume, not with units sold." }
+    ]
+  }
+}

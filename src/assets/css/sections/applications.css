@@ -1,0 +1,40 @@
+.applications {
+  padding-bottom: 120px;
+}
+
+/* Intro hugs the page edge rather than the container, matching the original. */
+.applications__intro {
+  padding: 80px var(--gutter) 40px;
+}
+
+.applications__intro .section-heading {
+  gap: 20px;
+}
+
+.applications__intro .section-heading__title {
+  color: #181e25;
+}
+
+.applications__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 272px);
+  justify-content: center;
+  gap: var(--grid-gap);
+  padding-inline: var(--gutter);
+}
+
+@media (max-width: 1199px) {
+  .applications__grid {
+    grid-template-columns: repeat(2, minmax(0, 340px));
+  }
+}
+
+@media (max-width: 809px) {
+  .applications__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .use-case-card {
+    min-height: 0;
+  }
+}

@@ -1,0 +1,16 @@
+{#
+  Eyebrow + title + supporting copy, used to open most sections.
+  options: { eyebrow, title, body, level (2), align ("center"|"start"), tone ("light"|"dark"), eyebrowTone ("coral"|"green"|"ink") }
+#}
+{% macro eyebrow(text, tone = "coral", tag = "h6") -%}
+<{{ tag }} class="eyebrow eyebrow--{{ tone }}">{{ text }}</{{ tag }}>
+{%- endmacro %}
+
+{% macro sectionHeading(options) -%}
+{%- set level = options.level or 2 -%}
+<header class="section-heading section-heading--{{ options.align or 'center' }} section-heading--{{ options.tone or 'light' }}" data-reveal>
+  {%- if options.eyebrow %}{{ eyebrow(options.eyebrow, options.eyebrowTone or "coral") }}{% endif %}
+  <h{{ level }} class="section-heading__title">{{ options.title }}</h{{ level }}>
+  {%- if options.body %}<p class="section-heading__body">{{ options.body }}</p>{% endif %}
+</header>
+{%- endmacro %}

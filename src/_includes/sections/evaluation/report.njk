@@ -1,0 +1,11 @@
+{% from "components/button.njk" import button %}
+{%- set s = evaluation.report -%}
+<section class="eval-report">
+  <div class="container">
+    <div class="report-card theme-dark" data-reveal>
+      <h3 class="report-card__title">{{ s.title }}</h3>
+      <p class="report-card__body">{{ s.body }}</p>
+      {{ button(s.button.label, site.links.mckinseyReport, "primary") }}
+    </div>
+  </div>
+</section>

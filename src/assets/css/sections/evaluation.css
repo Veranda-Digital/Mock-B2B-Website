@@ -1,0 +1,113 @@
+/* Evaluation kit page (/investors/) */
+.eval-hero {
+  padding: 190px 0 60px;
+}
+
+.eval-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  padding-inline: 48px 64px;
+}
+
+.eval-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.eval-hero__title {
+  max-width: 800px;
+  color: var(--color-ink);
+}
+
+.eval-hero__media {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: min(11vw, 220px);
+  aspect-ratio: 620 / 320;
+}
+
+.eval-hero__phone {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px rgba(51, 209, 107, 0.5), 0 0 16px rgba(51, 209, 107, 0.45);
+}
+
+.eval-hero__box {
+  position: absolute;
+  right: 0;
+  top: -6%;
+  width: 72%;
+}
+
+.eval-form {
+  padding: 40px 0 80px;
+}
+
+.eval-report {
+  padding: 40px 0 120px;
+}
+
+.report-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 80px 64px;
+  border: 1px solid rgba(51, 209, 107, 0.35);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.report-card__title {
+  max-width: 680px;
+}
+
+.report-card__body {
+  max-width: 760px;
+  margin-bottom: 16px;
+  font-size: var(--fs-lead);
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.eval-platform {
+  padding: 40px 0 160px;
+}
+
+.eval-platform .section-heading {
+  max-width: 560px;
+  margin-bottom: 40px;
+}
+
+.eval-platform .section-heading__body {
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+@media (max-width: 1199px) {
+  .eval-hero__inner {
+    grid-template-columns: 1fr;
+    padding-inline: var(--gutter);
+  }
+
+  .eval-hero__media {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 809px) {
+  .report-card {
+    padding: 56px 24px;
+  }
+}

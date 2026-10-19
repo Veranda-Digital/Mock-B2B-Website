@@ -1,0 +1,47 @@
+/* Text presets shared by every section. */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: inherit;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-h1); line-height: 1.05; letter-spacing: -0.02em; }
+h2 { font-size: var(--fs-h2); line-height: 1.05; letter-spacing: -0.02em; }
+h3 { font-size: var(--fs-h3); line-height: 1.05; letter-spacing: -0.02em; }
+h4 { font-size: var(--fs-h4); line-height: 1.2;  letter-spacing: -0.03em; }
+h5 { font-size: var(--fs-h5); line-height: 1.2;  letter-spacing: -0.01em; }
+
+p {
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.text-small {
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.eyebrow--coral { color: var(--color-coral-400); }
+.eyebrow--green { color: var(--color-green-900); }
+.eyebrow--ink   { color: var(--color-ink-900); }
+.eyebrow--light { color: var(--text-on-dark); }
+
+.eyebrow--mono {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+}

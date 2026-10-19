@@ -1,0 +1,11 @@
+{% from "components/button.njk" import button %}
+{%- set s = home.getStarted -%}
+<section class="get-started" id="{{ s.id }}">
+  <div class="container">
+    <div class="cta-banner" style="--cta-bg: url('{{ s.background }}')" data-reveal>
+      <h4 class="cta-banner__title">{{ s.title }}</h4>
+      <p class="cta-banner__body">{{ s.body }}</p>
+      {{ button(s.button.label, s.button.href, "primary") }}
+    </div>
+  </div>
+</section>

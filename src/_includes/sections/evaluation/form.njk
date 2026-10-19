@@ -1,0 +1,15 @@
+{% from "components/form-field.njk" import formField %}
+{% from "components/button.njk" import submitButton %}
+{%- set s = evaluation.form -%}
+<section class="eval-form">
+  <div class="container">
+    <form class="form-card" action="{{ site.evaluationForm.action }}" method="{{ site.evaluationForm.method }}" data-reveal>
+      <div class="form-card__grid">
+        {%- for field in s.fields %}
+        {{ formField(field) }}
+        {%- endfor %}
+      </div>
+      {{ submitButton(s.submitLabel) }}
+    </form>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+{
+  "sections": [
+    { "label": "Applications", "href": "#usecases", "watch": ["usecases"] },
+    { "label": "Our Solution", "href": "#solution", "watch": ["solution", "modules"] },
+    { "label": "Case Study", "href": "#casestudy", "watch": ["casestudy"] },
+    { "label": "Benefits", "href": "#benefits", "watch": ["benefits"] },
+    { "label": "Why Now", "href": "#problem", "watch": ["problem"] },
+    { "label": "Get Started", "href": "#cta", "watch": ["cta", "get-started"] }
+  ]
+}

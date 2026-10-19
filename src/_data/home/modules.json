@@ -1,0 +1,19 @@
+{
+  "id": "modules",
+  "eyebrow": "Proprietary modular lock technology",
+  "image": { "src": "/assets/images/core-board.png", "alt": "Veranda lock circuit board", "width": 1075, "height": 749 },
+  "steps": [
+    {
+      "label": "Core board",
+      "body": "Every enclosure starts with the same board — authentication, actuation, and a year of battery life built in."
+    },
+    {
+      "label": "Environment board",
+      "body": "Stack the environment board and it holds 2–8°C for eight hours, logging temperature alongside every custody event."
+    },
+    {
+      "label": "Connectivity board",
+      "body": "Add the connectivity board for 1 km of LoRa and Bluetooth reach — no Wi-Fi, no SIM, no dependency on the site."
+    }
+  ]
+}

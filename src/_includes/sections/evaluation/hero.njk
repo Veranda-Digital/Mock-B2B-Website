@@ -1,0 +1,14 @@
+{%- set s = evaluation.hero -%}
+<section class="eval-hero">
+  <div class="eval-hero__inner">
+    <div class="eval-hero__text" data-reveal>
+      <p class="eyebrow eyebrow--mono">{{ s.eyebrow }}</p>
+      <h1 class="eval-hero__title">{{ s.title }}</h1>
+      <p class="eval-hero__body">{{ s.body }}</p>
+    </div>
+    <figure class="eval-hero__media" data-reveal>
+      <img class="eval-hero__phone" src="{{ s.phone.src }}" alt="{{ s.phone.alt }}" width="{{ s.phone.width }}" height="{{ s.phone.height }}">
+      <img class="eval-hero__box" src="{{ s.image.src }}" alt="{{ s.image.alt }}" width="{{ s.image.width }}" height="{{ s.image.height }}">
+    </figure>
+  </div>
+</section>

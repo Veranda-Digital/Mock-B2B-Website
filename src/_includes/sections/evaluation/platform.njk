@@ -1,0 +1,13 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/cards.njk" import featureCard %}
+{%- set s = evaluation.platform -%}
+<section class="eval-platform">
+  <div class="container">
+    {{ sectionHeading({ title: s.title, body: s.body }) }}
+    <div class="feature-grid">
+      {%- for feature in s.features %}
+      {{ featureCard(feature, "plain") }}
+      {%- endfor %}
+    </div>
+  </div>
+</section>

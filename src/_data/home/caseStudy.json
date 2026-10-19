@@ -1,0 +1,17 @@
+{
+  "id": "casestudy",
+  "eyebrow": "Case Study : Dion's chicago Dream",
+  "title": "Delivering Better for Chicago",
+  "body": "Dion's Chicago Dream believes nutritious food should be a lived reality, not an aspiration, and has built the infrastructure to prove it: 325,000 pounds of fresh produce moved monthly to more than 5,400 households a week across every Chicago neighborhood. The Dream Box extends that reliability to the last few feet of the journey.",
+  "product": { "src": "/assets/images/dream-box.png", "alt": "The Dream Box", "width": 626, "height": 412 },
+  "feature": {
+    "tag": "partnering on the dreambox",
+    "title": "One platform, first proven on the front step.",
+    "body": "Built on Veranda's platform, it lives on a stoop or a community site with no power, Wi-Fi, or installer required, running a year on battery over long-range wireless. Insulated and sensor-equipped, it keeps produce and other perishables fresh, admits only the authorized carrier, and flags anything out of the ordinary in real time, so a delivery that reaches the block also reaches the family behind schedules, work shifts, and closed doors. The Veranda Dashboard gives the program one view across every box in the network: what's arrived, its condition, and who has access. Dion's Chicago Dream is building the case that communities don't change by accident, they're built; Veranda is proud to build alongside them, closing the final gap between a meal grown and a meal received.",
+    "photos": [
+      { "src": "/assets/images/dream-box-warehouse.jpg", "alt": "Volunteers packing produce boxes", "width": 1334, "height": 2000 },
+      { "src": "/assets/images/dream-box-chicago.jpg", "alt": "Dion sitting on a Dream Box by Lake Michigan", "width": 1000, "height": 1500 }
+    ]
+  },
+  "button": { "label": "More about the Dream Box", "href": "https://getveranda.com/" }
+}

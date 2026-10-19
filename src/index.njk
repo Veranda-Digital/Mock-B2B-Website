@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+pageClass: home
+showSectionNav: true
+# Homepage sections, in order. Each maps to src/_includes/sections/home/<name>.njk
+# and reads its content from src/_data/home/<name>.json.
+sections:
+  - hero
+  - applications
+  - solution
+  - modules
+  - case-study
+  - benefits
+  - problem
+  - opportunity
+  - get-started
+---
+{% for section in sections %}
+{% include "sections/home/" + section + ".njk" %}
+{% endfor %}

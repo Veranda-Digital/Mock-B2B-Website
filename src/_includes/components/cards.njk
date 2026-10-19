@@ -1,0 +1,39 @@
+{% from "components/icon.njk" import icon %}
+{% from "components/badge.njk" import tag %}
+
+{# Applications card: illustration on top, title + body pinned to the bottom. #}
+{% macro useCaseCard(card) -%}
+<article class="use-case-card" data-reveal>
+  <img class="use-case-card__art" src="{{ card.illustration }}" alt="" width="220" height="220" loading="lazy">
+  <div class="use-case-card__content">
+    <h5 class="use-case-card__title">{{ card.title }}</h5>
+    <p class="use-case-card__body">{{ card.body }}</p>
+  </div>
+</article>
+{%- endmacro %}
+
+{# Icon tile + title + body. variant: "card" (cream panel) | "plain" (no background). #}
+{% macro featureCard(feature, variant = "card") -%}
+<article class="feature-card feature-card--{{ variant }}" data-reveal>
+  <span class="icon-tile">{{ icon(feature.icon, 22) }}</span>
+  <h5 class="feature-card__title">{{ feature.title }}</h5>
+  <p class="feature-card__body">{{ feature.body }}</p>
+</article>
+{%- endmacro %}
+
+{# Opportunity metric: tag, copy, and an animated counter. #}
+{% macro metricCard(metric) -%}
+<article class="metric-card{% if metric.wide %} metric-card--wide{% endif %}" data-reveal>
+  {{ tag(metric.tag, metric.tone) }}
+  <p class="metric-card__body">{{ metric.body }}</p>
+  <p class="metric-card__value" data-counter data-prefix="{{ metric.prefix }}" data-suffix="{{ metric.suffix }}" data-target="{{ metric.value }}">{{ metric.prefix }}{{ metric.value }}{{ metric.suffix }}</p>
+</article>
+{%- endmacro %}
+
+{# Problem section stat row. #}
+{% macro statRow(stat) -%}
+<div class="stat-row" data-reveal>
+  <p class="stat-row__value">{{ stat.value }}</p>
+  <p class="stat-row__label">{{ stat.label }}</p>
+</div>
+{%- endmacro %}

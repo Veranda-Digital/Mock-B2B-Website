@@ -1,0 +1,19 @@
+{
+  "name": "Veranda Digital",
+  "title": "Veranda Digital — Ending the Blind Handoff",
+  "description": "A trusted, unattended handoff point that opens itself for the right person and proves who opened it, when, and in what condition.",
+  "url": "https://getveranda.com",
+  "ogImage": "/assets/images/og-image.jpg",
+  "lang": "en",
+  "links": {
+    "evaluationKit": "/investors/",
+    "privacyPolicy": "https://getveranda.com/privacy-policy/",
+    "dreamBox": "https://getveranda.com/",
+    "mckinseyReport": "https://www.mckinsey.com/industries/logistics/our-insights/digitizing-mid-and-last-mile-logistics-handovers-to-reduce-waste"
+  },
+  "evaluationForm": {
+    "action": "",
+    "method": "POST"
+  },
+  "copyright": "Copyright © Veranda Digital Inc. All rights reserved."
+}
