@@ -42,3 +42,20 @@ src/
 - **Add an icon:** add a path to the `paths` map in `src/_includes/components/icon.njk`.
 - **Hook up the Evaluation Kit form:** set `evaluationForm.action` in `src/_data/site.json`
   (e.g. a Formspree, Netlify Forms, or your own endpoint).
+
+## Deploying (GitHub Pages)
+
+`.github/workflows/deploy.yml` builds and deploys the site on every push to `main`
+(or manually via **Actions → Deploy to GitHub Pages → Run workflow**).
+
+In the repo's **Settings → Pages**, set **Source** to **GitHub Actions**.
+
+The workflow passes the Pages base path (`/Mock-B2B-Website/`) to Eleventy as
+`ELEVENTY_PATH_PREFIX`; `HtmlBasePlugin` then prefixes every root-relative `href`/`src`.
+Keep writing paths as `/assets/...` — for URLs outside those attributes (e.g. inline
+`style`), use the `url` filter: `{{ "/assets/images/foo.jpg" | url }}`.
+To preview the prefixed build locally:
+
+```bash
+ELEVENTY_PATH_PREFIX=/Mock-B2B-Website/ npx @11ty/eleventy --serve
+```
