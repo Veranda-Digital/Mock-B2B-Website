@@ -1,8 +1,11 @@
 // Pinned "board stack": as the section scrolls, step copy swaps and another
-// circuit board slides onto the stack.
+// circuit board slides onto the stack. Optional [data-step-dot] and
+// [data-step-count] elements track progress.
 export function initBoardStack(section) {
   const steps = [...section.querySelectorAll("[data-step]")];
   const boards = [...section.querySelectorAll("[data-board]")];
+  const dots = [...section.querySelectorAll("[data-step-dot]")];
+  const count = section.querySelector("[data-step-count]");
   let current = -1;
 
   function update() {
@@ -14,7 +17,17 @@ export function initBoardStack(section) {
     current = index;
 
     steps.forEach((step) => step.classList.toggle("is-active", Number(step.dataset.step) === index));
-    boards.forEach((board) => board.classList.toggle("is-visible", Number(board.dataset.board) <= index));
+    boards.forEach((board) => {
+      const n = Number(board.dataset.board);
+      board.classList.toggle("is-visible", n <= index);
+      board.classList.toggle("is-current", n === index);
+    });
+    dots.forEach((dot) => {
+      const n = Number(dot.dataset.stepDot);
+      dot.classList.toggle("is-active", n === index);
+      dot.classList.toggle("is-done", n < index);
+    });
+    if (count) count.textContent = String(index + 1).padStart(2, "0");
   }
 
   window.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });

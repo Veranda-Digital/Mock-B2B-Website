@@ -1,5 +1,6 @@
 {% from "components/button.njk" import button %}
 {% from "components/section-heading.njk" import eyebrow %}
+{% from "components/icon.njk" import icon %}
 {%- set hero = home.hero -%}
 <section class="hero" id="hero">
   <canvas class="hero__route" data-hero-route
@@ -22,5 +23,12 @@
       {{ button(b.label, b.href, b.variant) }}
       {%- endfor %}
     </div>
+    {%- if hero.pillars %}
+    <ul class="hero__pillars" data-reveal>
+      {%- for p in hero.pillars %}
+      <li class="hero__pillar">{{ icon(p.icon, 16) }}<span>{{ p.label }}</span></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
   </div>
 </section>

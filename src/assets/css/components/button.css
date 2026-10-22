@@ -62,3 +62,8 @@
 .btn--block {
   width: 100%;
 }
+
+.btn--light {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}

@@ -4,16 +4,21 @@ export function initCounters() {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reducedMotion || !("IntersectionObserver" in window)) return;
 
-  const format = (el, n) => `${el.dataset.prefix || ""}${n}${el.dataset.suffix || ""}`;
+  const format = (el, n) => {
+    const decimals = Number(el.dataset.decimals) || 0;
+    return `${el.dataset.prefix || ""}${n.toFixed(decimals)}${el.dataset.suffix || ""}`;
+  };
 
   function run(el) {
     const target = Number(el.dataset.target) || 0;
+    const decimals = Number(el.dataset.decimals) || 0;
+    const scale = 10 ** decimals;
     const duration = 1600;
     const start = performance.now();
     const step = (now) => {
       const t = Math.min(1, (now - start) / duration);
       const eased = 1 - (1 - t) ** 3;
-      el.textContent = format(el, Math.round(target * eased));
+      el.textContent = format(el, Math.round(target * eased * scale) / scale);
       if (t < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);

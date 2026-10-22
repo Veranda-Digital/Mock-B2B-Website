@@ -1,5 +1,17 @@
 {
-  "sections": [
+  "primary": [
+    { "label": "Work With Us", "href": "/work-with-us/" }
+  ],
+  "home": [
+    { "label": "Platform", "href": "#platform", "watch": ["platform"] },
+    { "label": "Hardware", "href": "#hardware", "watch": ["hardware"] },
+    { "label": "Software", "href": "#software", "watch": ["software"] },
+    { "label": "Applications", "href": "#applications", "watch": ["applications"] },
+    { "label": "Partners", "href": "#partners", "watch": ["partners"] },
+    { "label": "Case Study", "href": "#casestudy", "watch": ["casestudy"] },
+    { "label": "Delivery", "href": "#delivering", "watch": ["delivering", "get-started"] }
+  ],
+  "home1": [
     { "label": "Applications", "href": "#usecases", "watch": ["usecases"] },
     { "label": "Our Solution", "href": "#solution", "watch": ["solution", "modules"] },
     { "label": "Case Study", "href": "#casestudy", "watch": ["casestudy"] },

@@ -1,0 +1,114 @@
+.partners {
+  padding: 150px 0;
+}
+
+.partners__panel {
+  margin-top: 60px;
+  padding: 36px;
+  border-radius: var(--radius-xl);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+/* Gradient track from turnkey (left) to build-your-own (right). */
+.partners__spectrum {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #5b5e66;
+  white-space: nowrap;
+}
+
+.partners__track {
+  flex: 1;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-green-900), var(--color-green-500));
+}
+
+.partners__models {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.partner-model {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 22px;
+  border-radius: var(--radius-lg);
+  background: var(--color-cream);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+
+.partner-model:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -20px rgba(35, 37, 44, 0.25);
+}
+
+.partner-model__marker {
+  position: absolute;
+  top: -21px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: var(--color-green-500);
+  box-shadow: var(--glow-green);
+}
+
+.partner-model__title {
+  margin-top: 32px;
+  color: var(--color-ink);
+}
+
+.partner-model__body {
+  margin-top: 12px;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--color-text);
+}
+
+.partners__action {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+@media (max-width: 1199px) {
+  .partners__models {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .partner-model__marker {
+    display: none;
+  }
+}
+
+@media (max-width: 809px) {
+  .partners {
+    padding: 100px 0;
+  }
+
+  .partners__panel {
+    padding: 20px;
+  }
+
+  .partners__models {
+    grid-template-columns: 1fr;
+  }
+
+  .partners__spectrum {
+    font-size: 10px;
+  }
+}

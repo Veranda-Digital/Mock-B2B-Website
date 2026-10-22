@@ -1,0 +1,15 @@
+{
+  "id": "partners",
+  "eyebrow": "Partnership & integration",
+  "title": "Work with Veranda the way your product needs",
+  "body": "Some partners want a complete, ready-to-run solution. Others want a single board, the software, or the right to build their own branded product on the platform.",
+  "spectrum": { "start": "Veranda delivers more", "end": "You build more" },
+  "models": [
+    { "icon": "box", "title": "Complete solution", "body": "Deploy Veranda end to end — reference enclosure, hardware, and software — as a ready-to-run program." },
+    { "icon": "puzzle", "title": "Component integration", "body": "Integrate selected hardware boards or software services into the products and systems you already run." },
+    { "icon": "key", "title": "Technology licensing", "body": "License the platform to build access, monitoring, and automation into your own product line." },
+    { "icon": "tag", "title": "White label", "body": "Bring a Veranda-powered product to market under your own brand, as Dion's Chicago Dream is doing with the Dream Box." },
+    { "icon": "wrench", "title": "Custom development", "body": "Co-develop enclosures, boards, or workflows with our team for requirements no off-the-shelf product meets." }
+  ],
+  "button": { "label": "Explore ways to work with us", "href": "/work-with-us/" }
+}

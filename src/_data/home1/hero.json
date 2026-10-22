@@ -1,0 +1,19 @@
+{
+  "eyebrow": "predictability & control for last mile logistics",
+  "title": "The intelligent solution to the unattended exhange.",
+  "body": "Deliver goods safely and effecitvely without a person on the receiving end with Veranda, the smarter solution for verified, unattended exchange for the last mile.",
+  "buttons": [
+    { "label": "Learn More", "href": "#usecases", "variant": "dark" },
+    { "label": "Request Evaluation Kit", "href": "/investors/", "variant": "primary" }
+  ],
+  "animation": {
+    "color": "#33D16B",
+    "stops": 6,
+    "speed": 220,
+    "routeInset": 14,
+    "trailLength": 200,
+    "trailGap": 34,
+    "dotSize": 6,
+    "badgeSize": 30
+  }
+}

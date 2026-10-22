@@ -37,6 +37,33 @@
   color: var(--color-text);
 }
 
+.hero__pillars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__pillar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 10px;
+  border: 1px solid rgba(28, 81, 65, 0.18);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--color-ink);
+}
+
+.hero__pillar .icon {
+  color: var(--color-green-900);
+}
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;

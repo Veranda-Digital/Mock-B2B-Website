@@ -103,3 +103,121 @@
     min-height: 360px;
   }
 }
+
+/* ---- Partner vs. platform roles ---- */
+.case-roles {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.case-roles__col {
+  padding: 32px 36px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(247, 246, 241, 0.2);
+}
+
+.case-roles__col--veranda {
+  border-color: var(--color-green-500);
+  background: rgba(51, 209, 107, 0.08);
+  box-shadow: inset 0 0 40px -20px var(--color-green-500);
+}
+
+.case-roles__label {
+  margin-bottom: 20px;
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-pink-100);
+}
+
+.case-roles__col--veranda .case-roles__label {
+  color: var(--color-green-500);
+}
+
+.case-roles ul {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-roles li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.case-roles li .icon {
+  flex: none;
+  margin-top: 1px;
+  color: var(--color-coral-400);
+}
+
+.case-roles__col--veranda li .icon {
+  color: var(--color-green-500);
+}
+
+.case-roles__join {
+  display: grid;
+  place-items: center;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-cream);
+  color: var(--color-green-900);
+}
+
+.case-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: 80px;
+}
+
+.case-points__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-green-500);
+}
+
+.case-points__index {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--color-green-500);
+}
+
+.case-points__item p:last-child {
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: rgba(247, 246, 241, 0.85);
+}
+
+@media (max-width: 809px) {
+  .case-roles {
+    grid-template-columns: 1fr;
+  }
+
+  .case-roles__col {
+    padding: 24px;
+  }
+
+  .case-roles__join {
+    justify-self: center;
+  }
+
+  .case-points {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 56px;
+  }
+}

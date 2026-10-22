@@ -1,0 +1,55 @@
+/* Merged problem (dark) + impact (light) section. Re-uses .problem and .opportunity layouts. */
+.delivering .opportunity__metrics {
+  align-content: start;
+}
+
+.delivering .metric-card {
+  min-height: 0;
+  gap: 18px;
+}
+
+.delivering .metric-card__value {
+  margin-top: 8px;
+  font-size: 56px;
+}
+
+.metric-card__veranda {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding-top: 16px;
+  border-top: 1px solid rgba(35, 37, 44, 0.1);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--color-green-900);
+}
+
+.metric-card__veranda span {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-green-500);
+}
+
+.delivering__impact .opportunity__image img {
+  position: sticky;
+  top: 0;
+}
+
+.delivering__note {
+  max-width: 720px;
+  margin: 28px auto 0;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+  color: #5b5e66;
+}
+
+@media (max-width: 809px) {
+  .delivering .metric-card__value {
+    font-size: 46px;
+  }
+}

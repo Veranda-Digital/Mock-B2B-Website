@@ -1,7 +1,7 @@
 <nav class="section-nav" aria-label="Sections" data-section-nav>
   <ul class="section-nav__list">
     <li class="section-nav__indicator" aria-hidden="true"></li>
-    {%- for item in navigation.sections %}
+    {%- for item in navigation[navKey or "home"] %}
     <li><a class="section-nav__link" href="{{ item.href }}" data-watch="{{ item.watch | join(',') }}">{{ item.label }}</a></li>
     {%- endfor %}
   </ul>

@@ -1,0 +1,16 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{%- set s = workWithUs.process -%}
+<section class="wwu-process" id="process">
+  <div class="container">
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title }) }}
+    <ol class="wwu-process__steps">
+      {%- for step in s.steps %}
+      <li class="wwu-process__step" data-reveal>
+        <span class="wwu-process__index">{{ "0" + loop.index }}</span>
+        <h5>{{ step.title }}</h5>
+        <p>{{ step.body }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>

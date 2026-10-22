@@ -1,0 +1,13 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/cards.njk" import featureCard %}
+{%- set s = workWithUs.models -%}
+<section class="wwu-models theme-dark" id="models">
+  <div class="container">
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, tone: "dark" }) }}
+    <div class="feature-grid wwu-models__grid">
+      {%- for item in s.items %}
+      {{ featureCard(item) }}
+      {%- endfor %}
+    </div>
+  </div>
+</section>

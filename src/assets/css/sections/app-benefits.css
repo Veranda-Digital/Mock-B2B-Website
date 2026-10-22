@@ -1,0 +1,201 @@
+.app-benefits {
+  padding-top: 140px;
+}
+
+.app-benefits .section-heading__title {
+  color: #181e25;
+}
+
+.app-benefits__group {
+  margin-top: 70px;
+}
+
+.app-benefits__group-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-green-900);
+}
+
+.app-benefits__group-label span {
+  font-family: var(--font-mono);
+  color: var(--color-coral-400);
+}
+
+.app-benefits__group-label strong {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.app-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.application-card {
+  min-height: 0;
+}
+
+.application-card__outcomes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---- Beyond delivery panel ---- */
+.beyond-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  padding: 28px 36px;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+}
+
+.beyond-card__art {
+  width: 180px;
+  height: 180px;
+}
+
+.beyond-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.beyond-card__title {
+  font-size: var(--fs-h4);
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+
+.beyond-card__body {
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+
+.beyond-card__examples {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.beyond-card__examples li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  background: var(--color-cream);
+  font-size: var(--fs-small);
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+
+.icon-tile--xs {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+}
+
+/* ---- Outcomes (re-uses the Benefits accordion layout) ---- */
+.app-benefits__outcomes {
+  margin-top: 140px;
+  padding: 120px 0 160px;
+  background: var(--color-stone);
+}
+
+.app-benefits__outcomes .benefits__inner {
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 60px;
+}
+
+.app-benefits__outcomes-intro {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.app-benefits__outcomes-intro h3 {
+  color: var(--color-ink);
+}
+
+.app-benefits__outcomes-intro .text-small {
+  color: #5b5e66;
+}
+
+.app-benefits__outcomes .accordion-item__title {
+  font-size: 28px;
+}
+
+@media (max-width: 1199px) {
+  .app-benefits__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .beyond-card {
+    grid-template-columns: 140px minmax(0, 1fr);
+  }
+
+  .beyond-card__art {
+    width: 140px;
+    height: 140px;
+  }
+
+  .beyond-card__examples {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .app-benefits__outcomes .benefits__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .app-benefits__outcomes-intro {
+    position: static;
+  }
+}
+
+@media (max-width: 809px) {
+  .app-benefits {
+    padding-top: 100px;
+  }
+
+  .app-benefits__grid,
+  .beyond-card,
+  .beyond-card__examples {
+    grid-template-columns: 1fr;
+  }
+
+  .beyond-card {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .app-benefits__outcomes {
+    margin-top: 100px;
+    padding: 90px 0 120px;
+  }
+
+  .app-benefits__outcomes .accordion-item__title {
+    font-size: 22px;
+  }
+}

@@ -13,16 +13,22 @@ npm run build    # production output in _site/
 ```
 src/
   index.njk                     Homepage — lists its sections in order (front matter)
+  home1.njk                     Previous homepage, archived at /home1/
+  work-with-us.njk              Work With Us page (/work-with-us/)
   investors.njk                 Evaluation Kit page (/investors/)
   _data/
     site.json                   Site name, SEO, shared links, form action
-    navigation.json             Floating section-nav items
+    navigation.json             Header links + floating section-nav items per page (home, home1)
     home/<section>.json         Copy + images for each homepage section
+    home1/<section>.json        Copy for the archived homepage
+    workWithUs.json             Copy for the Work With Us page
     evaluation.json             Copy for the Evaluation Kit page
   _includes/
     layouts/base.njk            HTML shell
     partials/                   head, header, footer, section-nav
     sections/home/<section>.njk One file per homepage section
+    sections/home1/             Archived homepage sections
+    sections/work-with-us/      One file per Work With Us section
     sections/evaluation/        One file per Evaluation Kit section
     components/                 Reusable Nunjucks macros (button, icon, cards, badge, accordion, …)
   assets/

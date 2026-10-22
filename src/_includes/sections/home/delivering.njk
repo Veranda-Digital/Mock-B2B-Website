@@ -1,0 +1,46 @@
+{% from "components/section-heading.njk" import eyebrow, sectionHeading %}
+{% from "components/cards.njk" import statRow, metricCard %}
+{%- set s = home.delivering -%}
+{%- set p = s.problem -%}
+{%- set m = s.impact -%}
+<section class="delivering" id="{{ s.id }}">
+  <div class="problem theme-dark">
+    <div class="problem__inner">
+      <div class="problem__heading">
+        {{ eyebrow(p.eyebrow) }}
+        <p class="problem__statement">
+          <span class="problem__lead">{{ p.lead }}</span>
+          <span class="problem__reveal" data-word-reveal>{{ p.statement }}</span>
+        </p>
+      </div>
+
+      <div class="problem__stats">
+        {%- for stat in p.stats %}
+        {{ statRow(stat) }}
+        {%- endfor %}
+        <p class="problem__citation">
+          {{ p.citation.before }}<a href="{{ site.links.mckinseyReport }}" target="_blank" rel="noopener"><em>{{ p.citation.linkText }}</em></a>{{ p.citation.after }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="opportunity delivering__impact">
+    <div class="container">
+      {{ sectionHeading({ eyebrow: m.eyebrow, title: m.title, body: m.body }) }}
+
+      <div class="opportunity__grid">
+        <div class="opportunity__metrics">
+          {%- for metric in m.metrics %}
+          {{ metricCard(metric, m.veranda) }}
+          {%- endfor %}
+        </div>
+        <figure class="opportunity__image" data-reveal>
+          <img src="{{ m.image.src }}" alt="{{ m.image.alt }}" width="{{ m.image.width }}" height="{{ m.image.height }}" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="delivering__note">{{ m.note }}</p>
+    </div>
+  </div>
+</section>

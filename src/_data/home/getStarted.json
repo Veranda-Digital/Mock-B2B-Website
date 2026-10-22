@@ -1,7 +1,10 @@
 {
   "id": "get-started",
-  "title": "See the platform in motion.",
-  "body": "Real architecture, real specs, and a flagship product shipping today. Start with the platform, or go straight to the data room.",
-  "button": { "label": "Request Evaluation Kit", "href": "/investors/" },
+  "title": "See how Veranda fits your product.",
+  "body": "Evaluate the platform inside your own product, delivery program, or access-control application — starting with an Evaluation Kit and a conversation with our team.",
+  "buttons": [
+    { "label": "Request an Evaluation Kit", "href": "/investors/", "variant": "primary" },
+    { "label": "Work With Us", "href": "/work-with-us/", "variant": "light" }
+  ],
   "background": "/assets/images/cta-banner.jpg"
 }

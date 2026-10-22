@@ -1,0 +1,13 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/icon.njk" import icon %}
+{%- set s = workWithUs.considerations -%}
+<section class="wwu-considerations" id="considerations">
+  <div class="container wwu-considerations__inner">
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, align: "start" }) }}
+    <ul class="wwu-considerations__list" data-reveal>
+      {%- for item in s.items %}
+      <li><span class="icon-tile icon-tile--xs">{{ icon(item.icon, 16) }}</span>{{ item.title }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

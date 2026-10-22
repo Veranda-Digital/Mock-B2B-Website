@@ -1,0 +1,55 @@
+{
+  "intro": {
+    "eyebrow": "Work with us",
+    "title": "From a complete solution to a single component.",
+    "body": "Veranda supports organizations at whatever level fits — adopting the full platform, integrating individual hardware or software components, or building a product of their own on Veranda technology."
+  },
+  "models": {
+    "eyebrow": "Ways to work together",
+    "title": "Choose the engagement that fits your product",
+    "items": [
+      { "icon": "box", "title": "Complete Veranda solution", "body": "Reference enclosure, hardware, and software deployed together as a ready-to-run program." },
+      { "icon": "layers", "title": "Hardware integration", "body": "Build the lock and modular board stack into your own enclosure, locker, or access point." },
+      { "icon": "cloud-check", "title": "Software integration", "body": "Connect Veranda's access, scheduling, and event software to your existing systems and apps." },
+      { "icon": "key", "title": "Platform licensing", "body": "License Veranda technology to add access, monitoring, and automation to your product line." },
+      { "icon": "tag", "title": "White-labelling", "body": "Take a Veranda-powered product to market under your brand, with our platform underneath." },
+      { "icon": "wrench", "title": "Custom development", "body": "Co-develop new enclosures, boards, or workflows for requirements nothing off the shelf meets." },
+      { "icon": "users", "title": "Strategic relationships", "body": "Longer-term partnerships spanning distribution, programs, and joint product roadmaps." }
+    ]
+  },
+  "process": {
+    "eyebrow": "Engagement process",
+    "title": "How a relationship typically progresses",
+    "steps": [
+      { "title": "Initial discussion", "body": "Your product, operation, and what you want to achieve." },
+      { "title": "Requirements & fit", "body": "Which parts of the platform apply, and how." },
+      { "title": "Evaluation", "body": "Hands-on testing with an Evaluation Kit." },
+      { "title": "Pilot", "body": "A scoped deployment in real conditions." },
+      { "title": "Integration or deployment", "body": "Rolling out into your product or program." },
+      { "title": "Long-term relationship", "body": "Commercial terms, support, and roadmap." }
+    ]
+  },
+  "considerations": {
+    "eyebrow": "Partnership considerations",
+    "title": "What we'll explore together",
+    "body": "Every engagement is shaped by a handful of practical questions. We'll work through them with you early, so the evaluation and pilot answer the right ones.",
+    "items": [
+      { "icon": "activity", "title": "Product & operational requirements" },
+      { "icon": "box", "title": "Enclosure & hardware integration" },
+      { "icon": "signal", "title": "Sensors & connectivity" },
+      { "icon": "tag", "title": "Branding" },
+      { "icon": "code", "title": "Software requirements" },
+      { "icon": "shield", "title": "Support responsibilities" },
+      { "icon": "signature", "title": "Commercial structure" }
+    ]
+  },
+  "cta": {
+    "id": "get-started",
+    "title": "Start with an evaluation.",
+    "body": "Request an Evaluation Kit, or tell us about your product and we'll set up a preliminary partnership discussion.",
+    "buttons": [
+      { "label": "Request an Evaluation Kit", "href": "/investors/", "variant": "primary" }
+    ],
+    "background": "/assets/images/cta-banner.jpg"
+  }
+}

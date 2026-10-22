@@ -30,3 +30,10 @@
     padding: 48px 24px;
   }
 }
+
+.cta-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}

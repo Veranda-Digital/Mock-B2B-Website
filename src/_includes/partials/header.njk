@@ -5,6 +5,11 @@
     <a class="site-header__logo" href="/" aria-label="{{ site.name }} home">
       <img src="/assets/images/logo.svg" alt="{{ site.name }}" width="185" height="42">
     </a>
-    {{ button(cta.label, cta.href, "primary") }}
+    <nav class="site-header__nav" aria-label="Primary">
+      {%- for item in navigation.primary %}
+      <a class="site-header__link{% if page.url == item.href %} is-current{% endif %}" href="{{ item.href }}"{% if page.url == item.href %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {%- endfor %}
+      {{ button(cta.label, cta.href, "primary") }}
+    </nav>
   </div>
 </header>

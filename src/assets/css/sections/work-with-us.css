@@ -1,0 +1,136 @@
+.wwu-intro {
+  padding: 200px 0 130px;
+}
+
+.wwu-intro__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.wwu-intro__title {
+  max-width: 820px;
+  color: var(--color-ink);
+}
+
+.wwu-intro__body {
+  max-width: 640px;
+  font-size: var(--fs-lead);
+  line-height: 1.4;
+}
+
+.wwu-models {
+  padding: 140px 0;
+}
+
+.wwu-models__grid {
+  margin-top: 60px;
+}
+
+.wwu-models .feature-card--card {
+  min-height: 280px;
+}
+
+.wwu-process {
+  padding: 140px 0 100px;
+}
+
+.wwu-process__steps {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  margin: 60px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wwu-process__step {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 2px solid var(--color-green-500);
+}
+
+.wwu-process__index {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--color-coral-400);
+}
+
+.wwu-process__step h5 {
+  color: var(--color-ink);
+}
+
+.wwu-process__step p {
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.wwu-considerations {
+  padding: 120px 0 40px;
+}
+
+.wwu-considerations__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 60px;
+  padding: 60px;
+  border-radius: var(--radius-xl);
+  background: var(--color-stone);
+}
+
+.wwu-considerations__list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wwu-considerations__list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+@media (max-width: 1199px) {
+  .wwu-process__steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 809px) {
+  .wwu-intro {
+    padding: 140px 0 90px;
+  }
+
+  .wwu-models,
+  .wwu-process {
+    padding: 100px 0 60px;
+  }
+
+  .wwu-models .feature-card--card {
+    min-height: 0;
+  }
+
+  .wwu-process__steps {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .wwu-considerations__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 28px 20px;
+  }
+}

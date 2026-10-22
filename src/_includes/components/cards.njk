@@ -12,6 +12,24 @@
 </article>
 {%- endmacro %}
 
+{# Use case card with a row of outcome tags under the copy. #}
+{% macro applicationCard(card) -%}
+<article class="use-case-card application-card" data-reveal>
+  <img class="use-case-card__art" src="{{ card.illustration }}" alt="" width="220" height="220" loading="lazy">
+  <div class="use-case-card__content">
+    <h5 class="use-case-card__title">{{ card.title }}</h5>
+    <p class="use-case-card__body">{{ card.body }}</p>
+    {%- if card.outcomes %}
+    <ul class="application-card__outcomes">
+      {%- for outcome in card.outcomes %}
+      <li>{{ tag(outcome, "green", "sm") }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+</article>
+{%- endmacro %}
+
 {# Icon tile + title + body. variant: "card" (cream panel) | "plain" (no background). #}
 {% macro featureCard(feature, variant = "card") -%}
 <article class="feature-card feature-card--{{ variant }}" data-reveal>
@@ -21,12 +39,15 @@
 </article>
 {%- endmacro %}
 
-{# Opportunity metric: tag, copy, and an animated counter. #}
-{% macro metricCard(metric) -%}
+{# Opportunity metric: tag, copy, and an animated counter. An optional metric.veranda line is shown under verandaLabel. #}
+{% macro metricCard(metric, verandaLabel = "With Veranda") -%}
 <article class="metric-card{% if metric.wide %} metric-card--wide{% endif %}" data-reveal>
   {{ tag(metric.tag, metric.tone) }}
   <p class="metric-card__body">{{ metric.body }}</p>
-  <p class="metric-card__value" data-counter data-prefix="{{ metric.prefix }}" data-suffix="{{ metric.suffix }}" data-target="{{ metric.value }}">{{ metric.prefix }}{{ metric.value }}{{ metric.suffix }}</p>
+  <p class="metric-card__value" data-counter data-prefix="{{ metric.prefix }}" data-suffix="{{ metric.suffix }}" data-target="{{ metric.value }}"{% if metric.decimals %} data-decimals="{{ metric.decimals }}"{% endif %}>{{ metric.prefix }}{{ metric.value }}{{ metric.suffix }}</p>
+  {%- if metric.veranda %}
+  <p class="metric-card__veranda"><span>{{ verandaLabel }}</span>{{ metric.veranda }}</p>
+  {%- endif %}
 </article>
 {%- endmacro %}
 

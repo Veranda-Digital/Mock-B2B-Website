@@ -1,0 +1,44 @@
+{
+  "id": "hardware",
+  "eyebrow": "Hardware",
+  "title": "Modular by design",
+  "image": { "src": "/assets/images/core-board.png", "alt": "Veranda circuit board", "width": 1075, "height": 749 },
+  "steps": [
+    {
+      "label": "Primary board",
+      "short": "Primary",
+      "icon": "cpu",
+      "body": "Coordinates the system. Its processor and radios gather information from every other board and communicate over BLE and LoRaWAN.",
+      "specs": ["Primary processor", "BLE", "LoRaWAN"]
+    },
+    {
+      "label": "Sensor board",
+      "short": "Sensor",
+      "icon": "thermometer",
+      "body": "Adds environmental and motion awareness — currently air quality, temperature, and acceleration.",
+      "specs": ["Air quality", "Temperature", "Acceleration"]
+    },
+    {
+      "label": "Lock board",
+      "short": "Lock",
+      "icon": "lock",
+      "body": "Controls the locking unit, with motor drivers to actuate it and cam switches to confirm its position.",
+      "specs": ["Motor drivers", "Cam switches"]
+    },
+    {
+      "label": "Interaction board",
+      "short": "Interaction",
+      "icon": "toggle",
+      "body": "Manages buttons, LEDs, and other local controls so people at the access point get clear feedback.",
+      "specs": ["Buttons", "LEDs", "Local feedback"]
+    },
+    {
+      "label": "Power board",
+      "short": "Power",
+      "icon": "battery",
+      "body": "Connects to the system's batteries and distributes power across the whole stack.",
+      "specs": ["Battery connection", "Power distribution"]
+    }
+  ],
+  "note": "Board configuration varies by application; not every deployment uses every board."
+}

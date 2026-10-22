@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+permalink: /work-with-us/
+title: Work With Us — Veranda Digital
+description: Ways to work with Veranda — complete solutions, hardware and software integration, licensing, white-labelling, and custom development.
+pageClass: work-with-us
+sections:
+  - intro
+  - models
+  - process
+  - considerations
+---
+{% for section in sections %}
+{% include "sections/work-with-us/" + section + ".njk" %}
+{% endfor %}
+{%- set cta = workWithUs.cta %}
+{% include "sections/home/get-started.njk" %}

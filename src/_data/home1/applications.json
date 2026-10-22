@@ -1,0 +1,28 @@
+{
+  "id": "usecases",
+  "eyebrow": "applications",
+  "title": "Veranda’s modular platform applied across many industries",
+  "body": "Built for companies that move goods, the Veranda platform is designed to sit inside carrier, distributor, and integrator programs, not to replace them.",
+  "cards": [
+    {
+      "title": "Home, small-office & professional delivery",
+      "body": "Groceries, parcels, Rx, and confidential documents or devices — received without a delivery window, with a record of the receiver.",
+      "illustration": "/assets/illustrations/home-delivery.svg"
+    },
+    {
+      "title": "Regulated cold chain & clinical Custody",
+      "body": "Pharmaceuticals, diagnostics and clinical tests, and other healthcare deliveries, received and maintained at 2–8°C custody from distributor to patient or lab.",
+      "illustration": "/assets/illustrations/cold-chain.svg"
+    },
+    {
+      "title": "Field service & industrial parts",
+      "body": "Time-critical parts (e.g. contractor supplies, utilities, auto, optical, transport) delivered to technicians overnight so routes start loaded, not spent driving back to the shop.",
+      "illustration": "/assets/illustrations/field-service.svg"
+    },
+    {
+      "title": "Special access & asset control",
+      "body": "Timed, logged access to a space or asset for applications such as real estate (lockboxes and scheduled access) and waste management receptacles.",
+      "illustration": "/assets/illustrations/special-access.svg"
+    }
+  ]
+}

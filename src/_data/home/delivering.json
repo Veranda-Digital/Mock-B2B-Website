@@ -1,0 +1,80 @@
+{
+  "id": "delivering",
+  "problem": {
+    "eyebrow": "Delivering with Veranda",
+    "lead": "McKinsey has already named the problem and priced it:",
+    "statement": "The blind handoff — the moment two parties exchange goods and neither can see what the other is doing.",
+    "stats": [
+      { "value": "$720B", "label": "US handover market that the blind handoff sits inside" },
+      { "value": "$65–95B", "label": "wasted every year on blind handoffs in the US — 13–19% of logistics cost" },
+      { "value": "10%", "label": "of US parcels require a redelivery attempt after a failed first try" },
+      { "value": "70%", "label": "of dispatcher and service time is spent coordinating around handoff failures" }
+    ],
+    "citation": {
+      "before": "Bhattacharjee, D., Kamil, A., Lukasiewicz, M., & Melnikov, L. (2024, January 5). ",
+      "linkText": "Digitizing mid- and last-mile logistics handovers to reduce waste",
+      "after": ". McKinsey & Company."
+    }
+  },
+  "impact": {
+    "eyebrow": "Where blind handoffs cost you",
+    "title": "The last few feet are the most expensive",
+    "body": "You've optimized routes, warehouses, and fleets. The handoff itself is where time, vehicles, and goods still go to waste.",
+    "veranda": "With Veranda",
+    "metrics": [
+      {
+        "tag": "Dwell time",
+        "tone": "green",
+        "body": "Hours spent waiting at the handoff each year in US B2B delivery, plus 160M more in B2C.",
+        "veranda": "An unattended endpoint means nobody waits for anybody.",
+        "value": 850,
+        "suffix": "M hrs"
+      },
+      {
+        "tag": "Failed deliveries",
+        "tone": "yellow",
+        "body": "US deliveries that fail on the first attempt — 1 in 9 simply because nobody was there.",
+        "veranda": "The access point opens for a verified carrier, whether or not anyone is home.",
+        "prefix": "1 in ",
+        "value": 6
+      },
+      {
+        "tag": "Redelivery",
+        "tone": "pink",
+        "body": "Share of the 23 billion US parcels re-delivered each year, costing carriers 1–3% of revenue.",
+        "veranda": "Completing the first attempt removes the second trip.",
+        "value": 15,
+        "suffix": "%"
+      },
+      {
+        "tag": "Loss & theft",
+        "tone": "green",
+        "body": "Share of US parcels lost or stolen after delivery.",
+        "veranda": "Goods wait in a locked, logged enclosure — not on the doorstep.",
+        "value": 1.5,
+        "decimals": 1,
+        "suffix": "%"
+      },
+      {
+        "tag": "Coordination effort",
+        "tone": "yellow",
+        "body": "Dispatcher and service time spent coordinating around handoff failures.",
+        "veranda": "No driver app, no key, and no call-ahead needed to arrange access.",
+        "prefix": "+",
+        "value": 70,
+        "suffix": "%"
+      },
+      {
+        "tag": "Vehicles & personnel",
+        "tone": "pink",
+        "body": "Lost carrier revenue from 1–1.5 avoidable hours per truck, per day.",
+        "veranda": "Vehicles and crews spend their hours completing drops, not attempting them.",
+        "prefix": "$",
+        "value": 6,
+        "suffix": "B"
+      }
+    ],
+    "note": "Figures describe the US market as reported in industry research, including McKinsey & Company (cited above). They are not projected Veranda results.",
+    "image": { "src": "/assets/images/courier.jpg", "alt": "Courier carrying a parcel on a city street", "width": 1920, "height": 2880 }
+  }
+}

@@ -1,0 +1,14 @@
+{% from "components/section-heading.njk" import eyebrow %}
+{% from "components/button.njk" import button %}
+{%- set s = workWithUs.intro -%}
+<section class="wwu-intro" id="hero">
+  <div class="container wwu-intro__inner">
+    {{ eyebrow(s.eyebrow, "green") }}
+    <h1 class="wwu-intro__title" data-reveal>{{ s.title }}</h1>
+    <p class="wwu-intro__body" data-reveal>{{ s.body }}</p>
+    <div class="hero__actions" data-reveal>
+      {{ button("See the engagement models", "#models", "dark") }}
+      {{ button("Request an Evaluation Kit", site.links.evaluationKit, "primary") }}
+    </div>
+  </div>
+</section>

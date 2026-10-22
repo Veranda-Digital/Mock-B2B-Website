@@ -1,10 +1,16 @@
 {
-  "eyebrow": "predictability & control for last mile logistics",
-  "title": "The intelligent solution to the unattended exhange.",
-  "body": "Deliver goods safely and effecitvely without a person on the receiving end with Veranda, the smarter solution for verified, unattended exchange for the last mile.",
+  "eyebrow": "Embedded access, monitoring & automation",
+  "title": "The platform that connects physical access to digital systems.",
+  "body": "Veranda combines locking hardware, a modular electronics stack, sensors, long-range wireless, and cloud software into one platform — built to be embedded in partner enclosures, lockers, and access points, and proven first in unattended delivery.",
   "buttons": [
-    { "label": "Learn More", "href": "#usecases", "variant": "dark" },
-    { "label": "Request Evaluation Kit", "href": "/investors/", "variant": "primary" }
+    { "label": "Explore the Platform", "href": "#platform", "variant": "dark" },
+    { "label": "Request an Evaluation Kit", "href": "/investors/", "variant": "primary" }
+  ],
+  "pillars": [
+    { "icon": "lock", "label": "Locking hardware" },
+    { "icon": "layers", "label": "Modular boards" },
+    { "icon": "signal", "label": "BLE + LoRaWAN" },
+    { "icon": "cloud-check", "label": "Cloud software" }
   ],
   "animation": {
     "color": "#33D16B",
