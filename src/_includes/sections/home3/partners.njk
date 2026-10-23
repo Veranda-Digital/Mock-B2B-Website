@@ -1,0 +1,30 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/button.njk" import button %}
+{% from "components/icon.njk" import icon %}
+{%- set s = home3.partners -%}
+<section class="partners" id="{{ s.id }}">
+  <div class="container">
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body }) }}
+
+    <div class="partners__panel" data-reveal>
+      <div class="partners__spectrum" aria-hidden="true">
+        <span>{{ s.spectrum.start }}</span>
+        <span class="partners__track"></span>
+        <span>{{ s.spectrum.end }}</span>
+      </div>
+      <ol class="partners__models">
+        {%- for m in s.models %}
+        <li class="partner-model">
+          <span class="icon-tile">{{ icon(m.icon, 22) }}</span>
+          <h5 class="partner-model__title">{{ m.title }}</h5>
+          <p class="partner-model__body">{{ m.body }}</p>
+        </li>
+        {%- endfor %}
+      </ol>
+    </div>
+
+    <div class="partners__action" data-reveal>
+      {{ button(s.button.label, s.button.href, "arrow") }}
+    </div>
+  </div>
+</section>

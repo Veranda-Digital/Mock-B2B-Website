@@ -3,7 +3,15 @@ import { HtmlBasePlugin } from "@11ty/eleventy";
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
 
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  // Public site files only. src/assets/video/sources holds the original clips
+  // and is kept in the repo, but not published.
+  eleventyConfig.addPassthroughCopy({
+    "src/assets/css": "assets/css",
+    "src/assets/js": "assets/js",
+    "src/assets/images": "assets/images",
+    "src/assets/illustrations": "assets/illustrations",
+    "src/assets/video/hero": "assets/video/hero",
+  });
   eleventyConfig.addWatchTarget("src/assets/");
 
   eleventyConfig.addFilter("year", () => new Date().getFullYear());

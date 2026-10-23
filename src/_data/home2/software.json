@@ -1,0 +1,21 @@
+{
+  "id": "software",
+  "eyebrow": "Software",
+  "title": "Software that manages and extends the physical system",
+  "body": "The hardware decides whether a door opens. Veranda's software decides who, when, and why, then keeps a record of everything that happened.",
+  "showcase": {
+    "badge": { "label": "Veranda Dashboard App", "icon": "phone" },
+    "title": "One window into the Veranda platform",
+    "body": "The Dashboard app is one interface into Veranda's software. Check the status of deliveries, open or lock a device, set access schedules, or grant access to authorized people remotely. The same platform also serves operators managing many devices and the partner systems that feed it.",
+    "image": { "src": "/assets/images/dashboard-app.png", "alt": "Veranda Dashboard app on a phone", "width": 887, "height": 1825 },
+    "audiences": ["Recipients & residents", "Operators & dispatch", "Partner systems"]
+  },
+  "responsibilities": [
+    { "icon": "key", "title": "Access & permissions", "body": "Decide who can open which access point, and change or revoke those rights at any time." },
+    { "icon": "calendar-check", "title": "Scheduled access", "body": "Set recurring windows for planned deliveries, service visits, and pickups." },
+    { "icon": "activity", "title": "Device & sensor monitoring", "body": "Follow lock state, battery, connectivity, and sensor readings across every device." },
+    { "icon": "eye", "title": "Activity & events", "body": "Review a complete history of opens, closes, and changes in condition." },
+    { "icon": "bell", "title": "Status updates & alerts", "body": "Let the right people know when a delivery arrives or something looks out of the ordinary." },
+    { "icon": "users", "title": "Users, operators & partners", "body": "Support everyday users, the teams running fleets of devices, and partner workflows." }
+  ]
+}

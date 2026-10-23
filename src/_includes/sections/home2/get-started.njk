@@ -1,0 +1,15 @@
+{% from "components/button.njk" import button %}
+{%- set s = cta or home2.getStarted -%}
+<section class="get-started" id="{{ s.id }}">
+  <div class="container">
+    <div class="cta-banner" style="--cta-bg: url('{{ s.background | url }}')" data-reveal>
+      <h4 class="cta-banner__title">{{ s.title }}</h4>
+      <p class="cta-banner__body">{{ s.body }}</p>
+      <div class="cta-banner__actions">
+        {%- for b in s.buttons %}
+        {{ button(b.label, b.href, b.variant) }}
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>

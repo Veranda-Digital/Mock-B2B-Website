@@ -1,0 +1,36 @@
+{
+  "id": "platform",
+  "eyebrow": "Our Platform",
+  "title": "One platform bridging the physical and the digital",
+  "body": "Veranda isn't a single box. It's a stack of locking hardware, modular circuit boards, sensors, wireless communications, and cloud software that works as one system inside whatever enclosure or access point a partner needs.",
+  "diagram": {
+    "physical": {
+      "label": "Physical",
+      "layers": [
+        { "icon": "box", "title": "Enclosure or access point", "caption": "Porch box, locker, cage, door, or receptacle" },
+        { "icon": "lock", "title": "Locking hardware", "caption": "Actuated lock with position sensing" },
+        { "icon": "layers", "title": "Modular board stack", "caption": "Primary, sensor, lock, interaction & power" },
+        { "icon": "thermometer", "title": "Sensors", "caption": "Air quality, temperature, motion" }
+      ]
+    },
+    "link": {
+      "icon": "signal",
+      "title": "Wireless communications",
+      "caption": "BLE + LoRaWAN"
+    },
+    "digital": {
+      "label": "Digital",
+      "layers": [
+        { "icon": "cloud-check", "title": "Cloud software", "caption": "Access rules, schedules, event history" },
+        { "icon": "phone", "title": "Apps & dashboards", "caption": "For users, operators, and admins" },
+        { "icon": "code", "title": "Partner systems", "caption": "Dispatch, orders, and operations data" }
+      ]
+    }
+  },
+  "capabilities": [
+    { "icon": "signature", "title": "Authorization", "body": "Grant access to exactly the right people, at the right places and times, verified against dispatch or account data rather than a shared code or a copied key." },
+    { "icon": "eye", "title": "Auditability", "body": "Every open, close, and sensor event is recorded: who, when, and (where sensors are fitted) what condition the contents were in." },
+    { "icon": "calendar-check", "title": "Automation", "body": "Schedule recurring access, trigger alerts, and let routine handoffs run without a person waiting at either end." },
+    { "icon": "puzzle", "title": "Integration", "body": "Embed the lock and board stack in your own enclosure, and connect Veranda's software to the systems your operation already runs." }
+  ]
+}

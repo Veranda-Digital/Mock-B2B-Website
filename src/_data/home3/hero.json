@@ -1,0 +1,21 @@
+{
+  "eyebrow": "Embedded access, monitoring, & automation",
+  "title": "The intelligent access platform.",
+  "titleAccent": "Solving last-mile delivery, unattended exchanges, access to facilities, and more.",
+  "buttons": [
+    { "label": "Explore the Platform", "href": "#platform", "variant": "light" },
+    { "label": "Request an Evaluation Kit", "href": "/investors/", "variant": "primary" }
+  ],
+  "videos": [
+    { "src": "/assets/video/hero/home3/porch.mp4", "poster": "/assets/video/hero/home3/porch.jpg", "label": "Packages & Groceries" },
+    { "src": "/assets/video/hero/home3/logistics.mp4", "poster": "/assets/video/hero/home3/logistics.jpg", "label": "Business Exchanges" },
+    { "src": "/assets/video/hero/home3/healthcare.mp4", "poster": "/assets/video/hero/home3/healthcare.jpg", "label": "Pharmaceuticals & Healthcare" },
+    { "src": "/assets/video/hero/home3/access.mp4", "poster": "/assets/video/hero/home3/access.jpg", "label": "Authorized Entry" }
+  ],
+  "capabilities": [
+    { "icon": "signature", "label": "Authorization", "title": "Give access to only those who need it, when they need it." },
+    { "icon": "eye", "label": "Auditability", "title": "See everything you need to know, from access logs to temperatures, battery life, and more." },
+    { "icon": "calendar-check", "label": "Automation", "title": "Build schedules, triggers, and alerts that keep every access point running on its own." },
+    { "icon": "puzzle", "label": "Integration", "title": "Plug into the products, apps, and systems your operation already runs on." }
+  ]
+}

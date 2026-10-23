@@ -10,11 +10,6 @@
       <div class="hardware__text">
         <div class="hardware__progress" aria-hidden="true">
           <span class="hardware__count"><span data-step-count>01</span> / {{ ("0" + total) if total < 10 else total }}</span>
-          <ol class="hardware__dots">
-            {%- for step in s.steps %}
-            <li class="hardware__dot{% if loop.first %} is-active{% endif %}" data-step-dot="{{ loop.index0 }}">{{ step.short }}</li>
-            {%- endfor %}
-          </ol>
         </div>
 
         <div class="hardware__steps">
