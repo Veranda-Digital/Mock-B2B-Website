@@ -2,7 +2,7 @@
   "id": "applications",
   "eyebrow": "Applications & benefits",
   "title": "Built for delivery. Ready for any access point.",
-  "body": "Delivery is where Veranda leads — and where the platform proves itself every day. The same stack extends to any space or asset that needs verified, recorded access.",
+  "body": "Delivery is where Veranda leads, and where the platform proves itself every day. The same stack extends to any space or asset that needs verified, recorded access.",
   "lead": {
     "index": "01",
     "label": "Lead market",
@@ -10,7 +10,7 @@
     "cards": [
       {
         "title": "Home, small-office & professional delivery",
-        "body": "Groceries, parcels, Rx, and confidential documents or devices — received without a delivery window, with a record of the receiver.",
+        "body": "Groceries, parcels, Rx, and confidential documents or devices, received without a delivery window and with a record of the receiver.",
         "illustration": "/assets/illustrations/home-delivery.svg",
         "outcomes": ["Flexible unattended delivery", "Fewer failed handoffs"]
       },
@@ -32,7 +32,7 @@
     "index": "02",
     "label": "Beyond delivery",
     "title": "Special access & asset control",
-    "body": "Timed, logged access to a space or asset — wherever a key, a code, or a person waiting is the weak link today.",
+    "body": "Timed, logged access to any space or asset where a key, a code, or a person waiting is the weak link today.",
     "illustration": "/assets/illustrations/special-access.svg",
     "examples": [
       { "icon": "building", "label": "Real-estate lockboxes & scheduled viewings" },
@@ -48,7 +48,7 @@
     "items": [
       { "title": "More flexible unattended delivery", "body": "Deliveries no longer need someone home or on site to receive them. Drivers complete drops on their schedule; recipients collect on theirs." },
       { "title": "Fewer failed handoffs", "body": "When the access point opens itself for a verified carrier, a delivery that reaches the address can be completed on the first attempt." },
-      { "title": "Reduced loss, theft & spoilage", "body": "Goods wait in a locked, monitored enclosure — and, where fitted, an insulated, sensor-equipped one — instead of on a doorstep." },
+      { "title": "Reduced loss, theft & spoilage", "body": "Goods wait in a locked, monitored enclosure (insulated and sensor-equipped where fitted) instead of on a doorstep." },
       { "title": "Better access & condition records", "body": "Every open is logged with who and when, and sensor-equipped enclosures add the condition of the contents: a record regulated buyers can rely on." },
       { "title": "Delivery & field-service efficiency", "body": "Drivers spend less time waiting and redelivering; technicians can start routes with parts already delivered instead of driving back to the shop." },
       { "title": "Reverse-logistics support", "body": "The same secured endpoint can hold returns, empty totes, or reusable containers for pickup, with the same verified access." },

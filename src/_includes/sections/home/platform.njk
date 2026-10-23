@@ -1,5 +1,4 @@
 {% from "components/section-heading.njk" import sectionHeading %}
-{% from "components/cards.njk" import featureCard %}
 {% from "components/icon.njk" import icon %}
 {%- set s = home.platform -%}
 {%- set d = s.diagram -%}
@@ -7,22 +6,21 @@
   <div class="container">
     {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, tone: "dark" }) }}
 
-    <figure class="platform-diagram" data-reveal aria-label="Diagram: physical hardware connects over wireless to Veranda's cloud software and partner systems">
-      <div class="platform-diagram__side platform-diagram__side--physical">
-        <p class="platform-diagram__label">{{ d.physical.label }}</p>
-        {#- Layers nest inside one another: the enclosure wears the lock, which houses the boards and sensors. #}
-        {%- for layer in d.physical.layers %}
-        <div class="platform-diagram__nest platform-diagram__nest--{{ loop.index }}">
-          <div class="platform-diagram__item">
+    <figure class="platform-diagram platform-diagram--stacked" data-reveal aria-label="Diagram: physical hardware connects over wireless to Veranda's cloud software and partner systems">
+      {%- for name in ["physical", "digital"] %}
+      {%- set side = d[name] %}
+      <div class="platform-diagram__side platform-diagram__side--{{ name }}">
+        <p class="platform-diagram__label">{{ side.label }}</p>
+        <ul class="platform-diagram__list">
+          {%- for layer in side.layers %}
+          <li class="platform-diagram__item" style="--row: {{ loop.index + 1 }}">
             <span class="platform-diagram__icon">{{ icon(layer.icon, 18) }}</span>
             <span><strong>{{ layer.title }}</strong><small>{{ layer.caption }}</small></span>
-          </div>
-        {%- endfor %}
-        {%- for layer in d.physical.layers %}
-        </div>
-        {%- endfor %}
+          </li>
+          {%- endfor %}
+        </ul>
       </div>
-
+      {%- if loop.first %}
       <div class="platform-diagram__link" aria-hidden="true">
         <span class="platform-diagram__wire"><i></i><i></i><i></i></span>
         <div class="platform-diagram__chip">
@@ -32,24 +30,8 @@
         </div>
         <span class="platform-diagram__wire platform-diagram__wire--reverse"><i></i><i></i><i></i></span>
       </div>
-
-      <div class="platform-diagram__side platform-diagram__side--digital">
-        <p class="platform-diagram__label">{{ d.digital.label }}</p>
-        <ul class="platform-diagram__list">
-          {%- for layer in d.digital.layers %}
-          <li class="platform-diagram__item">
-            <span class="platform-diagram__icon">{{ icon(layer.icon, 18) }}</span>
-            <span><strong>{{ layer.title }}</strong><small>{{ layer.caption }}</small></span>
-          </li>
-          {%- endfor %}
-        </ul>
-      </div>
-    </figure>
-
-    <div class="feature-grid platform__capabilities">
-      {%- for feature in s.capabilities %}
-      {{ featureCard(feature) }}
+      {%- endif %}
       {%- endfor %}
-    </div>
+    </figure>
   </div>
 </section>

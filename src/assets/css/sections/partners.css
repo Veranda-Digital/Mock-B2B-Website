@@ -54,18 +54,6 @@
   box-shadow: 0 18px 40px -20px rgba(35, 37, 44, 0.25);
 }
 
-.partner-model__marker {
-  position: absolute;
-  top: -21px;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  margin-left: -5px;
-  border-radius: 50%;
-  background: var(--color-green-500);
-  box-shadow: var(--glow-green);
-}
-
 .partner-model__title {
   margin-top: 32px;
   color: var(--color-ink);
@@ -88,10 +76,6 @@
 @media (max-width: 1199px) {
   .partners__models {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .partner-model__marker {
-    display: none;
   }
 }
 

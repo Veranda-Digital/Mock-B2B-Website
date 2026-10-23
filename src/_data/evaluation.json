@@ -26,7 +26,7 @@
     "features": [
       { "icon": "box", "title": "Hardware", "body": "Proprietary modular lock technology, adaptable to every delivery scenario." },
       { "icon": "cloud-check", "title": "Software", "body": "Custody records, condition data, and enterprise integrations sold as a recurring platform fee to carriers, retailers, and distributors." },
-      { "icon": "signal", "title": "Per-handoff fees", "body": "A transaction fee on every confirmed handoff — the layer that scales with volume, not with units sold." }
+      { "icon": "signal", "title": "Per-handoff fees", "body": "A transaction fee on every confirmed handoff. It's the layer that scales with volume, not with units sold." }
     ]
   }
 }

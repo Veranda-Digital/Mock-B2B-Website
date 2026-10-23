@@ -1,48 +1,104 @@
 .software {
-  padding: 150px 0 140px;
+  padding: 140px 0 120px;
 }
 
-.software__showcase {
-  margin: 120px 0 110px;
+/* Equal halves: phone on the left, copy on the right, centered in the row. */
+.software .showcase--reverse {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  width: 100%;
+  margin: 48px 0 72px;
+}
+
+.software .glow-media {
+  width: 94%;
+  max-width: none;
+  margin-inline: auto;
+  /* The phone rises above the disc, so the alignment box needs extra
+     space above the disc for the copy to center on the image. */
+  margin-top: 17%;
+}
+
+/* Brighter disc so the phone still reads against the forest background. */
+.software .glow-media__disc {
+  background: radial-gradient(circle at 50% 42%, #46d978 0%, #229652 46%, #145c38 100%);
+  box-shadow:
+    inset 0 1px 70px 0 rgba(194, 255, 215, 0.28),
+    0 0 72px -12px rgba(51, 209, 107, 0.55);
+}
+
+.software .showcase__text {
+  max-width: none;
+}
+
+.software .showcase__title,
+.software .showcase__body {
+  max-width: none;
 }
 
 .software .showcase__body {
-  color: var(--color-text);
+  color: var(--text-on-dark);
+  line-height: 1.45;
 }
 
 .software__audiences {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 8px 0 0;
+  margin: 4px 0 0;
   padding: 0;
   list-style: none;
 }
 
 .software__audiences li {
   padding: 6px 14px;
-  border: 1px solid rgba(28, 81, 65, 0.2);
+  border: 1px solid rgba(194, 255, 215, 0.35);
   border-radius: var(--radius-pill);
+  background: rgba(194, 255, 215, 0.1);
   font-size: var(--fs-small);
   line-height: 1.5;
-  color: var(--color-green-900);
+  color: var(--color-green-100);
 }
 
 .software__grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
 }
 
-.software .feature-card--card {
-  min-height: 260px;
-  background: var(--color-white);
-  box-shadow: var(--shadow-card);
+.software .feature-grid .feature-card--card {
+  min-height: 0;
+  padding: 24px 24px 22px;
+  background: var(--color-cream);
+  box-shadow: 0 16px 36px -24px rgba(0, 0, 0, 0.55);
 }
 
 .software .feature-card__title {
-  margin-top: 32px;
+  margin-top: 18px;
+}
+
+.software .feature-card__body {
+  margin-top: 8px;
 }
 
 @media (max-width: 1199px) {
+  .software .showcase--reverse {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 40px 0 64px;
+  }
+
+  .software .showcase--reverse .showcase__text {
+    order: 2;
+  }
+
+  .software .glow-media {
+    width: 94%;
+    max-width: none;
+    margin-top: 17%;
+  }
+
   .software__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -50,14 +106,26 @@
 
 @media (max-width: 809px) {
   .software {
-    padding: 100px 0;
+    padding: 100px 0 80px;
+  }
+
+  .software .showcase--reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 56px 0 48px;
+  }
+
+  .software .showcase--reverse .showcase__text {
+    order: 0;
+  }
+
+  .software .glow-media {
+    width: min(260px, 100%);
+    margin-top: 0;
+    margin-inline: auto;
   }
 
   .software__grid {
     grid-template-columns: 1fr;
-  }
-
-  .software .feature-card--card {
-    min-height: 0;
   }
 }

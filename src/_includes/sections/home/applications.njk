@@ -8,7 +8,7 @@
     {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, align: "start" }) }}
 
     <div class="app-benefits__group">
-      <p class="app-benefits__group-label"><span>{{ s.lead.index }}</span>{{ s.lead.label }} — <strong>{{ s.lead.title }}</strong></p>
+      <p class="app-benefits__group-label"><span>{{ s.lead.index }}</span>{{ s.lead.label }}: <strong>{{ s.lead.title }}</strong></p>
       <div class="app-benefits__grid">
         {%- for card in s.lead.cards %}
         {{ applicationCard(card) }}

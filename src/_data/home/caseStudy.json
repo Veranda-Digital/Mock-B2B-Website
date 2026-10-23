@@ -2,12 +2,10 @@
   "id": "casestudy",
   "eyebrow": "Case Study : Dion's Chicago Dream",
   "title": "Delivering Better for Chicago",
-  "body": "Dion's Chicago Dream believes nutritious food should be a lived reality, not an aspiration, and has built the infrastructure to prove it: 325,000 pounds of fresh produce moved monthly to more than 5,400 households a week across every Chicago neighborhood. The Dream Box extends that reliability to the last few feet of the journey.",
-  "product": { "src": "/assets/images/dream-box.png", "alt": "The Dream Box", "width": 626, "height": 412 },
   "feature": {
     "tag": "A partner-led application",
     "title": "Their product. Our platform.",
-    "body": "The Dream Box is Dion's Chicago Dream's own product, built on Veranda's platform. It lives on a stoop or at a community site with no power, Wi-Fi, or installer required, running on battery over long-range wireless. Insulated and sensor-equipped, it keeps produce fresh, admits only the authorized carrier, and flags anything out of the ordinary — so a delivery that reaches the block also reaches the family behind it.",
+    "body": "Dion's Chicago Dream moves 325,000 pounds of fresh produce each month to more than 5,400 households a week, across every Chicago neighborhood. Together, Veranda and Dion's Chicago Dream created DreamBox to cover the last few feet of that journey. It runs on battery over long-range wireless, with no power, Wi-Fi, or installer, keeping food fresh, opening only for an authorized carrier, and flagging anything out of the ordinary.",
     "photos": [
       { "src": "/assets/images/dream-box-warehouse.jpg", "alt": "Volunteers packing produce boxes", "width": 1334, "height": 2000 },
       { "src": "/assets/images/dream-box-chicago.jpg", "alt": "Dion sitting on a Dream Box by Lake Michigan", "width": 1000, "height": 1500 }
@@ -38,7 +36,7 @@
   "points": [
     { "title": "The challenge", "body": "Fresh food arrives on a schedule, but the households receiving it often can't be home to meet it. A doorstep drop risks spoilage and theft; a missed one means another trip." },
     { "title": "How it fits", "body": "The Dream Box slots into the program's existing routes. Carriers are verified automatically, and the program sees what has arrived, its condition, and who has access." },
-    { "title": "Intended value", "body": "For the organization: fewer failed drops and less waste. For households: fresh food that's there when they get home — closing the gap between a meal grown and a meal received." }
+    { "title": "Intended value", "body": "For the organization: fewer failed drops and less waste. For households: fresh food that's there when they get home, closing the gap between a meal grown and a meal received." }
   ],
   "button": { "label": "More about the Dream Box", "href": "https://getveranda.com/" }
 }

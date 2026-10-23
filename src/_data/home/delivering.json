@@ -1,21 +1,5 @@
 {
   "id": "delivering",
-  "problem": {
-    "eyebrow": "Delivering with Veranda",
-    "lead": "McKinsey has already named the problem and priced it:",
-    "statement": "The blind handoff — the moment two parties exchange goods and neither can see what the other is doing.",
-    "stats": [
-      { "value": "$720B", "label": "US handover market that the blind handoff sits inside" },
-      { "value": "$65–95B", "label": "wasted every year on blind handoffs in the US — 13–19% of logistics cost" },
-      { "value": "10%", "label": "of US parcels require a redelivery attempt after a failed first try" },
-      { "value": "70%", "label": "of dispatcher and service time is spent coordinating around handoff failures" }
-    ],
-    "citation": {
-      "before": "Bhattacharjee, D., Kamil, A., Lukasiewicz, M., & Melnikov, L. (2024, January 5). ",
-      "linkText": "Digitizing mid- and last-mile logistics handovers to reduce waste",
-      "after": ". McKinsey & Company."
-    }
-  },
   "impact": {
     "eyebrow": "Where blind handoffs cost you",
     "title": "The last few feet are the most expensive",
@@ -33,7 +17,7 @@
       {
         "tag": "Failed deliveries",
         "tone": "yellow",
-        "body": "US deliveries that fail on the first attempt — 1 in 9 simply because nobody was there.",
+        "body": "US deliveries that fail on the first attempt, 1 in 9 of them simply because nobody was there.",
         "veranda": "The access point opens for a verified carrier, whether or not anyone is home.",
         "prefix": "1 in ",
         "value": 6
@@ -50,7 +34,7 @@
         "tag": "Loss & theft",
         "tone": "green",
         "body": "Share of US parcels lost or stolen after delivery.",
-        "veranda": "Goods wait in a locked, logged enclosure — not on the doorstep.",
+        "veranda": "Goods wait in a locked, logged enclosure, not on the doorstep.",
         "value": 1.5,
         "decimals": 1,
         "suffix": "%"
@@ -74,7 +58,7 @@
         "suffix": "B"
       }
     ],
-    "note": "Figures describe the US market as reported in industry research, including McKinsey & Company (cited above). They are not projected Veranda results.",
+    "note": "Figures describe the US market as reported in industry research, including McKinsey & Company. They are not projected Veranda results.",
     "image": { "src": "/assets/images/courier.jpg", "alt": "Courier carrying a parcel on a city street", "width": 1920, "height": 2880 }
   }
 }

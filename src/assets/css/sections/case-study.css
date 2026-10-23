@@ -27,6 +27,10 @@
   width: 100%;
 }
 
+.case-study .section-heading + .split-card {
+  margin-top: 72px;
+}
+
 .split-card {
   display: grid;
   grid-template-columns: 589fr 611fr;
@@ -42,6 +46,10 @@
   padding: 51px 44px;
   background: var(--color-white);
   color: var(--color-ink);
+}
+
+.split-card__text:not(:has(.split-card__body)) {
+  justify-content: center;
 }
 
 .split-card__title {

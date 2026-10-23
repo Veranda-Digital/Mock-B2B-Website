@@ -7,15 +7,11 @@
   <div class="container">
     {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, tone: "dark" }) }}
 
-    <figure class="case-study__product" data-reveal>
-      <img src="{{ s.product.src }}" alt="{{ s.product.alt }}" width="{{ s.product.width }}" height="{{ s.product.height }}" loading="lazy">
-    </figure>
-
     <div class="split-card" data-reveal>
       <div class="split-card__text">
         {{ tag(s.feature.tag, "pink", "sm") }}
         <h3 class="split-card__title">{{ s.feature.title }}</h3>
-        <p class="split-card__body">{{ s.feature.body }}</p>
+        {%- if s.feature.body %}<p class="split-card__body">{{ s.feature.body }}</p>{% endif %}
       </div>
       <div class="split-card__media">
         {%- for photo in s.feature.photos %}

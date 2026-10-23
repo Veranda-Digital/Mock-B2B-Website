@@ -1,34 +1,41 @@
 {% from "components/button.njk" import button %}
 {% from "components/section-heading.njk" import eyebrow %}
-{% from "components/icon.njk" import icon %}
+{% from "components/cards.njk" import capabilityCard %}
 {%- set hero = home.hero -%}
-<section class="hero" id="hero">
-  <canvas class="hero__route" data-hero-route
-    data-color="{{ hero.animation.color }}"
-    data-stops="{{ hero.animation.stops }}"
-    data-speed="{{ hero.animation.speed }}"
-    data-inset="{{ hero.animation.routeInset }}"
-    data-trail="{{ hero.animation.trailLength }}"
-    data-trail-gap="{{ hero.animation.trailGap }}"
-    data-dot="{{ hero.animation.dotSize }}"
-    data-badge="{{ hero.animation.badgeSize }}"
-    aria-hidden="true"></canvas>
-
+<section class="hero{% if hero.capabilities %} hero--capabilities{% endif %}{% if hero.videos %} hero--video{% endif %}" id="hero">
+  {%- if hero.videos %}
+  <div class="hero__media" data-hero-video aria-hidden="true">
+    {%- for v in hero.videos %}
+    <video class="hero__video{% if loop.first %} is-active{% endif %}" src="{{ v.src }}" poster="{{ v.poster }}" muted playsinline preload="{{ 'auto' if loop.first else 'none' }}"></video>
+    {%- endfor %}
+    <div class="hero__scrim"></div>
+  </div>
+  <ol class="hero__scenes" data-hero-scenes aria-hidden="true">
+    {%- for v in hero.videos %}
+    <li class="hero__scene{% if loop.first %} is-active{% endif %}"><span class="hero__scene-bar"></span>{{ v.label }}</li>
+    {%- endfor %}
+  </ol>
+  {%- endif %}
   <div class="container hero__content">
-    {{ eyebrow(hero.eyebrow, "green") }}
-    <h1 class="hero__title" data-reveal>{{ hero.title }}</h1>
-    <p class="hero__body" data-reveal>{{ hero.body }}</p>
-    <div class="hero__actions" data-reveal>
-      {%- for b in hero.buttons %}
-      {{ button(b.label, b.href, b.variant) }}
+    <div class="hero__stage">
+      {{ eyebrow(hero.eyebrow, "light" if hero.videos else "green") }}
+      <h1 class="hero__title" data-reveal>{{ hero.title }}{% if hero.titleAccent %} <span class="hero__title-accent">{{ hero.titleAccent | keepHyphenated | safe }}</span>{% endif %}</h1>
+      {%- if hero.body %}
+      <p class="hero__body" data-reveal>{{ hero.body }}</p>
+      {%- endif %}
+      <div class="hero__actions" data-reveal>
+        {%- for b in hero.buttons %}
+        {{ button(b.label, b.href, b.variant) }}
+        {%- endfor %}
+      </div>
+    </div>
+
+    {%- if hero.capabilities %}
+    <div class="hero__capabilities">
+      {%- for c in hero.capabilities %}
+      {{ capabilityCard(c) }}
       {%- endfor %}
     </div>
-    {%- if hero.pillars %}
-    <ul class="hero__pillars" data-reveal>
-      {%- for p in hero.pillars %}
-      <li class="hero__pillar">{{ icon(p.icon, 16) }}<span>{{ p.label }}</span></li>
-      {%- endfor %}
-    </ul>
     {%- endif %}
   </div>
 </section>

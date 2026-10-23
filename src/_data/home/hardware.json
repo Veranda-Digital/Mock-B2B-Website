@@ -8,37 +8,63 @@
       "label": "Primary board",
       "short": "Primary",
       "icon": "cpu",
-      "body": "Coordinates the system. Its processor and radios gather information from every other board and communicate over BLE and LoRaWAN.",
-      "specs": ["Primary processor", "BLE", "LoRaWAN"]
+      "body": "The hub of every stack. It collects data from each board and connects over BLE and LoRaWAN.",
+      "specs": ["Primary processor", "BLE", "LoRaWAN"],
+      "devices": [
+        { "icon": "phone", "label": "Phone app" },
+        { "icon": "signal", "label": "Gateway" },
+        { "icon": "cloud-check", "label": "Cloud" }
+      ]
     },
     {
       "label": "Sensor board",
       "short": "Sensor",
       "icon": "thermometer",
-      "body": "Adds environmental and motion awareness — currently air quality, temperature, and acceleration.",
-      "specs": ["Air quality", "Temperature", "Acceleration"]
+      "body": "Senses the space around it. Start with temperature, air quality, or motion, and add sensors as needs grow.",
+      "specs": ["Temperature", "Air quality", "Motion"],
+      "devices": [
+        { "icon": "thermometer", "label": "Temperature" },
+        { "icon": "motion", "label": "Motion" },
+        { "icon": "chart", "label": "Data logging" }
+      ]
     },
     {
       "label": "Lock board",
       "short": "Lock",
       "icon": "lock",
-      "body": "Controls the locking unit, with motor drivers to actuate it and cam switches to confirm its position.",
-      "specs": ["Motor drivers", "Cam switches"]
+      "body": "Secures a door, parcel box, locker, or more. Motor drivers move the lock and cam switches confirm its position.",
+      "specs": ["Motor drivers", "Cam switches"],
+      "devices": [
+        { "icon": "door", "label": "Door" },
+        { "icon": "box", "label": "Box" },
+        { "icon": "locker", "label": "Locker" }
+      ]
     },
     {
       "label": "Interaction board",
       "short": "Interaction",
       "icon": "toggle",
-      "body": "Manages buttons, LEDs, and other local controls so people at the access point get clear feedback.",
-      "specs": ["Buttons", "LEDs", "Local feedback"]
+      "body": "Connects the controls people touch and see. Mix and match buttons, lights, and screens.",
+      "specs": ["Buttons", "Lights", "Screens"],
+      "devices": [
+        { "icon": "button", "label": "Button" },
+        { "icon": "bulb", "label": "Light" },
+        { "icon": "screen", "label": "Screen" }
+      ]
     },
     {
       "label": "Power board",
       "short": "Power",
       "icon": "battery",
-      "body": "Connects to the system's batteries and distributes power across the whole stack.",
-      "specs": ["Battery connection", "Power distribution"]
+      "body": "Runs on batteries, wall power, or both, and powers every board in the stack.",
+      "specs": ["Batteries", "Wall power", "Power distribution"],
+      "flow": "in",
+      "devices": [
+        { "icon": "battery", "label": "Batteries" },
+        { "icon": "outlet", "label": "Wall power" }
+      ]
     }
   ],
-  "note": "Board configuration varies by application; not every deployment uses every board."
+  "more": "Add more",
+  "note": "Every board is optional and swappable. Configure the stack for each application, and extend it as needs grow."
 }

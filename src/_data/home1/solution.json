@@ -2,7 +2,7 @@
   "id": "solution",
   "eyebrow": "The Veranda Solution",
   "title": "The only platform that bridges the digital and the pysical",
-  "body": "Intelligent lock, connected enclosure, resilient link, and cloud software — one stack that any enclosure can wear, from a climate controlled porch box to a back-of-store cage to a lockbox on a door.",
+  "body": "Intelligent lock, connected enclosure, resilient link, and cloud software: one stack that any enclosure can wear, from a climate controlled porch box to a back-of-store cage to a lockbox on a door.",
   "showcases": [
     {
       "badge": { "label": "Veranda Smart Lock", "icon": "lock" },
@@ -15,7 +15,7 @@
         { "icon": "lock", "title": "Intelligent lock", "body": "Admits the right person automatically, verified against dispatch data. Nothing depends on a code the driver has to type or a key that can be copied." },
         { "icon": "plug", "title": "Connected enclosure", "body": "The same lock module fits any body: a Veranda porch box, a back-of-store cage or door lockbox; the list goes on. The enclosure changes; the platform doesn't." },
         { "icon": "signal", "title": "Resilient link", "body": "433–900 MHz LoRa plus Bluetooth, 1 km reach, no Wi-Fi or cellular dependency. Works at a rural clinic and a downtown loading dock alike." },
-        { "icon": "cloud-check", "title": "Cloud software", "body": "Every open event is logged: who, when, and — where the enclosure carries a sensor — what condition the contents were in. That record is the product for a regulated buyer." }
+        { "icon": "cloud-check", "title": "Cloud software", "body": "Every open event is logged: who, when, and (where the enclosure carries a sensor) what condition the contents were in. That record is the product for a regulated buyer." }
       ]
     },
     {

@@ -1,7 +1,7 @@
 {
   "id": "get-started",
   "title": "See how Veranda fits your product.",
-  "body": "Evaluate the platform inside your own product, delivery program, or access-control application — starting with an Evaluation Kit and a conversation with our team.",
+  "body": "Evaluate the platform inside your own product, delivery program, or access-control application, starting with an Evaluation Kit and a conversation with our team.",
   "buttons": [
     { "label": "Request an Evaluation Kit", "href": "/investors/", "variant": "primary" },
     { "label": "Work With Us", "href": "/work-with-us/", "variant": "light" }

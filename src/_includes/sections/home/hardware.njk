@@ -1,16 +1,13 @@
-{% from "components/section-heading.njk" import eyebrow %}
+{% from "components/section-heading.njk" import sectionHeading %}
 {% from "components/icon.njk" import icon %}
 {%- set s = home.hardware -%}
 {%- set total = s.steps | length -%}
 <section class="hardware theme-dark" id="{{ s.id }}" data-board-stack style="--steps: {{ total }}">
   <div class="hardware__sticky">
     <div class="container hardware__inner">
-      <div class="hardware__text">
-        <div class="hardware__intro">
-          {{ eyebrow(s.eyebrow) }}
-          <h2 class="hardware__title">{{ s.title }}</h2>
-        </div>
+      {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, tone: "dark" }) }}
 
+      <div class="hardware__text">
         <div class="hardware__progress" aria-hidden="true">
           <span class="hardware__count"><span data-step-count>01</span> / {{ ("0" + total) if total < 10 else total }}</span>
           <ol class="hardware__dots">
@@ -23,12 +20,13 @@
         <div class="hardware__steps">
           {%- for step in s.steps %}
           <div class="hardware__step{% if loop.first %} is-active{% endif %}" data-step="{{ loop.index0 }}">
-            <p class="hardware__label"><span class="icon-tile icon-tile--sm">{{ icon(step.icon, 18) }}</span>{{ step.label }}</p>
+            <p class="hardware__label hardware__label--lg"><span class="icon-tile icon-tile--sm">{{ icon(step.icon, 22) }}</span>{{ step.label }}</p>
             <p class="hardware__body">{{ step.body }}</p>
             <ul class="hardware__specs">
               {%- for spec in step.specs %}
               <li>{{ spec }}</li>
               {%- endfor %}
+              <li class="hardware__spec-more">+ more</li>
             </ul>
           </div>
           {%- endfor %}
@@ -37,15 +35,40 @@
         <p class="hardware__note">{{ s.note }}</p>
       </div>
 
-      <div class="hardware__boards" aria-hidden="true">
-        {#- Rendered in reverse so the primary board paints on top of the stack. #}
-        {%- for step in s.steps | reverse %}
-        {%- set i = total - loop.index %}
-        <div class="hardware__board{% if i == 0 %} is-visible is-current{% endif %}" data-board="{{ i }}" style="--i: {{ i }}">
-          <img src="{{ s.image.src }}" alt="" width="{{ s.image.width }}" height="{{ s.image.height }}" loading="lazy">
-          <span class="hardware__board-label">{{ step.short }}</span>
+      <div class="hardware__visual" aria-hidden="true">
+        <div class="hardware__boards">
+          {#- Rendered in reverse so the primary board paints on top of the stack. #}
+          {%- for step in s.steps | reverse %}
+          {%- set i = total - loop.index %}
+          <div class="hardware__board{% if i == 0 %} is-visible is-current{% endif %}" data-board="{{ i }}" style="--i: {{ i }}">
+            <img src="{{ s.image.src }}" alt="" width="{{ s.image.width }}" height="{{ s.image.height }}" loading="lazy">
+            <span class="hardware__board-label">{{ step.short }}</span>
+          </div>
+          {%- endfor %}
         </div>
-        {%- endfor %}
+
+        <div class="hardware__links">
+          {%- for step in s.steps %}
+          <div class="hardware__link{% if step.flow == 'in' %} hardware__link--in{% endif %}{% if loop.first %} is-active{% endif %}" data-link="{{ loop.index0 }}" style="--i: {{ loop.index0 }}; --n: {{ (step.devices | length) + 1 }}">
+            <span class="hardware__trunk"><i></i></span>
+            <span class="hardware__bus"></span>
+            <ul class="hardware__devices">
+              {%- for device in step.devices %}
+              <li class="hardware__device" style="--d: {{ loop.index0 }}">
+                <span class="hardware__wire"><i></i></span>
+                <span class="hardware__device-icon">{{ icon(device.icon, 22) }}</span>
+                <span class="hardware__device-label">{{ device.label }}</span>
+              </li>
+              {%- endfor %}
+              <li class="hardware__device hardware__device--more" style="--d: {{ step.devices | length }}">
+                <span class="hardware__wire"></span>
+                <span class="hardware__device-icon">{{ icon("plus", 20) }}</span>
+                <span class="hardware__device-label">{{ s.more }}</span>
+              </li>
+            </ul>
+          </div>
+          {%- endfor %}
+        </div>
       </div>
     </div>
   </div>

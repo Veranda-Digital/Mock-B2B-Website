@@ -1,11 +1,16 @@
 <footer class="site-footer">
-  <div class="container">
+  <div class="container site-footer__inner">
     <a class="site-footer__logo" href="/" aria-label="{{ site.name }} home">
-      <img src="/assets/images/logo-wordmark.svg" alt="{{ site.name }}" width="1200" height="269" loading="lazy">
+      <img src="/assets/images/logo-light.svg" alt="{{ site.name }}" width="247" height="56" loading="lazy">
     </a>
-    <div class="site-footer__bottom">
-      <p>{{ "" | year }} {{ site.copyright }}</p>
+    <nav class="site-footer__links" aria-label="Footer">
+      {%- for item in navigation.primary %}
+      <a href="{{ item.href }}">{{ item.label }}</a>
+      {%- endfor %}
       <a href="{{ site.links.privacyPolicy }}" target="_blank" rel="noopener">Privacy Policy</a>
-    </div>
+    </nav>
+  </div>
+  <div class="container">
+    <p class="site-footer__legal">{{ "" | year }} {{ site.copyright }}</p>
   </div>
 </footer>

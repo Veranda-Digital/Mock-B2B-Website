@@ -4,9 +4,9 @@
 {% from "components/glow-media.njk" import glowMedia %}
 {%- set s = home.software -%}
 {%- set item = s.showcase -%}
-<section class="software" id="{{ s.id }}">
+<section class="software theme-dark" id="{{ s.id }}">
   <div class="container">
-    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body }) }}
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, tone: "dark" }) }}
 
     <div class="showcase showcase--reverse software__showcase">
       <div class="showcase__text" data-reveal>

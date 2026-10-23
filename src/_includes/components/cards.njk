@@ -30,6 +30,17 @@
 </article>
 {%- endmacro %}
 
+{# Compact capability box: icon + small uppercase label + value statement. #}
+{% macro capabilityCard(item) -%}
+<article class="capability-card" data-reveal>
+  <span class="capability-card__head">
+    <span class="icon-tile icon-tile--xs">{{ icon(item.icon, 16) }}</span>
+    <span class="capability-card__label">{{ item.label }}</span>
+  </span>
+  <p class="capability-card__title">{{ item.title }}</p>
+</article>
+{%- endmacro %}
+
 {# Icon tile + title + body. variant: "card" (cream panel) | "plain" (no background). #}
 {% macro featureCard(feature, variant = "card") -%}
 <article class="feature-card feature-card--{{ variant }}" data-reveal>

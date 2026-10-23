@@ -8,7 +8,7 @@
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.6fr) minmax(0, 1fr);
   align-items: center;
   gap: 0;
-  margin: 90px 0 100px;
+  margin: 90px 0 0;
 }
 
 .platform-diagram__side {
@@ -92,6 +92,39 @@
   padding: 16px;
   border-radius: 14px;
   background: var(--color-cream);
+}
+
+/* Stacked diagram: both columns share rows so the wireless link
+   sits on the center of two equal stacks. */
+.platform-diagram--stacked {
+  grid-template-columns: minmax(0, 1fr) 220px minmax(0, 1fr);
+  grid-template-rows: auto repeat(3, auto);
+  align-items: stretch;
+  row-gap: 10px;
+}
+
+.platform-diagram--stacked .platform-diagram__side,
+.platform-diagram--stacked .platform-diagram__list {
+  display: contents;
+}
+
+.platform-diagram--stacked .platform-diagram__side--physical .platform-diagram__label { grid-column: 1; grid-row: 1; }
+.platform-diagram--stacked .platform-diagram__side--digital .platform-diagram__label { grid-column: 3; grid-row: 1; }
+
+.platform-diagram--stacked .platform-diagram__item {
+  grid-row: var(--row);
+  align-self: stretch;
+}
+
+.platform-diagram--stacked .platform-diagram__side--physical .platform-diagram__item { grid-column: 1; }
+.platform-diagram--stacked .platform-diagram__side--digital .platform-diagram__item { grid-column: 3; }
+
+.platform-diagram--stacked .platform-diagram__link {
+  grid-column: 2;
+  grid-row: 2 / span 3;
+  width: 100%;
+  height: auto;
+  align-self: stretch;
 }
 
 /* ---- Wireless link with travelling pulses ---- */
@@ -194,6 +227,19 @@
     margin-inline: auto;
   }
 
+  .platform-diagram--stacked {
+    grid-template-rows: none;
+  }
+
+  .platform-diagram--stacked .platform-diagram__side--physical .platform-diagram__label,
+  .platform-diagram--stacked .platform-diagram__side--digital .platform-diagram__label,
+  .platform-diagram--stacked .platform-diagram__side--physical .platform-diagram__item,
+  .platform-diagram--stacked .platform-diagram__side--digital .platform-diagram__item,
+  .platform-diagram--stacked .platform-diagram__link {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
   .platform-diagram__link {
     height: 150px;
   }
@@ -234,7 +280,7 @@
   }
 
   .platform-diagram {
-    margin: 60px 0;
+    margin: 60px 0 0;
   }
 
   .platform-diagram__nest {

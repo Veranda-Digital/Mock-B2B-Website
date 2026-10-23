@@ -2,11 +2,11 @@
   "id": "software",
   "eyebrow": "Software",
   "title": "Software that manages and extends the physical system",
-  "body": "The hardware decides whether a door opens. Veranda's software decides who, when, and why — then keeps a record of everything that happened.",
+  "body": "The hardware decides whether a door opens. Veranda's software decides who, when, and why, then keeps a record of everything that happened.",
   "showcase": {
     "badge": { "label": "Veranda Dashboard App", "icon": "phone" },
     "title": "One window into the Veranda platform",
-    "body": "The Dashboard app is one interface into Veranda's software. Check the status of deliveries, open or lock a device, set access schedules, or grant access to authorized people remotely — while the same platform serves operators managing many devices and the partner systems that feed it.",
+    "body": "The Dashboard app is one interface into Veranda's software. Check the status of deliveries, open or lock a device, set access schedules, or grant access to authorized people remotely. The same platform also serves operators managing many devices and the partner systems that feed it.",
     "image": { "src": "/assets/images/dashboard-app.png", "alt": "Veranda Dashboard app on a phone", "width": 887, "height": 1825 },
     "audiences": ["Recipients & residents", "Operators & dispatch", "Partner systems"]
   },

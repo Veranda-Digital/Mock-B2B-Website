@@ -5,7 +5,7 @@
   "steps": [
     {
       "label": "Core board",
-      "body": "Every enclosure starts with the same board — authentication, actuation, and a year of battery life built in."
+      "body": "Every enclosure starts with the same board, with authentication, actuation, and a year of battery life built in."
     },
     {
       "label": "Environment board",
@@ -13,7 +13,7 @@
     },
     {
       "label": "Connectivity board",
-      "body": "Add the connectivity board for 1 km of LoRa and Bluetooth reach — no Wi-Fi, no SIM, no dependency on the site."
+      "body": "Add the connectivity board for 1 km of LoRa and Bluetooth reach, with no Wi-Fi, no SIM, and no dependency on the site."
     }
   ]
 }

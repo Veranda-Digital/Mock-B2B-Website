@@ -48,6 +48,28 @@
   background: rgba(35, 37, 44, 0.06);
 }
 
+/* Over a dark hero (e.g. video): light logo and links until the header picks up its scrolled background. */
+.site-header__logo-light {
+  display: none;
+}
+
+.site-header--on-dark:not(.is-scrolled) .site-header__logo-default {
+  display: none;
+}
+
+.site-header--on-dark:not(.is-scrolled) .site-header__logo-light {
+  display: block;
+}
+
+.site-header--on-dark:not(.is-scrolled) .site-header__link {
+  color: var(--text-on-dark);
+}
+
+.site-header--on-dark:not(.is-scrolled) .site-header__link:hover,
+.site-header--on-dark:not(.is-scrolled) .site-header__link.is-current {
+  background: rgba(247, 246, 241, 0.12);
+}
+
 @media (max-width: 809px) {
   .site-header__logo img {
     width: 140px;

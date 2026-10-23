@@ -1,30 +1,8 @@
-{% from "components/section-heading.njk" import eyebrow, sectionHeading %}
-{% from "components/cards.njk" import statRow, metricCard %}
+{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/cards.njk" import metricCard %}
 {%- set s = home.delivering -%}
-{%- set p = s.problem -%}
 {%- set m = s.impact -%}
 <section class="delivering" id="{{ s.id }}">
-  <div class="problem theme-dark">
-    <div class="problem__inner">
-      <div class="problem__heading">
-        {{ eyebrow(p.eyebrow) }}
-        <p class="problem__statement">
-          <span class="problem__lead">{{ p.lead }}</span>
-          <span class="problem__reveal" data-word-reveal>{{ p.statement }}</span>
-        </p>
-      </div>
-
-      <div class="problem__stats">
-        {%- for stat in p.stats %}
-        {{ statRow(stat) }}
-        {%- endfor %}
-        <p class="problem__citation">
-          {{ p.citation.before }}<a href="{{ site.links.mckinseyReport }}" target="_blank" rel="noopener"><em>{{ p.citation.linkText }}</em></a>{{ p.citation.after }}
-        </p>
-      </div>
-    </div>
-  </div>
-
   <div class="opportunity delivering__impact">
     <div class="container">
       {{ sectionHeading({ eyebrow: m.eyebrow, title: m.title, body: m.body }) }}

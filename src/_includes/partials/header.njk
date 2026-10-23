@@ -1,9 +1,12 @@
 {% from "components/button.njk" import button %}
 {%- set cta = headerCta or { label: "Request Evaluation Kit", href: site.links.evaluationKit } -%}
-<header class="site-header" data-site-header>
+<header class="site-header{% if headerTheme == 'dark' %} site-header--on-dark{% endif %}" data-site-header>
   <div class="container site-header__inner">
     <a class="site-header__logo" href="/" aria-label="{{ site.name }} home">
-      <img src="/assets/images/logo.svg" alt="{{ site.name }}" width="185" height="42">
+      <img class="site-header__logo-default" src="/assets/images/logo.svg" alt="{{ site.name }}" width="185" height="42">
+      {%- if headerTheme == 'dark' %}
+      <img class="site-header__logo-light" src="/assets/images/logo-light.svg" alt="" width="185" height="42">
+      {%- endif %}
     </a>
     <nav class="site-header__nav" aria-label="Primary">
       {%- for item in navigation.primary %}
