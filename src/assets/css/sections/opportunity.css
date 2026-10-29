@@ -1,5 +1,5 @@
 .opportunity {
-  padding: 150px 0 0;
+  padding: 100px 0 0;
 }
 
 .opportunity .section-heading__body {
@@ -42,7 +42,7 @@
 
 @media (max-width: 809px) {
   .opportunity {
-    padding-top: 100px;
+    padding-top: 72px;
   }
 
   .opportunity__metrics {

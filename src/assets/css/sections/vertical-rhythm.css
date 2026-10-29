@@ -1,0 +1,145 @@
+/* Tighter vertical rhythm for tablets and phones. Loaded last so these
+   override each section's own spacing. Laptop/desktop spacing lives in the
+   individual section files. */
+
+/* ---- Tablet and below ---- */
+@media (max-width: 1199px) {
+  .value,
+  .platform,
+  .partners {
+    padding-block: 72px;
+  }
+
+  .software {
+    padding: 72px 0 64px;
+  }
+
+  .app-benefits--compact {
+    padding-top: 72px;
+  }
+
+  .app-benefits--stone {
+    padding-bottom: 72px;
+  }
+
+  .case-study--compact {
+    padding-block: 72px;
+  }
+
+  .opportunity {
+    padding-top: 72px;
+  }
+
+  .get-started {
+    padding: 64px 0 80px;
+  }
+
+  .opportunity__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .platform-diagram {
+    margin-top: 40px;
+  }
+}
+
+/* ---- Phones ---- */
+@media (max-width: 809px) {
+  .value,
+  .platform,
+  .partners,
+  .case-study--compact {
+    padding-block: 64px;
+  }
+
+  .software {
+    padding: 64px 0 56px;
+  }
+
+  .app-benefits--compact,
+  .opportunity {
+    padding-top: 64px;
+  }
+
+  .app-benefits--stone {
+    padding-bottom: 64px;
+  }
+
+  .get-started {
+    padding: 56px 0 72px;
+  }
+
+  .opportunity__image {
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Platform */
+  .platform-panel__stage {
+    height: 170px;
+  }
+
+  .platform-panel__row {
+    padding: 10px 20px;
+  }
+
+  /* Value + software cards */
+  .value .capability-card,
+  .software .capability-card {
+    padding: 16px 18px;
+    gap: 8px;
+  }
+
+  /* Applications */
+  .app-benefits--compact .use-case-card__art {
+    width: 72px;
+    height: 72px;
+  }
+
+  .app-benefits--compact .application-card {
+    padding: 22px;
+    gap: 14px;
+  }
+
+  .app-benefits--compact .beyond-card {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .app-benefits--compact .beyond-card__art {
+    width: 72px;
+    height: 72px;
+  }
+
+  .app-benefits--compact .beyond-card__examples {
+    gap: 6px;
+  }
+
+  .app-benefits--compact .beyond-card__examples li {
+    padding: 8px 10px;
+  }
+
+  /* Impact metrics */
+  .delivering .metric-card {
+    gap: 8px;
+    padding: 18px 20px;
+  }
+
+  .delivering .metric-card__value {
+    margin-top: 4px;
+    font-size: 40px;
+  }
+
+  .metric-card__veranda {
+    padding-top: 10px;
+  }
+
+  .delivering__note {
+    margin-top: 20px;
+  }
+
+  /* Closing banner */
+  .cta-banner {
+    min-height: 0;
+    padding: 36px 24px;
+  }
+}

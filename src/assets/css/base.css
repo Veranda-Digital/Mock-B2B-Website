@@ -9,14 +9,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Large screens: scale the whole page uniformly, like browser zoom. Each step
-   keeps the layout about 1450-1500 CSS px wide, the same as a laptop, so the
-   design is identical, just bigger. Laptops (< 1680px) are untouched. */
-@media (min-width: 1680px) { html { --zoom: 1.15; zoom: 1.15; } }
-@media (min-width: 1920px) { html { --zoom: 1.3;  zoom: 1.3; } }
-@media (min-width: 2200px) { html { --zoom: 1.5;  zoom: 1.5; } }
-@media (min-width: 2560px) { html { --zoom: 1.75; zoom: 1.75; } }
-@media (min-width: 3000px) { html { --zoom: 2;    zoom: 2; } }
+/* Large screens: scale the whole page up slightly, like browser zoom, so it
+   isn't tiny on a big monitor. The scale stops at 1.1x, so on ultrawides,
+   TVs and projectors the content keeps a fixed size, centered in its
+   container, and only the section backgrounds stretch. Laptops (< 1680px)
+   are untouched. */
+@media (min-width: 1680px) { html { --zoom: 1.1; zoom: 1.1; } }
 
 body {
   margin: 0;

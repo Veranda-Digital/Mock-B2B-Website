@@ -5,7 +5,8 @@
 
 .delivering .metric-card {
   min-height: 0;
-  gap: 18px;
+  gap: 12px;
+  padding: 22px;
 }
 
 .delivering .metric-card__value {
@@ -18,7 +19,7 @@
   flex-direction: column;
   gap: 4px;
   width: 100%;
-  padding-top: 16px;
+  padding-top: 12px;
   border-top: 1px solid rgba(35, 37, 44, 0.1);
   font-size: var(--fs-small);
   line-height: 1.5;

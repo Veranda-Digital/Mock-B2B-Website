@@ -1,5 +1,5 @@
 .platform {
-  padding: 150px 0;
+  padding: 76px 0;
 }
 
 /* ---- Physical ⇄ digital diagram ---- */
@@ -8,7 +8,7 @@
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.6fr) minmax(0, 1fr);
   align-items: center;
   gap: 0;
-  margin: 90px 0 0;
+  margin: 44px 0 0;
 }
 
 .platform-diagram__label {
@@ -49,7 +49,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 250px;
+  height: 196px;
   overflow: hidden;
   background: radial-gradient(ellipse 60% 70% at 50% 75%, rgba(51, 209, 107, 0.22), transparent 70%);
 }
@@ -75,14 +75,14 @@
 }
 
 .platform-panel--physical .platform-panel__image {
-  width: min(290px, 78%);
-  margin-bottom: 14px;
+  width: min(262px, 78%);
+  margin-bottom: 12px;
 }
 
 /* The phone rises out of the stage and fades into the list below. */
 .platform-panel--digital .platform-panel__stage {
   align-items: flex-start;
-  padding-top: 44px;
+  padding-top: 40px;
 }
 
 .platform-panel--digital .platform-panel__image {
@@ -101,7 +101,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 16px 24px;
+  padding: 12px 24px;
   border-top: 1px solid rgba(247, 246, 241, 0.1);
   color: var(--text-on-dark);
 }
@@ -268,11 +268,11 @@
 
 @media (max-width: 809px) {
   .platform {
-    padding: 100px 0;
+    padding: 72px 0;
   }
 
   .platform-diagram {
-    margin: 60px 0 0;
+    margin: 40px 0 0;
   }
 
   /* Room above and below the chip so the pulses read as travelling

@@ -1,5 +1,5 @@
 .software {
-  padding: 140px 0 120px;
+  padding: 84px 0 72px;
 }
 
 /* Equal halves: phone on the left, copy on the right, centered in the row. */
@@ -9,7 +9,7 @@
   justify-content: center;
   gap: 48px;
   width: 100%;
-  margin: 48px 0 72px;
+  margin: 28px 0 44px;
 }
 
 .software .glow-media {
@@ -87,7 +87,7 @@
   .software .showcase--reverse {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
-    margin: 40px 0 64px;
+    margin: 28px 0 40px;
   }
 
   .software .showcase--reverse .showcase__text {
@@ -107,13 +107,13 @@
 
 @media (max-width: 809px) {
   .software {
-    padding: 100px 0 80px;
+    padding: 72px 0 64px;
   }
 
   .software .showcase--reverse {
     grid-template-columns: 1fr;
     gap: 40px;
-    margin: 56px 0 48px;
+    margin: 36px 0 36px;
   }
 
   .software .showcase--reverse .showcase__text {

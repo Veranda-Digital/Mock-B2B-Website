@@ -1,5 +1,5 @@
 .value {
-  padding: 150px 0;
+  padding: 100px 0;
   background:
     linear-gradient(323deg, var(--color-green-900) 0%, rgba(28, 81, 65, 0.8) 37%, rgba(0, 0, 0, 0.8) 103%),
     url("../../images/cta-banner.jpg") center / cover no-repeat;
@@ -100,7 +100,7 @@
 
 @media (max-width: 809px) {
   .value {
-    padding: 100px 0;
+    padding: 72px 0;
   }
 
   .value__group {

@@ -1,6 +1,6 @@
 /* Sticky five-board stack: one step of scroll per board. */
 .hardware {
-  --step-height: 480px;
+  --step-height: 460px;
   position: relative;
   height: calc(var(--steps, 5) * var(--step-height));
   background: var(--color-ink);
@@ -481,7 +481,7 @@
 
 @media (max-width: 809px) {
   .hardware {
-    --step-height: 420px;
+    --step-height: 400px;
   }
 
   .hardware__sticky {

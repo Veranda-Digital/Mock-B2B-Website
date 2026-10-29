@@ -1,5 +1,5 @@
 .partners {
-  padding: 150px 0;
+  padding: 100px 0;
 }
 
 /* Partnership scale (home): models grow as the pin nears them. JS sets
@@ -18,7 +18,7 @@
   container-type: inline-size;
   display: flex;
   flex-direction: column;
-  margin-top: 56px;
+  margin-top: 40px;
 }
 
 .partner-scale__models {
@@ -240,7 +240,7 @@
 .partners__action {
   display: flex;
   justify-content: center;
-  margin-top: 48px;
+  margin-top: 36px;
 }
 
 @media (max-width: 1199px) {
@@ -339,11 +339,11 @@
 
 @media (max-width: 809px) {
   .partners {
-    padding: 100px 0;
+    padding: 72px 0;
   }
 
   .partner-scale {
-    margin-top: 40px;
+    margin-top: 28px;
   }
 
   .partner-scale__body {

@@ -85,11 +85,11 @@
 
 /* ---- Home version: copy, three highlights, and photos ---- */
 .case-study--compact {
-  padding: 120px 0;
+  padding: 90px 0;
 }
 
 .case-study--compact .section-heading + .split-card {
-  margin-top: 56px;
+  margin-top: 40px;
 }
 
 /* Text and photos sit straight on the section, no card. */
@@ -112,7 +112,7 @@
 }
 
 .case-study--compact .split-card__media {
-  min-height: 500px;
+  min-height: 440px;
   padding: 0;
   background: none;
 }
@@ -171,7 +171,7 @@
 
 @media (max-width: 809px) {
   .case-study--compact {
-    padding: 100px 0;
+    padding: 72px 0;
   }
 
   .case-study--compact .section-heading + .split-card {
@@ -183,6 +183,6 @@
   }
 
   .case-study--compact .split-card__media {
-    min-height: 380px;
+    min-height: 340px;
   }
 }
