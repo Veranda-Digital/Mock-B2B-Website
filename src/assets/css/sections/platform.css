@@ -2,6 +2,13 @@
   padding: 76px 0;
 }
 
+/* Forest-green gradient over the banner photo (overrides the slate theme). */
+.platform.theme-ink {
+  background:
+    linear-gradient(323deg, var(--color-green-900) 0%, rgba(28, 81, 65, 0.8) 37%, rgba(0, 0, 0, 0.8) 103%),
+    url("../../images/cta-banner.jpg") center / cover no-repeat;
+}
+
 /* ---- Physical ⇄ digital diagram ---- */
 .platform-diagram {
   display: grid;

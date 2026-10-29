@@ -2,9 +2,9 @@
 {% from "components/cards.njk" import capabilityCard %}
 {% from "components/icon.njk" import icon %}
 {%- set s = home.value -%}
-<section class="value theme-dark" id="{{ s.id }}">
+<section class="value" id="{{ s.id }}">
   <div class="container">
-    {{ sectionHeading({ title: s.title, body: s.body, tone: "dark" }) }}
+    {{ sectionHeading({ title: s.title, body: s.body }) }}
 
     {%- if s.audiences %}
     <div class="value__group" data-reveal>

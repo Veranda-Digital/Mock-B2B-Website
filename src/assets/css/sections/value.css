@@ -1,8 +1,11 @@
 .value {
   padding: 100px 0;
-  background:
-    linear-gradient(323deg, var(--color-green-900) 0%, rgba(28, 81, 65, 0.8) 37%, rgba(0, 0, 0, 0.8) 103%),
-    url("../../images/cta-banner.jpg") center / cover no-repeat;
+  background: var(--color-cream);
+}
+
+/* Same coral as the rest of the site, bolder so it reads on cream. */
+.value .eyebrow--coral {
+  font-weight: 700;
 }
 
 /* Each labeled group ("Built for" / "Features") is its own centered stack. */
@@ -39,28 +42,26 @@
   gap: 8px;
   padding: 8px 16px 8px 12px;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(247, 246, 241, 0.28);
-  background: rgba(247, 246, 241, 0.1);
-  -webkit-backdrop-filter: blur(14px) saturate(150%);
-          backdrop-filter: blur(14px) saturate(150%);
+  border: 1px solid rgba(35, 37, 44, 0.1);
+  background: var(--color-white);
   font-size: var(--fs-small);
   line-height: 1.4;
   white-space: nowrap;
-  color: var(--text-on-dark);
+  color: var(--color-ink);
   transition: background-color 0.3s, border-color 0.3s;
 }
 
 .value__audience-pill:hover {
-  border-color: rgba(247, 246, 241, 0.45);
-  background: rgba(247, 246, 241, 0.18);
+  border-color: rgba(28, 81, 65, 0.4);
+  background: var(--color-white);
 }
 
 .value__audience-pill .icon {
   flex: none;
-  color: var(--color-green-500);
+  color: var(--color-green-900);
 }
 
-/* ---- What it does: glass capability cards, matching the "Built for" pills ---- */
+/* ---- What it does: cream capability cards, matching the "Built for" pills ---- */
 .value__capabilities {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -69,27 +70,25 @@
 }
 
 .value .capability-card {
-  border: 1px solid rgba(247, 246, 241, 0.28);
-  background: rgba(247, 246, 241, 0.1);
+  border: 1px solid rgba(35, 37, 44, 0.08);
+  background: var(--color-white);
   box-shadow: none;
-  -webkit-backdrop-filter: blur(14px) saturate(150%);
-          backdrop-filter: blur(14px) saturate(150%);
   transition: background-color 0.3s, border-color 0.3s, transform 0.35s var(--ease-out);
 }
 
 .value .capability-card:hover {
-  border-color: rgba(247, 246, 241, 0.45);
-  background: rgba(247, 246, 241, 0.18);
+  border-color: rgba(28, 81, 65, 0.3);
 }
 
 .value .capability-card__title {
   font-weight: 700;
-  color: var(--text-on-dark);
+  color: var(--color-ink);
 }
 
 .value .capability-card__label {
   font-size: 15px;
   letter-spacing: 0.04em;
+  color: var(--color-green-900); /* 9.1:1 on white */
 }
 
 @media (max-width: 1199px) {
