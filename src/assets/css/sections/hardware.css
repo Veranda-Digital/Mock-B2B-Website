@@ -486,7 +486,12 @@
 
   .hardware__sticky {
     align-items: flex-start;
-    padding-top: 80px;
+    padding-top: 64px;
+    /* Keeps the device row clear of the bottom section menu. */
+    padding-bottom: 96px;
+    height: 100vh;
+    height: 100svh;
+    min-height: 0;
   }
 
   .hardware__inner,
@@ -496,22 +501,47 @@
       "heading"
       "text"
       "boards";
-    gap: 28px;
+    gap: 14px;
+  }
+
+  /* Compact so the whole stack, wiring included, fits above the menu on
+     short phone screens. */
+  .hardware__inner > .section-heading {
+    gap: 8px;
+    top: 0;
+  }
+
+  .hardware__inner > .section-heading .section-heading__title {
+    font-size: 26px;
   }
 
   .hardware__text {
-    gap: 20px;
+    gap: 10px;
+  }
+
+  .hardware__progress {
+    gap: 8px;
+  }
+
+  .hardware__step {
+    gap: 12px;
+  }
+
+  .hardware__label--lg .icon-tile--sm {
+    width: 36px;
+    height: 36px;
   }
 
   .hardware__body {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.2;
   }
 
   .hardware__visual {
-    --board-w: 160px;
-    --links-gap: 10px;
-    --drop: 16px;
-    margin-top: -8px;
+    --board-w: clamp(96px, 20vh, 150px);
+    --links-gap: 8px;
+    --drop: 14px;
+    margin-top: 0;
   }
 
   .hardware__device {

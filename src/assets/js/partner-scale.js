@@ -20,6 +20,9 @@ export function initPartnerScale(root) {
   let frame = 0;
   let introPlayed = false;
 
+  // Phones stack the cards, so the rail runs vertically beside them.
+  const vertical = window.matchMedia("(max-width: 809px)");
+
   function render(next) {
     pos = clamp(next);
     pin.style.setProperty("--at", pos / last);
@@ -92,6 +95,7 @@ export function initPartnerScale(root) {
   // Pointer dragging anywhere on the rail.
   const posFromPointer = (event) => {
     const rect = stops.getBoundingClientRect();
+    if (vertical.matches) return ((event.clientY - rect.top) / rect.height) * last;
     return ((event.clientX - rect.left) / rect.width) * last;
   };
 

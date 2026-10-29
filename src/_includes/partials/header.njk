@@ -13,6 +13,20 @@
       <a class="site-header__link{% if page.url == item.href %} is-current{% endif %}" href="{{ item.href }}"{% if page.url == item.href %} aria-current="page"{% endif %}>{{ item.label }}</a>
       {%- endfor %}
       {{ button(cta.label, cta.href, "primary") }}
+      <button class="site-header__toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+        <span class="site-header__toggle-bars" aria-hidden="true"></span>
+      </button>
     </nav>
   </div>
+  {#- Mobile menu: the primary links and the CTA, which are hidden from the bar on small screens. #}
+  <nav class="site-header__menu" id="site-menu" aria-label="Menu" data-menu hidden>
+    <div class="container">
+      <div class="site-header__menu-card">
+      {%- for item in navigation.primary %}
+      <a class="site-header__menu-link{% if page.url == item.href %} is-current{% endif %}" href="{{ item.href }}"{% if page.url == item.href %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {%- endfor %}
+      {{ button(cta.label, cta.href, "dark") }}
+      </div>
+    </div>
+  </nav>
 </header>

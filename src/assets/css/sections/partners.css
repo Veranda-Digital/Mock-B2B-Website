@@ -259,6 +259,7 @@
   .partner-scale__includes ul {
     grid-template-columns: 1fr;
   }
+
 }
 
 /* Stacked: the rail moves above the list and the focused model opens up. */
@@ -351,5 +352,47 @@
 
   .partner-scale__includes ul {
     grid-template-columns: 1fr;
+  }
+
+  /* The cards stack vertically, so the slider runs vertically too, down the
+     left side. It has a fixed length and stays in view (sticky) while the
+     cards open and close, so it never moves under the finger. */
+  .partner-scale {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .partner-scale__models {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .partner-scale__rail {
+    order: -1;
+    flex: none;
+    position: sticky;
+    top: 96px;
+    width: 40px;
+    height: 260px;
+    margin: 0;
+  }
+
+  .partner-scale__stops {
+    inset: 18px 0;
+  }
+
+  .partner-scale__track {
+    inset: 18px auto 18px 50%;
+    width: 4px;
+    height: auto;
+    background: linear-gradient(180deg, var(--color-green-900), var(--color-green-500));
+    transform: translateX(-50%);
+  }
+
+  .partner-scale__tick,
+  .partner-scale__pin {
+    top: calc(var(--at) * 100%);
+    left: 50%;
   }
 }

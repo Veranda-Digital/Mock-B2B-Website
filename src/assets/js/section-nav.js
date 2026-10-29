@@ -73,4 +73,49 @@ export function initSectionNav(nav) {
   window.addEventListener("resize", () => moveIndicator(active));
   document.fonts?.ready.then(() => moveIndicator(active));
   update();
+
+  // Mobile: dragging a finger across the menu steps through the sections.
+  const mobile = window.matchMedia("(max-width: 809px)");
+  const STEP = 36; // px of drag per section
+  let drag = null;
+
+  const sectionOf = (link) => targets.find((t) => t.link === link)?.sections[0];
+
+  nav.addEventListener("pointerdown", (event) => {
+    if (!mobile.matches) return;
+    drag = {
+      id: event.pointerId,
+      x: event.clientX,
+      index: Math.max(0, links.indexOf(active)),
+      moved: false,
+    };
+  });
+
+  nav.addEventListener("pointermove", (event) => {
+    if (!drag || event.pointerId !== drag.id) return;
+    const dx = event.clientX - drag.x;
+    if (!drag.moved) {
+      if (Math.abs(dx) < 8) return;
+      drag.moved = true;
+      nav.setPointerCapture(event.pointerId);
+    }
+    const next = Math.min(links.length - 1, Math.max(0, drag.index + Math.round(dx / STEP)));
+    const section = sectionOf(links[next]);
+    if (!section || links[next] === active) return;
+    section.scrollIntoView({ behavior: "auto", block: "start" });
+  });
+
+  const endDrag = (event) => {
+    if (!drag || event.pointerId !== drag.id) return;
+    const moved = drag.moved;
+    drag = null;
+    // A swipe should not also count as a tap on whichever link is underneath.
+    if (moved) {
+      const swallow = (e) => e.stopPropagation();
+      nav.addEventListener("click", swallow, { capture: true, once: true });
+      setTimeout(() => nav.removeEventListener("click", swallow, { capture: true }), 0);
+    }
+  };
+  nav.addEventListener("pointerup", endDrag);
+  nav.addEventListener("pointercancel", endDrag);
 }

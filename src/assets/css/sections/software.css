@@ -122,7 +122,8 @@
 
   .software .glow-media {
     width: min(260px, 100%);
-    margin-top: 0;
+    /* The phone rises above the disc; leave room so it clears the pills. */
+    margin-top: 80px;
     margin-inline: auto;
   }
 

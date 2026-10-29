@@ -274,4 +274,10 @@
   .platform-diagram {
     margin: 60px 0 0;
   }
+
+  /* Room above and below the chip so the pulses read as travelling
+     from the hardware to the software. */
+  .platform-diagram--panels .platform-diagram__link {
+    height: 260px;
+  }
 }

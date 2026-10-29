@@ -64,19 +64,49 @@
   opacity: 1;
 }
 
+/* Mobile: only the current section shows its name; the rest are dots.
+   Swiping left or right on the menu steps through the sections. */
 @media (max-width: 809px) {
   .section-nav {
     bottom: 16px;
     max-width: calc(100vw - 24px);
+    /* The menu handles horizontal swipes itself. */
+    touch-action: none;
   }
 
   .section-nav__list {
-    overflow-x: auto;
-    scrollbar-width: none;
+    align-items: center;
+    gap: 0;
+    padding: 5px;
+  }
+
+  .section-nav__indicator {
+    display: none;
   }
 
   .section-nav__link {
-    padding: 9px 12px;
+    padding: 14px 9px;
+    border-radius: var(--radius-pill);
+    font-size: 0;
+    transition: padding 0.35s var(--ease-out), font-size 0.35s var(--ease-out), background-color 0.35s, color 0.35s;
+  }
+
+  .section-nav__link::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(247, 246, 241, 0.45);
+  }
+
+  .section-nav__link.is-active {
+    padding: 9px 18px;
     font-size: 13px;
+    background: var(--color-green-500);
+  }
+
+  .section-nav__link.is-active::before {
+    display: none;
   }
 }
