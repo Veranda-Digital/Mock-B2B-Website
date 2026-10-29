@@ -9,14 +9,6 @@
   overflow: hidden;
 }
 
-.hero__route {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .hero__content {
   position: relative;
   z-index: 1;
@@ -32,38 +24,6 @@
   color: var(--color-ink);
 }
 
-.hero__body {
-  max-width: 660px;
-  color: var(--color-text);
-}
-
-.hero__pillars {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin: 28px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.hero__pillar {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px 6px 10px;
-  border: 1px solid rgba(28, 81, 65, 0.18);
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.6);
-  font-size: var(--fs-small);
-  line-height: 1.5;
-  color: var(--color-ink);
-}
-
-.hero__pillar .icon {
-  color: var(--color-green-900);
-}
-
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -72,65 +32,12 @@
   margin-top: 16px;
 }
 
-/* Hero with capability boxes: tighter spacing so the boxes sit above the fold. */
-.hero--capabilities {
-  padding: 96px 0 56px;
-}
-
-.hero--capabilities .hero__title {
-  max-width: 880px;
-}
-
-.hero__capabilities {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--grid-gap);
-  width: 100%;
-  max-width: 1080px;
-  margin-top: 8em;
-}
-
-/* Without the intro paragraph, pull the cards up so the headline, buttons,
-   and cards stay one centered group with a clear band of video between them. */
-.hero--video .hero__capabilities {
-  margin-top: 6em;
-}
-
-@media (max-width: 1199px) {
-  .hero__capabilities {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 809px) {
-  .hero--capabilities {
-    padding: 110px 0 60px;
-  }
-
-  .hero__capabilities,
-  .hero--video .hero__capabilities {
-    grid-template-columns: 1fr;
-    margin-top: 28px;
-  }
-}
-
 .hero__stage {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-}
-
-/* Loop frames the headline block only; the hero clips any overflow at the sides. */
-.hero--capabilities .hero__route {
-  inset: auto;
-  top: -72px;
-  left: 50%;
-  width: min(1240px, 100vw);
-  height: calc(100% + 136px);
-  transform: translateX(-50%);
-  z-index: -1;
 }
 
 .hero__title-accent {
@@ -185,27 +92,24 @@
 }
 
 .hero--video .hero__title {
+  max-width: none;
   color: var(--text-on-dark);
+}
+
+.hero--video .hero__content {
+  container-type: inline-size;
+}
+
+.hero--video .hero__title-line {
+  display: block;
+  font-size: min(76px, 6.2cqi);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
 }
 
 .hero--video .hero__title-accent {
   color: var(--color-green-500);
-}
-
-.hero--video .hero__body {
-  color: rgba(247, 246, 241, 0.84);
-}
-
-.hero--video .capability-card {
-  border: 1px solid rgba(247, 246, 241, 0.16);
-  background: rgba(247, 246, 241, 0.1);
-  box-shadow: none;
-  -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
-}
-
-.hero--video .capability-card__title {
-  color: var(--text-on-dark);
 }
 
 .hero__scenes {
@@ -266,6 +170,12 @@
 @media (max-width: 809px) {
   .hero--video {
     padding-bottom: 60px;
+  }
+
+  .hero--video .hero__title-line {
+    font-size: var(--fs-h1);
+    letter-spacing: -0.02em;
+    white-space: normal;
   }
 
   .hero__scenes {

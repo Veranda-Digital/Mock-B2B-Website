@@ -58,16 +58,6 @@
   padding-left: 60px;
 }
 
-.hardware__intro {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.hardware__title {
-  color: var(--text-on-dark);
-}
-
 /* ---- Progress ---- */
 .hardware__progress {
   display: flex;
@@ -79,36 +69,6 @@
   font-family: var(--font-mono);
   font-size: var(--fs-small);
   color: var(--color-green-500);
-}
-
-.hardware__dots {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.hardware__dot {
-  padding: 4px 10px;
-  border: 1px solid rgba(247, 246, 241, 0.2);
-  border-radius: var(--radius-pill);
-  font-size: 12px;
-  line-height: 1.5;
-  color: rgba(247, 246, 241, 0.55);
-  transition: background-color 0.35s, color 0.35s, border-color 0.35s;
-}
-
-.hardware__dot.is-done {
-  border-color: rgba(51, 209, 107, 0.5);
-  color: var(--text-on-dark);
-}
-
-.hardware__dot.is-active {
-  border-color: var(--color-green-500);
-  background: var(--color-green-500);
-  color: var(--color-ink);
 }
 
 /* ---- Steps ---- */
@@ -521,10 +481,6 @@
 
   .hardware__text {
     gap: 20px;
-  }
-
-  .hardware__title {
-    font-size: 30px;
   }
 
   .hardware__body {

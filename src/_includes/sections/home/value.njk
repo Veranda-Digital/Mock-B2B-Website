@@ -1,0 +1,29 @@
+{% from "components/section-heading.njk" import sectionHeading, eyebrow %}
+{% from "components/cards.njk" import capabilityCard %}
+{% from "components/icon.njk" import icon %}
+{%- set s = home.value -%}
+<section class="value theme-dark" id="{{ s.id }}">
+  <div class="container">
+    {{ sectionHeading({ title: s.title, body: s.body, tone: "dark" }) }}
+
+    {%- if s.audiences %}
+    <div class="value__group" data-reveal>
+      {{ eyebrow(s.audienceLabel, "coral") }}
+      <ul class="value__audience-list">
+        {%- for a in s.audiences %}
+        <li class="value__audience-pill">{{ icon(a.icon, 16) }}<span>{{ a.label }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+
+    <div class="value__group">
+      {{ eyebrow(s.featuresLabel, "coral") }}
+      <div class="value__capabilities">
+        {%- for c in s.capabilities %}
+        {{ capabilityCard(c) }}
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>

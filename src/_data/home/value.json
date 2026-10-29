@@ -1,0 +1,19 @@
+{
+  "id": "value",
+  "title": "Making access more intelligent",
+  "body": "Unattended handoffs used to mean blind trust: no record of who showed up, what changed hands, or whether anything went wrong along the way. Veranda was built to close that gap.",
+  "audienceLabel": "Built for",
+  "featuresLabel": "Benefits",
+  "audiences": [
+    { "icon": "truck", "label": "Logistics & last-mile delivery" },
+    { "icon": "heart", "label": "Healthcare & pharma" },
+    { "icon": "building", "label": "Multifamily & commercial property" },
+    { "icon": "door", "label": "Facilities & restricted access" }
+  ],
+  "capabilities": [
+    { "icon": "signature", "label": "Authorization", "title": "Give access to only those who need it and only when they need it." },
+    { "icon": "eye", "label": "Auditability", "title": "See everything, from access logs to temperature, air quality, battery levels, and more." },
+    { "icon": "calendar-check", "label": "Automation", "title": "Build schedules, triggers, and alerts that keep things running on their own." },
+    { "icon": "puzzle", "label": "Integration", "title": "Plug into the apps, systems, and physical products your operation already uses." }
+  ]
+}

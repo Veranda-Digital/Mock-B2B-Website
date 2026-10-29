@@ -2,14 +2,41 @@
   "id": "partners",
   "eyebrow": "Partnership & integration",
   "title": "Work with Veranda the way your product needs",
-  "body": "Some partners want a complete, ready-to-run solution. Others want a single board, the software, or the right to build their own branded product on the platform.",
-  "spectrum": { "start": "Veranda delivers more", "end": "You build more" },
+  "body": "Take the full platform as a turnkey solution, pick only the parts you need, or meet us in the middle with something built just for you.",
+  "scaleLabel": "Partnership model",
+  "includesLabel": "What's included",
+  "start": 2,
   "models": [
-    { "icon": "box", "title": "Complete solution", "body": "Deploy Veranda end to end (reference enclosure, hardware, and software) as a ready-to-run program." },
-    { "icon": "puzzle", "title": "Component integration", "body": "Integrate selected hardware boards or software services into the products and systems you already run." },
-    { "icon": "key", "title": "Technology licensing", "body": "License the platform to build access, monitoring, and automation into your own product line." },
-    { "icon": "tag", "title": "White label", "body": "Bring a Veranda-powered product to market under your own brand, as Dion's Chicago Dream is doing with the Dream Box." },
-    { "icon": "wrench", "title": "Custom development", "body": "Co-develop enclosures, boards, or workflows with our team for requirements no off-the-shelf product meets." }
+    {
+      "icon": "box",
+      "title": "Complete solution",
+      "body": "Launch a secure access program without building anything yourself. We supply the enclosure, hardware, software, and support as one ready-to-run system.",
+      "includes": ["Reference enclosures", "Locking hardware & sensors", "Cloud software & apps", "Deployment & ongoing support"]
+    },
+    {
+      "icon": "tag",
+      "title": "White label",
+      "body": "Bring a proven product to market under your own name, in a fraction of the time it takes to build one. You own the brand and the customer; we power everything underneath.",
+      "includes": ["Your brand on product & apps", "Proven, field-ready hardware", "Platform updates handled", "You own the customer"]
+    },
+    {
+      "icon": "wrench",
+      "title": "Custom development",
+      "body": "A solution designed around your product. Our engineers work alongside yours to build custom hardware and software for requirements no off-the-shelf product meets.",
+      "includes": ["Custom enclosures & boards", "Tailored software & workflows", "Dedicated engineering team", "Prototype through production"]
+    },
+    {
+      "icon": "key",
+      "title": "Technology licensing",
+      "body": "Put Veranda's technology inside your own product line. License the platform and ship access, monitoring, and automation as features of products you already sell.",
+      "includes": ["Hardware designs", "Software platform license", "Your product, your roadmap", "Engineering guidance"]
+    },
+    {
+      "icon": "puzzle",
+      "title": "Component integration",
+      "body": "Fill the gap in the systems you already run. Add a single lock or sensor board, or connect one software service, without replacing what already works.",
+      "includes": ["Individual hardware boards", "Standalone software services", "Fits existing systems", "Integration support"]
+    }
   ],
   "button": { "label": "Explore ways to work with us", "href": "/work-with-us/" }
 }

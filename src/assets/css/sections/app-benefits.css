@@ -145,6 +145,73 @@
   font-size: 28px;
 }
 
+/* ---- Compact home version: smaller art, tighter rhythm ---- */
+.app-benefits--compact {
+  padding-top: 120px;
+}
+
+.app-benefits--compact .app-benefits__group {
+  margin-top: 48px;
+}
+
+.app-benefits--compact .app-benefits__group-label {
+  margin-bottom: 16px;
+}
+
+.app-benefits--compact .application-card {
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 28px;
+}
+
+.app-benefits--compact .use-case-card__art {
+  width: 120px;
+  height: 120px;
+  margin: 0;
+}
+
+.app-benefits--compact .use-case-card__content {
+  flex: 1;
+  gap: 12px;
+}
+
+.app-benefits--compact .application-card__outcomes {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.app-benefits--compact .beyond-card {
+  grid-template-columns: 120px minmax(0, 1fr) minmax(0, 1fr);
+  gap: 36px;
+  padding: 28px;
+}
+
+.app-benefits--compact .beyond-card__art {
+  width: 120px;
+  height: 120px;
+}
+
+.app-benefits--compact .beyond-card__examples {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.app-benefits--compact .app-benefits__outcomes {
+  margin-top: 100px;
+  padding: 100px 0 120px;
+}
+
+@media (max-width: 1199px) {
+  .app-benefits--compact .beyond-card {
+    grid-template-columns: 100px minmax(0, 1fr);
+  }
+
+  .app-benefits--compact .beyond-card__art {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 @media (max-width: 1199px) {
   .app-benefits__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -197,5 +264,20 @@
 
   .app-benefits__outcomes .accordion-item__title {
     font-size: 22px;
+  }
+
+  .app-benefits--compact .use-case-card__art {
+    width: 96px;
+    height: 96px;
+  }
+
+  .app-benefits--compact .beyond-card,
+  .app-benefits--compact .beyond-card__examples {
+    grid-template-columns: 1fr;
+  }
+
+  .app-benefits--compact .app-benefits__outcomes {
+    margin-top: 72px;
+    padding: 80px 0 96px;
   }
 }

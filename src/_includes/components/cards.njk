@@ -1,18 +1,7 @@
 {% from "components/icon.njk" import icon %}
 {% from "components/badge.njk" import tag %}
 
-{# Applications card: illustration on top, title + body pinned to the bottom. #}
-{% macro useCaseCard(card) -%}
-<article class="use-case-card" data-reveal>
-  <img class="use-case-card__art" src="{{ card.illustration }}" alt="" width="220" height="220" loading="lazy">
-  <div class="use-case-card__content">
-    <h5 class="use-case-card__title">{{ card.title }}</h5>
-    <p class="use-case-card__body">{{ card.body }}</p>
-  </div>
-</article>
-{%- endmacro %}
-
-{# Use case card with a row of outcome tags under the copy. #}
+{# Applications card: illustration, copy, and a row of outcome tags. #}
 {% macro applicationCard(card) -%}
 <article class="use-case-card application-card" data-reveal>
   <img class="use-case-card__art" src="{{ card.illustration }}" alt="" width="220" height="220" loading="lazy">
@@ -60,12 +49,4 @@
   <p class="metric-card__veranda"><span>{{ verandaLabel }}</span>{{ metric.veranda }}</p>
   {%- endif %}
 </article>
-{%- endmacro %}
-
-{# Problem section stat row. #}
-{% macro statRow(stat) -%}
-<div class="stat-row" data-reveal>
-  <p class="stat-row__value">{{ stat.value }}</p>
-  <p class="stat-row__label">{{ stat.label }}</p>
-</div>
 {%- endmacro %}

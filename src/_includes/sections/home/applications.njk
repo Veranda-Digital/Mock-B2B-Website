@@ -3,7 +3,7 @@
 {% from "components/accordion.njk" import accordionItem %}
 {% from "components/icon.njk" import icon %}
 {%- set s = home.applications -%}
-<section class="app-benefits" id="{{ s.id }}">
+<section class="app-benefits app-benefits--compact" id="{{ s.id }}">
   <div class="container">
     {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, align: "start" }) }}
 

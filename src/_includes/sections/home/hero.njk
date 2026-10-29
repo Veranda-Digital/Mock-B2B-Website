@@ -19,7 +19,7 @@
   <div class="container hero__content">
     <div class="hero__stage">
       {{ eyebrow(hero.eyebrow, "light" if hero.videos else "green") }}
-      <h1 class="hero__title" data-reveal>{{ hero.title }}{% if hero.titleAccent %} <span class="hero__title-accent">{{ hero.titleAccent | keepHyphenated | safe }}</span>{% endif %}</h1>
+      <h1 class="hero__title" data-reveal><span class="hero__title-line">{{ hero.title }}</span>{% if hero.titleAccent %} <span class="hero__title-accent">{{ hero.titleAccent | keepHyphenated | safe }}</span>{% endif %}</h1>
       {%- if hero.body %}
       <p class="hero__body" data-reveal>{{ hero.body }}</p>
       {%- endif %}

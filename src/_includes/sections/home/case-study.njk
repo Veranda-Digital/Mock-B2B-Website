@@ -3,7 +3,7 @@
 {% from "components/button.njk" import button %}
 {% from "components/icon.njk" import icon %}
 {%- set s = home.caseStudy -%}
-<section class="case-study theme-dark" id="{{ s.id }}">
+<section class="case-study case-study--compact theme-dark" id="{{ s.id }}">
   <div class="container">
     {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, tone: "dark" }) }}
 
@@ -11,37 +11,24 @@
       <div class="split-card__text">
         {{ tag(s.feature.tag, "pink", "sm") }}
         <h3 class="split-card__title">{{ s.feature.title }}</h3>
-        {%- if s.feature.body %}<p class="split-card__body">{{ s.feature.body }}</p>{% endif %}
+        <p class="split-card__body">{{ s.feature.body }}</p>
+        <ul class="case-highlights">
+          {%- for h in s.feature.highlights %}
+          <li class="case-highlights__item">
+            <span class="icon-tile icon-tile--sm">{{ icon(h.icon, 18) }}</span>
+            <div>
+              <h6 class="case-highlights__title">{{ h.title }}</h6>
+              <p class="case-highlights__body">{{ h.body }}</p>
+            </div>
+          </li>
+          {%- endfor %}
+        </ul>
       </div>
       <div class="split-card__media">
         {%- for photo in s.feature.photos %}
         <img class="split-card__photo split-card__photo--{{ loop.index }}" src="{{ photo.src }}" alt="{{ photo.alt }}" width="{{ photo.width }}" height="{{ photo.height }}" loading="lazy">
         {%- endfor %}
       </div>
-    </div>
-
-    <div class="case-roles" data-reveal>
-      {%- for role in s.roles %}
-      <div class="case-roles__col case-roles__col--{{ role.tone }}">
-        <p class="case-roles__label">{{ role.label }}</p>
-        <ul>
-          {%- for item in role.items %}
-          <li>{{ icon("arrow-right" if role.tone == "partner" else "badge-check", 16) }}<span>{{ item }}</span></li>
-          {%- endfor %}
-        </ul>
-      </div>
-      {%- if loop.first %}<span class="case-roles__join" aria-hidden="true">{{ icon("plus", 18, 2) }}</span>{% endif %}
-      {%- endfor %}
-    </div>
-
-    <div class="case-points">
-      {%- for point in s.points %}
-      <article class="case-points__item" data-reveal>
-        <p class="case-points__index">{{ "0" + loop.index }}</p>
-        <h5>{{ point.title }}</h5>
-        <p>{{ point.body }}</p>
-      </article>
-      {%- endfor %}
     </div>
 
     <div class="case-study__action" data-reveal>

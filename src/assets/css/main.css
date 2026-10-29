@@ -17,12 +17,10 @@
 
 /* Sections */
 @import url("./sections/hero.css");
-@import url("./sections/applications.css");
+@import url("./sections/value.css");
 @import url("./sections/solution.css");
-@import url("./sections/modules.css");
 @import url("./sections/case-study.css");
 @import url("./sections/benefits.css");
-@import url("./sections/problem.css");
 @import url("./sections/opportunity.css");
 @import url("./sections/get-started.css");
 @import url("./sections/platform.css");

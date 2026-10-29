@@ -3,40 +3,18 @@
   "eyebrow": "Case Study : Dion's Chicago Dream",
   "title": "Delivering Better for Chicago",
   "feature": {
-    "tag": "A partner-led application",
-    "title": "Their product. Our platform.",
-    "body": "Dion's Chicago Dream moves 325,000 pounds of fresh produce each month to more than 5,400 households a week, across every Chicago neighborhood. Together, Veranda and Dion's Chicago Dream created DreamBox to cover the last few feet of that journey. It runs on battery over long-range wireless, with no power, Wi-Fi, or installer, keeping food fresh, opening only for an authorized carrier, and flagging anything out of the ordinary.",
+    "tag": "Complete solution",
+    "title": "Their mission. Our box.",
+    "body": "Dion's Chicago Dream moves 325,000 pounds of fresh produce each month to more than 5,400 households a week, reaching every Chicago neighborhood so that healthy food isn't decided by zip code. Veranda built the Dream Box to handle the last few feet: a smart, battery-powered drop box that needs no power, Wi-Fi, or installer.",
+    "highlights": [
+      { "icon": "clock", "title": "Faster", "body": "Drivers drop and go. No waiting at the door, no second trip." },
+      { "icon": "lock", "title": "More secure", "body": "Opens only for an authorized carrier, and logs every access." },
+      { "icon": "thermometer", "title": "Fresher", "body": "Monitors conditions inside and flags anything out of the ordinary." }
+    ],
     "photos": [
       { "src": "/assets/images/dream-box-warehouse.jpg", "alt": "Volunteers packing produce boxes", "width": 1334, "height": 2000 },
       { "src": "/assets/images/dream-box-chicago.jpg", "alt": "Dion sitting on a Dream Box by Lake Michigan", "width": 1000, "height": 1500 }
     ]
   },
-  "roles": [
-    {
-      "label": "Dion's Chicago Dream brings",
-      "tone": "partner",
-      "items": [
-        "The food-access program and its community network",
-        "The Dream Box product, brand, and enclosure",
-        "Delivery operations across Chicago neighborhoods",
-        "Relationships with the households it serves"
-      ]
-    },
-    {
-      "label": "Veranda provides",
-      "tone": "veranda",
-      "items": [
-        "Locking hardware and the modular board stack",
-        "Temperature and environmental sensing",
-        "Long-range BLE + LoRaWAN connectivity",
-        "Cloud software with one view across every box"
-      ]
-    }
-  ],
-  "points": [
-    { "title": "The challenge", "body": "Fresh food arrives on a schedule, but the households receiving it often can't be home to meet it. A doorstep drop risks spoilage and theft; a missed one means another trip." },
-    { "title": "How it fits", "body": "The Dream Box slots into the program's existing routes. Carriers are verified automatically, and the program sees what has arrived, its condition, and who has access." },
-    { "title": "Intended value", "body": "For the organization: fewer failed drops and less waste. For households: fresh food that's there when they get home, closing the gap between a meal grown and a meal received." }
-  ],
   "button": { "label": "More about the Dream Box", "href": "https://getveranda.com/" }
 }

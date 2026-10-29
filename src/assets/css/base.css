@@ -63,6 +63,14 @@ section[id] {
   color: var(--text-on-dark);
 }
 
+/* Dark, but not the brand green — used to keep two green sections from
+   sitting back-to-back (e.g. the platform section, between the green
+   value and software sections). */
+.theme-ink {
+  background: var(--color-ink);
+  color: var(--text-on-dark);
+}
+
 .nowrap {
   white-space: nowrap;
 }

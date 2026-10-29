@@ -11,12 +11,6 @@
   margin: 90px 0 0;
 }
 
-.platform-diagram__side {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
 .platform-diagram__label {
   font-family: var(--font-mono);
   font-size: var(--fs-eyebrow);
@@ -25,106 +19,117 @@
   color: var(--color-coral-400);
 }
 
-.platform-diagram__item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--color-ink);
+/* ---- Panel diagram (home): two matching glass panels joined by the wireless link ---- */
+.platform-diagram--panels {
+  grid-template-columns: minmax(0, 1fr) 230px minmax(0, 1fr);
+  align-items: stretch;
+  max-width: 1100px;
+  margin-inline: auto;
 }
 
-.platform-diagram__item strong {
+.platform-diagram--panels .platform-diagram__chip {
+  max-width: 140px;
+}
+
+.platform-panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(247, 246, 241, 0.16);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, rgba(247, 246, 241, 0.08), rgba(247, 246, 241, 0.03));
+  box-shadow: inset 0 1px 0 rgba(247, 246, 241, 0.08), 0 30px 60px -40px rgba(0, 0, 0, 0.7);
+}
+
+/* Both stages share one height so the box and the app carry equal weight. */
+.platform-panel__stage {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 250px;
+  overflow: hidden;
+  background: radial-gradient(ellipse 60% 70% at 50% 75%, rgba(51, 209, 107, 0.22), transparent 70%);
+}
+
+.platform-panel__stage .platform-diagram__label {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+}
+
+.platform-panel__images {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 32px;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.platform-panel__image {
+  display: block;
+  height: auto;
+}
+
+.platform-panel--physical .platform-panel__image {
+  width: min(290px, 78%);
+  margin-bottom: 14px;
+}
+
+/* The phone rises out of the stage and fades into the list below. */
+.platform-panel--digital .platform-panel__stage {
+  align-items: flex-start;
+  padding-top: 44px;
+}
+
+.platform-panel--digital .platform-panel__image {
+  width: min(170px, 44%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 58%);
+          mask-image: linear-gradient(to bottom, #000 30%, transparent 58%);
+}
+
+.platform-panel__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.platform-panel__row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(247, 246, 241, 0.1);
+  color: var(--text-on-dark);
+}
+
+.platform-panel__row strong {
   display: block;
   font-size: var(--fs-body);
   font-weight: 600;
   line-height: 1.25;
 }
 
-.platform-diagram__item small {
+.platform-panel__row small {
   display: block;
   font-size: 13px;
   line-height: 1.4;
-  color: #5b5e66;
+  color: rgba(247, 246, 241, 0.62);
 }
 
-.platform-diagram__icon {
+.platform-panel__icon {
   flex: none;
   display: grid;
   place-items: center;
   width: 36px;
   height: 36px;
+  border: 1px solid rgba(51, 209, 107, 0.3);
   border-radius: var(--radius-md);
-  background: var(--color-green-900);
-  color: var(--color-cream);
-}
-
-/* Nested layers: each sits inside the previous one. */
-.platform-diagram__nest {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding: 16px;
-  border-radius: 14px;
-}
-
-.platform-diagram__nest--1 {
-  background: var(--color-cream);
-  box-shadow: 0 0 40px -12px rgba(51, 209, 107, 0.45);
-}
-
-.platform-diagram__nest--2 { background: #ecebe3; }
-.platform-diagram__nest--3 { background: #dfeee4; }
-
-.platform-diagram__nest--4 {
-  background: var(--color-green-100);
-  box-shadow: inset 0 0 0 1px rgba(28, 81, 65, 0.2);
-}
-
-.platform-diagram__list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.platform-diagram__list .platform-diagram__item {
-  padding: 16px;
-  border-radius: 14px;
-  background: var(--color-cream);
-}
-
-/* Stacked diagram: both columns share rows so the wireless link
-   sits on the center of two equal stacks. */
-.platform-diagram--stacked {
-  grid-template-columns: minmax(0, 1fr) 220px minmax(0, 1fr);
-  grid-template-rows: auto repeat(3, auto);
-  align-items: stretch;
-  row-gap: 10px;
-}
-
-.platform-diagram--stacked .platform-diagram__side,
-.platform-diagram--stacked .platform-diagram__list {
-  display: contents;
-}
-
-.platform-diagram--stacked .platform-diagram__side--physical .platform-diagram__label { grid-column: 1; grid-row: 1; }
-.platform-diagram--stacked .platform-diagram__side--digital .platform-diagram__label { grid-column: 3; grid-row: 1; }
-
-.platform-diagram--stacked .platform-diagram__item {
-  grid-row: var(--row);
-  align-self: stretch;
-}
-
-.platform-diagram--stacked .platform-diagram__side--physical .platform-diagram__item { grid-column: 1; }
-.platform-diagram--stacked .platform-diagram__side--digital .platform-diagram__item { grid-column: 3; }
-
-.platform-diagram--stacked .platform-diagram__link {
-  grid-column: 2;
-  grid-row: 2 / span 3;
-  width: 100%;
-  height: auto;
-  align-self: stretch;
+  background: rgba(51, 209, 107, 0.12);
+  color: var(--color-green-500);
 }
 
 /* ---- Wireless link with travelling pulses ---- */
@@ -212,10 +217,6 @@
   color: var(--color-green-100);
 }
 
-.platform .feature-card--card {
-  min-height: 300px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .platform-diagram__wire i { animation: none; display: none; }
 }
@@ -227,21 +228,12 @@
     margin-inline: auto;
   }
 
-  .platform-diagram--stacked {
-    grid-template-rows: none;
-  }
-
-  .platform-diagram--stacked .platform-diagram__side--physical .platform-diagram__label,
-  .platform-diagram--stacked .platform-diagram__side--digital .platform-diagram__label,
-  .platform-diagram--stacked .platform-diagram__side--physical .platform-diagram__item,
-  .platform-diagram--stacked .platform-diagram__side--digital .platform-diagram__item,
-  .platform-diagram--stacked .platform-diagram__link {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
   .platform-diagram__link {
     height: 150px;
+  }
+
+  .platform-diagram--panels .platform-diagram__link {
+    height: 130px;
   }
 
   /* Wires run vertically when the diagram stacks. */
@@ -281,13 +273,5 @@
 
   .platform-diagram {
     margin: 60px 0 0;
-  }
-
-  .platform-diagram__nest {
-    padding: 12px;
-  }
-
-  .platform .feature-card--card {
-    min-height: 0;
   }
 }

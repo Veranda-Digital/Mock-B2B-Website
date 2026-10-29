@@ -2,25 +2,48 @@
 {% from "components/button.njk" import button %}
 {% from "components/icon.njk" import icon %}
 {%- set s = home.partners -%}
+{%- set last = s.models | length - 1 -%}
 <section class="partners" id="{{ s.id }}">
   <div class="container">
     {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body }) }}
 
-    <div class="partners__panel" data-reveal>
-      <div class="partners__spectrum" aria-hidden="true">
-        <span>{{ s.spectrum.start }}</span>
-        <span class="partners__track"></span>
-        <span>{{ s.spectrum.end }}</span>
-      </div>
-      <ol class="partners__models">
+    <div class="partner-scale" data-partner-scale data-start="{{ s.start }}" style="--count: {{ s.models | length }}" data-reveal>
+      <ol class="partner-scale__models">
         {%- for m in s.models %}
-        <li class="partner-model">
-          <span class="icon-tile">{{ icon(m.icon, 22) }}</span>
-          <h5 class="partner-model__title">{{ m.title }}</h5>
-          <p class="partner-model__body">{{ m.body }}</p>
+        <li class="partner-scale__model{% if loop.index0 == s.start %} is-active{% endif %}" data-model="{{ loop.index0 }}" style="--focus: {{ 1 if loop.index0 == s.start else 0 }}">
+          <div class="partner-scale__head">
+            <span class="icon-tile partner-scale__icon">{{ icon(m.icon, 22) }}</span>
+            <span class="partner-scale__index">{{ "0" + loop.index }}</span>
+          </div>
+          <h5 class="partner-scale__title">{{ m.title }}</h5>
+          <div class="partner-scale__detail">
+            <p class="partner-scale__body">{{ m.body }}</p>
+            <div class="partner-scale__includes">
+              <span class="partner-scale__includes-label">{{ s.includesLabel }}</span>
+              <ul>
+                {%- for item in m.includes %}
+                <li>{{ icon("badge-check", 16) }}{{ item }}</li>
+                {%- endfor %}
+              </ul>
+            </div>
+          </div>
+          <span class="partner-scale__more" aria-hidden="true">{{ icon("plus", 16) }}</span>
         </li>
         {%- endfor %}
       </ol>
+
+      <div class="partner-scale__rail" data-rail>
+        <span class="partner-scale__track" aria-hidden="true"></span>
+        <div class="partner-scale__stops" data-stops>
+          {%- for m in s.models %}
+          <span class="partner-scale__tick" data-tick="{{ loop.index0 }}" style="--at: {{ loop.index0 / last }}" aria-hidden="true"></span>
+          {%- endfor %}
+          <span class="partner-scale__pin" data-pin role="slider" tabindex="0"
+            aria-label="{{ s.scaleLabel }}" aria-valuemin="0" aria-valuemax="{{ last }}"
+            aria-valuenow="{{ s.start }}" aria-valuetext="{{ s.models[s.start].title }}"
+            style="--at: {{ s.start / last }}"></span>
+        </div>
+      </div>
     </div>
 
     <div class="partners__action" data-reveal>

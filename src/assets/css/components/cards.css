@@ -126,27 +126,6 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* ---- Stat row (Problem) ---- */
-.stat-row {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding: 48px 40px;
-  border-bottom: 1px solid var(--color-green-500);
-}
-
-.stat-row__value {
-  font-size: var(--fs-stat);
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: var(--color-green-500);
-}
-
-.stat-row__label {
-  color: var(--text-on-dark);
-}
-
 @media (max-width: 1199px) {
   .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -166,9 +145,6 @@
     min-height: 300px;
   }
 
-  .stat-row {
-    padding: 36px 24px;
-  }
 }
 
 /* ---- Capability card (hero) ---- */

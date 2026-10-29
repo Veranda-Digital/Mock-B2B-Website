@@ -3,7 +3,7 @@
   "title": "The intelligent access platform.",
   "titleAccent": "Solving last-mile delivery, unattended exchanges, access to facilities, and more.",
   "buttons": [
-    { "label": "Explore the Platform", "href": "#platform", "variant": "light" },
+    { "label": "Explore the Platform", "href": "#value", "variant": "light" },
     { "label": "Request an Evaluation Kit", "href": "/investors/", "variant": "primary" }
   ],
   "videos": [
@@ -11,11 +11,5 @@
     { "src": "/assets/video/hero/logistics.mp4", "poster": "/assets/video/hero/logistics.jpg", "label": "Business Exchanges" },
     { "src": "/assets/video/hero/healthcare.mp4", "poster": "/assets/video/hero/healthcare.jpg", "label": "Pharmaceuticals & Healthcare" },
     { "src": "/assets/video/hero/access.mp4", "poster": "/assets/video/hero/access.jpg", "label": "Authorized Entry" }
-  ],
-  "capabilities": [
-    { "icon": "signature", "label": "Authorization", "title": "Give access to only those who need it, when they need it." },
-    { "icon": "eye", "label": "Auditability", "title": "See everything you need to know, from access logs to temperatures, battery life, and more." },
-    { "icon": "calendar-check", "label": "Automation", "title": "Build schedules, triggers, and alerts that keep every access point running on its own." },
-    { "icon": "puzzle", "label": "Integration", "title": "Plug into the products, apps, and systems your operation already runs on." }
   ]
 }

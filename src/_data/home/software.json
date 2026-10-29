@@ -11,11 +11,11 @@
     "audiences": ["Recipients & residents", "Operators & dispatch", "Partner systems"]
   },
   "responsibilities": [
-    { "icon": "key", "title": "Access & permissions", "body": "Decide who can open which access point, and change or revoke those rights at any time." },
-    { "icon": "calendar-check", "title": "Scheduled access", "body": "Set recurring windows for planned deliveries, service visits, and pickups." },
-    { "icon": "activity", "title": "Device & sensor monitoring", "body": "Follow lock state, battery, connectivity, and sensor readings across every device." },
-    { "icon": "eye", "title": "Activity & events", "body": "Review a complete history of opens, closes, and changes in condition." },
-    { "icon": "bell", "title": "Status updates & alerts", "body": "Let the right people know when a delivery arrives or something looks out of the ordinary." },
-    { "icon": "users", "title": "Users, operators & partners", "body": "Support everyday users, the teams running fleets of devices, and partner workflows." }
+    { "icon": "key", "title": "Hands-free access", "body": "Authorized users just need the app on their phone. Walk up, tap, and the box opens." },
+    { "icon": "users", "title": "Shared & partner access", "body": "Friends and family get their own access. Partners get in only when a delivery needs it." },
+    { "icon": "calendar-check", "title": "Scheduled access", "body": "Set one-time or repeating windows for the box to unlock, stay open, or lock again after use." },
+    { "icon": "activity", "title": "Device & sensor monitoring", "body": "Follow lock state, battery, connectivity, and live sensor readings across every device." },
+    { "icon": "eye", "title": "Activity & events", "body": "Look back at every open, close, and change in condition across your devices." },
+    { "icon": "bell", "title": "Status updates & alerts", "body": "Let the right people know when a delivery arrives, or when something looks unusual." }
   ]
 }

@@ -13,12 +13,12 @@
 }
 
 .software .glow-media {
-  width: 94%;
+  width: 78%;
   max-width: none;
   margin-inline: auto;
   /* The phone rises above the disc, so the alignment box needs extra
      space above the disc for the copy to center on the image. */
-  margin-top: 17%;
+  margin-top: 14%;
 }
 
 /* Brighter disc so the phone still reads against the forest background. */
@@ -64,22 +64,35 @@
 
 .software__grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
+  align-items: stretch;
 }
 
-.software .feature-grid .feature-card--card {
-  min-height: 0;
-  padding: 24px 24px 22px;
-  background: var(--color-cream);
-  box-shadow: 0 16px 36px -24px rgba(0, 0, 0, 0.55);
+/* Glass cards matching the benefits section. */
+.software .capability-card {
+  border: 1px solid rgba(247, 246, 241, 0.28);
+  background: rgba(247, 246, 241, 0.1);
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+          backdrop-filter: blur(14px) saturate(150%);
+  transition: background-color 0.3s, border-color 0.3s, transform 0.35s var(--ease-out);
 }
 
-.software .feature-card__title {
-  margin-top: 18px;
+.software .capability-card:hover {
+  border-color: rgba(247, 246, 241, 0.45);
+  background: rgba(247, 246, 241, 0.18);
 }
 
-.software .feature-card__body {
-  margin-top: 8px;
+.software .capability-card__label {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+
+.software__card-body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-on-dark);
 }
 
 @media (max-width: 1199px) {
@@ -94,9 +107,9 @@
   }
 
   .software .glow-media {
-    width: 94%;
+    width: 78%;
     max-width: none;
-    margin-top: 17%;
+    margin-top: 14%;
   }
 
   .software__grid {

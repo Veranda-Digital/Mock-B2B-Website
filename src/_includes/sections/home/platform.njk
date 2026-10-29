@@ -2,25 +2,33 @@
 {% from "components/icon.njk" import icon %}
 {%- set s = home.platform -%}
 {%- set d = s.diagram -%}
-<section class="platform theme-dark" id="{{ s.id }}">
+{%- macro panel(s, name) -%}
+{%- set side = s.diagram[name] -%}
+{%- set img = s.media[name] -%}
+<div class="platform-panel platform-panel--{{ name }}">
+  <div class="platform-panel__stage">
+    <p class="platform-diagram__label">{{ side.label }}</p>
+    <div class="platform-panel__images">
+      <img class="platform-panel__image" src="{{ img.src }}" alt="{{ img.alt }}" width="{{ img.width }}" height="{{ img.height }}" loading="lazy">
+    </div>
+  </div>
+  <ul class="platform-panel__list">
+    {%- for layer in side.layers %}
+    <li class="platform-panel__row">
+      <span class="platform-panel__icon">{{ icon(layer.icon, 18) }}</span>
+      <span><strong>{{ layer.title }}</strong><small>{{ layer.caption }}</small></span>
+    </li>
+    {%- endfor %}
+  </ul>
+</div>
+{%- endmacro -%}
+<section class="platform theme-ink" id="{{ s.id }}">
   <div class="container">
     {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, tone: "dark" }) }}
 
-    <figure class="platform-diagram platform-diagram--stacked" data-reveal aria-label="Diagram: physical hardware connects over wireless to Veranda's cloud software and partner systems">
-      {%- for name in ["physical", "digital"] %}
-      {%- set side = d[name] %}
-      <div class="platform-diagram__side platform-diagram__side--{{ name }}">
-        <p class="platform-diagram__label">{{ side.label }}</p>
-        <ul class="platform-diagram__list">
-          {%- for layer in side.layers %}
-          <li class="platform-diagram__item" style="--row: {{ loop.index + 1 }}">
-            <span class="platform-diagram__icon">{{ icon(layer.icon, 18) }}</span>
-            <span><strong>{{ layer.title }}</strong><small>{{ layer.caption }}</small></span>
-          </li>
-          {%- endfor %}
-        </ul>
-      </div>
-      {%- if loop.first %}
+    <figure class="platform-diagram platform-diagram--panels" data-reveal aria-label="Diagram: Veranda's physical hardware connects over wireless to its cloud software, apps, and partner systems">
+      {{ panel(s, "physical") }}
+
       <div class="platform-diagram__link" aria-hidden="true">
         <span class="platform-diagram__wire"><i></i><i></i><i></i></span>
         <div class="platform-diagram__chip">
@@ -30,8 +38,8 @@
         </div>
         <span class="platform-diagram__wire platform-diagram__wire--reverse"><i></i><i></i><i></i></span>
       </div>
-      {%- endif %}
-      {%- endfor %}
+
+      {{ panel(s, "digital") }}
     </figure>
   </div>
 </section>
