@@ -2,8 +2,8 @@
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: calc(100vh / var(--zoom));
+  min-height: calc(100svh / var(--zoom));
   padding: 0 0 90px;
   background: var(--bg-page);
   overflow: hidden;
@@ -44,7 +44,7 @@
   display: block;
   position: relative;
   left: 50%;
-  width: min(1000px, calc(100vw - 48px));
+  width: min(1000px, calc((100vw - 48px) / var(--zoom)));
   transform: translateX(-50%);
   margin-top: 14px;
   font-size: 0.56em;

@@ -11,7 +11,7 @@
   top: 0;
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh / var(--zoom));
   min-height: 720px;
   overflow: hidden;
   background: var(--color-ink);
@@ -252,7 +252,7 @@
    current board to a bus, which feeds one tile per connected device. */
 .hardware__visual {
   /* 1.046 is the stack photos' height / width. */
-  --board-w: clamp(230px, 33.5vh, 315px);
+  --board-w: clamp(230px, calc(33.5vh / var(--zoom)), 315px);
   --board-h: calc(var(--board-w) * 1.046);
   --links-gap: 24px;
   --drop: 28px;

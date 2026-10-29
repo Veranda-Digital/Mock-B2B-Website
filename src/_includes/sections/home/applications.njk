@@ -3,7 +3,7 @@
 {% from "components/accordion.njk" import accordionItem %}
 {% from "components/icon.njk" import icon %}
 {%- set s = home.applications -%}
-<section class="app-benefits app-benefits--compact" id="{{ s.id }}">
+<section class="app-benefits app-benefits--compact app-benefits--stone" id="{{ s.id }}">
   <div class="container">
     {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, align: "start" }) }}
 
@@ -33,18 +33,4 @@
     </div>
   </div>
 
-  <div class="app-benefits__outcomes">
-    <div class="container benefits__inner">
-      <div class="app-benefits__outcomes-intro">
-        {{ eyebrow(s.outcomes.eyebrow) }}
-        <h3>{{ s.outcomes.title }}</h3>
-        <p class="text-small">{{ s.outcomes.note }}</p>
-      </div>
-      <div class="accordion" data-reveal>
-        {%- for item in s.outcomes.items %}
-        {{ accordionItem(item, "outcomes") }}
-        {%- endfor %}
-      </div>
-    </div>
-  </div>
 </section>

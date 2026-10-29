@@ -281,3 +281,16 @@
     padding: 80px 0 96px;
   }
 }
+
+/* Home: the whole section sits on stone, so it differs from the cream
+   Partnering section that follows. */
+.app-benefits--stone {
+  padding-bottom: 140px;
+  background: var(--color-stone);
+}
+
+@media (max-width: 809px) {
+  .app-benefits--stone {
+    padding-bottom: 96px;
+  }
+}
