@@ -181,8 +181,8 @@
   width: 420px;
   max-width: 80%;
   opacity: 0;
-  transform: translateY(calc(var(--i, 0) * var(--board-offset) + 40px));
-  transition: opacity 0.6s var(--ease-out), transform 0.7s var(--ease-out);
+  transform: translateY(calc(var(--i, 0) * var(--board-offset) - 70px));
+  transition: opacity 0.5s var(--ease-out), transform 0.7s var(--ease-out);
 }
 
 .hardware__board img {
