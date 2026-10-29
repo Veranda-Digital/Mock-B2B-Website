@@ -2,7 +2,7 @@
   padding: 150px 0;
   background:
     linear-gradient(323deg, var(--color-green-900) 0%, rgba(28, 81, 65, 0.8) 37%, rgba(0, 0, 0, 0.8) 103%),
-    url("/assets/images/cta-banner.jpg") center / cover no-repeat;
+    url("../../images/cta-banner.jpg") center / cover no-repeat;
 }
 
 /* Each labeled group ("Built for" / "Features") is its own centered stack. */

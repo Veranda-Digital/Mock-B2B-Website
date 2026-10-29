@@ -31,12 +31,15 @@
       </div>
 
       <div class="hardware__visual" aria-hidden="true">
-        <div class="hardware__boards">
-          {#- Rendered in reverse so the primary board paints on top of the stack. #}
+        <div class="hardware__boards" style="--ratio: {{ s.image.width }} / {{ s.image.height }}">
+          {#- Rendered in reverse so the primary board paints on top of the stack.
+              Each board has a photo of the stack with it on top, plus a cutout of
+              just that board, which lifts away. #}
           {%- for step in s.steps | reverse %}
           {%- set i = total - loop.index %}
-          <div class="hardware__board is-visible{% if i == 0 %} is-current{% endif %}" data-board="{{ i }}" style="--i: {{ i }}">
-            <img src="{{ s.image.src }}" alt="" width="{{ s.image.width }}" height="{{ s.image.height }}" loading="lazy">
+          <div class="hardware__board is-visible{% if i == 0 %} is-current{% endif %}" data-board="{{ i }}" style="--ly: {{ step.photo.ly }}%">
+            <img class="hardware__board-frame" src="{{ step.photo.frame }}" alt="" width="{{ s.image.width }}" height="{{ s.image.height }}" loading="lazy">
+            <img class="hardware__board-top" src="{{ step.photo.board }}" alt="" width="{{ s.image.width }}" height="{{ s.image.height }}" loading="lazy">
             <span class="hardware__board-label">{{ step.short }}</span>
           </div>
           {%- endfor %}
@@ -44,7 +47,7 @@
 
         <div class="hardware__links">
           {%- for step in s.steps %}
-          <div class="hardware__link{% if step.flow == 'in' %} hardware__link--in{% endif %}{% if loop.first %} is-active{% endif %}" data-link="{{ loop.index0 }}" style="--i: {{ loop.index0 }}; --n: {{ (step.devices | length) + 1 }}">
+          <div class="hardware__link{% if step.flow == 'in' %} hardware__link--in{% endif %}{% if loop.first %} is-active{% endif %}" data-link="{{ loop.index0 }}" style="--cy: {{ step.photo.cy }}; --n: {{ (step.devices | length) + 1 }}">
             <span class="hardware__trunk"><i></i></span>
             <span class="hardware__bus"></span>
             <ul class="hardware__devices">

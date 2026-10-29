@@ -2,7 +2,7 @@
   "id": "hardware",
   "eyebrow": "Hardware",
   "title": "Hardware that's modular and flexible by design.",
-  "image": { "src": "/assets/images/core-board.png", "alt": "Veranda circuit board", "width": 1075, "height": 749 },
+  "image": { "width": 478, "height": 500 },
   "steps": [
     {
       "label": "Primary board",
@@ -10,22 +10,11 @@
       "icon": "cpu",
       "body": "The hub of every stack. It collects data from each board and connects over BLE and LoRaWAN.",
       "specs": ["Primary processor", "BLE", "LoRaWAN"],
+      "photo": { "frame": "/assets/images/board-stack/frame-1.webp", "board": "/assets/images/board-stack/board-1.webp", "cy": 32.8, "ly": 25.4 },
       "devices": [
         { "icon": "phone", "label": "Phone app" },
         { "icon": "signal", "label": "Gateway" },
         { "icon": "cloud-check", "label": "Cloud" }
-      ]
-    },
-    {
-      "label": "Sensor board",
-      "short": "Sensor",
-      "icon": "thermometer",
-      "body": "Senses the space around it. Start with temperature, air quality, or motion, and add sensors as needs grow.",
-      "specs": ["Temperature", "Air quality", "Motion"],
-      "devices": [
-        { "icon": "thermometer", "label": "Temperature" },
-        { "icon": "motion", "label": "Motion" },
-        { "icon": "chart", "label": "Data logging" }
       ]
     },
     {
@@ -34,10 +23,24 @@
       "icon": "lock",
       "body": "Secures a door, parcel box, locker, or more. Motor drivers move the lock and cam switches confirm its position.",
       "specs": ["Motor drivers", "Cam switches"],
+      "photo": { "frame": "/assets/images/board-stack/frame-2.webp", "board": "/assets/images/board-stack/board-2.webp", "cy": 41.3, "ly": 33.1 },
       "devices": [
         { "icon": "door", "label": "Door" },
         { "icon": "box", "label": "Box" },
         { "icon": "locker", "label": "Locker" }
+      ]
+    },
+    {
+      "label": "Sensor board",
+      "short": "Sensor",
+      "icon": "thermometer",
+      "body": "Senses the space around it. Start with temperature, air quality, or motion, and add sensors as needs grow.",
+      "specs": ["Temperature", "Air quality", "Motion"],
+      "photo": { "frame": "/assets/images/board-stack/frame-3.webp", "board": "/assets/images/board-stack/board-3.webp", "cy": 49.5, "ly": 40.8 },
+      "devices": [
+        { "icon": "thermometer", "label": "Temperature" },
+        { "icon": "motion", "label": "Motion" },
+        { "icon": "chart", "label": "Data logging" }
       ]
     },
     {
@@ -46,6 +49,7 @@
       "icon": "toggle",
       "body": "Connects the controls people touch and see. Mix and match buttons, lights, and screens.",
       "specs": ["Buttons", "Lights", "Screens"],
+      "photo": { "frame": "/assets/images/board-stack/frame-4.webp", "board": "/assets/images/board-stack/board-4.webp", "cy": 58.8, "ly": 48.4 },
       "devices": [
         { "icon": "button", "label": "Button" },
         { "icon": "bulb", "label": "Light" },
@@ -59,6 +63,7 @@
       "body": "Runs on batteries, wall power, or both, and powers every board in the stack.",
       "specs": ["Batteries", "Wall power", "Power distribution"],
       "flow": "in",
+      "photo": { "frame": "/assets/images/board-stack/frame-5.webp", "board": "/assets/images/board-stack/board-5.webp", "cy": 64.9, "ly": 56.1 },
       "devices": [
         { "icon": "battery", "label": "Batteries" },
         { "icon": "outlet", "label": "Wall power" }

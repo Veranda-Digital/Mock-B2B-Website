@@ -1,7 +1,6 @@
 /* Sticky five-board stack: one step of scroll per board. */
 .hardware {
   --step-height: 720px;
-  --board-offset: 46px;
   position: relative;
   height: calc(var(--steps, 5) * var(--step-height));
   background: var(--color-ink);
@@ -167,12 +166,15 @@
   color: rgba(247, 246, 241, 0.6);
 }
 
-/* ---- Board stack ---- */
+/* ---- Board stack ----
+   Every board shares one frame. The frame photo shows the real stack with
+   that board on top; the cutout of the board itself sits over it and is what
+   lifts away. Frames swap instantly, after the cutout lands when scrolling
+   back up (--frame-delay, set by board-stack.js). */
 .hardware__boards {
   position: relative;
   display: grid;
   justify-items: center;
-  padding-bottom: calc(var(--board-offset) * (var(--steps, 5) - 1));
 }
 
 .hardware__board {
@@ -180,30 +182,51 @@
   grid-area: 1 / 1;
   width: 420px;
   max-width: 80%;
-  opacity: 0;
-  transform: translateY(calc(var(--i, 0) * var(--board-offset) - 70px));
-  transition: opacity 0.5s var(--ease-out), transform 0.7s var(--ease-out);
+  aspect-ratio: var(--ratio);
 }
 
 .hardware__board img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.45)) brightness(0.85);
-  transition: filter 0.5s var(--ease-out);
+  height: 100%;
 }
 
-.hardware__board.is-visible {
+.hardware__board-frame {
+  opacity: 0;
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.45)) brightness(1.05) contrast(1.12) saturate(1.25);
+  transition: opacity 0s linear var(--frame-delay, 0s);
+}
+
+.hardware__board.is-current .hardware__board-frame {
   opacity: 1;
-  transform: translateY(calc(var(--i, 0) * var(--board-offset)));
 }
 
-.hardware__board.is-current img {
-  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 14px rgba(51, 209, 107, 0.28)) brightness(1);
+.hardware__board-top {
+  opacity: 0;
+  filter: brightness(1.28) contrast(1.12) saturate(1.25) drop-shadow(0 0 14px rgba(51, 209, 107, 0.28));
+}
+
+.hardware__board.is-current .hardware__board-top {
+  opacity: 1;
+}
+
+.hardware__board-top,
+.hardware__board-label {
+  transition: opacity 0.5s var(--ease-out), translate 0.7s var(--ease-out), color 0.35s;
+}
+
+.hardware__board:not(.is-visible) .hardware__board-top,
+.hardware__board:not(.is-visible) .hardware__board-label {
+  opacity: 0;
+  translate: 0 -70px;
 }
 
 .hardware__board-label {
   position: absolute;
-  left: calc(100% + 8px);
-  bottom: 14%;
+  left: calc(100% + 4px);
+  top: var(--ly, 86%);
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -211,7 +234,6 @@
   font-size: 12px;
   color: rgba(247, 246, 241, 0.6);
   white-space: nowrap;
-  transition: color 0.35s;
 }
 
 .hardware__board-label::before {
@@ -229,10 +251,9 @@
    A smaller stack with a wiring diagram underneath: a trunk drops from the
    current board to a bus, which feeds one tile per connected device. */
 .hardware__visual {
-  /* 0.6967 is the board image's height / width. */
-  --board-w: clamp(220px, 32vh, 300px);
-  --board-h: calc(var(--board-w) * 0.6967);
-  --board-offset: calc(var(--board-w) * 0.1);
+  /* 1.046 is the stack photos' height / width. */
+  --board-w: clamp(230px, 33.5vh, 315px);
+  --board-h: calc(var(--board-w) * 1.046);
   --links-gap: 24px;
   --drop: 28px;
   --wire: rgba(51, 209, 107, 0.7);
@@ -271,10 +292,10 @@
   background: repeating-linear-gradient(180deg, var(--wire) 0 6px, transparent 6px 12px);
 }
 
-/* Starts behind the current board, which sits higher the earlier it is in the stack. */
+/* Starts behind the current board; --cy is its center, as a % of the photo height. */
 .hardware__trunk {
   bottom: 100%;
-  height: calc(var(--board-h) / 2 + (var(--steps, 5) - 1 - var(--i, 0)) * var(--board-offset) + var(--links-gap));
+  height: calc(var(--board-h) * (100 - var(--cy, 50)) / 100 + var(--links-gap));
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.2s;
@@ -461,7 +482,6 @@
 @media (max-width: 809px) {
   .hardware {
     --step-height: 640px;
-    --board-offset: 24px;
   }
 
   .hardware__sticky {
@@ -487,12 +507,8 @@
     font-size: 20px;
   }
 
-  .hardware__board {
-    width: 240px;
-  }
-
   .hardware__visual {
-    --board-w: 150px;
+    --board-w: 160px;
     --links-gap: 10px;
     --drop: 16px;
     margin-top: -8px;

@@ -16,6 +16,8 @@ export function initBoardStack(section) {
     const progress = scrollable > 0 ? Math.min(1, Math.max(0, -rect.top / scrollable)) : 0;
     const index = Math.min(steps.length - 1, Math.floor(progress * steps.length));
     if (index === current) return;
+    // Going back up, the photo underneath swaps once the returning board has landed.
+    section.style.setProperty("--frame-delay", index < current ? "0.45s" : "0s");
     current = index;
 
     steps.forEach((step) => step.classList.toggle("is-active", Number(step.dataset.step) === index));
