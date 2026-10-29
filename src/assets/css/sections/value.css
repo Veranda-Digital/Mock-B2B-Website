@@ -58,7 +58,7 @@
 
 .value__audience-pill .icon {
   flex: none;
-  color: var(--color-green-900);
+  color: var(--color-green-500);
 }
 
 /* ---- What it does: cream capability cards, matching the "Built for" pills ---- */

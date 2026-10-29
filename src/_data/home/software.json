@@ -4,18 +4,73 @@
   "title": "Software that manages your physical systems.",
   "body": "The hardware decides whether a door opens. Veranda's software decides who, when, and why, then keeps a record of everything that happened.",
   "showcase": {
-    "badge": { "label": "Veranda Dashboard App", "icon": "phone" },
+    "badge": {
+      "label": "Veranda Dashboard App",
+      "icon": "phone"
+    },
     "title": "One window into the Veranda platform",
     "body": "The Dashboard app is one interface into Veranda's software. Check the status of deliveries, open or lock a device, set access schedules, or grant access to authorized people remotely. The same platform also serves operators managing many devices and the partner systems that feed it.",
-    "image": { "src": "/assets/images/dashboard-app.png", "alt": "Veranda Dashboard app on a phone", "width": 887, "height": 1825 },
-    "audiences": ["Recipients & residents", "Operators & dispatch", "Partner systems"]
+    "image": {
+      "src": "/assets/images/dashboard-app.png",
+      "alt": "Veranda Dashboard app on a phone",
+      "width": 887,
+      "height": 1825
+    },
+    "audiences": [
+      "Recipients & residents",
+      "Operators & dispatch",
+      "Partner systems"
+    ]
+  },
+  "sdk": {
+    "badge": {
+      "label": "Veranda SDK & API",
+      "icon": "code"
+    },
+    "title": "Build Veranda into your own software",
+    "body": "The API and SDK libraries give your developers the same control the Dashboard has: lock and unlock devices, manage access, read sensor data, and subscribe to events as they happen. Connect Veranda to your dispatch, ordering, or property-management systems without building the hardware, wireless, or cloud layers yourself.",
+    "image": {
+      "src": "/assets/images/sdk-api.png",
+      "alt": "Code editor showing the Veranda SDK unlocking a device, with the API response beside it",
+      "width": 914,
+      "height": 646
+    },
+    "audiences": [
+      "REST API",
+      "Client SDKs",
+      "Webhooks & events"
+    ]
   },
   "responsibilities": [
-    { "icon": "key", "title": "Hands-free access", "body": "Authorized users just need the app on their phone. Walk up, tap, and the box opens." },
-    { "icon": "users", "title": "Shared & partner access", "body": "Friends and family get their own access. Partners get in only when a delivery needs it." },
-    { "icon": "calendar-check", "title": "Scheduled access", "body": "Set one-time or repeating windows for the box to unlock, stay open, or lock again after use." },
-    { "icon": "activity", "title": "Device & sensor monitoring", "body": "Follow lock state, battery, connectivity, and live sensor readings across every device." },
-    { "icon": "eye", "title": "Activity & events", "body": "Look back at every open, close, and change in condition across your devices." },
-    { "icon": "bell", "title": "Status updates & alerts", "body": "Let the right people know when a delivery arrives, or when something looks unusual." }
+    {
+      "icon": "key",
+      "title": "Hands-free access",
+      "body": "Authorized users just need the app on their phone. Walk up, tap, and the box opens."
+    },
+    {
+      "icon": "users",
+      "title": "Shared & partner access",
+      "body": "Friends and family get their own access. Partners get in only when a delivery needs it."
+    },
+    {
+      "icon": "calendar-check",
+      "title": "Scheduled access",
+      "body": "Set one-time or repeating windows for the box to unlock, stay open, or lock again after use."
+    },
+    {
+      "icon": "activity",
+      "title": "Device & sensor monitoring",
+      "body": "Follow lock state, battery, connectivity, and live sensor readings across every device."
+    },
+    {
+      "icon": "eye",
+      "title": "Activity & events",
+      "body": "Look back at every open, close, and change in condition across your devices."
+    },
+    {
+      "icon": "bell",
+      "title": "Status updates & alerts",
+      "body": "Let the right people know when a delivery arrives, or when something looks unusual."
+    }
   ]
 }

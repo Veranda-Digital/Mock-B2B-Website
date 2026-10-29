@@ -3,7 +3,7 @@
 }
 
 /* Equal halves: phone on the left, copy on the right, centered in the row. */
-.software .showcase--reverse {
+.software .software__showcase {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
@@ -13,12 +13,22 @@
 }
 
 .software .glow-media {
-  width: 78%;
+  width: 64%;
   max-width: none;
   margin-inline: auto;
   /* The phone rises above the disc, so the alignment box needs extra
      space above the disc for the copy to center on the image. */
-  margin-top: 14%;
+  margin-top: 11.5%;
+}
+
+/* SDK & API: copy on the left, code window on the right. */
+.software .software__showcase--sdk {
+  margin-top: 28px;
+}
+
+.software .software__showcase--sdk .glow-media {
+  width: 84%;
+  margin-top: 0;
 }
 
 .software .showcase__text {
@@ -84,20 +94,25 @@
 }
 
 @media (max-width: 1199px) {
-  .software .showcase--reverse {
+  .software .software__showcase {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
     margin: 28px 0 40px;
   }
 
-  .software .showcase--reverse .showcase__text {
+  .software .software__showcase .showcase__text {
     order: 2;
   }
 
   .software .glow-media {
-    width: 78%;
+    width: 64%;
     max-width: none;
-    margin-top: 14%;
+    margin-top: 11.5%;
+  }
+
+  .software .software__showcase--sdk .glow-media {
+    width: 84%;
+    margin-top: 0;
   }
 
   .software__grid {
@@ -110,13 +125,13 @@
     padding: 72px 0 64px;
   }
 
-  .software .showcase--reverse {
+  .software .software__showcase {
     grid-template-columns: 1fr;
     gap: 40px;
     margin: 36px 0 36px;
   }
 
-  .software .showcase--reverse .showcase__text {
+  .software .software__showcase .showcase__text {
     order: 0;
   }
 
@@ -125,6 +140,15 @@
     /* The phone rises above the disc; leave room so it clears the pills. */
     margin-top: 80px;
     margin-inline: auto;
+  }
+
+  .software .software__showcase--sdk {
+    margin-top: 56px;
+  }
+
+  .software .software__showcase--sdk .glow-media {
+    width: min(340px, 100%);
+    margin-top: 0;
   }
 
   .software__grid {

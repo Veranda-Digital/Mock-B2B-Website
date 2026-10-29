@@ -23,6 +23,23 @@
       {{ glowMedia(item.image, "phone") }}
     </div>
 
+    {%- set sdk = s.sdk %}
+    {%- if sdk %}
+    <div class="showcase software__showcase software__showcase--sdk">
+      <div class="showcase__text" data-reveal>
+        {{ pillBadge(sdk.badge.label, sdk.badge.icon) }}
+        <h3 class="showcase__title">{{ sdk.title }}</h3>
+        <p class="showcase__body">{{ sdk.body }}</p>
+        <ul class="software__audiences">
+          {%- for a in sdk.audiences %}
+          <li>{{ a }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {{ glowMedia(sdk.image, "code") }}
+    </div>
+    {%- endif %}
+
     <div class="feature-grid software__grid">
       {%- for feature in s.responsibilities %}
       <article class="capability-card software__card" data-reveal>
