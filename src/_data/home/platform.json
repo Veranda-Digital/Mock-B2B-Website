@@ -1,7 +1,7 @@
 {
   "id": "platform",
   "eyebrow": "Platform",
-  "title": "One platform to bridge physical access and digital management",
+  "title": "One platform to bridge the physical and digital.",
   "body": "Veranda combines modular locking hardware, sensors, and cloud software, connected through long-range wireless and Bluetooth, into one unified access management platform.",
   "media": {
     "physical": { "src": "/assets/images/smart-lock-exploded.png", "alt": "Veranda smart lock, exploded view", "width": 2000, "height": 1332 },

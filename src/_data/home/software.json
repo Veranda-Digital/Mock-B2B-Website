@@ -1,7 +1,7 @@
 {
   "id": "software",
   "eyebrow": "Software",
-  "title": "Software that manages and extends the physical system",
+  "title": "Software that manages your physical systems.",
   "body": "The hardware decides whether a door opens. Veranda's software decides who, when, and why, then keeps a record of everything that happened.",
   "showcase": {
     "badge": { "label": "Veranda Dashboard App", "icon": "phone" },

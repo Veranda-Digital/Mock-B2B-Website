@@ -1,7 +1,7 @@
 {
   "id": "hardware",
   "eyebrow": "Hardware",
-  "title": "Modular by design",
+  "title": "Hardware that's modular and flexible by design.",
   "image": { "src": "/assets/images/core-board.png", "alt": "Veranda circuit board", "width": 1075, "height": 749 },
   "steps": [
     {

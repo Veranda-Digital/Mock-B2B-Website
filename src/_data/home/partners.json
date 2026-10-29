@@ -1,7 +1,7 @@
 {
   "id": "partners",
   "eyebrow": "Partnership & integration",
-  "title": "Work with Veranda the way your product needs",
+  "title": "Work with Veranda the way that works for you.",
   "body": "Take the full platform as a turnkey solution, pick only the parts you need, or meet us in the middle with something built just for you.",
   "scaleLabel": "Partnership model",
   "includesLabel": "What's included",
@@ -22,7 +22,7 @@
     {
       "icon": "wrench",
       "title": "Custom development",
-      "body": "A solution designed around your product. Our engineers work alongside yours to build custom hardware and software for requirements no off-the-shelf product meets.",
+      "body": "A solution designed around your product. Our engineers work alongside yours to build custom hardware and software for requirements that no off-the-shelf product meets.",
       "includes": ["Custom enclosures & boards", "Tailored software & workflows", "Dedicated engineering team", "Prototype through production"]
     },
     {
