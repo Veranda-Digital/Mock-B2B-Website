@@ -21,12 +21,13 @@
   margin-top: 14%;
 }
 
-/* Brighter disc so the phone still reads against the forest background. */
-.software .glow-media__disc {
-  background: radial-gradient(circle at 50% 42%, #46d978 0%, #229652 46%, #145c38 100%);
-  box-shadow:
-    inset 0 1px 70px 0 rgba(194, 255, 215, 0.28),
-    0 0 72px -12px rgba(51, 209, 107, 0.55);
+/* The artwork's frame is translucent, so it vanished on the cream
+   background and the top looked cut off. A matching fill shows through
+   those pixels as a solid bezel, and the radius follows the artwork
+   instead of clipping it. */
+.software .glow-media--phone .glow-media__image {
+  border-radius: 6.4% / 3.1%;
+  background: #464e67;
 }
 
 .software .showcase__text {
@@ -39,8 +40,8 @@
 }
 
 .software .showcase__body {
-  color: var(--text-on-dark);
   line-height: 1.45;
+  color: var(--text-body);
 }
 
 .software__audiences {
@@ -54,32 +55,17 @@
 
 .software__audiences li {
   padding: 6px 14px;
-  border: 1px solid rgba(194, 255, 215, 0.35);
+  border: 1px solid rgba(28, 81, 65, 0.22);
   border-radius: var(--radius-pill);
-  background: rgba(194, 255, 215, 0.1);
+  background: rgba(28, 81, 65, 0.06);
   font-size: var(--fs-small);
   line-height: 1.5;
-  color: var(--color-green-100);
+  color: var(--color-green-900);
 }
 
 .software__grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
-}
-
-/* Glass cards matching the benefits section. */
-.software .capability-card {
-  border: 1px solid rgba(247, 246, 241, 0.28);
-  background: rgba(247, 246, 241, 0.1);
-  box-shadow: none;
-  -webkit-backdrop-filter: blur(14px) saturate(150%);
-          backdrop-filter: blur(14px) saturate(150%);
-  transition: background-color 0.3s, border-color 0.3s, transform 0.35s var(--ease-out);
-}
-
-.software .capability-card:hover {
-  border-color: rgba(247, 246, 241, 0.45);
-  background: rgba(247, 246, 241, 0.18);
 }
 
 .software .capability-card__label {
@@ -92,7 +78,7 @@
   margin: 0;
   font-size: 15px;
   line-height: 1.5;
-  color: var(--text-on-dark);
+  color: var(--text-body);
 }
 
 @media (max-width: 1199px) {

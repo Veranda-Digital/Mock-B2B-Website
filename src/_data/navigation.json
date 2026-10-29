@@ -3,7 +3,7 @@
     { "label": "Work With Us", "href": "/work-with-us/" }
   ],
   "home": [
-    { "label": "Platform", "href": "#value", "watch": ["value", "platform"] },
+    { "label": "Platform", "href": "#value", "watch": ["value"] },
     { "label": "Software", "href": "#software", "watch": ["software"] },
     { "label": "Hardware", "href": "#hardware", "watch": ["hardware"] },
     { "label": "Applications", "href": "#applications", "watch": ["applications"] },

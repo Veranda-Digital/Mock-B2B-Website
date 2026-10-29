@@ -1,9 +1,10 @@
 {
   "id": "value",
-  "title": "Making access more intelligent",
+  "title": "One platform to bridge the physical and digital.",
   "body": "Unattended handoffs used to mean blind trust: no record of who showed up, what changed hands, or whether anything went wrong along the way. Veranda was built to close that gap.",
   "audienceLabel": "Built for",
   "featuresLabel": "Benefits",
+  "platformLabel": "Hardware, sensors & software in one platform",
   "audiences": [
     { "icon": "truck", "label": "Logistics & last-mile delivery" },
     { "icon": "heart", "label": "Healthcare & pharma" },
@@ -15,5 +16,34 @@
     { "icon": "eye", "label": "Auditability", "title": "See everything, from access logs to temperature, air quality, battery levels, and more." },
     { "icon": "calendar-check", "label": "Automation", "title": "Build schedules, triggers, and alerts that keep things running on their own." },
     { "icon": "puzzle", "label": "Integration", "title": "Plug into the apps, systems, and physical products your operation already uses." }
-  ]
+  ],
+  "platform": {
+    "media": {
+      "physical": { "src": "/assets/images/smart-lock-exploded.png", "alt": "Veranda smart lock, exploded view", "width": 2000, "height": 1332 },
+      "digital": { "src": "/assets/images/dashboard-app.png", "alt": "Veranda dashboard app", "width": 887, "height": 1825 }
+    },
+    "diagram": {
+      "physical": {
+        "label": "Physical",
+        "layers": [
+          { "icon": "box", "title": "Enclosures & access points", "caption": "Boxes, lockers, doors" },
+          { "icon": "lock", "title": "Locking hardware", "caption": "Actuated, position-sensed" },
+          { "icon": "thermometer", "title": "Sensors", "caption": "Temp, air quality, motion" }
+        ]
+      },
+      "link": {
+        "icon": "signal",
+        "title": "Wireless communications",
+        "caption": "BLE + LoRaWAN"
+      },
+      "digital": {
+        "label": "Digital",
+        "layers": [
+          { "icon": "cloud-check", "title": "Cloud software", "caption": "Rules, schedules, history" },
+          { "icon": "phone", "title": "Apps & dashboards", "caption": "Users, operators, admins" },
+          { "icon": "code", "title": "Partner systems", "caption": "Dispatch & operations data" }
+        ]
+      }
+    }
+  }
 }

@@ -2,6 +2,27 @@
 {% from "components/cards.njk" import capabilityCard %}
 {% from "components/icon.njk" import icon %}
 {%- set s = home.value -%}
+{%- set p = s.platform -%}
+{%- macro panel(p, name) -%}
+{%- set side = p.diagram[name] -%}
+{%- set img = p.media[name] -%}
+<div class="platform-panel platform-panel--{{ name }}">
+  <div class="platform-panel__stage">
+    <p class="platform-diagram__label">{{ side.label }}</p>
+    <div class="platform-panel__images">
+      <img class="platform-panel__image" src="{{ img.src }}" alt="{{ img.alt }}" width="{{ img.width }}" height="{{ img.height }}" loading="lazy">
+    </div>
+  </div>
+  <ul class="platform-panel__list">
+    {%- for layer in side.layers %}
+    <li class="platform-panel__row">
+      <span class="platform-panel__icon">{{ icon(layer.icon, 18) }}</span>
+      <span><strong>{{ layer.title }}</strong><small>{{ layer.caption }}</small></span>
+    </li>
+    {%- endfor %}
+  </ul>
+</div>
+{%- endmacro -%}
 <section class="value theme-dark" id="{{ s.id }}">
   <div class="container">
     {{ sectionHeading({ title: s.title, body: s.body, tone: "dark" }) }}
@@ -24,6 +45,25 @@
         {{ capabilityCard(c) }}
         {%- endfor %}
       </div>
+    </div>
+
+    <div class="value__group value__platform">
+      {{ eyebrow(s.platformLabel, "coral") }}
+      <figure class="platform-diagram platform-diagram--panels" data-reveal aria-label="Diagram: Veranda's physical hardware connects over wireless to its cloud software, apps, and partner systems">
+        {{ panel(p, "physical") }}
+
+        <div class="platform-diagram__link" aria-hidden="true">
+          <span class="platform-diagram__wire"><i></i><i></i><i></i></span>
+          <div class="platform-diagram__chip">
+            {{ icon(p.diagram.link.icon, 20) }}
+            <strong>{{ p.diagram.link.title }}</strong>
+            <small>{{ p.diagram.link.caption }}</small>
+          </div>
+          <span class="platform-diagram__wire platform-diagram__wire--reverse"><i></i><i></i><i></i></span>
+        </div>
+
+        {{ panel(p, "digital") }}
+      </figure>
     </div>
   </div>
 </section>
