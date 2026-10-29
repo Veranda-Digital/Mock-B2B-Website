@@ -31,9 +31,9 @@
     "body": "The API and SDK libraries give your developers the same control the Dashboard has: lock and unlock devices, manage access, read sensor data, and subscribe to events as they happen. Connect Veranda to your dispatch, ordering, or property-management systems without building the hardware, wireless, or cloud layers yourself.",
     "image": {
       "src": "/assets/images/sdk-api.png",
-      "alt": "Code editor showing the Veranda SDK unlocking a device, with the API response beside it",
-      "width": 914,
-      "height": 646
+      "alt": "Veranda API documentation page showing the Unlock a device endpoint with parameters, a request example, and a JSON response",
+      "width": 1041,
+      "height": 751
     },
     "audiences": [
       "REST API",
