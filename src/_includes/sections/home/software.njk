@@ -5,9 +5,9 @@
 {% from "components/icon.njk" import icon %}
 {%- set s = home.software -%}
 {%- set item = s.showcase -%}
-<section class="software theme-dark" id="{{ s.id }}">
+<section class="software" id="{{ s.id }}">
   <div class="container">
-    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, tone: "dark" }) }}
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body }) }}
 
     <div class="showcase showcase--reverse software__showcase">
       <div class="showcase__text" data-reveal>
