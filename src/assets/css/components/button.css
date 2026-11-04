@@ -44,6 +44,21 @@
   color: var(--color-cream);
 }
 
+.btn--arrow-light {
+  padding: 8px 8px 8px 18px;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.btn--arrow-light .btn__chip {
+  background: var(--color-green-900);
+  color: var(--color-cream);
+}
+
+.btn--arrow-light:hover .btn__chip {
+  transform: translateX(2px);
+}
+
 .btn__chip {
   display: grid;
   place-items: center;

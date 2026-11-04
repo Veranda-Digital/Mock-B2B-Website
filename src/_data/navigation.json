@@ -1,14 +1,54 @@
 {
   "primary": [
-    { "label": "Work With Us", "href": "/work-with-us/" }
+    {
+      "label": "Technology",
+      "href": "/technology/"
+    },
+    {
+      "label": "Team",
+      "href": "/team/"
+    },
+    {
+      "label": "Work With Us",
+      "href": "/work-with-us/"
+    }
   ],
   "home": [
-    { "label": "Platform", "href": "#value", "watch": ["value", "platform"] },
-    { "label": "Software", "href": "#software", "watch": ["software"] },
-    { "label": "Hardware", "href": "#hardware", "watch": ["hardware"] },
-    { "label": "Applications", "href": "#applications", "watch": ["applications"] },
-    { "label": "Partnering", "href": "#partners", "watch": ["partners"] },
-    { "label": "Case Study", "href": "#casestudy", "watch": ["casestudy"] },
-    { "label": "Impact", "href": "#delivering", "watch": ["delivering", "get-started"] }
+    {
+      "label": "Overview",
+      "href": "#what-who",
+      "watch": [
+        "what-who"
+      ]
+    },
+    {
+      "label": "Value",
+      "href": "#value",
+      "watch": [
+        "value"
+      ]
+    },
+    {
+      "label": "Platform",
+      "href": "#platform",
+      "watch": [
+        "platform"
+      ]
+    },
+    {
+      "label": "Partnering",
+      "href": "#partners",
+      "watch": [
+        "partners"
+      ]
+    },
+    {
+      "label": "Case Study",
+      "href": "#casestudy",
+      "watch": [
+        "casestudy",
+        "get-started"
+      ]
+    }
   ]
 }

@@ -1,9 +1,9 @@
 {
-  "eyebrow": "Embedded access, monitoring, & automation",
+  "eyebrow": "ACCESS CONTROL, CONDITION MONITORING & WORKFLOW AUTOMATION",
   "title": "The intelligent access platform.",
-  "titleAccent": "Solving last-mile delivery, unattended exchanges, access to facilities, and more.",
+  "titleAccent": "Solving last-mile delivery, unattended exchanges, access to facilities, and beyond.",
   "buttons": [
-    { "label": "Explore the Platform", "href": "#value", "variant": "light" },
+    { "label": "Explore the Platform", "href": "#what-who", "variant": "light" },
     { "label": "Request an Evaluation Kit", "href": "/investors/", "variant": "primary" }
   ],
   "videos": [

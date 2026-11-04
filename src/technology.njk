@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+permalink: /technology/
+title: Technology | Veranda Digital
+description: How the Veranda platform works. Modular hardware, connected software, and an API and SDK for integrating access, monitoring, and automation into your product.
+pageClass: technology
+sections:
+  - intro
+  - hardware
+  - software
+---
+{% for section in sections %}
+{% include "sections/technology/" + section + ".njk" %}
+{% endfor %}
+{%- set cta = technology.page.cta %}
+{% include "sections/home/get-started.njk" %}

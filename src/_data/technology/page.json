@@ -1,0 +1,21 @@
+{
+  "intro": {
+    "eyebrow": "Technology",
+    "title": "How the Veranda platform works.",
+    "body": "Modular hardware, connected software, and open integration, designed to work as one system or to be built into your own product.",
+    "buttons": [
+      { "label": "See the hardware", "href": "#hardware", "variant": "primary" },
+      { "label": "See the software", "href": "#software", "variant": "dark" }
+    ]
+  },
+  "cta": {
+    "id": "get-started",
+    "title": "See how the technology fits your product.",
+    "body": "Evaluate the hardware and software hands-on with an Evaluation Kit, or talk with us about integrating individual components.",
+    "buttons": [
+      { "label": "Request an Evaluation Kit", "href": "/investors/", "variant": "primary" },
+      { "label": "Work With Us", "href": "/work-with-us/", "variant": "light" }
+    ],
+    "background": "/assets/images/cta-banner.jpg"
+  }
+}

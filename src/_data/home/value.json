@@ -1,19 +1,81 @@
 {
   "id": "value",
-  "title": "Making access more intelligent",
-  "body": "Unattended handoffs used to mean blind trust: no record of who showed up, what changed hands, or whether anything went wrong along the way. Veranda was built to close that gap.",
-  "audienceLabel": "Built for",
-  "featuresLabel": "Benefits",
-  "audiences": [
-    { "icon": "truck", "label": "Logistics & last-mile delivery" },
-    { "icon": "heart", "label": "Healthcare & pharma" },
-    { "icon": "building", "label": "Multifamily & commercial property" },
-    { "icon": "door", "label": "Facilities & restricted access" }
+  "eyebrow": "The value",
+  "title": "Built to pay off. Built to plug in.",
+  "lanes": [
+    {
+      "key": "business",
+      "label": "For business leaders",
+      "icon": "chart",
+      "title": "Stop paying more for the last few feet.",
+      "body": "Missed handoffs, waiting drivers, and damaged goods drain margin and loyalty. Veranda removes all three and plugs into your existing routing software.",
+      "proofs": [
+        {
+          "value": 15,
+          "suffix": "%",
+          "label": "of US deliveries are re-delivered",
+          "title": "Complete the first attempt",
+          "body": "A verified carrier opens the box even when no one is home. No missed handoff, no second trip."
+        },
+        {
+          "value": 850,
+          "suffix": "M",
+          "label": "hours a year lost to B2B detention and dwell",
+          "title": "Drivers drop and go",
+          "body": "No keys, codes, or apps. Hands-free or remote opening keeps every stop short."
+        },
+        {
+          "display": "1–1.5",
+          "label": "avoidable dwell hours per truck, daily",
+          "title": "Put trucks and assets to work",
+          "body": "Secure boxes enable overnight routes, and shorter stops fit more drops per shift."
+        },
+        {
+          "value": 85,
+          "suffix": "%",
+          "label": "of consumers won't shop again after a poor delivery",
+          "title": "Goods arrive intact",
+          "body": "Locked, monitored boxes protect orders from theft, weather, and spoilage, with a record to prove it."
+        }
+      ]
+    },
+    {
+      "key": "technical",
+      "label": "For operators & technology teams",
+      "icon": "code",
+      "title": "Add intelligent access without building it.",
+      "body": "Hardware, wireless, and cloud are already built and proven in the field, so your team can focus on what makes your product different.",
+      "proofs": [
+        {
+          "icon": "puzzle",
+          "tag": "Integrate",
+          "title": "Fits the stack you already run",
+          "body": "REST API, SDKs, and webhooks connect access events to your dispatch, ordering, or property systems."
+        },
+        {
+          "icon": "layers",
+          "tag": "Modular",
+          "title": "Take only what you need",
+          "body": "Five swappable boards and standalone cloud services. Add one lock or sensor, or the full stack."
+        },
+        {
+          "icon": "cpu",
+          "tag": "Extend",
+          "title": "Upgrade what you sell or run",
+          "body": "Give a product, locker, or door timed access and condition monitoring without redesigning it."
+        },
+        {
+          "icon": "signal",
+          "tag": "Deploy",
+          "title": "Reach places Wi-Fi can't",
+          "body": "Bluetooth up close and LoRaWAN for long range, with up to a year on battery. No wiring or installer."
+        }
+      ]
+    }
   ],
-  "capabilities": [
-    { "icon": "signature", "label": "Authorization", "title": "Give access to only those who need it and only when they need it." },
-    { "icon": "eye", "label": "Auditability", "title": "See everything, from access logs to temperature, air quality, battery levels, and more." },
-    { "icon": "calendar-check", "label": "Automation", "title": "Build schedules, triggers, and alerts that keep things running on their own." },
-    { "icon": "puzzle", "label": "Integration", "title": "Plug into the apps, systems, and physical products your operation already uses." }
-  ]
+  "note": "Figures describe the US market, not projected Veranda results. Source:",
+  "source": {
+    "label": "McKinsey & Company (2024), including a consumer survey it cites",
+    "href": "https://www.mckinsey.com/industries/logistics/our-insights/digitizing-mid-and-last-mile-logistics-handovers-to-reduce-waste"
+  }
 }

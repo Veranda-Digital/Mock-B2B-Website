@@ -17,18 +17,17 @@
 
 /* Sections */
 @import url("./sections/hero.css");
+@import url("./sections/what-who.css");
 @import url("./sections/value.css");
 @import url("./sections/solution.css");
 @import url("./sections/case-study.css");
-@import url("./sections/benefits.css");
-@import url("./sections/opportunity.css");
 @import url("./sections/get-started.css");
 @import url("./sections/platform.css");
 @import url("./sections/hardware.css");
 @import url("./sections/software.css");
-@import url("./sections/app-benefits.css");
 @import url("./sections/partners.css");
-@import url("./sections/delivering.css");
 @import url("./sections/work-with-us.css");
+@import url("./sections/technology.css");
+@import url("./sections/team.css");
 @import url("./sections/evaluation.css");
 @import url("./sections/vertical-rhythm.css");

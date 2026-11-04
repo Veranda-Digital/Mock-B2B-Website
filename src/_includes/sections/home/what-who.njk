@@ -1,0 +1,95 @@
+{% from "components/section-heading.njk" import eyebrow %}
+{% from "components/icon.njk" import icon %}
+{%- set s = home.whatWho -%}
+{%- set e = s.embodiment -%}
+{%- set b = s.beyond -%}
+<section class="what-who" id="{{ s.id }}">
+  <div class="container">
+    <div class="what-who__intro">
+      <header class="section-heading section-heading--start" data-reveal>
+        <h2 class="section-heading__title">{{ s.title }}</h2>
+        <p class="section-heading__body">{{ s.body }}</p>
+      </header>
+
+      <figure class="embodiment" data-reveal>
+        <div class="embodiment__stage" role="img" aria-label="{{ e.alt }}">
+          <img class="embodiment__layer embodiment__layer--lock" src="{{ e.lock.src }}" alt="" width="{{ e.lock.width }}" height="{{ e.lock.height }}" loading="lazy">
+          <img class="embodiment__layer embodiment__layer--app" src="{{ e.app.src }}" alt="" width="{{ e.app.width }}" height="{{ e.app.height }}" loading="lazy">
+          <img class="embodiment__layer embodiment__layer--box" src="{{ e.box.src }}" alt="" width="{{ e.box.width }}" height="{{ e.box.height }}" loading="lazy">        </div>
+        <figcaption class="embodiment__caption">
+          <span class="embodiment__caption-star" aria-hidden="true">*</span>
+          <span>{{ e.caption }} <a href="{{ e.link.href }}" target="_blank" rel="noopener">{{ e.link.label }}</a></span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="sector-groups">
+      <div class="sector-group sector-group--delivery">
+        {{ eyebrow(s.delivery.label, "coral") }}
+        <ul class="sector-group__cards">
+          {%- for sector in s.delivery.sectors %}
+          <li class="sector-card" data-reveal>
+            <img class="sector-card__art" src="{{ sector.illustration }}" alt="" width="220" height="220" loading="lazy">
+            <h5 class="sector-card__title">{{ sector.title | keepHyphenated | safe }}</h5>
+            <ul class="sector-card__benefits">
+              {%- for benefit in sector.benefits %}
+              <li>{{ icon("badge-check", 16) }}<span>{{ benefit }}</span></li>
+              {%- endfor %}
+            </ul>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      <div class="sector-group sector-group--beyond">
+        {{ eyebrow(b.label, "green") }}
+        <ul class="sector-group__cards">
+          {%- for sector in b.sectors %}
+          <li class="sector-card" data-reveal>
+            <img class="sector-card__art" src="{{ sector.illustration }}" alt="" width="220" height="220" loading="lazy">
+            <h5 class="sector-card__title">{{ sector.title }}</h5>
+            <ul class="sector-card__benefits">
+              {%- for benefit in sector.benefits %}
+              <li>{{ icon("badge-check", 16) }}<span>{{ benefit }}</span></li>
+              {%- endfor %}
+            </ul>
+          </li>
+          {%- endfor %}
+          <li class="sector-card sector-card--open" data-reveal>
+            <div class="sector-card__art sector-card__art--icons" aria-hidden="true">
+              {%- for name in b.open.icons %}
+              <span class="sector-card__icon{% if name == 'plus' %} is-open{% endif %}">{{ icon(name, 22) }}</span>
+              {%- endfor %}
+            </div>
+            <h5 class="sector-card__title">{{ b.open.title | keepHyphenated | safe }}</h5>
+            <ul class="sector-card__benefits">
+              {%- for benefit in b.open.benefits %}
+              <li>{{ icon("badge-check", 16) }}<span>{{ benefit }}</span></li>
+              {%- endfor %}
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="what-who__block">
+      {{ eyebrow(s.capabilitiesLabel, "coral") }}
+      <ul class="capabilities">
+        {%- for c in s.capabilities %}
+        <li class="capability" data-reveal>
+          <div class="capability__head">
+            <span class="capability__icon">{{ icon(c.icon, 22) }}</span>
+            <h5 class="capability__label">{{ c.label }}</h5>
+          </div>
+          <p class="capability__title">{{ c.title }}</p>
+          <ul class="capability__preview" aria-hidden="true">
+            {%- for row in c.preview %}
+            <li class="capability__row capability__row--{{ row.tone }}"><span>{{ row.left }}</span><strong>{{ row.right }}</strong></li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

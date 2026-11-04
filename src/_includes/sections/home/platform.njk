@@ -1,45 +1,65 @@
 {% from "components/section-heading.njk" import sectionHeading %}
 {% from "components/icon.njk" import icon %}
+{% from "components/button.njk" import button %}
 {%- set s = home.platform -%}
-{%- set d = s.diagram -%}
-{%- macro panel(s, name) -%}
-{%- set side = s.diagram[name] -%}
-{%- set img = s.media[name] -%}
-<div class="platform-panel platform-panel--{{ name }}">
-  <div class="platform-panel__stage">
-    <p class="platform-diagram__label">{{ side.label }}</p>
-    <div class="platform-panel__images">
-      <img class="platform-panel__image" src="{{ img.src }}" alt="{{ img.alt }}" width="{{ img.width }}" height="{{ img.height }}" loading="lazy">
-    </div>
-  </div>
-  <ul class="platform-panel__list">
-    {%- for layer in side.layers %}
-    <li class="platform-panel__row">
-      <span class="platform-panel__icon">{{ icon(layer.icon, 18) }}</span>
-      <span><strong>{{ layer.title }}</strong><small>{{ layer.caption }}</small></span>
-    </li>
-    {%- endfor %}
-  </ul>
-</div>
+{#- One list of features per side. -#}
+{%- macro modules(side, name) -%}
+<ul class="platform-modules">
+  {%- for m in side.modules %}
+  <li class="platform-module is-on" data-module="{{ name }}:{{ m.id }}">
+    <span class="platform-module__icon">{{ icon(m.icon, 18) }}</span>
+    <span class="platform-module__text"><strong>{{ m.title }}</strong><small>{{ m.caption }}</small></span>
+  </li>
+  {%- endfor %}
+</ul>
 {%- endmacro -%}
-<section class="platform theme-ink" id="{{ s.id }}">
+<section class="platform theme-dark" id="{{ s.id }}">
   <div class="container">
-    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, tone: "dark" }) }}
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, tone: "dark" }) }}
 
-    <figure class="platform-diagram platform-diagram--panels" data-reveal aria-label="Diagram: Veranda's physical hardware connects over wireless to its cloud software, apps, and partner systems">
-      {{ panel(s, "physical") }}
+    <figure class="platform-diagram" data-reveal aria-label="Diagram: Veranda's modular hardware connects over wireless to its cloud software, apps, and APIs">
+      {#- Hardware -#}
+      <div class="platform-panel platform-panel--hardware">
+        <header class="platform-panel__head">
+          <p class="platform-panel__tag">{{ icon(s.hardware.icon, 16) }}{{ s.hardware.label }}</p>
+          <p class="platform-panel__count">{{ s.hardware.modular }}</p>
+        </header>
+        <h3 class="platform-panel__title">{{ s.hardware.title }}</h3>
+        <div class="platform-panel__stage">
+          <img class="platform-panel__stack" src="{{ s.hardware.image.src }}" alt="{{ s.hardware.image.alt }}" width="{{ s.hardware.image.width }}" height="{{ s.hardware.image.height }}" loading="lazy">
+        </div>
+        {{ modules(s.hardware, "hardware") }}
+      </div>
 
       <div class="platform-diagram__link" aria-hidden="true">
         <span class="platform-diagram__wire"><i></i><i></i><i></i></span>
         <div class="platform-diagram__chip">
-          {{ icon(d.link.icon, 20) }}
-          <strong>{{ d.link.title }}</strong>
-          <small>{{ d.link.caption }}</small>
+          {{ icon(s.link.icon, 20) }}
+          <strong>{{ s.link.title }}</strong>
+          <small>{{ s.link.caption }}</small>
         </div>
         <span class="platform-diagram__wire platform-diagram__wire--reverse"><i></i><i></i><i></i></span>
       </div>
 
-      {{ panel(s, "digital") }}
+      {#- Software -#}
+      <div class="platform-panel platform-panel--software">
+        <header class="platform-panel__head">
+          <p class="platform-panel__tag">{{ icon(s.software.icon, 16) }}{{ s.software.label }}</p>
+          <p class="platform-panel__count">{{ s.software.modular }}</p>
+        </header>
+        <h3 class="platform-panel__title">{{ s.software.title }}</h3>
+        <div class="platform-panel__stage">
+          <div class="platform-panel__combo">
+          <img class="platform-panel__api" src="{{ s.software.images.api.src }}" alt="{{ s.software.images.api.alt }}" width="{{ s.software.images.api.width }}" height="{{ s.software.images.api.height }}" loading="lazy">
+          <img class="platform-panel__app" src="{{ s.software.images.app.src }}" alt="{{ s.software.images.app.alt }}" width="{{ s.software.images.app.width }}" height="{{ s.software.images.app.height }}" loading="lazy">
+          </div>
+        </div>
+        {{ modules(s.software, "software") }}
+      </div>
     </figure>
+
+    <div class="platform__footer" data-reveal>
+      {{ button(s.button.label, s.button.href, "arrow-light") }}
+    </div>
   </div>
 </section>

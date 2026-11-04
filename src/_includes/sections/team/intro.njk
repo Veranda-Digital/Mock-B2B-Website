@@ -1,0 +1,14 @@
+{% from "components/section-heading.njk" import eyebrow %}
+{%- set s = team.intro -%}
+<section class="team-intro" id="hero">
+  <div class="container team-intro__inner">
+    <ul class="team-intro__faces" aria-hidden="true" data-reveal>
+      {%- for person in team.leadership.people %}
+      <li><img src="{{ person.photo }}" alt="" width="64" height="64" style="object-position: {{ person.focus or 'center' }}"></li>
+      {%- endfor %}
+    </ul>
+    {{ eyebrow(s.eyebrow, "green") }}
+    <h1 class="team-intro__title" data-reveal>{{ s.titleLead }} <span class="team-intro__accent">{{ s.titleAccent }}</span></h1>
+    <p class="team-intro__body" data-reveal>{{ s.body }}</p>
+  </div>
+</section>

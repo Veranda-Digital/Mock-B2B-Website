@@ -1,5 +1,5 @@
 {#
-  Variants: "primary" (glowing green), "dark" (ink pill), "arrow" (ink pill + arrow chip).
+  Variants: "primary" (glowing green), "dark" (ink pill), "arrow" (ink pill + arrow chip), "arrow-light" (cream pill + green arrow chip, for dark sections).
   Usage: {% from "components/button.njk" import button %} {{ button("Learn More", "#usecases", "dark") }}
 #}
 {% from "components/icon.njk" import icon %}
@@ -8,7 +8,7 @@
 {%- set external = href and (href.startsWith("http://") or href.startsWith("https://")) -%}
 <a class="btn btn--{{ variant }}" href="{{ href }}"{% if external %} target="_blank" rel="noopener"{% endif %}{% for key, value in attrs %} {{ key }}="{{ value }}"{% endfor %}>
   <span class="btn__label">{{ label }}</span>
-  {%- if variant == "arrow" %}<span class="btn__chip">{{ icon("arrow-right", 14, 2) }}</span>{% endif %}
+  {%- if variant == "arrow" or variant == "arrow-light" %}<span class="btn__chip">{{ icon("arrow-right", 14, 2) }}</span>{% endif %}
 </a>
 {%- endmacro %}
 

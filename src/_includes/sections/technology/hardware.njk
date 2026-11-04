@@ -1,6 +1,6 @@
 {% from "components/section-heading.njk" import sectionHeading %}
 {% from "components/icon.njk" import icon %}
-{%- set s = home.hardware -%}
+{%- set s = technology.hardware -%}
 {%- set total = s.steps | length -%}
 <section class="hardware theme-dark" id="{{ s.id }}" data-board-stack style="--steps: {{ total }}">
   <div class="hardware__sticky">

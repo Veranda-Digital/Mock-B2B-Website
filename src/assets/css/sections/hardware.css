@@ -1,9 +1,13 @@
-/* Sticky five-board stack: one step of scroll per board. */
+/* Sticky five-board stack: one step of scroll per board.
+   Accents are lifted toward the light mint so they hold on forest green;
+   signal green stays for the solid icon tiles. */
 .hardware {
   --step-height: 460px;
+  --hw-accent: var(--color-green-100);
+  --hw-line: rgba(194, 255, 215, 0.75);
   position: relative;
   height: calc(var(--steps, 5) * var(--step-height));
-  background: var(--color-ink);
+  background: var(--bg-dark);
 }
 
 .hardware__sticky {
@@ -14,7 +18,7 @@
   height: calc(100vh / var(--zoom));
   min-height: 720px;
   overflow: hidden;
-  background: var(--color-ink);
+  background: var(--bg-dark);
 }
 
 .hardware__inner {
@@ -67,7 +71,7 @@
 .hardware__count {
   font-family: var(--font-mono);
   font-size: var(--fs-small);
-  color: var(--color-green-500);
+  color: var(--hw-accent);
 }
 
 /* ---- Steps ---- */
@@ -109,7 +113,7 @@
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.04em;
-  color: var(--color-green-500);
+  color: var(--hw-accent);
 }
 
 .hardware__label--lg .icon-tile--sm {
@@ -145,7 +149,7 @@
 .hardware__specs li {
   padding: 5px 10px;
   border-radius: var(--radius-sm);
-  background: rgba(247, 246, 241, 0.08);
+  background: rgba(247, 246, 241, 0.12);
   font-family: var(--font-mono);
   font-size: 12px;
   line-height: 1.4;
@@ -154,16 +158,16 @@
 
 .hardware__specs .hardware__spec-more {
   padding: 4px 9px;
-  border: 1px dashed rgba(247, 246, 241, 0.3);
+  border: 1px dashed rgba(247, 246, 241, 0.4);
   background: none;
-  color: rgba(247, 246, 241, 0.6);
+  color: rgba(247, 246, 241, 0.72);
 }
 
 .hardware__note {
   max-width: 420px;
   font-size: 13px;
   line-height: 1.5;
-  color: rgba(247, 246, 241, 0.6);
+  color: rgba(247, 246, 241, 0.72);
 }
 
 /* ---- Board stack ----
@@ -194,7 +198,7 @@
 
 .hardware__board-frame {
   opacity: 0;
-  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.45)) brightness(1.05) contrast(1.12) saturate(1.25);
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.5)) brightness(1.04) contrast(1.06) saturate(1.08);
   transition: opacity 0s linear var(--frame-delay, 0s);
 }
 
@@ -204,7 +208,7 @@
 
 .hardware__board-top {
   opacity: 0;
-  filter: brightness(1.28) contrast(1.12) saturate(1.25) drop-shadow(0 0 14px rgba(51, 209, 107, 0.28));
+  filter: brightness(1.12) contrast(1.06) saturate(1.08) drop-shadow(0 14px 22px rgba(0, 0, 0, 0.42));
 }
 
 .hardware__board.is-current .hardware__board-top {
@@ -232,7 +236,7 @@
   gap: 8px;
   font-family: var(--font-mono);
   font-size: 12px;
-  color: rgba(247, 246, 241, 0.6);
+  color: rgba(247, 246, 241, 0.7);
   white-space: nowrap;
 }
 
@@ -244,7 +248,7 @@
 }
 
 .hardware__board.is-current .hardware__board-label {
-  color: var(--color-green-500);
+  color: var(--hw-accent);
 }
 
 /* ---- Stack with connected devices ----
@@ -256,7 +260,7 @@
   --board-h: calc(var(--board-w) * 1.046);
   --links-gap: 24px;
   --drop: 28px;
-  --wire: rgba(51, 209, 107, 0.7);
+  --wire: var(--hw-line);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -325,8 +329,8 @@
   height: 8px;
   margin: -4px 0 0 -4px;
   border-radius: 50%;
-  background: var(--color-green-500);
-  box-shadow: 0 0 10px 2px rgba(51, 209, 107, 0.6);
+  background: var(--hw-accent);
+  box-shadow: 0 0 10px 2px rgba(194, 255, 215, 0.55);
 }
 
 .hardware__devices {
@@ -383,8 +387,8 @@
   height: 6px;
   margin-left: -3px;
   border-radius: 50%;
-  background: var(--color-green-500);
-  box-shadow: 0 0 8px 2px var(--color-green-500);
+  background: var(--hw-accent);
+  box-shadow: 0 0 8px 2px rgba(194, 255, 215, 0.7);
   opacity: 0;
   animation: hardware-pulse-first 2.4s linear infinite;
 }
@@ -415,33 +419,33 @@
   place-items: center;
   width: 48px;
   height: 48px;
-  border: 1px solid rgba(51, 209, 107, 0.45);
+  border: 1px solid rgba(194, 255, 215, 0.38);
   border-radius: 12px;
-  background: rgba(51, 209, 107, 0.08);
-  color: var(--color-cream);
+  background: rgba(8, 28, 22, 0.38);
+  color: var(--hw-accent);
 }
 
 .hardware__device-label {
   font-family: var(--font-mono);
   font-size: 11px;
   line-height: 1.3;
-  color: rgba(247, 246, 241, 0.75);
+  color: rgba(247, 246, 241, 0.88);
   text-align: center;
   white-space: nowrap;
 }
 
 .hardware__device--more {
-  --wire: rgba(247, 246, 241, 0.3);
+  --wire: rgba(247, 246, 241, 0.38);
 }
 
 .hardware__device--more .hardware__device-icon {
-  border: 1px dashed rgba(247, 246, 241, 0.35);
+  border: 1px dashed rgba(247, 246, 241, 0.42);
   background: none;
-  color: rgba(247, 246, 241, 0.6);
+  color: rgba(247, 246, 241, 0.72);
 }
 
 .hardware__device--more .hardware__device-label {
-  color: rgba(247, 246, 241, 0.5);
+  color: rgba(247, 246, 241, 0.62);
 }
 
 /* Wiring draws in once the board has landed: trunk, then bus, then devices. */

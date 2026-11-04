@@ -1,0 +1,25 @@
+{%- set s = team.board -%}
+<section class="team-board" id="board">
+  <div class="container">
+    <div class="team-board__groups">
+      {%- for group in s.groups %}
+      <div class="team-group">
+        <header class="team-group__head" data-reveal>
+          <h3 class="team-group__title">{{ group.title }}</h3>
+          <span class="team-group__count">{{ "0" + group.people | length }}</span>
+        </header>
+        <ul class="team-group__list">
+          {%- for person in group.people %}
+          <li class="person-card" data-reveal>
+            <img class="person-card__photo" src="{{ person.photo }}" alt="{{ person.name }}" width="180" height="180" loading="lazy">
+            <h5 class="person-card__name">{{ person.name }}</h5>
+            <p class="person-card__role">{{ person.role }}</p>
+            <p class="person-card__bio">{{ person.bio }}</p>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
