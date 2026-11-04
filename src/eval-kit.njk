@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+permalink: /eval-kit/
+title: Request an Evaluation Kit | Veranda Digital
+description: The Veranda Evaluation Kit is a miniature version of our delivery box with access to the mobile app and every platform feature. Request a kit or book a meeting with our team.
+pageClass: evaluation
+headerCta:
+  label: Request Your Kit
+  href: "#request"
+sections:
+  - hero
+  - kit
+  - process
+  - request
+---
+{% for section in sections %}
+{% include "sections/evaluation/" + section + ".njk" %}
+{% endfor %}

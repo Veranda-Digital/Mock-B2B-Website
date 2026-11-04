@@ -4,9 +4,15 @@
 <section class="wwu-considerations" id="considerations">
   <div class="container wwu-considerations__inner">
     {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, align: "start" }) }}
-    <ul class="wwu-considerations__list" data-reveal>
+    <ul class="wwu-considerations__list">
       {%- for item in s.items %}
-      <li><span class="icon-tile icon-tile--xs">{{ icon(item.icon, 16) }}</span>{{ item.title }}</li>
+      <li class="wwu-consideration" data-reveal>
+        <span class="icon-tile wwu-consideration__icon">{{ icon(item.icon, 18) }}</span>
+        <div>
+          <h5 class="wwu-consideration__title">{{ item.title }}</h5>
+          <p class="wwu-consideration__question">{{ item.question }}</p>
+        </div>
+      </li>
       {%- endfor %}
     </ul>
   </div>

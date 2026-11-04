@@ -1,14 +1,27 @@
+{% from "components/button.njk" import button %}
+{% from "components/icon.njk" import icon %}
 {%- set s = evaluation.hero -%}
-<section class="eval-hero">
-  <div class="eval-hero__inner">
-    <div class="eval-hero__text" data-reveal>
-      <p class="eyebrow eyebrow--mono">{{ s.eyebrow }}</p>
-      <h1 class="eval-hero__title">{{ s.title }}</h1>
-      <p class="eval-hero__body">{{ s.body }}</p>
+<section class="eval-hero" id="hero">
+  <div class="container eval-hero__inner">
+    <div class="eval-hero__text">
+      <p class="eyebrow eyebrow--green" data-reveal>{{ s.eyebrow }}</p>
+      <h1 class="eval-hero__title" data-reveal>{{ s.title }}</h1>
+      <p class="eval-hero__body" data-reveal>{{ s.body }}</p>
+      <div class="eval-hero__actions" data-reveal>
+        {%- for b in s.buttons %}
+        {{ button(b.label, b.href, b.variant) }}
+        {%- endfor %}
+      </div>
+      <ul class="eval-hero__assurances" data-reveal>
+        {%- for item in s.assurances %}
+        <li>{{ icon("badge-check", 16) }}<span>{{ item }}</span></li>
+        {%- endfor %}
+      </ul>
     </div>
     <figure class="eval-hero__media" data-reveal>
-      <img class="eval-hero__phone" src="{{ s.phone.src }}" alt="{{ s.phone.alt }}" width="{{ s.phone.width }}" height="{{ s.phone.height }}">
+      <span class="eval-hero__glow" aria-hidden="true"></span>
       <img class="eval-hero__box" src="{{ s.image.src }}" alt="{{ s.image.alt }}" width="{{ s.image.width }}" height="{{ s.image.height }}">
+      <img class="eval-hero__phone" src="{{ s.phone.src }}" alt="{{ s.phone.alt }}" width="{{ s.phone.width }}" height="{{ s.phone.height }}">
     </figure>
   </div>
 </section>

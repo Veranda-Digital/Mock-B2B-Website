@@ -1,13 +1,57 @@
 {% from "components/section-heading.njk" import sectionHeading %}
-{% from "components/cards.njk" import featureCard %}
+{% from "components/icon.njk" import icon %}
 {%- set s = workWithUs.models -%}
 <section class="wwu-models theme-dark" id="models">
   <div class="container">
-    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, tone: "dark" }) }}
-    <div class="feature-grid wwu-models__grid">
-      {%- for item in s.items %}
-      {{ featureCard(item) }}
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body, tone: "dark" }) }}
+
+    <div class="wwu-models__list">
+      {%- for m in s.items %}
+      <article class="wwu-model" id="model-{{ m.id }}" data-reveal>
+        <div class="wwu-model__main">
+          <div class="wwu-model__head">
+            <span class="icon-tile wwu-model__icon">{{ icon(m.icon, 22) }}</span>
+            <span class="wwu-model__index">{{ "0" + loop.index }}</span>
+          </div>
+          <h3 class="wwu-model__title">{{ m.title }}</h3>
+          <p class="wwu-model__body">{{ m.body }}</p>
+        </div>
+
+        <div class="wwu-model__col">
+          <span class="wwu-model__label">{{ s.providesLabel }}</span>
+          <ul class="wwu-model__list">
+            {%- for item in m.provides %}
+            <li>{{ icon("badge-check", 16) }}<span>{{ item }}</span></li>
+            {%- endfor %}
+          </ul>
+        </div>
+
+        <div class="wwu-model__col wwu-model__col--bring">
+          <span class="wwu-model__label">{{ s.bringLabel }}</span>
+          <ul class="wwu-model__list">
+            {%- for item in m.bring %}
+            <li>{{ icon("plus", 16) }}<span>{{ item }}</span></li>
+            {%- endfor %}
+          </ul>
+        </div>
+
+        <footer class="wwu-model__foot">
+          <p class="wwu-model__fit"><span>{{ s.fitLabel }}</span>{{ m.fit }}</p>
+          {%- if m.proof %}
+          <a class="wwu-model__proof" href="{{ m.proof.href }}">{{ m.proof.label }}{{ icon("arrow-right", 14, 2) }}</a>
+          {%- endif %}
+        </footer>
+      </article>
       {%- endfor %}
+
+      <aside class="wwu-growth" data-reveal>
+        <span class="icon-tile wwu-growth__icon">{{ icon(s.growth.icon, 22) }}</span>
+        <div class="wwu-growth__text">
+          <h5 class="wwu-growth__title">{{ s.growth.title }}</h5>
+          <p class="wwu-growth__body">{{ s.growth.body }}</p>
+        </div>
+        <a class="wwu-growth__link" href="{{ s.growth.link.href }}">{{ s.growth.link.label }}{{ icon("arrow-right", 14, 2) }}</a>
+      </aside>
     </div>
   </div>
 </section>

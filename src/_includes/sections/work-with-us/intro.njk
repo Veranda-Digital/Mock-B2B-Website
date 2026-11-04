@@ -1,5 +1,6 @@
 {% from "components/section-heading.njk" import eyebrow %}
 {% from "components/button.njk" import button %}
+{% from "components/icon.njk" import icon %}
 {%- set s = workWithUs.intro -%}
 <section class="wwu-intro" id="hero">
   <div class="container wwu-intro__inner">
@@ -7,8 +8,27 @@
     <h1 class="wwu-intro__title" data-reveal>{{ s.title }}</h1>
     <p class="wwu-intro__body" data-reveal>{{ s.body }}</p>
     <div class="hero__actions" data-reveal>
-      {{ button("See the engagement models", "#models", "dark") }}
-      {{ button("Request an Evaluation Kit", site.links.evaluationKit, "primary") }}
+      {%- for b in s.buttons %}
+      {{ button(b.label, b.href, b.variant) }}
+      {%- endfor %}
     </div>
+
+    <nav class="wwu-spectrum" aria-label="{{ s.spectrum.label }}" data-reveal>
+      <div class="wwu-spectrum__ends" aria-hidden="true">
+        <span>{{ s.spectrum.start }}</span>
+        <span>{{ s.spectrum.end }}</span>
+      </div>
+      <ol class="wwu-spectrum__stops">
+        {%- for m in workWithUs.models.items %}
+        <li>
+          <a class="wwu-spectrum__stop" href="#model-{{ m.id }}">
+            <span class="wwu-spectrum__dot" aria-hidden="true"></span>
+            <span class="icon-tile wwu-spectrum__icon">{{ icon(m.icon, 20) }}</span>
+            <span class="wwu-spectrum__label">{{ m.title }}</span>
+          </a>
+        </li>
+        {%- endfor %}
+      </ol>
+    </nav>
   </div>
 </section>

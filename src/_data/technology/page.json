@@ -13,7 +13,7 @@
     "title": "See how the technology fits your product.",
     "body": "Evaluate the hardware and software hands-on with an Evaluation Kit, or talk with us about integrating individual components.",
     "buttons": [
-      { "label": "Request an Evaluation Kit", "href": "/investors/", "variant": "primary" },
+      { "label": "Request an Evaluation Kit", "href": "/eval-kit/", "variant": "primary" },
       { "label": "Work With Us", "href": "/work-with-us/", "variant": "light" }
     ],
     "background": "/assets/images/cta-banner.jpg"

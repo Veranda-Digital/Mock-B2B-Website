@@ -1,0 +1,19 @@
+{% from "components/section-heading.njk" import eyebrow %}
+{%- set s = evaluation.process -%}
+<section class="eval-process" id="process">
+  <div class="container">
+    <header class="eval-process__head" data-reveal>
+      {{ eyebrow(s.eyebrow) }}
+      <h4 class="eval-process__title">{{ s.title }}</h4>
+    </header>
+    <ol class="eval-process__steps">
+      {%- for step in s.steps %}
+      <li class="eval-process__step" data-reveal>
+        <span class="eval-process__index">{{ "0" + loop.index }}</span>
+        <h5>{{ step.title }}</h5>
+        <p>{{ step.body }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>

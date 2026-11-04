@@ -4,7 +4,7 @@
   "titleAccent": "Solving last-mile delivery, unattended exchanges, access to facilities, and beyond.",
   "buttons": [
     { "label": "Explore the Platform", "href": "#what-who", "variant": "light" },
-    { "label": "Request an Evaluation Kit", "href": "/investors/", "variant": "primary" }
+    { "label": "Request an Evaluation Kit", "href": "/eval-kit/", "variant": "primary" }
   ],
   "videos": [
     { "src": "/assets/video/hero/porch.mp4", "poster": "/assets/video/hero/porch.jpg", "label": "Packages & Groceries" },
