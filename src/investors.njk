@@ -1,16 +1,17 @@
 ---
-layout: layouts/base.njk
 permalink: /investors/
-pageClass: evaluation
-headerCta:
-  label: Learn More
-  href: /
-sections:
-  - hero
-  - form
-  - report
-  - platform
+eleventyExcludeFromCollections: true
 ---
-{% for section in sections %}
-{% include "sections/evaluation/" + section + ".njk" %}
-{% endfor %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting to the Evaluation Kit</title>
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ '/eval-kit/' | url }}">
+  <link rel="canonical" href="{{ site.url }}{{ '/eval-kit/' | url }}">
+</head>
+<body>
+  <p>This page has moved. <a href="{{ '/eval-kit/' | url }}">Go to the Evaluation Kit page</a>.</p>
+</body>
+</html>

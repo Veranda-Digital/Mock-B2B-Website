@@ -1,33 +1,98 @@
 {
   "id": "platform",
   "eyebrow": "Platform",
-  "title": "One platform to bridge the physical and digital.",
-  "body": "Veranda combines modular locking hardware, sensors, and cloud software, connected through long-range wireless and Bluetooth, into one unified access management platform.",
-  "media": {
-    "physical": { "src": "/assets/images/smart-lock-exploded.png", "alt": "Veranda smart lock, exploded view", "width": 2000, "height": 1332 },
-    "digital": { "src": "/assets/images/dashboard-app.png", "alt": "Veranda dashboard app", "width": 887, "height": 1825 }
+  "title": "Modular software and hardware.",
+  "hardware": {
+    "label": "Hardware",
+    "icon": "layers",
+    "image": {
+      "src": "/assets/images/board-stack/frame-1.webp",
+      "alt": "Veranda's stack of five modular circuit boards",
+      "width": 478,
+      "height": 500
+    },
+    "modules": [
+      {
+        "id": "sensors",
+        "icon": "thermometer",
+        "title": "Add the sensors you need",
+        "caption": "Temperature, air quality, motion, and more"
+      },
+      {
+        "id": "networking",
+        "icon": "signal",
+        "title": "Bluetooth + LoRaWAN networking",
+        "caption": "Fast, secure unlocking up close, plus low-cost, long-range reporting"
+      },
+      {
+        "id": "locks",
+        "icon": "lock",
+        "title": "Works with the lock you choose",
+        "caption": "Our custom locking mechanism, or off-the-shelf door and receptacle locks"
+      },
+      {
+        "id": "battery",
+        "icon": "battery",
+        "title": "Up to 1 year of battery life",
+        "caption": "Or run on wall power, or both"
+      }
+    ],
+    "modular": "Modular boards",
+    "title": "Hardware that connects, lasts, and adapts."
   },
-  "diagram": {
-    "physical": {
-      "label": "Physical",
-      "layers": [
-        { "icon": "box", "title": "Enclosures & access points", "caption": "Boxes, lockers, doors" },
-        { "icon": "lock", "title": "Locking hardware", "caption": "Actuated, position-sensed" },
-        { "icon": "thermometer", "title": "Sensors", "caption": "Temp, air quality, motion" }
-      ]
+  "link": {
+    "icon": "signal",
+    "title": "Wireless communications",
+    "caption": "BLE + LoRaWAN"
+  },
+  "software": {
+    "label": "Software",
+    "icon": "cloud-check",
+    "images": {
+      "app": {
+        "src": "/assets/images/dashboard-app.png",
+        "alt": "Veranda Dashboard app on a phone",
+        "width": 887,
+        "height": 1825
+      },
+      "api": {
+        "src": "/assets/images/sdk-api.png",
+        "alt": "Veranda API documentation for unlocking a device",
+        "width": 1041,
+        "height": 751
+      }
     },
-    "link": {
-      "icon": "signal",
-      "title": "Wireless communications",
-      "caption": "BLE + LoRaWAN"
-    },
-    "digital": {
-      "label": "Digital",
-      "layers": [
-        { "icon": "cloud-check", "title": "Cloud software", "caption": "Rules, schedules, history" },
-        { "icon": "phone", "title": "Apps & dashboards", "caption": "Users, operators, admins" },
-        { "icon": "code", "title": "Partner systems", "caption": "Dispatch & operations data" }
-      ]
-    }
+    "modules": [
+      {
+        "id": "access",
+        "icon": "key",
+        "title": "Access & sharing",
+        "caption": "Hands-free, shared, and partner access"
+      },
+      {
+        "id": "schedules",
+        "icon": "calendar-check",
+        "title": "Schedules",
+        "caption": "One-time or recurring access windows"
+      },
+      {
+        "id": "activity",
+        "icon": "bell",
+        "title": "Activity & alerts",
+        "caption": "Every event on record, with alerts"
+      },
+      {
+        "id": "api",
+        "icon": "code",
+        "title": "API & SDK",
+        "caption": "Connect your own systems"
+      }
+    ],
+    "modular": "Modular services",
+    "title": "Cloud software that decides who, when, and why."
+  },
+  "button": {
+    "label": "See how the technology works",
+    "href": "/technology/"
   }
 }

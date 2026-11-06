@@ -1,0 +1,15 @@
+{% from "components/section-heading.njk" import eyebrow %}
+{% from "components/button.njk" import button %}
+{%- set s = technology.page.intro -%}
+<section class="tech-intro" id="hero">
+  <div class="container tech-intro__inner">
+    {{ eyebrow(s.eyebrow, "green") }}
+    <h1 class="tech-intro__title" data-reveal>{{ s.title }}</h1>
+    <p class="tech-intro__body" data-reveal>{{ s.body }}</p>
+    <div class="hero__actions" data-reveal>
+      {%- for b in s.buttons %}
+      {{ button(b.label, b.href, b.variant) }}
+      {%- endfor %}
+    </div>
+  </div>
+</section>

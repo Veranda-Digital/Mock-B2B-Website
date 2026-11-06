@@ -5,6 +5,7 @@ import { initHeroVideo } from "./hero-video.js";
 import { initBoardStack } from "./board-stack.js";
 import { initCounters } from "./counters.js";
 import { initPartnerScale } from "./partner-scale.js";
+import { initEvalForm } from "./eval-form.js";
 
 const header = document.querySelector("[data-site-header]");
 if (header) initHeader(header);
@@ -15,6 +16,7 @@ if (nav) initSectionNav(nav);
 document.querySelectorAll("[data-hero-video]").forEach(initHeroVideo);
 document.querySelectorAll("[data-board-stack]").forEach(initBoardStack);
 document.querySelectorAll("[data-partner-scale]").forEach(initPartnerScale);
+document.querySelectorAll("[data-eval-form]").forEach(initEvalForm);
 
 initCounters();
 initReveal();

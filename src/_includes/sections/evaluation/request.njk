@@ -1,0 +1,41 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/form-field.njk" import formField %}
+{% from "components/button.njk" import button, submitButton %}
+{% from "components/icon.njk" import icon %}
+{%- set s = evaluation.request -%}
+{%- set t = evaluation.talk -%}
+{%- set email = site.contact.email -%}
+{%- set meetingHref = site.contact.meetingUrl or ("mailto:" + email + "?subject=" + "Meeting request" | urlencode) -%}
+<section class="eval-request" id="{{ s.id }}">
+  <div class="container">
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body }) }}
+
+    <div class="eval-request__grid">
+      <form class="form-card eval-form" action="{{ site.evaluationForm.action }}" method="{{ site.evaluationForm.method }}" data-eval-form data-mailto="{{ email }}" data-reveal>
+        <div class="form-card__grid">
+          {%- for field in s.form.fields %}
+          {{ formField(field) }}
+          {%- endfor %}
+        </div>
+        {{ submitButton(s.form.submitLabel) }}
+        <p class="eval-form__note">{{ s.form.note }}</p>
+        <p class="eval-form__status" role="status" data-eval-status hidden></p>
+      </form>
+
+      <aside class="eval-talk theme-dark" id="{{ t.id }}" data-reveal>
+        <span class="eyebrow eyebrow--light">{{ t.eyebrow }}</span>
+        <h3 class="eval-talk__title">{{ t.title }}</h3>
+        <p class="eval-talk__body">{{ t.body }}</p>
+        <ul class="eval-talk__points">
+          {%- for p in t.points %}
+          <li>{{ icon("badge-check", 18) }}<span>{{ p }}</span></li>
+          {%- endfor %}
+        </ul>
+        <div class="eval-talk__actions">
+          {{ button(t.meetingLabel, meetingHref, "primary") }}
+          <a class="eval-talk__email" href="mailto:{{ email }}">{{ icon("arrow-right", 14, 2) }}<span>{{ t.emailLabel }}: {{ email }}</span></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>

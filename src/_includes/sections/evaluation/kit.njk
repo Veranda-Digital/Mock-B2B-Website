@@ -1,0 +1,33 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/icon.njk" import icon %}
+{%- set s = evaluation.kit -%}
+<section class="eval-kit" id="kit">
+  <div class="container">
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body }) }}
+
+    <div class="eval-kit__items">
+      {%- for item in s.items %}
+      <article class="eval-kit__item" data-reveal>
+        <span class="icon-tile eval-kit__icon">{{ icon(item.icon, 24) }}</span>
+        <h4 class="eval-kit__title">{{ item.title }}</h4>
+        <p class="eval-kit__body">{{ item.body }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <div class="eval-kit__features" data-reveal>
+      <h6 class="eval-kit__features-label">{{ s.featuresLabel }}</h6>
+      <ul class="eval-kit__feature-list">
+        {%- for f in s.features %}
+        <li class="eval-feature">
+          <span class="eval-feature__icon">{{ icon(f.icon, 20) }}</span>
+          <div>
+            <h5 class="eval-feature__title">{{ f.title }}</h5>
+            <p class="eval-feature__body">{{ f.body }}</p>
+          </div>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,29 +1,46 @@
-{% from "components/section-heading.njk" import sectionHeading, eyebrow %}
-{% from "components/cards.njk" import capabilityCard %}
+{% from "components/section-heading.njk" import sectionHeading %}
 {% from "components/icon.njk" import icon %}
 {%- set s = home.value -%}
 <section class="value" id="{{ s.id }}">
   <div class="container">
-    {{ sectionHeading({ title: s.title, body: s.body }) }}
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title }) }}
 
-    {%- if s.audiences %}
-    <div class="value__group" data-reveal>
-      {{ eyebrow(s.audienceLabel, "coral") }}
-      <ul class="value__audience-list">
-        {%- for a in s.audiences %}
-        <li class="value__audience-pill">{{ icon(a.icon, 16) }}<span>{{ a.label }}</span></li>
-        {%- endfor %}
-      </ul>
-    </div>
-    {%- endif %}
+    <div class="value__lanes">
+      {%- for lane in s.lanes %}
+      <article class="value-lane value-lane--{{ lane.key }}" data-reveal>
+        <p class="value-lane__label">{{ icon(lane.icon, 16) }}<span>{{ lane.label }}</span></p>
+        <h3 class="value-lane__title">{{ lane.title }}</h3>
+        <p class="value-lane__body">{{ lane.body }}</p>
 
-    <div class="value__group">
-      {{ eyebrow(s.featuresLabel, "coral") }}
-      <div class="value__capabilities">
-        {%- for c in s.capabilities %}
-        {{ capabilityCard(c) }}
-        {%- endfor %}
-      </div>
+        <ol class="value-lane__proofs">
+          {%- for p in lane.proofs %}
+          <li class="proof">
+            {%- if p.icon %}
+            <div class="proof__lead">
+              <span class="proof__icon">{{ icon(p.icon, 24) }}</span>
+              <p class="proof__tag">{{ p.tag }}</p>
+            </div>
+            {%- else %}
+            <div class="proof__lead">
+              {%- if p.display %}
+              <p class="proof__value proof__value--range">{{ p.display }}</p>
+              {%- else %}
+              <p class="proof__value" data-counter data-suffix="{{ p.suffix }}" data-target="{{ p.value }}">{{ p.value }}{{ p.suffix }}</p>
+              {%- endif %}
+              <p class="proof__label">{{ p.label }}</p>
+            </div>
+            {%- endif %}
+            <div class="proof__text">
+              <h4 class="proof__title">{{ p.title }}</h4>
+              <p class="proof__body">{{ p.body }}</p>
+            </div>
+          </li>
+          {%- endfor %}
+        </ol>
+      </article>
+      {%- endfor %}
     </div>
+
+    <p class="value__note">{{ s.note }} <a href="{{ s.source.href }}" target="_blank" rel="noopener">{{ s.source.label }}</a>.</p>
   </div>
 </section>

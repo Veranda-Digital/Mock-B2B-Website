@@ -1,0 +1,18 @@
+{% from "components/section-heading.njk" import eyebrow %}
+{%- set s = team.story -%}
+<section class="team-story" id="story">
+  <div class="container">
+    <div class="team-story__panel" data-reveal>
+      <div class="team-story__lead">
+        {{ eyebrow(s.eyebrow, "coral") }}
+        <h2 class="team-story__title">{{ s.titleLead }} <span>{{ s.titleAccent }}</span></h2>
+        <p class="team-story__statement">{{ s.lead | safe }}</p>
+      </div>
+      <div class="team-story__body">
+        {%- for p in s.paragraphs %}
+        <p>{{ p | safe }}</p>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>

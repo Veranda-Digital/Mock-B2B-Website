@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+permalink: /team/
+title: Team | Veranda Digital
+description: Meet the people behind Veranda, including our core team, board, and advisors across hardware, software, logistics, retail, and community impact.
+pageClass: team
+sections:
+  - intro
+  - story
+  - leadership
+  - board
+---
+{% for section in sections %}
+{% include "sections/team/" + section + ".njk" %}
+{% endfor %}
+{%- set cta = team.cta %}
+{% include "sections/home/get-started.njk" %}

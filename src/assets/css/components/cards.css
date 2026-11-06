@@ -187,3 +187,10 @@
   letter-spacing: -0.01em;
   color: var(--color-ink);
 }
+
+/* Small icon tile used in capability cards and lists. */
+.icon-tile--xs {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+}

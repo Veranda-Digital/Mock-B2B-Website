@@ -1,0 +1,409 @@
+.what-who {
+  padding: 100px 0;
+  background: var(--color-cream);
+}
+
+/* Group labels sit a step above the site-wide 13px eyebrow. */
+.what-who .eyebrow--coral,
+.what-who .eyebrow--green {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ---- Intro: what Veranda is, with the Dream Box as an example ---- */
+.what-who__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.what-who__intro .section-heading__body {
+  max-width: 520px;
+  font-size: var(--fs-lead);
+  line-height: 1.45;
+}
+
+.embodiment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+}
+
+/* Compiled graphic: the Dream Box in front, with the exploded lock and the app
+   tucked behind it, peeking out from the top left and top right. Layers are
+   positioned as % of the stage so the group scales as one. */
+.embodiment__stage {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 100 / 60;
+}
+
+.embodiment__layer {
+  position: absolute;
+  height: auto;
+}
+
+.embodiment__layer--lock {
+  left: 3%;
+  top: -5.25%;
+  width: 50%;
+  /* Pivot on the top-left so the right side drops and the group balances. */
+  transform-origin: top left;
+  transform: rotate(7deg);
+  filter: drop-shadow(0 10px 16px rgba(35, 37, 44, 0.14));
+}
+
+.embodiment__layer--app {
+  left: 71%;
+  top: 8.4%;
+  width: 19%;
+  border-radius: 14px;
+  filter: drop-shadow(0 12px 20px rgba(35, 37, 44, 0.18));
+}
+
+.embodiment__layer--box {
+  left: 12%;
+  top: 13.65%;
+  width: 80%;
+}
+
+
+.embodiment__caption {
+  /* The product image overflows the stage and paints above in-flow text. */
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-ink);
+}
+
+.embodiment__caption-star {
+  font-size: 1.4em;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-green-500);
+}
+
+.embodiment__caption a {
+  font-weight: 500;
+  color: var(--color-green-900);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---- Who it serves: three delivery sectors, then one open-ended card ---- */
+.sector-groups {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: var(--grid-gap);
+  margin-top: 64px;
+}
+
+.sector-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+/* A rule after each group label shows where the group runs. */
+.sector-group--beyond {
+  --cols: 2;
+}
+
+.sector-group > .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sector-group > .eyebrow::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+.sector-group__cards {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+  flex: 1;
+  gap: var(--grid-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sector-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 22px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+
+.sector-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -20px rgba(35, 37, 44, 0.25);
+}
+
+.sector-card__art {
+  width: 140px;
+  height: 140px;
+  margin: 4px auto 0;
+}
+
+.sector-card__title {
+  color: var(--color-ink);
+}
+
+.sector-card__benefits {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sector-card__benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: var(--fs-small);
+  line-height: 1.35;
+  color: var(--color-ink);
+}
+
+.sector-card__benefits .icon {
+  flex: none;
+  margin-top: 1px;
+  color: var(--color-green-500);
+}
+
+/* Beyond delivery: dashed and open, so it reads as "and more" next to the solid cards. */
+.sector-card--open {
+  border: 1.5px dashed rgba(28, 81, 65, 0.45);
+  background: transparent;
+}
+
+.sector-card--open:hover {
+  background: var(--color-white);
+}
+
+/* A small cluster of icons stands in for the illustration, with an open slot for what is not listed. */
+.sector-card__art--icons {
+  display: grid;
+  grid-template-columns: repeat(2, 56px);
+  gap: 8px;
+  width: auto;
+  height: 140px;
+  align-content: center;
+  justify-content: center;
+}
+
+.sector-card__icon {
+  display: grid;
+  place-items: center;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--color-green-900);
+  color: var(--color-cream);
+}
+
+.sector-card__icon.is-open {
+  border: 1.5px dashed rgba(28, 81, 65, 0.5);
+  background: transparent;
+  color: var(--color-green-900);
+}
+
+/* ---- What it does: four small product previews ---- */
+.what-who__block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 64px;
+}
+
+.capabilities {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.capability {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  background: var(--color-green-900);
+  color: var(--text-on-dark);
+}
+
+.capability__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.capability__icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-green-500);
+  color: var(--color-green-900);
+}
+
+.capability__label {
+  font-size: var(--fs-h5);
+  line-height: 1.2;
+  color: var(--text-on-dark);
+}
+
+.capability__title {
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--text-on-dark);
+  opacity: 0.9;
+}
+
+.capability__preview {
+  display: grid;
+  gap: 6px;
+  margin: auto 0 0;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.22);
+  list-style: none;
+}
+
+.capability__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(247, 246, 241, 0.08);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* Long labels wrap instead of clipping, so the previews hold up at any card width. */
+.capability__row span {
+  min-width: 0;
+  color: rgba(247, 246, 241, 0.85);
+}
+
+.capability__row strong {
+  flex: none;
+  max-width: 55%;
+  font-weight: 500;
+  text-align: right;
+}
+
+.capability__row--ok strong { color: var(--color-green-500); }
+.capability__row--warn strong { color: var(--color-yellow-100); }
+.capability__row--off strong { color: rgba(247, 246, 241, 0.6); }
+
+@media (max-width: 1199px) {
+  .what-who {
+    padding-block: 72px;
+  }
+
+  .sector-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 809px) {
+  .what-who {
+    padding-block: 64px;
+  }
+
+  .what-who__intro {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .embodiment__stage {
+    max-width: 400px;
+  }
+
+  .sector-groups,
+  .what-who__block {
+    margin-top: 44px;
+  }
+
+  .sector-group__cards,
+  .capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .sector-group--beyond {
+    --cols: 1;
+  }
+
+  /* Delivery cards go horizontal: small art beside the benefits. */
+  .sector-group .sector-card {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-areas:
+      "art title"
+      "art benefits";
+    column-gap: 16px;
+    row-gap: 10px;
+    padding: 18px;
+  }
+
+  .sector-group .sector-card__art {
+    grid-area: art;
+    width: 72px;
+    height: 72px;
+    margin: 0;
+  }
+
+  .sector-group .sector-card__title { grid-area: title; }
+  .sector-group .sector-card__benefits { grid-area: benefits; }
+
+  .sector-card__art--icons {
+    grid-template-columns: repeat(2, 34px);
+    gap: 6px;
+    height: auto;
+  }
+
+  .sector-card__icon {
+    height: 34px;
+  }
+
+  .sector-card__icon .icon {
+    width: 16px;
+    height: 16px;
+  }
+}

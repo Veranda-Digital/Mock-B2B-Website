@@ -1,0 +1,23 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{%- set s = team.leadership -%}
+<section class="team-leadership theme-dark" id="leadership">
+  <div class="container">
+    {{ sectionHeading({ title: s.title, tone: "dark" }) }}
+    <div class="team-leadership__grid">
+      {%- for person in s.people %}
+      <article class="leader-card" data-reveal>
+        <figure class="leader-card__figure">
+          <div class="leader-card__photo">
+            <img src="{{ person.photo }}" alt="{{ person.name }}" style="object-position: {{ person.focus or 'center' }}" loading="lazy">
+          </div>
+          <figcaption class="leader-card__id">
+            <h4 class="leader-card__name">{{ person.name }}</h4>
+            <p class="leader-card__role">{{ person.role }}</p>
+          </figcaption>
+        </figure>
+        <p class="leader-card__bio">{{ person.bio }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

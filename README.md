@@ -14,7 +14,7 @@ npm run build    # production output in _site/
 src/
   index.njk                     Homepage — lists its sections in order (front matter)
   work-with-us.njk              Work With Us page (/work-with-us/)
-  investors.njk                 Evaluation Kit page (/investors/)
+  eval-kit.njk                  Evaluation Kit page (/eval-kit/)
   _data/
     site.json                   Site name, SEO, shared links, form action
     navigation.json             Header links + floating section-nav items for the homepage
@@ -45,7 +45,11 @@ src/
 - **Re-theme:** change values in `src/assets/css/theme/tokens.css`.
 - **Add an icon:** add a path to the `paths` map in `src/_includes/components/icon.njk`.
 - **Hook up the Evaluation Kit form:** set `evaluationForm.action` in `src/_data/site.json`
-  (e.g. a Formspree, Netlify Forms, or your own endpoint).
+  (e.g. a Formspree, Netlify Forms, or your own endpoint). Until an action is set, the form
+  opens the visitor's email app with the request pre-filled for `contact.email`.
+- **Add a booking link:** set `contact.meetingUrl` in `src/_data/site.json` (e.g. a Calendly or
+  HubSpot meetings URL). Until then, "Book a meeting" opens an email to `contact.email`.
+- `/investors/` is a redirect stub to `/eval-kit/`, kept so old links keep working.
 
 ## Deploying (GitHub Pages)
 
