@@ -1,0 +1,230 @@
+{
+  "title": "Privacy Policy",
+  "effective": "May 27, 2026",
+  "updated": "May 27, 2026",
+  "intro": "This policy explains how Veranda Digital Inc. handles personal information in the Veranda mobile app.",
+  "sections": [
+    {
+      "id": "introduction",
+      "heading": "1. Introduction",
+      "blocks": [
+        { "type": "p", "text": "Veranda Digital Inc. (\"Veranda,\" \"we,\" \"us,\" or \"our\") is committed to protecting your privacy. This policy describes the personal information we collect through the Veranda mobile app (the \"App\"), how we use it, and the choices available to you." },
+        { "type": "p", "text": "By using the App you consent to this policy. If you do not agree with it, please stop using the App." },
+        { "type": "p", "text": "This policy applies to users in Canada and the United States, and is designed to meet the requirements of the Personal Information Protection and Electronic Documents Act (PIPEDA) in Canada and applicable state privacy laws in the United States." }
+      ]
+    },
+    {
+      "id": "information-we-collect",
+      "heading": "2. Information We Collect",
+      "blocks": [
+        { "type": "h3", "text": "2.1 Information you provide directly" },
+        {
+          "type": "table",
+          "head": ["Information", "Why we collect it"],
+          "rows": [
+            ["Name", "Entered when you register an account."],
+            ["Email address", "Authentication, account management, and notifications."],
+            ["Password", "Stored hashed or encrypted. We never store passwords in plain text."],
+            ["Lock sharing contacts", "Email addresses you enter in order to share access to a lock."]
+          ]
+        },
+        { "type": "h3", "text": "2.2 Information collected automatically" },
+        {
+          "type": "table",
+          "head": ["Information", "Why we collect it"],
+          "rows": [
+            ["Lock activity logs", "Lock and unlock events, timestamps, and who triggered them."],
+            ["Lock schedules", "The access schedules you create."],
+            ["Telemetry data", "Temperature and battery level reported by lock hardware."],
+            ["Bluetooth usage", "Lock command events are logged. Raw Bluetooth signals are not stored."],
+            ["Push notification data", "Device tokens used to deliver notifications."],
+            ["App usage data", "Sessions, feature use, and error logs, used for diagnostics and improvement."]
+          ]
+        },
+        { "type": "h3", "text": "2.3 Information we do not collect" },
+        {
+          "type": "list",
+          "items": [
+            "Location or GPS data",
+            "Camera or microphone data",
+            "Contacts from your device address book",
+            "Biometric data"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-we-use",
+      "heading": "3. How We Use Your Information",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["Purpose", "Legal basis under PIPEDA"],
+          "rows": [
+            ["Operating the App", "Contractual necessity"],
+            ["Authenticating your identity", "Contractual necessity"],
+            ["Delivering lock control commands", "Contractual necessity"],
+            ["Push notifications about lock events", "Consent (you may opt out in device settings)"],
+            ["Showing your lock activity history", "Contractual necessity"],
+            ["Enabling lock sharing", "Consent (you start each share)"],
+            ["Diagnosing issues and improving the App", "Legitimate interest"],
+            ["Complying with the law", "Legal obligation"],
+            ["Account-related communications", "Contractual necessity or legitimate interest"]
+          ]
+        },
+        { "type": "p", "text": "We do not sell personal information to third parties, and we do not use your data for targeted advertising." }
+      ]
+    },
+    {
+      "id": "lock-sharing",
+      "heading": "4. Lock Sharing and Other Users",
+      "blocks": [
+        { "type": "p", "text": "When you share access to a lock:" },
+        {
+          "type": "list",
+          "items": [
+            "The invitee's email address is sent to our servers so we can identify their account.",
+            "The invitee can see the access grant and operate the lock.",
+            "Activity by shared users appears in the lock owner's activity log.",
+            "The names and email addresses of users who share a lock are shown in the App."
+          ]
+        },
+        { "type": "p", "text": "If someone adds your email address in order to share a lock with you, we process that information to create the access grant. You may contact us to request removal of such access records." }
+      ]
+    },
+    {
+      "id": "storage",
+      "heading": "5. Data Storage and Transfer",
+      "blocks": [
+        { "type": "h3", "text": "5.1 Where your data is stored" },
+        { "type": "p", "text": "Data is stored on Amazon Web Services (AWS) servers in Canada (ca-central-1) and the United States (us-east-1 and/or us-west-2). By using the App you consent to storage and processing in both countries." },
+        { "type": "h3", "text": "5.2 Cross-border transfers" },
+        { "type": "p", "text": "Data belonging to Canadian users may be processed in the United States. We rely on contractual safeguards with our providers, including AWS Standard Contractual Clauses where applicable." },
+        { "type": "h3", "text": "5.3 Data security" },
+        {
+          "type": "list",
+          "items": [
+            "Encryption in transit using TLS/HTTPS",
+            "Passwords hashed at rest using bcrypt or an equivalent",
+            "Access controls limiting staff access to personal information",
+            "Regular security monitoring of our infrastructure"
+          ]
+        },
+        { "type": "p", "text": "No method of transmission or storage is completely secure, and we cannot guarantee absolute security." }
+      ]
+    },
+    {
+      "id": "retention",
+      "heading": "6. Data Retention",
+      "blocks": [
+        {
+          "type": "table",
+          "head": ["Data", "Retention period"],
+          "rows": [
+            ["Account information (name, email)", "Until account deletion, then 30 days for backup expiry"],
+            ["Lock activity logs", "12 months, rolling"],
+            ["Telemetry data (temperature, battery)", "12 months, rolling"],
+            ["Lock schedules", "Until you delete them or your account is terminated"],
+            ["Push notification tokens", "Until the App is uninstalled or notification permission is revoked"],
+            ["Diagnostic and error logs", "90 days"]
+          ]
+        },
+        { "type": "p", "text": "After the applicable period, data is permanently deleted or anonymized." }
+      ]
+    },
+    {
+      "id": "sharing",
+      "heading": "7. Sharing Your Information",
+      "blocks": [
+        { "type": "p", "text": "We do not sell, trade, or rent your personal information." },
+        { "type": "h3", "text": "7.1 Service providers" },
+        { "type": "p", "text": "We share data with Amazon Web Services for cloud infrastructure, database storage, and hosting. Our providers are contractually bound and may use the data only to provide those services." },
+        { "type": "h3", "text": "7.2 Legal requirements" },
+        {
+          "type": "list",
+          "items": [
+            "Where disclosure is required by law, court order, or a government authority",
+            "To comply with our legal obligations",
+            "To protect the rights, property, or safety of Veranda, our users, or the public",
+            "To detect, investigate, or prevent fraud or security incidents"
+          ]
+        },
+        { "type": "h3", "text": "7.3 Business transfers" },
+        { "type": "p", "text": "If Veranda is involved in a merger, acquisition, or sale of all or substantially all of its assets, your data may be transferred. We will notify you by email or by a prominent notice in the App." },
+        { "type": "h3", "text": "7.4 With your consent" },
+        { "type": "p", "text": "We may share information in any other way with your explicit consent." }
+      ]
+    },
+    {
+      "id": "your-rights",
+      "heading": "8. Your Privacy Rights",
+      "blocks": [
+        { "type": "h3", "text": "8.1 Users in Canada (PIPEDA)" },
+        {
+          "type": "list",
+          "items": [
+            "Access the personal information we hold about you",
+            "Request correction of inaccurate information",
+            "Withdraw consent where consent is the basis for processing, which may limit some features",
+            "File a complaint with the Office of the Privacy Commissioner of Canada at priv.gc.ca"
+          ]
+        },
+        { "type": "h3", "text": "8.2 Users in the United States" },
+        { "type": "p", "text": "Depending on your state, you may have the right to know what information is collected, to request deletion, to opt out of the sale of personal information (we do not sell it), and not to be discriminated against for exercising these rights." },
+        { "type": "h3", "text": "8.3 Exercising your rights" },
+        { "type": "p", "text": "Email software@getveranda.com. We aim to respond to verifiable requests within 30 days, or within the period required by law. We may need to verify your identity first." }
+      ]
+    },
+    {
+      "id": "children",
+      "heading": "9. Children's Privacy",
+      "blocks": [
+        { "type": "p", "text": "The App is not directed at anyone under 18. We do not knowingly collect personal information from minors, and will delete it promptly if we become aware of it. If you have a concern, contact software@getveranda.com." }
+      ]
+    },
+    {
+      "id": "push",
+      "heading": "10. Push Notifications",
+      "blocks": [
+        { "type": "p", "text": "The App may send push notifications about lock events, such as a lock being opened or closed or a schedule being triggered. You can turn notifications off in your device settings. Doing so does not affect other functions of the App." }
+      ]
+    },
+    {
+      "id": "bluetooth",
+      "heading": "11. Bluetooth",
+      "blocks": [
+        { "type": "p", "text": "The App connects to Veranda lock hardware over Bluetooth. Communication is direct between your device and the lock. Raw Bluetooth data is not sent to our servers; we log only lock command events, such as a lock being activated via Bluetooth at a given time." }
+      ]
+    },
+    {
+      "id": "third-party",
+      "heading": "12. Third-Party Links and Services",
+      "blocks": [
+        { "type": "p", "text": "We are not responsible for the privacy practices of third parties. We encourage you to read their privacy policies." }
+      ]
+    },
+    {
+      "id": "changes",
+      "heading": "13. Changes to This Privacy Policy",
+      "blocks": [
+        { "type": "p", "text": "We may update this policy from time to time. For material changes we will update the \"Last Updated\" date and, where required, notify you by email or by a notice in the App. Continued use of the App after a change means you accept the updated policy." }
+      ]
+    },
+    {
+      "id": "contact",
+      "heading": "14. Contact Us",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Veranda Digital Inc.",
+            "Attention: Privacy Officer",
+            "Email: software@getveranda.com",
+            "Website: www.getveranda.com"
+          ]
+        },
+        { "type": "p", "text": "If a privacy concern is not resolved to your satisfaction, users in Canada may contact the Office of the Privacy Commissioner of Canada at priv.gc.ca or 1-800-282-1376." }
+      ]
+    }
+  ]
+}

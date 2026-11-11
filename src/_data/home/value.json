@@ -77,5 +77,76 @@
   "source": {
     "label": "McKinsey & Company (2024), including a consumer survey it cites",
     "href": "https://www.mckinsey.com/industries/logistics/our-insights/digitizing-mid-and-last-mile-logistics-handovers-to-reduce-waste"
-  }
+  },
+  "capabilitiesLabel": "What it does",
+  "capabilities": [
+    {
+      "icon": "signature",
+      "label": "Authorization",
+      "title": "Give access to only those who need it and only when they need it.",
+      "preview": [
+        {
+          "left": "Carrier",
+          "right": "One-time",
+          "tone": "warn"
+        },
+        {
+          "left": "Manager",
+          "right": "Always",
+          "tone": "ok"
+        }
+      ]
+    },
+    {
+      "icon": "eye",
+      "label": "Auditability",
+      "title": "Log everything: access, temperature, air quality, motion, battery, and more.",
+      "preview": [
+        {
+          "left": "2:14 PM Opened",
+          "right": "Carrier",
+          "tone": "off"
+        },
+        {
+          "left": "Conditions",
+          "right": "38°F, 45% RH",
+          "tone": "ok"
+        }
+      ]
+    },
+    {
+      "icon": "calendar-check",
+      "label": "Automation",
+      "title": "Build schedules, triggers, and alerts that keep things running on their own.",
+      "preview": [
+        {
+          "left": "9:00 AM - 5:30 PM",
+          "right": "Unlocked",
+          "tone": "ok"
+        },
+        {
+          "left": "8:00 PM - 7:30 AM",
+          "right": "Alarmed",
+          "tone": "warn"
+        }
+      ]
+    },
+    {
+      "icon": "puzzle",
+      "label": "Integration",
+      "title": "Plug into the apps, systems, and physical products you already use.",
+      "preview": [
+        {
+          "left": "POST /unlock",
+          "right": "200 OK",
+          "tone": "ok"
+        },
+        {
+          "left": "Dispatch system",
+          "right": "Synced",
+          "tone": "ok"
+        }
+      ]
+    }
+  ]
 }

@@ -1,4 +1,4 @@
-{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/section-heading.njk" import sectionHeading, eyebrow %}
 {% from "components/icon.njk" import icon %}
 {%- set s = home.value -%}
 <section class="value" id="{{ s.id }}">
@@ -42,5 +42,26 @@
     </div>
 
     <p class="value__note">{{ s.note }} <a href="{{ s.source.href }}" target="_blank" rel="noopener">{{ s.source.label }}</a>.</p>
+
+    {# What it does: four small product previews, moved here from the what-who section. #}
+    <div class="value__capabilities">
+      {{ eyebrow(s.capabilitiesLabel, "coral") }}
+      <ul class="capabilities">
+        {%- for c in s.capabilities %}
+        <li class="capability" data-reveal>
+          <div class="capability__head">
+            <span class="capability__icon">{{ icon(c.icon, 22) }}</span>
+            <h5 class="capability__label">{{ c.label }}</h5>
+          </div>
+          <p class="capability__title">{{ c.title }}</p>
+          <ul class="capability__preview" aria-hidden="true">
+            {%- for row in c.preview %}
+            <li class="capability__row capability__row--{{ row.tone }}"><span>{{ row.left }}</span><strong>{{ row.right }}</strong></li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
   </div>
 </section>

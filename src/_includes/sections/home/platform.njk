@@ -36,7 +36,7 @@
         <div class="platform-diagram__chip">
           {{ icon(s.link.icon, 20) }}
           <strong>{{ s.link.title }}</strong>
-          <small>{{ s.link.caption }}</small>
+          {%- if s.link.caption %}<small>{{ s.link.caption }}</small>{% endif %}
         </div>
         <span class="platform-diagram__wire platform-diagram__wire--reverse"><i></i><i></i><i></i></span>
       </div>

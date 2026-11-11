@@ -270,12 +270,14 @@
 
 /* ---- Link to the Technology page ---- */
 .platform__footer {
+  /* Space above the button so it is not crowded by the two panels. */
+  padding-top: 24px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 16px 28px;
-  margin-top: 32px;
+  margin-top: 48px;
   text-align: center;
 }
 
@@ -342,6 +344,6 @@
   }
 
   .platform__footer {
-    margin-top: 28px;
+    margin-top: 36px;
   }
 }

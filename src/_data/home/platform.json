@@ -42,8 +42,7 @@
   },
   "link": {
     "icon": "signal",
-    "title": "Wireless communications",
-    "caption": "BLE + LoRaWAN"
+    "title": "Wireless communications"
   },
   "software": {
     "label": "Software",
