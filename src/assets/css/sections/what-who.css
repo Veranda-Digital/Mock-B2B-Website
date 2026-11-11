@@ -81,7 +81,7 @@
 .embodiment__layer--lock {
   left: 28.5%;
   top: 23.4%;
-  z-index: 1;
+  z-index: 2;
   width: 57.2%;
   filter: drop-shadow(0 14px 22px rgba(35, 37, 44, 0.16));
 }
@@ -89,7 +89,7 @@
 .embodiment__layer--app {
   left: 8.9%;
   top: 13.4%;
-  z-index: 2;
+  z-index: 1;
   width: 25.1%;
   border-radius: 18px;
   filter: drop-shadow(0 18px 30px rgba(35, 37, 44, 0.22));
