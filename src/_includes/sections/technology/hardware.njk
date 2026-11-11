@@ -3,6 +3,11 @@
 {%- set s = technology.hardware -%}
 {%- set total = s.steps | length -%}
 <section class="hardware theme-dark" id="{{ s.id }}" data-board-stack style="--steps: {{ total }}">
+  {#- One snap stop per board, so a hard scroll lands on a board rather than
+      skipping several. #}
+  <div class="hardware__snaps" aria-hidden="true">
+    {%- for step in s.steps %}<span class="hardware__snap"></span>{% endfor %}
+  </div>
   <div class="hardware__sticky">
     <div class="container hardware__inner">
       {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, tone: "dark" }) }}

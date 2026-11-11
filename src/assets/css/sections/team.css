@@ -3,6 +3,12 @@
 
 /* ---- Intro ---- */
 .team-intro {
+  /* Fits its content, but never shorter than most of the first screen. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(80vh / var(--zoom));
+  min-height: calc(80svh / var(--zoom));
   padding: 180px 0 100px;
   background:
     radial-gradient(ellipse 55% 60% at 50% 0%, rgba(51, 209, 107, 0.14), transparent 70%),

@@ -6,6 +6,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Proximity, so only sections that declare snap points (the board stack)
+     behave differently; everything else scrolls normally. */
+  scroll-snap-type: y proximity;
   -webkit-text-size-adjust: 100%;
 }
 
