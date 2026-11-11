@@ -8,6 +8,7 @@
   <div class="hardware__snaps" aria-hidden="true">
     {%- for step in s.steps %}<span class="hardware__snap"></span>{% endfor %}
   </div>
+  <span class="hardware__snap--exit" aria-hidden="true"></span>
   <div class="hardware__sticky">
     <div class="container hardware__inner">
       {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, tone: "dark" }) }}
