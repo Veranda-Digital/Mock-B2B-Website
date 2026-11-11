@@ -5,6 +5,7 @@
   "url": "https://getveranda.com",
   "ogImage": "/assets/images/og-image.jpg",
   "lang": "en",
+  "indexable": false,
   "links": {
     "evaluationKit": "/eval-kit/",
     "privacyPolicy": "/privacy/",
