@@ -4,7 +4,8 @@
   "body": "The Veranda platform combines hardware, software, and intelligent networking to let a box, locker, or door open for the right person, and record what happened.",
   "embodiment": {
     "caption": "DreamBox is a product embodiment built with Veranda.",
-    "alt": "The Veranda platform: the Dream Box smart drop box, the exploded smart lock inside it, and the Veranda app",
+    "alt": "The Veranda platform: the Veranda app and the exploded smart lock inside the box",
+    "showBox": false,
     "lock": {
       "src": "/assets/images/smart-lock-exploded.png",
       "width": 2000,
