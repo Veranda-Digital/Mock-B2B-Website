@@ -1,20 +1,45 @@
 {
   "id": "casestudy",
-  "eyebrow": "Case Study: Dion's Chicago Dream",
+  "eyebrow": "Case Study: Dion’s Chicago Dream",
   "title": "Our partner is delivering better for Chicago",
   "feature": {
     "tag": "Complete solution",
     "title": "Their mission. Our Tech.",
-    "body": "Dion's Chicago Dream moves 325,000 pounds of fresh produce each month to more than 5,400 households a week, reaching every Chicago neighborhood so that healthy food isn't decided by zip code. Veranda built the Dream Box to handle the last few feet: a smart, battery-powered drop box that needs no power, Wi-Fi, or installer.",
+    "body": "Dion’s Chicago Dream moves 325,000 pounds of fresh produce each month to more than 5,400 households a week, reaching every Chicago neighborhood so that healthy food isn’t decided by zip code. Veranda built the Dream Box to handle the last few feet: a smart, battery-powered drop box that needs no power, Wi-Fi, or installer.",
     "highlights": [
-      { "icon": "clock", "title": "Faster", "body": "Drivers drop and go. No waiting at the door, no second trip." },
-      { "icon": "lock", "title": "More secure", "body": "Opens only for an authorized carrier, and logs every access." },
-      { "icon": "thermometer", "title": "Fresher", "body": "Monitors conditions inside and flags anything out of the ordinary." }
+      {
+        "icon": "clock",
+        "title": "Faster",
+        "body": "Drivers drop and go. No waiting at the door, no second trip."
+      },
+      {
+        "icon": "lock",
+        "title": "More secure",
+        "body": "Opens only for an authorized carrier, and logs every access."
+      },
+      {
+        "icon": "thermometer",
+        "title": "Fresher",
+        "body": "Monitors conditions inside and flags anything out of the ordinary."
+      }
     ],
     "photos": [
-      { "src": "/assets/images/dream-box-warehouse.jpg", "alt": "Volunteers packing produce boxes", "width": 1334, "height": 2000 },
-      { "src": "/assets/images/dream-box-chicago.jpg", "alt": "Dion sitting on a Dream Box by Lake Michigan", "width": 1000, "height": 1500 }
+      {
+        "src": "/assets/images/dream-box-warehouse.jpg",
+        "alt": "Volunteers packing produce boxes",
+        "width": 1334,
+        "height": 2000
+      },
+      {
+        "src": "/assets/images/dream-box-chicago.jpg",
+        "alt": "Dion sitting on a Dream Box by Lake Michigan",
+        "width": 1000,
+        "height": 1500
+      }
     ]
   },
-  "button": { "label": "More about the Dream Box", "href": "https://getveranda.com/" }
+  "button": {
+    "label": "More about the Dream Box",
+    "href": "https://getveranda.com/"
+  }
 }

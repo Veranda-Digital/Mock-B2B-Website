@@ -24,7 +24,7 @@
   "models": {
     "eyebrow": "Ways to work together",
     "title": "Five ways to build on Veranda",
-    "body": "Each model is a different split between what we provide and what you bring. Choose the one that matches how much you want to build, or start a conversation and we'll help you decide.",
+    "body": "Each model is a different split between what we provide and what you bring. Choose the one that matches how much you want to build, or start a conversation and we’ll help you decide.",
     "providesLabel": "Veranda provides",
     "bringLabel": "You bring",
     "fitLabel": "Best for",
@@ -46,7 +46,7 @@
           "Your operation and customers"
         ],
         "proof": {
-          "label": "See it in the field: Dion's Chicago Dream",
+          "label": "See it in the field: Dion’s Chicago Dream",
           "href": "/#casestudy"
         }
       },
@@ -161,7 +161,7 @@
   },
   "considerations": {
     "eyebrow": "Partnership considerations",
-    "title": "What we'll explore together",
+    "title": "What we’ll explore together",
     "body": "Every engagement is shaped by a handful of practical questions. We work through them with you early, so the evaluation and pilot answer the right ones.",
     "items": [
       {
@@ -204,7 +204,7 @@
   "cta": {
     "id": "get-started",
     "title": "Find the right fit, hands-on.",
-    "body": "Request an Evaluation Kit to test Veranda in your own product, or tell us what you're building and we'll set up a partnership discussion.",
+    "body": "Request an Evaluation Kit to test Veranda in your own product, or tell us what you’re building and we’ll set up a partnership discussion.",
     "buttons": [
       {
         "label": "Request an Evaluation Kit",

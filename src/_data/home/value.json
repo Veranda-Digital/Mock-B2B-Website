@@ -33,7 +33,7 @@
         {
           "value": 85,
           "suffix": "%",
-          "label": "of consumers won't shop again after a poor delivery",
+          "label": "of consumers won’t shop again after a poor delivery",
           "title": "Goods arrive intact",
           "body": "Locked, monitored boxes protect orders from theft, weather, and spoilage, with a record to prove it."
         }
@@ -67,7 +67,7 @@
         {
           "icon": "signal",
           "tag": "Deploy",
-          "title": "Reach places Wi-Fi can't",
+          "title": "Reach places Wi-Fi can’t",
           "body": "Bluetooth up close and LoRaWAN for long range, with up to a year on battery. No wiring or installer."
         }
       ]

@@ -76,3 +76,22 @@ textarea.form-field__control {
   background-repeat: no-repeat;
   cursor: pointer;
 }
+
+/* ---- Glow: an in-page link calling attention to where it lands ---- */
+@keyframes glow-attention {
+  0% { box-shadow: 0 0 0 0 rgba(51, 209, 107, 0); }
+  12% { box-shadow: 0 0 0 2px var(--color-green-500), 0 0 34px -4px rgba(51, 209, 107, 0.75); }
+  70% { box-shadow: 0 0 0 2px var(--color-green-500), 0 0 34px -4px rgba(51, 209, 107, 0.75); }
+  100% { box-shadow: 0 0 0 0 rgba(51, 209, 107, 0); }
+}
+
+.is-glowing {
+  animation: glow-attention 3s var(--ease-out) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-glowing {
+    animation: none;
+    box-shadow: 0 0 0 2px var(--color-green-500);
+  }
+}

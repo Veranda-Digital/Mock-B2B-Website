@@ -4,7 +4,7 @@
   "title": "Work with Veranda the way that works for you",
   "body": "Take the full platform as a turnkey solution, pick only the parts you need, or meet us in the middle with something built just for you.",
   "scaleLabel": "Partnership model",
-  "includesLabel": "What's included",
+  "includesLabel": "What’s included",
   "start": 2,
   "models": [
     {
@@ -43,7 +43,7 @@
     {
       "icon": "key",
       "title": "Technology licensing",
-      "body": "Put Veranda's technology inside your own product line. License the platform and ship access, monitoring, and automation as features of products you already sell.",
+      "body": "Put Veranda’s technology inside your own product line. License the platform and ship access, monitoring, and automation as features of products you already sell.",
       "includes": [
         "Hardware designs",
         "Software platform license",

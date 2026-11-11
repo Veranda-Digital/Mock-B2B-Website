@@ -152,24 +152,13 @@
 }
 
 .proof__value {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
   color: var(--color-green-900);
-}
-
-/* A short signal-green bar ties each figure to its caption. */
-.proof__value::after {
-  content: "";
-  display: block;
-  width: 28px;
-  height: 3px;
-  margin-top: 4px;
-  border-radius: 2px;
-  background: var(--color-green-500);
 }
 
 .proof__label {
@@ -265,7 +254,7 @@
   }
 
   .proof__value {
-    font-size: 36px;
+    font-size: 40px;
   }
 }
 
@@ -307,10 +296,6 @@
     border-bottom-color: rgba(247, 246, 241, 0.16);
   }
 
-  .proof__value::after {
-    display: none;
-  }
-
   .proof__value {
     flex: none;
   }
@@ -321,7 +306,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 28px;
   margin-top: 56px;
 }
 

@@ -301,11 +301,14 @@ section.eval-request {
 }
 
 .eval-form__note {
+  max-width: 46ch;
   margin-top: 16px;
+  margin-inline: auto;
   font-size: 13px;
   line-height: 1.5;
   letter-spacing: 0;
   text-align: center;
+  text-wrap: pretty;
   color: var(--color-text);
 }
 

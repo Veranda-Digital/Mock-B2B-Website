@@ -135,7 +135,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 28px;
   margin-top: 64px;
   min-width: 0;
 }

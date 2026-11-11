@@ -34,7 +34,7 @@
     }
   },
   "kit": {
-    "eyebrow": "What's included",
+    "eyebrow": "What’s included",
     "title": "The whole system, in a box you can hold",
     "body": "Everything that makes a Veranda delivery box work is in the kit, shrunk down to a size that fits on a desk and works the same way.",
     "items": [
@@ -93,7 +93,7 @@
     "title": "Four steps from request to your desk.",
     "steps": [
       {
-        "title": "Tell us what you're building",
+        "title": "Tell us what you’re building",
         "body": "Send a short request with your use case and what you want to learn."
       },
       {
@@ -114,7 +114,7 @@
     "id": "request",
     "eyebrow": "Request your kit",
     "title": "Get an Evaluation Kit",
-    "body": "Tell us a little about your organization and what you'd like to evaluate. We'll follow up to confirm details and arrange your kit.",
+    "body": "Tell us a little about your organization and what you’d like to evaluate. We’ll follow up to confirm details and arrange your kit.",
     "form": {
       "submitLabel": "Request my Evaluation Kit",
       "note": "No commitment. A member of our team will reach out to set up an intro call and confirm where to ship your kit.",
@@ -158,7 +158,7 @@
           "name": "evaluating",
           "label": "What would you like to evaluate?",
           "type": "textarea",
-          "placeholder": "Your product or delivery program, the problem you're solving, and what would help you decide"
+          "placeholder": "Your product or delivery program, the problem you’re solving, and what would help you decide"
         },
         {
           "name": "timing",
@@ -178,7 +178,7 @@
   "talk": {
     "id": "talk",
     "eyebrow": "Prefer to talk first?",
-    "title": "Talk with us.",
+    "title": "Let’s discuss",
     "body": "Not ready for a kit, or have questions about a partnership? Book time with our team to walk through the platform and see what fits.",
     "meetingLabel": "Book a meeting",
     "emailLabel": "Email us",
