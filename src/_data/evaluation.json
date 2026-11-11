@@ -4,15 +4,37 @@
     "title": "Put the Veranda platform in your hands.",
     "body": "The Evaluation Kit is a miniature version of our delivery box, with access to the Veranda mobile app and every feature of the platform. Set it up at your desk, test it with your team, and decide with real experience instead of a slide deck.",
     "buttons": [
-      { "label": "Request your kit", "href": "#request", "variant": "primary" },
-      { "label": "Book a meeting", "href": "#talk", "variant": "dark" }
+      {
+        "label": "Request your kit",
+        "href": "#request",
+        "variant": "primary"
+      },
+      {
+        "label": "Book a meeting",
+        "href": "#talk",
+        "variant": "dark"
+      }
     ],
-    "assurances": ["Miniature Dream Box", "Full app access", "Every platform feature"],
-    "image": { "src": "/assets/images/evaluation-kit.png", "alt": "The Veranda Evaluation Kit, a miniature version of the Dream Box delivery box", "width": 925, "height": 656 },
-    "phone": { "src": "/assets/images/dashboard-app.png", "alt": "The Veranda Dashboard app on a phone", "width": 887, "height": 1825 }
+    "assurances": [
+      "Miniature Dream Box",
+      "Full app access",
+      "Every platform feature"
+    ],
+    "image": {
+      "src": "/assets/images/evaluation-kit.png",
+      "alt": "The Veranda Evaluation Kit, a miniature version of the Dream Box delivery box",
+      "width": 925,
+      "height": 656
+    },
+    "phone": {
+      "src": "/assets/images/dashboard-app.png",
+      "alt": "The Veranda Dashboard app on a phone",
+      "width": 887,
+      "height": 1825
+    }
   },
   "kit": {
-    "eyebrow": "What's included",
+    "eyebrow": "What’s included",
     "title": "The whole system, in a box you can hold.",
     "body": "Everything that makes a Veranda delivery box work is in the kit, shrunk down to a size that fits on a desk and works the same way.",
     "items": [
@@ -34,44 +56,121 @@
     ],
     "featuresLabel": "Features you can try on day one",
     "features": [
-      { "icon": "key", "title": "Hands-free access", "body": "Walk up with the app on your phone and the box opens." },
-      { "icon": "users", "title": "Shared & partner access", "body": "Invite teammates and give a one-time visitor temporary access." },
-      { "icon": "calendar-check", "title": "Scheduled access", "body": "Set windows for the box to unlock, stay open, or lock again." },
-      { "icon": "activity", "title": "Device & sensor monitoring", "body": "Follow lock state, battery, connectivity, and live readings." },
-      { "icon": "eye", "title": "Activity & events", "body": "Look back at every open, close, and change in condition." },
-      { "icon": "bell", "title": "Status updates & alerts", "body": "Get notified when a delivery arrives or something looks unusual." }
+      {
+        "icon": "key",
+        "title": "Hands-free access",
+        "body": "Walk up with the app on your phone and the box opens."
+      },
+      {
+        "icon": "users",
+        "title": "Shared & partner access",
+        "body": "Invite teammates and give a one-time visitor temporary access."
+      },
+      {
+        "icon": "calendar-check",
+        "title": "Scheduled access",
+        "body": "Set windows for the box to unlock, stay open, or lock again."
+      },
+      {
+        "icon": "activity",
+        "title": "Device & sensor monitoring",
+        "body": "Follow lock state, battery, connectivity, and live readings."
+      },
+      {
+        "icon": "eye",
+        "title": "Activity & events",
+        "body": "Look back at every open, close, and change in condition."
+      },
+      {
+        "icon": "bell",
+        "title": "Status updates & alerts",
+        "body": "Get notified when a delivery arrives or something looks unusual."
+      }
     ]
   },
   "process": {
     "eyebrow": "How it works",
     "title": "Four steps from request to your desk.",
     "steps": [
-      { "title": "Tell us what you're building", "body": "Send a short request with your use case and what you want to learn." },
-      { "title": "Meet the team", "body": "We schedule a call to confirm fit and shape the evaluation around your goals." },
-      { "title": "Receive your kit", "body": "Your miniature box ships to you with access to the mobile app." },
-      { "title": "Review and plan next steps", "body": "We gather your feedback and, if it makes sense, plan a pilot together." }
+      {
+        "title": "Tell us what you’re building",
+        "body": "Send a short request with your use case and what you want to learn."
+      },
+      {
+        "title": "Meet the team",
+        "body": "We schedule a call to confirm fit and shape the evaluation around your goals."
+      },
+      {
+        "title": "Receive your kit",
+        "body": "Your miniature box ships to you with access to the mobile app."
+      },
+      {
+        "title": "Review and plan next steps",
+        "body": "We gather your feedback and, if it makes sense, plan a pilot together."
+      }
     ]
   },
   "request": {
     "id": "request",
     "eyebrow": "Request your kit",
     "title": "Get an Evaluation Kit.",
-    "body": "Tell us a little about your organization and what you'd like to evaluate. We'll follow up to confirm details and arrange your kit.",
+    "body": "Tell us a little about your organization and what you’d like to evaluate. We’ll follow up to confirm details and arrange your kit.",
     "form": {
       "submitLabel": "Request my Evaluation Kit",
       "note": "No commitment. A member of our team will reach out to set up an intro call and confirm where to ship your kit.",
       "fields": [
-        { "name": "name", "label": "Name", "type": "text", "placeholder": "Jane Smith", "required": true, "half": true, "autocomplete": "name" },
-        { "name": "email", "label": "Work email", "type": "email", "placeholder": "jane@business.com", "required": true, "half": true, "autocomplete": "email" },
-        { "name": "company", "label": "Company", "type": "text", "placeholder": "Company name", "required": true, "half": true, "autocomplete": "organization" },
-        { "name": "role", "label": "Role", "type": "text", "placeholder": "Head of Operations", "half": true, "autocomplete": "organization-title" },
-        { "name": "evaluating", "label": "What would you like to evaluate?", "type": "textarea", "placeholder": "Your product or delivery program, the problem you're solving, and what would help you decide" },
+        {
+          "name": "name",
+          "label": "Name",
+          "type": "text",
+          "placeholder": "Jane Smith",
+          "required": true,
+          "half": true,
+          "autocomplete": "name"
+        },
+        {
+          "name": "email",
+          "label": "Work email",
+          "type": "email",
+          "placeholder": "jane@business.com",
+          "required": true,
+          "half": true,
+          "autocomplete": "email"
+        },
+        {
+          "name": "company",
+          "label": "Company",
+          "type": "text",
+          "placeholder": "Company name",
+          "required": true,
+          "half": true,
+          "autocomplete": "organization"
+        },
+        {
+          "name": "role",
+          "label": "Role",
+          "type": "text",
+          "placeholder": "Head of Operations",
+          "half": true,
+          "autocomplete": "organization-title"
+        },
+        {
+          "name": "evaluating",
+          "label": "What would you like to evaluate?",
+          "type": "textarea",
+          "placeholder": "Your product or delivery program, the problem you’re solving, and what would help you decide"
+        },
         {
           "name": "timing",
           "label": "When are you looking to start?",
           "type": "select",
           "placeholder": "Select a timeframe",
-          "options": ["As soon as possible", "Within 3 months", "Within 6 months", "Just exploring"]
+          "options": [
+            "As soon as possible",
+            "Within 3 months",
+            "Within 6 months",
+            "Just exploring"
+          ]
         }
       ]
     }
@@ -79,7 +178,7 @@
   "talk": {
     "id": "talk",
     "eyebrow": "Prefer to talk first?",
-    "title": "Talk with us.",
+    "title": "Let’s discuss",
     "body": "Not ready for a kit, or have questions about a partnership? Book time with our team to walk through the platform and see what fits.",
     "meetingLabel": "Book a meeting",
     "emailLabel": "Email us",

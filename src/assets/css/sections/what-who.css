@@ -3,23 +3,53 @@
   background: var(--color-cream);
 }
 
-/* Group labels sit a step above the site-wide 13px eyebrow. */
-.what-who .eyebrow--coral,
-.what-who .eyebrow--green {
+/* The group label sits a step above the site-wide 13px eyebrow. */
+.what-who .eyebrow--coral {
   font-size: 15px;
   font-weight: 700;
 }
 
-/* ---- Intro: what Veranda is, with the Dream Box as an example ---- */
+/* ---- Intro: what Veranda is, with the Dream Box as an example ----
+   Centred stack: headline, product cluster, then the body copy. The route
+   animation rings this block, running inside the padding. */
 .what-who__intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  /* Read by flightline.js; falls back to the green token. */
+  --flightline-color: var(--color-green-500);
+  position: relative;
+  max-width: none;
+  padding: clamp(52px, 5vw, 72px) clamp(44px, 5vw, 64px);
+}
+
+.flightline {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.what-who__intro-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 48px;
+  gap: 28px;
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.what-who__intro .section-heading__title {
+  max-width: 18ch;
+  text-wrap: balance;
 }
 
 .what-who__intro .section-heading__body {
-  max-width: 520px;
+  max-width: 560px;
+  margin: 0;
   font-size: var(--fs-lead);
   line-height: 1.45;
 }
@@ -29,6 +59,7 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  width: 100%;
   margin: 0;
 }
 
@@ -39,7 +70,7 @@
   position: relative;
   width: 100%;
   max-width: 560px;
-  aspect-ratio: 100 / 60;
+  aspect-ratio: 100 / 72;
 }
 
 .embodiment__layer {
@@ -48,21 +79,20 @@
 }
 
 .embodiment__layer--lock {
-  left: 3%;
-  top: -5.25%;
-  width: 50%;
-  /* Pivot on the top-left so the right side drops and the group balances. */
-  transform-origin: top left;
-  transform: rotate(7deg);
-  filter: drop-shadow(0 10px 16px rgba(35, 37, 44, 0.14));
+  left: 28.5%;
+  top: 23.4%;
+  z-index: 2;
+  width: 57.2%;
+  filter: drop-shadow(0 14px 22px rgba(35, 37, 44, 0.16));
 }
 
 .embodiment__layer--app {
-  left: 71%;
-  top: 8.4%;
-  width: 19%;
-  border-radius: 14px;
-  filter: drop-shadow(0 12px 20px rgba(35, 37, 44, 0.18));
+  left: 8.9%;
+  top: 13.4%;
+  z-index: 1;
+  width: 25.1%;
+  border-radius: 18px;
+  filter: drop-shadow(0 18px 30px rgba(35, 37, 44, 0.22));
 }
 
 .embodiment__layer--box {
@@ -71,6 +101,10 @@
   width: 80%;
 }
 
+/* Keeps the cluster from crowding the caption now that it runs taller. */
+.what-who__intro .embodiment {
+  margin-bottom: 4px;
+}
 
 .embodiment__caption {
   /* The product image overflows the stage and paints above in-flow text. */
@@ -100,44 +134,20 @@
   text-underline-offset: 3px;
 }
 
-/* ---- Who it serves: three delivery sectors, then one open-ended card ---- */
-.sector-groups {
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  gap: var(--grid-gap);
-  margin-top: 64px;
-}
-
+/* ---- Who it serves: four sectors, then one open-ended card ---- */
 .sector-group {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 28px;
+  margin-top: 64px;
   min-width: 0;
 }
 
-/* A rule after each group label shows where the group runs. */
-.sector-group--beyond {
-  --cols: 2;
-}
-
-.sector-group > .eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.sector-group > .eyebrow::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.3;
-}
-
 .sector-group__cards {
+  text-align: left;
   display: grid;
-  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
-  flex: 1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--grid-gap);
   margin: 0;
   padding: 0;
@@ -151,12 +161,62 @@
   padding: 20px 22px 24px;
   border-radius: var(--radius-lg);
   background: var(--color-white);
-  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+  transition:
+    transform 0.6s var(--ease-out),
+    box-shadow 0.6s var(--ease-out);
 }
 
 .sector-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px -20px rgba(35, 37, 44, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px -22px rgba(35, 37, 44, 0.28);
+}
+
+/* The illustration sits on top of a photograph that fades up on hover. */
+.sector-card__media {
+  position: relative;
+  width: 100%;
+  margin: 4px 0 0;
+  aspect-ratio: 1 / 1;
+  max-height: 150px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.sector-card__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.06);
+  transition:
+    opacity 0.75s var(--ease-out),
+    transform 1s var(--ease-out);
+}
+
+.sector-card__media .sector-card__art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+  transition:
+    opacity 0.6s var(--ease-out),
+    transform 0.8s var(--ease-out);
+}
+
+.sector-card:hover .sector-card__photo,
+.sector-card:focus-within .sector-card__photo {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sector-card:hover .sector-card__media .sector-card__art,
+.sector-card:focus-within .sector-card__media .sector-card__art {
+  opacity: 0;
+  transform: scale(0.94);
 }
 
 .sector-card__art {
@@ -192,31 +252,53 @@
   color: var(--color-green-500);
 }
 
-/* Beyond delivery: dashed and open, so it reads as "and more" next to the solid cards. */
+/* The open-ended card runs the full width under the four sectors, so it reads
+   as "and more" rather than as a fifth sector. */
 .sector-card--open {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 28px;
   border: 1.5px dashed rgba(28, 81, 65, 0.45);
   background: transparent;
+  transition: background 0.5s var(--ease-out);
 }
 
 .sector-card--open:hover {
+  transform: none;
+  box-shadow: none;
   background: var(--color-white);
+}
+
+.sector-card__open-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sector-card--open .sector-card__benefits {
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 20px;
 }
 
 /* A small cluster of icons stands in for the illustration, with an open slot for what is not listed. */
 .sector-card__art--icons {
   display: grid;
-  grid-template-columns: repeat(2, 56px);
+  grid-template-columns: repeat(4, 48px);
   gap: 8px;
   width: auto;
-  height: 140px;
+  height: auto;
   align-content: center;
   justify-content: center;
+  margin: 0;
 }
 
 .sector-card__icon {
   display: grid;
   place-items: center;
-  height: 56px;
+  height: 48px;
   border-radius: var(--radius-md);
   background: var(--color-green-900);
   color: var(--color-cream);
@@ -228,116 +310,12 @@
   color: var(--color-green-900);
 }
 
-/* ---- What it does: four small product previews ---- */
-.what-who__block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  margin-top: 64px;
-}
-
-.capabilities {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--grid-gap);
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.capability {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 22px;
-  border-radius: var(--radius-lg);
-  background: var(--color-green-900);
-  color: var(--text-on-dark);
-}
-
-.capability__head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.capability__icon {
-  display: grid;
-  flex: none;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-md);
-  background: var(--color-green-500);
-  color: var(--color-green-900);
-}
-
-.capability__label {
-  font-size: var(--fs-h5);
-  line-height: 1.2;
-  color: var(--text-on-dark);
-}
-
-.capability__title {
-  font-size: var(--fs-small);
-  line-height: 1.5;
-  letter-spacing: 0;
-  color: var(--text-on-dark);
-  opacity: 0.9;
-}
-
-.capability__preview {
-  display: grid;
-  gap: 6px;
-  margin: auto 0 0;
-  padding: 10px;
-  border-radius: var(--radius-md);
-  background: rgba(0, 0, 0, 0.22);
-  list-style: none;
-}
-
-.capability__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 7px 10px;
-  border-radius: var(--radius-sm);
-  background: rgba(247, 246, 241, 0.08);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  line-height: 1.2;
-}
-
-/* Long labels wrap instead of clipping, so the previews hold up at any card width. */
-.capability__row span {
-  min-width: 0;
-  color: rgba(247, 246, 241, 0.85);
-}
-
-.capability__row strong {
-  flex: none;
-  max-width: 55%;
-  font-weight: 500;
-  text-align: right;
-}
-
-.capability__row--ok strong { color: var(--color-green-500); }
-.capability__row--warn strong { color: var(--color-yellow-100); }
-.capability__row--off strong { color: rgba(247, 246, 241, 0.6); }
-
 @media (max-width: 1199px) {
   .what-who {
     padding-block: 72px;
   }
 
-  .sector-groups {
-    grid-template-columns: 1fr;
-  }
-
-  .capabilities {
+  .sector-group__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -347,33 +325,26 @@
     padding-block: 64px;
   }
 
-  .what-who__intro {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .what-who__intro-content {
+    gap: 22px;
   }
 
   .embodiment__stage {
-    max-width: 400px;
+    max-width: 420px;
   }
 
-  .sector-groups,
-  .what-who__block {
+  .sector-group {
     margin-top: 44px;
   }
 
-  .sector-group__cards,
-  .capabilities {
+  .sector-group__cards {
     grid-template-columns: 1fr;
   }
 
-  .sector-group--beyond {
-    --cols: 1;
-  }
-
-  /* Delivery cards go horizontal: small art beside the benefits. */
-  .sector-group .sector-card {
+  /* Sector cards go horizontal: small art beside the benefits. */
+  .sector-group .sector-card:not(.sector-card--open) {
     display: grid;
-    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-columns: 84px minmax(0, 1fr);
     grid-template-areas:
       "art title"
       "art benefits";
@@ -382,20 +353,30 @@
     padding: 18px;
   }
 
-  .sector-group .sector-card__art {
+  .sector-group .sector-card__media {
     grid-area: art;
-    width: 72px;
-    height: 72px;
+    width: 84px;
+    max-height: none;
     margin: 0;
   }
 
   .sector-group .sector-card__title { grid-area: title; }
   .sector-group .sector-card__benefits { grid-area: benefits; }
 
+  .sector-card--open {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sector-card--open .sector-card__benefits {
+    grid-auto-flow: row;
+    gap: 8px;
+  }
+
   .sector-card__art--icons {
     grid-template-columns: repeat(2, 34px);
     gap: 6px;
-    height: auto;
+    justify-content: start;
   }
 
   .sector-card__icon {

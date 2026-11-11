@@ -4,17 +4,30 @@
   "body": "The Veranda platform combines hardware, software, and intelligent networking to let a box, locker, or door open for the right person, and record what happened.",
   "embodiment": {
     "caption": "DreamBox is a product embodiment built with Veranda.",
-    "alt": "The Veranda platform: the Dream Box smart drop box, the exploded smart lock inside it, and the Veranda app",
-    "lock": { "src": "/assets/images/smart-lock-exploded.png", "width": 2000, "height": 1332 },
-    "box": { "src": "/assets/images/evaluation-kit.png", "width": 925, "height": 656 },
-    "app": { "src": "/assets/images/dashboard-app.png", "width": 887, "height": 1825 },
+    "alt": "The Veranda platform: the Veranda app and the exploded smart lock inside the box",
+    "showBox": false,
+    "lock": {
+      "src": "/assets/images/smart-lock-exploded.png",
+      "width": 2000,
+      "height": 1332
+    },
+    "box": {
+      "src": "/assets/images/evaluation-kit.png",
+      "width": 925,
+      "height": 656
+    },
+    "app": {
+      "src": "/assets/images/dashboard-app.png",
+      "width": 887,
+      "height": 1825
+    },
     "link": {
       "label": "Visit the DreamBox site",
       "href": "https://getveranda.com/"
     }
   },
-  "delivery": {
-    "label": "Who it serves: Delivery",
+  "serves": {
+    "label": "For Delivery and Beyond",
     "sectors": [
       {
         "title": "Last-mile delivery & logistics",
@@ -23,7 +36,8 @@
           "First-attempt delivery",
           "No one needs to be home",
           "Proof of every drop-off"
-        ]
+        ],
+        "photo": "/assets/images/sectors/special-access.jpg"
       },
       {
         "title": "Healthcare & cold chain",
@@ -32,7 +46,8 @@
           "Monitored conditions",
           "Logged chain of custody",
           "Less spoilage"
-        ]
+        ],
+        "photo": "/assets/images/sectors/cold-chain.jpg"
       },
       {
         "title": "Field service & industrial",
@@ -41,13 +56,9 @@
           "Parts ready before the shift",
           "Overnight drop-offs",
           "Fewer trips to the shop"
-        ]
-      }
-    ]
-  },
-  "beyond": {
-    "label": "Beyond delivery",
-    "sectors": [
+        ],
+        "photo": "/assets/images/sectors/field-service.jpg"
+      },
       {
         "title": "Facilities & entry control",
         "illustration": "/assets/illustrations/special-access.svg",
@@ -55,7 +66,8 @@
           "Scheduled, timed entry",
           "No keys or codes to share",
           "Every entry logged"
-        ]
+        ],
+        "photo": "/assets/images/sectors/home-delivery.jpg"
       }
     ],
     "open": {
@@ -72,76 +84,5 @@
         "Built into your product"
       ]
     }
-  },
-  "capabilitiesLabel": "What it does",
-  "capabilities": [
-    {
-      "icon": "signature",
-      "label": "Authorization",
-      "title": "Give access to only those who need it and only when they need it.",
-      "preview": [
-        {
-          "left": "Carrier",
-          "right": "One-time",
-          "tone": "warn"
-        },
-        {
-          "left": "Manager",
-          "right": "Always",
-          "tone": "ok"
-        }
-      ]
-    },
-    {
-      "icon": "eye",
-      "label": "Auditability",
-      "title": "Log everything: access, temperature, air quality, motion, battery, and more.",
-      "preview": [
-        {
-          "left": "2:14 PM Opened",
-          "right": "Carrier",
-          "tone": "off"
-        },
-        {
-          "left": "Conditions",
-          "right": "38°F, 45% RH",
-          "tone": "ok"
-        }
-      ]
-    },
-    {
-      "icon": "calendar-check",
-      "label": "Automation",
-      "title": "Build schedules, triggers, and alerts that keep things running on their own.",
-      "preview": [
-        {
-          "left": "9:00 AM - 5:30 PM",
-          "right": "Unlocked",
-          "tone": "ok"
-        },
-        {
-          "left": "8:00 PM - 7:30 AM",
-          "right": "Alarmed",
-          "tone": "warn"
-        }
-      ]
-    },
-    {
-      "icon": "puzzle",
-      "label": "Integration",
-      "title": "Plug into the apps, systems, and physical products you already use.",
-      "preview": [
-        {
-          "left": "POST /unlock",
-          "right": "200 OK",
-          "tone": "ok"
-        },
-        {
-          "left": "Dispatch system",
-          "right": "Synced",
-          "tone": "ok"
-        }
-      ]
-    }
-  ]
+  }
 }

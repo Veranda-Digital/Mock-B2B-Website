@@ -152,24 +152,13 @@
 }
 
 .proof__value {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
   color: var(--color-green-900);
-}
-
-/* A short signal-green bar ties each figure to its caption. */
-.proof__value::after {
-  content: "";
-  display: block;
-  width: 28px;
-  height: 3px;
-  margin-top: 4px;
-  border-radius: 2px;
-  background: var(--color-green-500);
 }
 
 .proof__label {
@@ -225,12 +214,19 @@
 }
 
 .value__note {
-  max-width: 760px;
-  margin: 20px auto 0;
+  /* Spans the full width of the two lanes above it. */
+  max-width: none;
+  margin: 20px 0 0;
   font-size: 13px;
   line-height: 1.5;
   text-align: center;
   color: #5b5e66;
+}
+
+/* Keeps "Source: …" together, so it drops to its own line as one piece
+   instead of leaving a single word stranded. */
+.value__source {
+  display: inline-block;
 }
 
 .value__note a {
@@ -258,7 +254,7 @@
   }
 
   .proof__value {
-    font-size: 36px;
+    font-size: 40px;
   }
 }
 
@@ -300,11 +296,123 @@
     border-bottom-color: rgba(247, 246, 241, 0.16);
   }
 
-  .proof__value::after {
-    display: none;
-  }
-
   .proof__value {
     flex: none;
+  }
+}
+
+/* ---- What it does: four small product previews, moved here from what-who ---- */
+.value__capabilities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  margin-top: 56px;
+}
+
+.capabilities {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.capability {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  background: var(--color-green-900);
+  color: var(--text-on-dark);
+}
+
+.capability__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.capability__icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-green-500);
+  color: var(--color-green-900);
+}
+
+.capability__label {
+  font-size: var(--fs-h5);
+  line-height: 1.2;
+  color: var(--text-on-dark);
+}
+
+.capability__title {
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--text-on-dark);
+  opacity: 0.9;
+}
+
+.capability__preview {
+  display: grid;
+  gap: 6px;
+  margin: auto 0 0;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.22);
+  list-style: none;
+}
+
+.capability__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(247, 246, 241, 0.08);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* Long labels wrap instead of clipping, so the previews hold up at any card width. */
+.capability__row span {
+  min-width: 0;
+  color: rgba(247, 246, 241, 0.85);
+}
+
+.capability__row strong {
+  flex: none;
+  max-width: 55%;
+  font-weight: 500;
+  text-align: right;
+}
+
+.capability__row--ok strong { color: var(--color-green-500); }
+.capability__row--warn strong { color: var(--color-yellow-100); }
+.capability__row--off strong { color: rgba(247, 246, 241, 0.6); }
+
+@media (max-width: 1199px) {
+  .capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 809px) {
+  .value__capabilities {
+    margin-top: 44px;
+  }
+
+  .capabilities {
+    grid-template-columns: 1fr;
   }
 }

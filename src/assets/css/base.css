@@ -6,6 +6,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Proximity, so only sections that declare snap points (the board stack)
+     behave differently; everything else scrolls normally. */
+  scroll-snap-type: y proximity;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -102,24 +105,36 @@ section[id] {
   outline-offset: 3px;
 }
 
-/* Scroll-in reveal (toggled by assets/js/reveal.js). */
-.js [data-reveal] {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+/* Scroll-in reveal (toggled by assets/js/reveal.js).
+   Held at zero specificity with :where() and driven by an animation rather
+   than a transition, so a component's own hover transition and transform are
+   never overridden by it. */
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.js [data-reveal].is-revealed {
+:where(.js [data-reveal]) {
+  opacity: 0;
+}
+
+:where(.js [data-reveal].is-revealed) {
   opacity: 1;
-  transform: none;
+  animation: reveal-in 0.8s var(--ease-out);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 
-  .js [data-reveal] {
+  :where(.js [data-reveal]) {
     opacity: 1;
     transform: none;
-    transition: none;
+    animation: none;
   }
 }

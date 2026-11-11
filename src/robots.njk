@@ -1,0 +1,15 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+{%- if site.indexable -%}
+User-agent: *
+Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml
+{%- else -%}
+# Staging. Set site.indexable to true in src/_data/site.json at launch to
+# open the site to search engines.
+User-agent: *
+Disallow: /
+{%- endif %}

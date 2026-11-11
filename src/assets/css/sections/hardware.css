@@ -10,6 +10,37 @@
   background: var(--bg-dark);
 }
 
+/* One snap stop per board, sitting behind the pinned panel. scroll-snap-stop
+   forces a fast flick to come to rest on each board instead of flying past
+   several at once.
+   The run ends with an exit stop at the foot of the section. Without it the
+   last board's snap point is the nearest one for the whole of the final
+   screen, so leaving the section fights the scroll until you are clear of
+   it. The exit stop gives that scroll somewhere to land. */
+.hardware__snaps {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: grid;
+  grid-template-rows: repeat(var(--steps, 5), var(--step-height));
+  pointer-events: none;
+}
+
+.hardware__snap {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.hardware__snap--exit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  scroll-snap-align: end;
+  scroll-snap-stop: normal;
+}
+
 .hardware__sticky {
   position: sticky;
   top: 0;

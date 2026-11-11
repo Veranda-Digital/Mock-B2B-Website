@@ -2,6 +2,12 @@
 
 /* ---- Hero ---- */
 .eval-hero {
+  /* Fits its content, but never shorter than most of the first screen. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(80vh / var(--zoom));
+  min-height: calc(80svh / var(--zoom));
   padding: 140px 0 56px;
   background:
     radial-gradient(ellipse 60% 70% at 85% 30%, rgba(51, 209, 107, 0.16), transparent 70%),
@@ -94,10 +100,14 @@
   filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.3));
 }
 
+/* The app sits in front of the box, their centres on the same line, with the
+   box's left edge running down the middle of the phone. Both PNGs carry
+   transparent margins, so these percentages are measured from the visible
+   edges of the artwork, not the image boxes. */
 .eval-hero__phone {
   position: absolute;
-  left: 4%;
-  bottom: 0;
+  left: 24.57%;
+  top: 22.8%;
   z-index: 2;
   width: 25%;
   border-radius: 14px;
@@ -273,7 +283,7 @@ section.eval-request {
   max-width: none;
   margin: 0;
   padding: 32px 36px;
-  border-color: var(--color-green-500);
+  border-color: var(--color-green-900);
   box-shadow: 0 0 0 4px rgba(51, 209, 107, 0.12), 0 24px 60px -30px rgba(35, 37, 44, 0.3);
 }
 
@@ -301,11 +311,14 @@ section.eval-request {
 }
 
 .eval-form__note {
+  max-width: 46ch;
   margin-top: 16px;
+  margin-inline: auto;
   font-size: 13px;
   line-height: 1.5;
   letter-spacing: 0;
   text-align: center;
+  text-wrap: pretty;
   color: var(--color-text);
 }
 

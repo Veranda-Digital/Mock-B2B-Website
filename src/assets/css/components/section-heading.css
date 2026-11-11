@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  /* Breathing room between a section's heading and the content under it. */
+  padding-bottom: 16px;
 }
 
 .section-heading--center {

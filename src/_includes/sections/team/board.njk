@@ -11,7 +11,10 @@
         <ul class="team-group__list">
           {%- for person in group.people %}
           <li class="person-card" data-reveal>
-            <img class="person-card__photo" src="{{ person.photo }}" alt="{{ person.name }}" width="180" height="180" loading="lazy">
+            <span class="person-card__photo portrait">
+              <img src="{{ person.photo }}" alt="{{ person.name }}" width="180" height="180" loading="lazy">
+              <span class="portrait__duo" aria-hidden="true"></span>
+            </span>
             <h5 class="person-card__name">{{ person.name }}</h5>
             <p class="person-card__role">{{ person.role }}</p>
             <p class="person-card__bio">{{ person.bio }}</p>

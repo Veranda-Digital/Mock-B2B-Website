@@ -4,6 +4,11 @@
 <script>document.documentElement.classList.add("js")</script>
 <title>{{ pageTitle }}</title>
 <meta name="description" content="{{ description or site.description }}">
+{%- if not site.indexable %}
+{#- Staging is public, so keep it out of search results. Set site.indexable
+    to true in src/_data/site.json at launch. -#}
+<meta name="robots" content="noindex, nofollow">
+{%- endif %}
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ pageTitle }}">

@@ -1,0 +1,70 @@
+---
+layout: layouts/base.njk
+permalink: /privacy/
+title: Privacy Policy | Veranda Digital
+description: How Veranda Digital Inc. collects, uses, stores, and protects personal information in the Veranda app.
+pageClass: legal
+---
+<section class="legal-page">
+  <div class="container">
+    <header class="legal-page__head">
+      <h1 class="legal-page__title">{{ privacy.title }}</h1>
+      <p class="legal-page__dates">
+        <span>Effective {{ privacy.effective }}</span>
+        <span>Last updated {{ privacy.updated }}</span>
+      </p>
+      <p class="legal-page__intro">{{ privacy.intro }}</p>
+    </header>
+
+    <nav class="legal-page__toc" aria-label="Contents">
+      <h2 class="legal-page__toc-title">Contents</h2>
+      <ol>
+        {%- for section in privacy.sections %}
+        <li><a href="#{{ section.id }}">{{ section.heading }}</a></li>
+        {%- endfor %}
+      </ol>
+    </nav>
+
+    <div class="legal-page__body">
+      {%- for section in privacy.sections %}
+      <section class="legal-section" id="{{ section.id }}">
+        <h2 class="legal-section__heading">{{ section.heading }}</h2>
+        {%- for block in section.blocks %}
+          {%- if block.type == "p" %}
+        <p>{{ block.text }}</p>
+          {%- elif block.type == "h3" %}
+        <h3>{{ block.text }}</h3>
+          {%- elif block.type == "list" %}
+        <ul>
+          {%- for item in block.items %}
+          <li>{{ item }}</li>
+          {%- endfor %}
+        </ul>
+          {%- elif block.type == "table" %}
+        <div class="legal-table">
+          <table>
+            <thead>
+              <tr>
+                {%- for cell in block.head %}
+                <th scope="col">{{ cell }}</th>
+                {%- endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {%- for row in block.rows %}
+              <tr>
+                {%- for cell in row %}
+                <td>{{ cell }}</td>
+                {%- endfor %}
+              </tr>
+              {%- endfor %}
+            </tbody>
+          </table>
+        </div>
+          {%- endif %}
+        {%- endfor %}
+      </section>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

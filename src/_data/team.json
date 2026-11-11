@@ -3,7 +3,19 @@
     "eyebrow": "Our team",
     "titleLead": "The people behind",
     "titleAccent": "Veranda.",
-    "body": "We're engineers, operators, business leaders, and community builders who care about making everyday systems work better."
+    "body": "We’re engineers, operators, business leaders, and community builders who care about making everyday systems work better.",
+    "buttons": [
+      {
+        "label": "Our Story",
+        "href": "#story",
+        "variant": "primary"
+      },
+      {
+        "label": "Meet the Team",
+        "href": "#leadership",
+        "variant": "dark"
+      }
+    ]
   },
   "story": {
     "eyebrow": "Our story",
@@ -13,7 +25,7 @@
     "paragraphs": [
       "Our team brings together software, hardware, wireless, logistics, food systems, and community impact. Those different perspectives shape how we build, how we partner, and how we think about the future of deliveries.",
       "We believe good technology should feel <strong>practical, dependable, and easy to use</strong>. Our culture is hands-on and collaborative, grounded in solving real problems for real households.",
-      "As we grow, we're building a company defined by trust, accessibility, strong partnerships, and meaningful impact, alongside people who share our mission to bring <strong>reliable, accessible delivery to the communities that need it most</strong>."
+      "As we grow, we’re building a company defined by trust, accessibility, strong partnerships, and meaningful impact, alongside people who share our mission to bring <strong>reliable, accessible delivery to the communities that need it most</strong>."
     ]
   },
   "leadership": {
@@ -24,28 +36,28 @@
         "role": "Chief Executive Officer",
         "photo": "/assets/images/team/nic.jpg",
         "focus": "50% 30%",
-        "bio": "Nic is a computer scientist and digital strategist with more than a decade of experience building practical technology across academic, public-sector, and commercial environments. His work has ranged from studying the digital divide in rural communities, to developing accessible software for local governments, to designing scalable cloud infrastructure for large enterprise systems. As CEO, Nic leads Veranda's product vision, technical strategy, and long-term growth."
+        "bio": "Nic is a computer scientist and digital strategist with more than a decade of experience building practical technology across academic, public-sector, and commercial environments. His work has ranged from studying the digital divide in rural communities, to developing accessible software for local governments, to designing scalable cloud infrastructure for large enterprise systems. As CEO, Nic leads Veranda’s product vision, technical strategy, and long-term growth."
       },
       {
         "name": "Joshua Wong",
         "role": "Chief Technology Officer",
         "photo": "/assets/images/team/josh.jpg",
         "focus": "62% 30%",
-        "bio": "Josh is a technology executive, RF systems expert, and hardware innovator with deep experience in wireless communications, antenna design, and connected-device engineering. He previously managed the Antenna Design Team at BlackBerry, leading engineering on antenna systems for BlackBerry smartphones and tablets. As CTO, Josh leads Veranda's hardware architecture, embedded systems strategy, and wireless communications development."
+        "bio": "Josh is a technology executive, RF systems expert, and hardware innovator with deep experience in wireless communications, antenna design, and connected-device engineering. He previously managed the Antenna Design Team at BlackBerry, leading engineering on antenna systems for BlackBerry smartphones and tablets. As CTO, Josh leads Veranda’s hardware architecture, embedded systems strategy, and wireless communications development."
       },
       {
         "name": "Dion Dawson",
         "role": "Chief Communications Officer",
         "photo": "/assets/images/team/dion.jpg",
         "focus": "50% 18%",
-        "bio": "Dion is a social entrepreneur, technology executive, and communications strategist who builds organizations at the intersection of logistics, food accessibility, and social impact. He is the Founder and Chief Dreamer of Dion's Chicago Dream and CEO of Cosmic Crate, with work recognized by the White House, Crain's Chicago Business, and the Chicago Innovation Awards. As Chief Communications Officer, Dion shapes Veranda's public narrative, partnerships, and market presence."
+        "bio": "Dion is a social entrepreneur, technology executive, and communications strategist who builds organizations at the intersection of logistics, food accessibility, and social impact. He is the Founder and Chief Dreamer of Dion’s Chicago Dream and CEO of Cosmic Crate, with work recognized by the White House, Crain’s Chicago Business, and the Chicago Innovation Awards. As Chief Communications Officer, Dion shapes Veranda’s public narrative, partnerships, and market presence."
       },
       {
         "name": "Patrick Houlding",
         "role": "Director of Software Development",
         "photo": "/assets/images/team/patrick.jpg",
         "focus": "50% 20%",
-        "bio": "Patrick is a software engineer with a background in mobile applications, cloud-connected systems, and resilient networking. His previous work includes building user-focused mobile apps, improving system reliability through test-driven development, and researching Mobile Ad-Hoc Network technologies. As Director of Software Development, Patrick leads Veranda's mobile app, cloud services, and partner-facing systems."
+        "bio": "Patrick is a software engineer with a background in mobile applications, cloud-connected systems, and resilient networking. His previous work includes building user-focused mobile apps, improving system reliability through test-driven development, and researching Mobile Ad-Hoc Network technologies. As Director of Software Development, Patrick leads Veranda’s mobile app, cloud services, and partner-facing systems."
       }
     ]
   },
@@ -61,7 +73,7 @@
             "name": "Terry Sweeney",
             "role": "Executive Chairman",
             "photo": "/assets/images/team/terry.jpg",
-            "bio": "Co-founder and former CEO of Veranda. Former retail CIO and a founding leader of Toronto's Daily Bread Food Bank."
+            "bio": "Co-founder and former CEO of Veranda. Former retail CIO and a founding leader of Toronto’s Daily Bread Food Bank."
           },
           {
             "name": "Paul Oulahen",
@@ -84,7 +96,7 @@
             "name": "Perry Caicco",
             "role": "Strategic Advisor",
             "photo": "/assets/images/team/perry.png",
-            "bio": "Former retail president and CIBC Managing Director. Ranked Canada's #1 Retail and Consumer analyst for 15 years."
+            "bio": "Former retail president and CIBC Managing Director. Ranked Canada’s #1 Retail and Consumer analyst for 15 years."
           },
           {
             "name": "John Kim",
@@ -117,7 +129,7 @@
   "cta": {
     "id": "get-started",
     "title": "Open to discussions and partnerships.",
-    "body": "Whether you're exploring a pilot, a strategic partnership, or just want to learn more about what we're building, we'd love to hear from you.",
+    "body": "Whether you’re exploring a pilot, a strategic partnership, or just want to learn more about what we’re building, we’d love to hear from you.",
     "buttons": [
       {
         "label": "contact@getveranda.com",

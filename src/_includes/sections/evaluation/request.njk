@@ -11,7 +11,7 @@
     {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body }) }}
 
     <div class="eval-request__grid">
-      <form class="form-card eval-form" action="{{ site.evaluationForm.action }}" method="{{ site.evaluationForm.method }}" data-eval-form data-mailto="{{ email }}" data-reveal>
+      <form class="form-card eval-form" action="{{ site.evaluationForm.action }}" method="{{ site.evaluationForm.method }}" data-eval-form data-mailto="{{ email }}" data-glow data-reveal>
         <div class="form-card__grid">
           {%- for field in s.form.fields %}
           {{ formField(field) }}
@@ -22,7 +22,7 @@
         <p class="eval-form__status" role="status" data-eval-status hidden></p>
       </form>
 
-      <aside class="eval-talk theme-dark" id="{{ t.id }}" data-reveal>
+      <aside class="eval-talk theme-dark" id="{{ t.id }}" data-glow data-reveal>
         <span class="eyebrow eyebrow--light">{{ t.eyebrow }}</span>
         <h3 class="eval-talk__title">{{ t.title }}</h3>
         <p class="eval-talk__body">{{ t.body }}</p>
@@ -33,7 +33,7 @@
         </ul>
         <div class="eval-talk__actions">
           {{ button(t.meetingLabel, meetingHref, "primary") }}
-          <a class="eval-talk__email" href="mailto:{{ email }}">{{ icon("arrow-right", 14, 2) }}<span>{{ t.emailLabel }}: {{ email }}</span></a>
+          <a class="eval-talk__email" href="mailto:{{ email }}"><span>{{ t.emailLabel }}: {{ email }}</span>{{ icon("arrow-right", 14, 2) }}</a>
         </div>
       </aside>
     </div>

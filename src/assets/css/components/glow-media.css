@@ -32,8 +32,6 @@
   left: 24%;
   bottom: -2%;
   filter: drop-shadow(0 0 18px rgba(51, 209, 107, 0.55));
-  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
-          mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
 }
 
 /* Code window floats over the middle of the disc, spilling slightly past it. */
