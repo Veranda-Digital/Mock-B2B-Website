@@ -27,22 +27,27 @@ export function initGlowTargets() {
   const clear = () => {
     if (current) current.classList.remove("is-glowing");
     current = null;
-    timer = 0;
+    if (timer) {
+      clearTimeout(timer);
+      timer = 0;
+    }
   };
 
   links.forEach((link) => {
     link.addEventListener("click", () => {
       const target = resolveTarget(link.getAttribute("href"));
       if (!target) return;
-      if (timer) {
-        clearTimeout(timer);
-        clear();
-      }
-      // Restart the animation even when the same target is clicked twice.
+      clear();
+      // Let the removed class settle so the animation restarts when the same
+      // target is clicked twice in a row.
       void target.offsetWidth;
-      target.classList.add("is-glowing");
       current = target;
-      timer = window.setTimeout(clear, DURATION + 120);
+      target.classList.add("is-glowing");
+      // The glow sits on ::after, so the animation ends on the element itself.
+      // Removing the class then changes nothing that was visible.
+      target.addEventListener("animationend", clear, { once: true });
+      // Reduced motion runs no animation, so keep a fallback.
+      timer = window.setTimeout(clear, DURATION + 400);
     });
   });
 }

@@ -9,9 +9,7 @@
         <figure class="leader-card__figure">
           <div class="leader-card__photo portrait">
             <img src="{{ person.photo }}" alt="{{ person.name }}" style="object-position: {{ person.focus or 'center' }}" loading="lazy">
-            <span class="portrait__duo" aria-hidden="true">
-              <img src="{{ person.photo }}" alt="" style="object-position: {{ person.focus or 'center' }}" loading="lazy">
-            </span>
+            <span class="portrait__duo" aria-hidden="true"></span>
           </div>
           <figcaption class="leader-card__id">
             <h4 class="leader-card__name">{{ person.name }}</h4>

@@ -162,12 +162,12 @@
   gap: 16px;
 }
 
-/* ---- Duotone portraits ----
-   The colour photograph sits underneath; a duotone copy sits on top, built by
-   multiplying a greyscale image over light green and lightening the result
-   with forest green. The whole duotone layer fades out on hover, so no blend
-   mode has to animate. */
+/* ---- Tinted portraits ----
+   A flat green sheet blended onto the photograph with mix-blend-mode: color,
+   which keeps the picture's luminance and takes its hue from the sheet. The
+   sheet fades out on hover to reveal the photograph in full colour. */
 .portrait {
+  --portrait-tint: #144d3b;
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -182,25 +182,10 @@
 .portrait__duo {
   position: absolute;
   inset: 0;
-  isolation: isolate;
-  background: var(--color-green-100);
+  background: var(--portrait-tint);
+  mix-blend-mode: color;
+  pointer-events: none;
   transition: opacity 0.6s var(--ease-out);
-}
-
-.portrait__duo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(1) contrast(1.06);
-  mix-blend-mode: multiply;
-}
-
-.portrait__duo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--color-green-900);
-  mix-blend-mode: lighten;
 }
 
 .leader-card:hover .portrait__duo,

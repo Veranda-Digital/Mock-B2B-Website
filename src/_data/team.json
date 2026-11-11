@@ -3,7 +3,19 @@
     "eyebrow": "Our team",
     "titleLead": "The people behind",
     "titleAccent": "Veranda.",
-    "body": "We’re engineers, operators, business leaders, and community builders who care about making everyday systems work better."
+    "body": "We’re engineers, operators, business leaders, and community builders who care about making everyday systems work better.",
+    "buttons": [
+      {
+        "label": "Our Story",
+        "href": "#story",
+        "variant": "primary"
+      },
+      {
+        "label": "Meet the Team",
+        "href": "#leadership",
+        "variant": "dark"
+      }
+    ]
   },
   "story": {
     "eyebrow": "Our story",

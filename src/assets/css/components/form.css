@@ -77,24 +77,35 @@ textarea.form-field__control {
   cursor: pointer;
 }
 
-/* ---- Glow: an in-page link calling attention to where it lands ---- */
+/* ---- Glow: an in-page link calling attention to where it lands ----
+   The glow lives on a pseudo-element rather than on the element's own
+   box-shadow, so a panel that already carries a shadow keeps it throughout
+   and there is nothing to snap back to when the animation ends. */
 @keyframes glow-attention {
   0%,
-  27%,
-  60%,
-  93%,
+  38%,
+  82%,
   100% { box-shadow: 0 0 0 0 rgba(51, 209, 107, 0); }
-  10%,
-  43%,
-  76% { box-shadow: 0 0 0 2px var(--color-green-500), 0 0 38px -4px rgba(51, 209, 107, 0.8); }
+  15%,
+  58% { box-shadow: 0 0 0 2px var(--color-green-500), 0 0 38px -4px rgba(51, 209, 107, 0.8); }
 }
 
 .is-glowing {
-  animation: glow-attention 3s ease-in-out forwards;
+  position: relative;
+}
+
+.is-glowing::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  pointer-events: none;
+  animation: glow-attention 3s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .is-glowing {
+  .is-glowing::after {
     animation: none;
     box-shadow: 0 0 0 2px var(--color-green-500);
   }

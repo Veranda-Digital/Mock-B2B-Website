@@ -187,7 +187,7 @@
   inset: 50% 0 auto;
   height: 4px;
   border-radius: 4px;
-  background: linear-gradient(90deg, transparent, var(--color-green-900) calc(var(--focused) / 2), var(--color-green-500) calc(100% - var(--focused) / 2), transparent);
+  background: linear-gradient(90deg, transparent, var(--color-green-900) calc(var(--focused) / 2), var(--color-green-900) calc(100% - var(--focused) / 2), transparent);
   transform: translateY(-50%);
 }
 
@@ -280,7 +280,7 @@
   }
 
   .partner-scale__track {
-    background: linear-gradient(90deg, var(--color-green-900), var(--color-green-500));
+    background: var(--color-green-900);
   }
 
   .partner-scale__models {
@@ -386,7 +386,7 @@
     inset: 18px auto 18px 50%;
     width: 4px;
     height: auto;
-    background: linear-gradient(180deg, var(--color-green-900), var(--color-green-500));
+    background: var(--color-green-900);
     transform: translateX(-50%);
   }
 
