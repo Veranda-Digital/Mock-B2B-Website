@@ -16,8 +16,7 @@
   /* Read by flightline.js; falls back to the green token. */
   --flightline-color: var(--color-green-500);
   position: relative;
-  max-width: 880px;
-  margin: 0 auto;
+  max-width: none;
   padding: clamp(52px, 5vw, 72px) clamp(44px, 5vw, 64px);
 }
 
@@ -38,6 +37,8 @@
   flex-direction: column;
   align-items: center;
   gap: 28px;
+  max-width: 720px;
+  margin-inline: auto;
   text-align: center;
 }
 
@@ -131,6 +132,7 @@
 
 /* ---- Who it serves: four sectors, then one open-ended card ---- */
 .sector-group {
+  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -139,6 +141,7 @@
 }
 
 .sector-group__cards {
+  text-align: left;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--grid-gap);
@@ -155,8 +158,8 @@
   border-radius: var(--radius-lg);
   background: var(--color-white);
   transition:
-    transform 0.5s var(--ease-out),
-    box-shadow 0.5s var(--ease-out);
+    transform 0.6s var(--ease-out),
+    box-shadow 0.6s var(--ease-out);
 }
 
 .sector-card:hover {
@@ -184,8 +187,8 @@
   opacity: 0;
   transform: scale(1.06);
   transition:
-    opacity 0.5s var(--ease-out),
-    transform 0.7s var(--ease-out);
+    opacity 0.75s var(--ease-out),
+    transform 1s var(--ease-out);
 }
 
 .sector-card__media .sector-card__art {
@@ -196,8 +199,8 @@
   margin: 0;
   object-fit: contain;
   transition:
-    opacity 0.4s var(--ease-out),
-    transform 0.5s var(--ease-out);
+    opacity 0.6s var(--ease-out),
+    transform 0.8s var(--ease-out);
 }
 
 .sector-card:hover .sector-card__photo,
@@ -279,7 +282,7 @@
 /* A small cluster of icons stands in for the illustration, with an open slot for what is not listed. */
 .sector-card__art--icons {
   display: grid;
-  grid-template-columns: repeat(2, 48px);
+  grid-template-columns: repeat(4, 48px);
   gap: 8px;
   width: auto;
   height: auto;

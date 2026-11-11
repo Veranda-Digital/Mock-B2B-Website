@@ -1,6 +1,6 @@
 {
   "id": "what-who",
-  "title": "One platform for every unattended handoff.",
+  "title": "One platform for every unattended handoff",
   "body": "The Veranda platform combines hardware, software, and intelligent networking to let a box, locker, or door open for the right person, and record what happened.",
   "embodiment": {
     "caption": "DreamBox is a product embodiment built with Veranda.",
@@ -36,7 +36,7 @@
           "No one needs to be home",
           "Proof of every drop-off"
         ],
-        "photo": "/assets/images/sectors/home-delivery.jpg"
+        "photo": "/assets/images/sectors/special-access.jpg"
       },
       {
         "title": "Healthcare & cold chain",
@@ -66,7 +66,7 @@
           "No keys or codes to share",
           "Every entry logged"
         ],
-        "photo": "/assets/images/sectors/special-access.jpg"
+        "photo": "/assets/images/sectors/home-delivery.jpg"
       }
     ],
     "open": {

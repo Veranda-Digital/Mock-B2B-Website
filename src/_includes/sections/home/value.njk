@@ -41,7 +41,7 @@
       {%- endfor %}
     </div>
 
-    <p class="value__note">{{ s.note }} <a href="{{ s.source.href }}" target="_blank" rel="noopener">{{ s.source.label }}</a>.</p>
+    <p class="value__note">{{ s.note }} <span class="value__source">Source: <a href="{{ s.source.href }}" target="_blank" rel="noopener">{{ s.source.label }}</a>.</span></p>
 
     {# What it does: four small product previews, moved here from the what-who section. #}
     <div class="value__capabilities">

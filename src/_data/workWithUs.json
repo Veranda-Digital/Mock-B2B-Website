@@ -4,8 +4,16 @@
     "title": "From a complete solution to a single component.",
     "body": "Veranda fits the way you build. Launch a ready-to-run program, put our technology inside your own product, or add a single lock or sensor to the systems you already run.",
     "buttons": [
-      { "label": "See ways to work together", "href": "#models", "variant": "dark" },
-      { "label": "Request an Evaluation Kit", "href": "/eval-kit/", "variant": "primary" }
+      {
+        "label": "See ways to work together",
+        "href": "#models",
+        "variant": "dark"
+      },
+      {
+        "label": "Request an Evaluation Kit",
+        "href": "/eval-kit/",
+        "variant": "primary"
+      }
     ],
     "spectrum": {
       "label": "Ways to work with Veranda",
@@ -15,7 +23,7 @@
   },
   "models": {
     "eyebrow": "Ways to work together",
-    "title": "Five ways to build on Veranda.",
+    "title": "Five ways to build on Veranda",
     "body": "Each model is a different split between what we provide and what you bring. Choose the one that matches how much you want to build, or start a conversation and we'll help you decide.",
     "providesLabel": "Veranda provides",
     "bringLabel": "You bring",
@@ -27,9 +35,20 @@
         "title": "Complete solution",
         "body": "The fastest route to a live program. Veranda delivers the enclosure, hardware, software, and support as one system, so your team runs the program instead of building the technology.",
         "fit": "Organizations launching a delivery or access program without building the system themselves.",
-        "provides": ["Reference enclosures", "Locking hardware & sensors", "Cloud software & apps", "Deployment & ongoing support"],
-        "bring": ["Your delivery or access program", "Your operation and customers"],
-        "proof": { "label": "See it in the field: Dion's Chicago Dream", "href": "/#casestudy" }
+        "provides": [
+          "Reference enclosures",
+          "Locking hardware & sensors",
+          "Cloud software & apps",
+          "Deployment & ongoing support"
+        ],
+        "bring": [
+          "Your delivery or access program",
+          "Your operation and customers"
+        ],
+        "proof": {
+          "label": "See it in the field: Dion's Chicago Dream",
+          "href": "/#casestudy"
+        }
       },
       {
         "id": "white-label",
@@ -37,8 +56,16 @@
         "title": "White label",
         "body": "A proven product under your name. Take Veranda-powered hardware and apps to market with your branding, in a fraction of the time it takes to develop your own.",
         "fit": "Companies that want a field-ready product to sell as their own.",
-        "provides": ["Proven, field-ready hardware", "Your brand on product & apps", "Platform updates handled", "Our platform underneath"],
-        "bring": ["Your brand and go-to-market", "Your customer relationships"]
+        "provides": [
+          "Proven, field-ready hardware",
+          "Your brand on product & apps",
+          "Platform updates handled",
+          "Our platform underneath"
+        ],
+        "bring": [
+          "Your brand and go-to-market",
+          "Your customer relationships"
+        ]
       },
       {
         "id": "custom-development",
@@ -46,8 +73,16 @@
         "title": "Custom development",
         "body": "Built around your requirements. When nothing off the shelf fits, our engineers work alongside yours on custom hardware, software, and workflows, from prototype through production.",
         "fit": "Products with requirements that no off-the-shelf solution meets.",
-        "provides": ["Custom enclosures & boards", "Tailored software & workflows", "Dedicated engineering team", "Prototype through production"],
-        "bring": ["Your product requirements", "Your engineers, working alongside ours"]
+        "provides": [
+          "Custom enclosures & boards",
+          "Tailored software & workflows",
+          "Dedicated engineering team",
+          "Prototype through production"
+        ],
+        "bring": [
+          "Your product requirements",
+          "Your engineers, working alongside ours"
+        ]
       },
       {
         "id": "technology-licensing",
@@ -55,8 +90,16 @@
         "title": "Technology licensing",
         "body": "Veranda inside your product line. License the hardware designs and software platform to ship access, monitoring, and automation as features of products you already sell.",
         "fit": "Product makers adding intelligent access to an existing line.",
-        "provides": ["Hardware designs", "Software platform license", "Engineering guidance", "Your product, your roadmap"],
-        "bring": ["Your product line", "Your own roadmap"]
+        "provides": [
+          "Hardware designs",
+          "Software platform license",
+          "Engineering guidance",
+          "Your product, your roadmap"
+        ],
+        "bring": [
+          "Your product line",
+          "Your own roadmap"
+        ]
       },
       {
         "id": "component-integration",
@@ -64,27 +107,56 @@
         "title": "Component integration",
         "body": "Fill a gap without replacing a system. Add a single lock or sensor board, or connect one software service, to what you already run.",
         "fit": "Teams with working systems that are missing one capability.",
-        "provides": ["Individual hardware boards", "Standalone software services", "Fits existing systems", "Integration support"],
-        "bring": ["Your existing systems", "The gap to fill: a lock, a sensor, or a service"]
+        "provides": [
+          "Individual hardware boards",
+          "Standalone software services",
+          "Fits existing systems",
+          "Integration support"
+        ],
+        "bring": [
+          "Your existing systems",
+          "The gap to fill: a lock, a sensor, or a service"
+        ]
       }
     ],
     "growth": {
       "icon": "users",
       "title": "Any of these can grow into a longer-term relationship.",
       "body": "Over time, partnerships can span distribution, programs, and joint product roadmaps.",
-      "link": { "label": "How relationships progress", "href": "#process" }
+      "link": {
+        "label": "How relationships progress",
+        "href": "#process"
+      }
     }
   },
   "process": {
     "eyebrow": "Engagement process",
-    "title": "How a relationship typically progresses",
+    "title": "How a partnership typically progresses",
     "steps": [
-      { "title": "Initial discussion", "body": "Your product, operation, and what you want to achieve." },
-      { "title": "Requirements & fit", "body": "Which parts of the platform apply, and how." },
-      { "title": "Evaluation", "body": "Hands-on testing with an Evaluation Kit." },
-      { "title": "Pilot", "body": "A scoped deployment in real conditions." },
-      { "title": "Integration or deployment", "body": "Rolling out into your product or program." },
-      { "title": "Long-term relationship", "body": "Commercial terms, support, and roadmap." }
+      {
+        "title": "Initial discussion",
+        "body": "Your product, operation, and what you want to achieve."
+      },
+      {
+        "title": "Requirements & fit",
+        "body": "Which parts of the platform apply, and how."
+      },
+      {
+        "title": "Evaluation",
+        "body": "Hands-on testing with an Evaluation Kit."
+      },
+      {
+        "title": "Pilot",
+        "body": "A scoped deployment in real conditions."
+      },
+      {
+        "title": "Integration or deployment",
+        "body": "Rolling out into your product or program."
+      },
+      {
+        "title": "Long-term relationship",
+        "body": "Commercial terms, support, and roadmap."
+      }
     ]
   },
   "considerations": {
@@ -92,13 +164,41 @@
     "title": "What we'll explore together",
     "body": "Every engagement is shaped by a handful of practical questions. We work through them with you early, so the evaluation and pilot answer the right ones.",
     "items": [
-      { "icon": "activity", "title": "Product & operational requirements", "question": "What does your product or operation need access control, monitoring, and automation to do?" },
-      { "icon": "box", "title": "Enclosure & hardware integration", "question": "Does the hardware go into our reference enclosure, or into one of your own?" },
-      { "icon": "signal", "title": "Sensors & connectivity", "question": "Which conditions need monitoring, and how far does the signal need to reach? Bluetooth works up close, LoRaWAN over long range." },
-      { "icon": "tag", "title": "Branding", "question": "Does the product carry the Veranda name, or yours?" },
-      { "icon": "code", "title": "Software requirements", "question": "Which of your systems should access events reach? The REST API, SDKs, and webhooks connect to dispatch, ordering, or property systems." },
-      { "icon": "shield", "title": "Support responsibilities", "question": "Who supports the hardware, the software, and the end customer, and where does that line sit?" },
-      { "icon": "signature", "title": "Commercial structure", "question": "What terms fit, from the first pilot to a long-term relationship?" }
+      {
+        "icon": "activity",
+        "title": "Product & operational requirements",
+        "question": "What does your product or operation need access control, monitoring, and automation to do?"
+      },
+      {
+        "icon": "box",
+        "title": "Enclosure & hardware integration",
+        "question": "Does the hardware go into our reference enclosure, or into one of your own?"
+      },
+      {
+        "icon": "signal",
+        "title": "Sensors & connectivity",
+        "question": "Which conditions need monitoring, and how far does the signal need to reach? Bluetooth works up close, LoRaWAN over long range."
+      },
+      {
+        "icon": "tag",
+        "title": "Branding",
+        "question": "Does the product carry the Veranda name, or yours?"
+      },
+      {
+        "icon": "code",
+        "title": "Software requirements",
+        "question": "Which of your systems should access events reach? The REST API, SDKs, and webhooks connect to dispatch, ordering, or property systems."
+      },
+      {
+        "icon": "shield",
+        "title": "Support responsibilities",
+        "question": "Who supports the hardware, the software, and the end customer, and where does that line sit?"
+      },
+      {
+        "icon": "signature",
+        "title": "Commercial structure",
+        "question": "What terms fit, from the first pilot to a long-term relationship?"
+      }
     ]
   },
   "cta": {
@@ -106,8 +206,16 @@
     "title": "Find the right fit, hands-on.",
     "body": "Request an Evaluation Kit to test Veranda in your own product, or tell us what you're building and we'll set up a partnership discussion.",
     "buttons": [
-      { "label": "Request an Evaluation Kit", "href": "/eval-kit/", "variant": "primary" },
-      { "label": "See the technology", "href": "/technology/", "variant": "light" }
+      {
+        "label": "Request an Evaluation Kit",
+        "href": "/eval-kit/",
+        "variant": "primary"
+      },
+      {
+        "label": "See the technology",
+        "href": "/technology/",
+        "variant": "light"
+      }
     ],
     "background": "/assets/images/cta-banner.jpg"
   }

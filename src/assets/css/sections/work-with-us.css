@@ -335,11 +335,14 @@
 }
 
 .wwu-growth__link .icon {
-  transition: transform 0.25s var(--ease-out);
+  transition: transform 0.35s var(--ease-out);
 }
 
-.wwu-growth__link:hover .icon {
-  transform: translateX(3px);
+/* The link jumps down the page, so the arrow swings clockwise to point the
+   way on hover. */
+.wwu-growth__link:hover .icon,
+.wwu-growth__link:focus-visible .icon {
+  transform: rotate(90deg) translateX(3px);
 }
 
 /* ---- Process ---- */

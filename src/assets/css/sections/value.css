@@ -225,12 +225,19 @@
 }
 
 .value__note {
-  max-width: 760px;
-  margin: 20px auto 0;
+  /* Spans the full width of the two lanes above it. */
+  max-width: none;
+  margin: 20px 0 0;
   font-size: 13px;
   line-height: 1.5;
   text-align: center;
   color: #5b5e66;
+}
+
+/* Keeps "Source: …" together, so it drops to its own line as one piece
+   instead of leaving a single word stranded. */
+.value__source {
+  display: inline-block;
 }
 
 .value__note a {
@@ -313,7 +320,7 @@
 .value__capabilities {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
   margin-top: 56px;
 }
