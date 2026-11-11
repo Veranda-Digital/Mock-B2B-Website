@@ -2,7 +2,7 @@
   max-width: 820px;
   margin-inline: auto;
   padding: 40px 40px 32px;
-  border: 1px solid var(--color-coral-400);
+  border: 1px solid var(--color-green-900);
   border-radius: var(--radius-lg);
   background: #f4f4f4;
 }
@@ -79,14 +79,18 @@ textarea.form-field__control {
 
 /* ---- Glow: an in-page link calling attention to where it lands ---- */
 @keyframes glow-attention {
-  0% { box-shadow: 0 0 0 0 rgba(51, 209, 107, 0); }
-  12% { box-shadow: 0 0 0 2px var(--color-green-500), 0 0 34px -4px rgba(51, 209, 107, 0.75); }
-  70% { box-shadow: 0 0 0 2px var(--color-green-500), 0 0 34px -4px rgba(51, 209, 107, 0.75); }
+  0%,
+  27%,
+  60%,
+  93%,
   100% { box-shadow: 0 0 0 0 rgba(51, 209, 107, 0); }
+  10%,
+  43%,
+  76% { box-shadow: 0 0 0 2px var(--color-green-500), 0 0 38px -4px rgba(51, 209, 107, 0.8); }
 }
 
 .is-glowing {
-  animation: glow-attention 3s var(--ease-out) forwards;
+  animation: glow-attention 3s ease-in-out forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {

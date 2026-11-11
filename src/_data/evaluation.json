@@ -35,7 +35,7 @@
   },
   "kit": {
     "eyebrow": "What’s included",
-    "title": "The whole system, in a box you can hold",
+    "title": "The whole system, in a box you can hold.",
     "body": "Everything that makes a Veranda delivery box work is in the kit, shrunk down to a size that fits on a desk and works the same way.",
     "items": [
       {
@@ -113,7 +113,7 @@
   "request": {
     "id": "request",
     "eyebrow": "Request your kit",
-    "title": "Get an Evaluation Kit",
+    "title": "Get an Evaluation Kit.",
     "body": "Tell us a little about your organization and what you’d like to evaluate. We’ll follow up to confirm details and arrange your kit.",
     "form": {
       "submitLabel": "Request my Evaluation Kit",

@@ -94,10 +94,14 @@
   filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.3));
 }
 
+/* The app sits in front of the box, their centres on the same line, with the
+   box's left edge running down the middle of the phone. Both PNGs carry
+   transparent margins, so these percentages are measured from the visible
+   edges of the artwork, not the image boxes. */
 .eval-hero__phone {
   position: absolute;
-  left: 4%;
-  bottom: 0;
+  left: 12.07%;
+  top: 22.8%;
   z-index: 2;
   width: 25%;
   border-radius: 14px;

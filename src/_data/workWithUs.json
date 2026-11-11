@@ -23,7 +23,7 @@
   },
   "models": {
     "eyebrow": "Ways to work together",
-    "title": "Five ways to build on Veranda",
+    "title": "Five ways to build on Veranda.",
     "body": "Each model is a different split between what we provide and what you bring. Choose the one that matches how much you want to build, or start a conversation and we’ll help you decide.",
     "providesLabel": "Veranda provides",
     "bringLabel": "You bring",
@@ -121,17 +121,17 @@
     ],
     "growth": {
       "icon": "users",
-      "title": "Any of these can grow into a longer-term relationship.",
+      "title": "Any of these can grow into a longer-term partnership.",
       "body": "Over time, partnerships can span distribution, programs, and joint product roadmaps.",
       "link": {
-        "label": "How relationships progress",
+        "label": "How partnerships progress",
         "href": "#process"
       }
     }
   },
   "process": {
     "eyebrow": "Engagement process",
-    "title": "How a partnership typically progresses",
+    "title": "How a partnership typically progresses.",
     "steps": [
       {
         "title": "Initial discussion",
@@ -154,14 +154,14 @@
         "body": "Rolling out into your product or program."
       },
       {
-        "title": "Long-term relationship",
+        "title": "Long-term partnership",
         "body": "Commercial terms, support, and roadmap."
       }
     ]
   },
   "considerations": {
     "eyebrow": "Partnership considerations",
-    "title": "What we’ll explore together",
+    "title": "What we’ll explore together.",
     "body": "Every engagement is shaped by a handful of practical questions. We work through them with you early, so the evaluation and pilot answer the right ones.",
     "items": [
       {
@@ -197,7 +197,7 @@
       {
         "icon": "signature",
         "title": "Commercial structure",
-        "question": "What terms fit, from the first pilot to a long-term relationship?"
+        "question": "What terms fit, from the first pilot to a long-term partnership?"
       }
     ]
   },

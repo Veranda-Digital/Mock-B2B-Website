@@ -1,7 +1,7 @@
 {
   "id": "platform",
   "eyebrow": "Platform",
-  "title": "Modular software and hardware",
+  "title": "Modular software and hardware.",
   "hardware": {
     "label": "Hardware",
     "icon": "layers",
