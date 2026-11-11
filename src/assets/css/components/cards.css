@@ -8,7 +8,7 @@
   padding: 22px;
   border-radius: var(--radius-lg);
   background: var(--color-white);
-  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+  transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
 }
 
 .use-case-card:hover {
@@ -157,7 +157,7 @@
   background: var(--color-white);
   box-shadow: var(--shadow-card);
   text-align: left;
-  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+  transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
 }
 
 .capability-card:hover {
