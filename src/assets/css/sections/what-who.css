@@ -118,15 +118,21 @@
   filter: brightness(1.18) contrast(1.05) saturate(1.1) drop-shadow(0 10px 14px rgba(0, 0, 0, 0.3));
 }
 
-/* Phone rises out of the top of the disc and fades into it below. */
-.pillars__item--software .pillars__img {
-  width: 58%;
-  left: 21%;
-  bottom: -2%;
-  border-radius: 0;
-  filter: drop-shadow(0 0 16px rgba(51, 209, 107, 0.55));
-  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
-          mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+/* Software: the API docs window sits behind, the app in front of it, rising
+   out of the top of the disc. */
+.pillars__item--software .pillars__img--back {
+  width: 92%;
+  left: -16%;
+  top: 8%;
+  border-radius: 8px;
+  filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.35));
+}
+
+.pillars__item--software .pillars__img:not(.pillars__img--back) {
+  width: 48%;
+  left: 44%;
+  top: -8%;
+  filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.38));
 }
 
 /* Box sits across the disc, wider than it. */

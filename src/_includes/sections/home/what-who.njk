@@ -24,6 +24,9 @@
             <li class="pillars__item pillars__item--{{ p.id }}">
               <a class="pillars__link" href="{{ p.href }}">
                 <span class="pillars__circle">
+                  {%- if p.back %}
+                  <img class="pillars__img pillars__img--back" src="{{ p.back.src }}" alt="" width="{{ p.back.width }}" height="{{ p.back.height }}" loading="lazy">
+                  {%- endif %}
                   <img class="pillars__img" src="{{ p.image.src }}" alt="" width="{{ p.image.width }}" height="{{ p.image.height }}" loading="lazy">
                 </span>
                 <span class="pillars__label">{{ p.label }}<span class="pillars__arrow" aria-hidden="true">{{ icon("arrow-right", 14, 2) }}</span></span>

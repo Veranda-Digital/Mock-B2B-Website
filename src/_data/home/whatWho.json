@@ -7,7 +7,7 @@
     "alt": "The three pillars of the Veranda platform: Hardware, Software, and Receptacle",
     "pillars": [
       { "id": "hardware", "label": "Hardware", "href": "/technology/#hardware", "image": { "src": "/assets/images/board-stack/frame-1.webp", "width": 478, "height": 500 } },
-      { "id": "software", "label": "Software", "href": "/technology/#software", "image": { "src": "/assets/images/dashboard-app.png", "width": 887, "height": 1825 } },
+      { "id": "software", "label": "Software", "href": "/technology/#software", "image": { "src": "/assets/images/dashboard-app.png", "width": 887, "height": 1825 }, "back": { "src": "/assets/images/sdk-api.png", "width": 1041, "height": 751 } },
       { "id": "receptacle", "label": "Receptacle", "href": "/technology/#hardware", "image": { "src": "/assets/images/evaluation-kit.png", "width": 925, "height": 656 } }
     ]
   },
