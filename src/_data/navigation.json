@@ -67,7 +67,14 @@
       "label": "Hardware",
       "href": "#hardware",
       "watch": [
-        "hardware",
+        "hardware"
+      ]
+    },
+    {
+      "label": "Receptacle",
+      "href": "#receptacle",
+      "watch": [
+        "receptacle",
         "get-started"
       ]
     }
