@@ -54,5 +54,22 @@
         "get-started"
       ]
     }
+  ],
+  "technology": [
+    {
+      "label": "Software",
+      "href": "#software",
+      "watch": [
+        "software"
+      ]
+    },
+    {
+      "label": "Hardware",
+      "href": "#hardware",
+      "watch": [
+        "hardware",
+        "get-started"
+      ]
+    }
   ]
 }

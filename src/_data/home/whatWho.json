@@ -20,6 +20,7 @@
       {
         "title": "Last-mile delivery & logistics",
         "illustration": "/assets/illustrations/home-delivery.svg",
+        "photo": { "src": "/assets/images/sectors/last-mile.jpg", "alt": "A courier leaving a parcel at a front door", "position": "50% 50%" },
         "benefits": [
           "First-attempt delivery",
           "No one needs to be home",
@@ -29,6 +30,7 @@
       {
         "title": "Healthcare & cold chain",
         "illustration": "/assets/illustrations/cold-chain.svg",
+        "photo": { "src": "/assets/images/sectors/healthcare.jpg", "alt": "A customer talking with a pharmacist at a pharmacy counter", "position": "50% 50%" },
         "benefits": [
           "Monitored conditions",
           "Logged chain of custody",
@@ -38,6 +40,7 @@
       {
         "title": "Field service & industrial",
         "illustration": "/assets/illustrations/field-service.svg",
+        "photo": { "src": "/assets/images/sectors/field-service.jpg", "alt": "Auto parts being handed over in a workshop", "position": "50% 60%" },
         "benefits": [
           "Parts ready before the shift",
           "Overnight drop-offs",
@@ -52,6 +55,7 @@
       {
         "title": "Facilities & entry control",
         "illustration": "/assets/illustrations/special-access.svg",
+        "photo": { "src": "/assets/images/sectors/facilities.jpg", "alt": "A card reader on a concrete wall beside a closed door", "position": "50% 50%" },
         "benefits": [
           "Scheduled, timed entry",
           "No keys or codes to share",
@@ -60,7 +64,7 @@
       }
     ],
     "open": {
-      "title": "Access-restricted products & assets",
+      "title": "Your business or product",
       "icons": [
         "lock",
         "box",
