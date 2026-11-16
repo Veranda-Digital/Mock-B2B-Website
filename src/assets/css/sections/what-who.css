@@ -33,75 +33,165 @@
   margin: 0;
 }
 
-/* Compiled graphic: the Dream Box in front, with the board stack and the app
-   tucked behind it, peeking out from the top left and top right. Layers are
-   positioned as % of the stage so the group scales as one. */
-.embodiment__stage {
-  position: relative;
+/* Three pillars of the platform as a triangle: Hardware and Software on top,
+   Receptacle below, every pair joined by a line. Each circle links to its
+   section on the Technology page. The stage is a fixed 560 x 340 drawing that
+   scales as one, so the SVG lines always meet the circle centres. */
+.embodiment {
   width: 100%;
   max-width: 560px;
-  aspect-ratio: 100 / 60;
+  margin: 0;
+  container-type: inline-size;
 }
 
-.embodiment__layer {
-  position: absolute;
-  height: auto;
-}
-
-.embodiment__layer--lock {
-  left: 11%;
-  top: 3%;
-  width: 29%;
-  filter: brightness(1.18) contrast(1.05) saturate(1.1) drop-shadow(0 10px 16px rgba(35, 37, 44, 0.14));
-}
-
-.embodiment__layer--app {
-  left: 71%;
-  top: 8.4%;
-  width: 19%;
-  border-radius: 14px;
-  filter: drop-shadow(0 12px 20px rgba(35, 37, 44, 0.18));
-}
-
-.embodiment__layer--box {
-  left: 12%;
-  top: 13.65%;
-  width: 80%;
-}
-
-
-.embodiment__caption {
-  /* The product image overflows the stage and paints above in-flow text. */
+.pillars {
   position: relative;
-  z-index: 1;
+  width: 100%;
+  aspect-ratio: 560 / 340;
+}
+
+.pillars__links {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.pillars__links line {
+  stroke: var(--color-green-500);
+  stroke-width: 2;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.pillars__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Circles are 160/560 of the stage wide; positions are centre-based. */
+.pillars__item {
+  position: absolute;
+  width: 28.57%;
+}
+
+.pillars__item--hardware { left: 7.14%; top: 0; }
+.pillars__item--software { left: 64.29%; top: 0; }
+.pillars__item--receptacle { left: 35.71%; top: 39.7%; }
+
+.pillars__link {
+  position: relative;
   display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 5px;
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
   color: var(--color-ink);
 }
 
-.embodiment__caption-star {
-  font-size: 1.4em;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--color-green-500);
+.pillars__circle {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1.5px solid rgba(28, 81, 65, 0.12);
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: 0 10px 28px -16px rgba(35, 37, 44, 0.3), 0 0 0 0 rgba(51, 209, 107, 0);
+  transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out), background-color 0.3s;
 }
 
-.embodiment__caption a {
-  font-weight: 500;
+.pillars__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  transition: transform 0.45s var(--ease-out);
+}
+
+.pillars__item--hardware .pillars__img {
+  width: 74%;
+  filter: brightness(1.18) contrast(1.05) saturate(1.1) drop-shadow(0 8px 12px rgba(35, 37, 44, 0.16));
+}
+
+.pillars__item--software .pillars__img {
+  width: auto;
+  height: 84%;
+  border-radius: 12px;
+  filter: drop-shadow(0 8px 14px rgba(35, 37, 44, 0.2));
+}
+
+.pillars__item--receptacle .pillars__img {
+  width: 112%;
+  max-width: none;
+  filter: drop-shadow(0 8px 12px rgba(35, 37, 44, 0.16));
+}
+
+.pillars__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: var(--fs-h5);
+  font-weight: 600;
+  line-height: 1.2;
   color: var(--color-green-900);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  transition: transform 0.45s var(--ease-out);
 }
 
-.embodiment__link-arrow {
-  display: inline-block;
+.pillars__arrow {
+  display: inline-grid;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: width 0.35s var(--ease-out), opacity 0.35s, margin 0.35s var(--ease-out);
+}
+
+.pillars__link:focus-visible {
+  outline: none;
+}
+
+.pillars__link:focus-visible .pillars__circle {
+  outline: 2px solid var(--color-green-900);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .pillars__link:hover .pillars__circle,
+  .pillars__link:focus-visible .pillars__circle {
+    transform: scale(1.18);
+    border-color: var(--color-green-500);
+    box-shadow: 0 18px 36px -14px rgba(28, 81, 65, 0.4), 0 0 0 6px rgba(51, 209, 107, 0.18);
+  }
+
+  .pillars__link:hover .pillars__img,
+  .pillars__link:focus-visible .pillars__img {
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+
+  /* The circle grows from its centre, so the label steps down to clear it. */
+  .pillars__link:hover .pillars__label,
+  .pillars__link:focus-visible .pillars__label {
+    transform: translateY(calc(2.6cqi + 2px));
+  }
+}
+
+.pillars__link:hover .pillars__arrow,
+.pillars__link:focus-visible .pillars__arrow {
+  width: 14px;
   margin-left: 4px;
-  vertical-align: -2px;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pillars__circle,
+  .pillars__img,
+  .pillars__label,
+  .pillars__arrow {
+    transition: none;
+  }
 }
 
 /* ---- Who it serves: three delivery sectors, then one open-ended card ---- */
@@ -390,10 +480,6 @@
   .what-who__intro {
     grid-template-columns: 1fr;
     gap: 32px;
-  }
-
-  .embodiment__stage {
-    max-width: 400px;
   }
 
   .sector-groups,

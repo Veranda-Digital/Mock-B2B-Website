@@ -13,13 +13,25 @@
       </header>
 
       <figure class="embodiment" data-reveal>
-        <div class="embodiment__stage" role="img" aria-label="{{ e.alt }}">
-          <img class="embodiment__layer embodiment__layer--lock" src="{{ e.lock.src }}" alt="" width="{{ e.lock.width }}" height="{{ e.lock.height }}" loading="lazy">
-          <img class="embodiment__layer embodiment__layer--app" src="{{ e.app.src }}" alt="" width="{{ e.app.width }}" height="{{ e.app.height }}" loading="lazy">
-          <img class="embodiment__layer embodiment__layer--box" src="{{ e.box.src }}" alt="" width="{{ e.box.width }}" height="{{ e.box.height }}" loading="lazy">        </div>
-        <figcaption class="embodiment__caption">
-          <span>{{ e.caption }} <a href="{{ e.link.href }}" target="_blank" rel="noopener">{{ e.link.label }}<span class="embodiment__link-arrow" aria-hidden="true">{{ icon("arrow-right", 14, 2) }}</span></a></span>
-        </figcaption>
+        <div class="pillars">
+          <svg class="pillars__links" viewBox="0 0 560 340" aria-hidden="true" focusable="false">
+            <line x1="120" y1="80" x2="440" y2="80" />
+            <line x1="120" y1="80" x2="280" y2="215" />
+            <line x1="440" y1="80" x2="280" y2="215" />
+          </svg>
+          <ul class="pillars__list" aria-label="{{ e.alt }}">
+            {%- for p in e.pillars %}
+            <li class="pillars__item pillars__item--{{ p.id }}">
+              <a class="pillars__link" href="{{ p.href }}">
+                <span class="pillars__circle">
+                  <img class="pillars__img" src="{{ p.image.src }}" alt="" width="{{ p.image.width }}" height="{{ p.image.height }}" loading="lazy">
+                </span>
+                <span class="pillars__label">{{ p.label }}<span class="pillars__arrow" aria-hidden="true">{{ icon("arrow-right", 14, 2) }}</span></span>
+              </a>
+            </li>
+            {%- endfor %}
+          </ul>
+        </div>
       </figure>
     </div>
 
