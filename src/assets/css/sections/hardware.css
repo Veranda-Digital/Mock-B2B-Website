@@ -490,9 +490,9 @@
 
   .hardware__sticky {
     align-items: flex-start;
-    padding-top: 64px;
-    /* Keeps the device row clear of the bottom section menu. */
-    padding-bottom: 96px;
+    /* Clears the fixed header when it slides back in. */
+    padding-top: 80px;
+    padding-bottom: 32px;
     height: 100vh;
     height: 100svh;
     min-height: 0;
@@ -508,8 +508,7 @@
     gap: 14px;
   }
 
-  /* Compact so the whole stack, wiring included, fits above the menu on
-     short phone screens. */
+  /* Compact so the whole stack, wiring included, fits on short phone screens. */
   .hardware__inner > .section-heading {
     gap: 8px;
     top: 0;

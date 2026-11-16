@@ -281,23 +281,34 @@
     padding: 24px 20px;
   }
 
-  .proof {
+  /* Each tile stacks: the figure (or icon + tag) on top, the copy below.
+     The technical lane's desktop rules are more specific than the base
+     ones, so it is overridden explicitly or its text sits beside the icon. */
+  .proof,
+  .value-lane--technical .proof {
     grid-template-columns: 1fr;
     gap: 12px;
     padding: 16px 18px;
   }
 
-  .proof__lead {
+  .proof__lead,
+  .value-lane--technical .proof__lead {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: 14px;
     padding: 0 0 12px;
     border-right: 0;
     border-bottom: 1px solid rgba(35, 37, 44, 0.12);
+    text-align: left;
   }
 
   .value-lane--technical .proof__lead {
     border-bottom-color: rgba(247, 246, 241, 0.16);
+  }
+
+  .proof__icon {
+    flex: none;
   }
 
   .proof__value::after {

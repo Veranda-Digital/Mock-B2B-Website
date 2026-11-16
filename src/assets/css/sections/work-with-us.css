@@ -486,9 +486,13 @@
     padding-top: 80px;
   }
 
+  /* The card is also a .container, whose side padding the card's own padding
+     replaces, so keep the page gutter as outer margin instead of letting the
+     card run edge to edge. */
   .wwu-considerations__inner {
     grid-template-columns: 1fr;
     gap: 36px;
+    width: calc(100% - var(--gutter) * 2);
     padding: 44px 36px;
   }
 

@@ -394,4 +394,44 @@
   .team-group {
     --cols: 1;
   }
+
+  /* Compact board cards: small portrait beside the name and role, bio below,
+     so the long list of people isn't a wall of large circles. */
+  .person-card {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 16px;
+    padding: 18px;
+    text-align: left;
+  }
+
+  .person-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .person-card__photo {
+    grid-row: 1 / span 2;
+    width: 76px;
+    height: 76px;
+    box-shadow: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-green-500);
+  }
+
+  .person-card__name {
+    align-self: end;
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  .person-card__role {
+    align-self: start;
+    margin-top: 4px;
+  }
+
+  .person-card__bio {
+    grid-column: 1 / -1;
+    margin-top: 14px;
+  }
 }

@@ -90,6 +90,22 @@
   color: inherit;
 }
 
+/* The title is a button so the model works from the keyboard; it looks like
+   plain heading text. */
+.partner-scale__toggle {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
 /* Sized to the fully focused card so copy doesn't reflow while it grows. */
 .partner-scale__detail {
   display: flex;
@@ -262,25 +278,16 @@
 
 }
 
-/* Stacked: the rail moves above the list and the focused model opens up. */
+/* Phones and tablets: no slider. The models stack as an accordion, with the
+   first open. Tapping a header opens or closes just that one. */
 @media (max-width: 1023px) {
   .partner-scale {
     --pad: 20px;
-    --title-min: 17px;
-    --title-max: 24px;
+    margin-top: 32px;
   }
 
   .partner-scale__rail {
-    order: -1;
-    margin: 0 0 16px;
-  }
-
-  .partner-scale__stops {
-    inset: 0 14px;
-  }
-
-  .partner-scale__track {
-    background: linear-gradient(90deg, var(--color-green-900), var(--color-green-500));
+    display: none;
   }
 
   .partner-scale__models {
@@ -290,11 +297,20 @@
 
   .partner-scale__model {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     column-gap: 16px;
     flex: none;
     padding: 16px;
+    transition: color 0.35s, background-color 0.3s;
+  }
+
+  .partner-scale__model::before {
+    transition: opacity 0.35s;
+  }
+
+  .partner-scale__icon {
+    transition: background-color 0.35s, color 0.35s;
   }
 
   .partner-scale__head {
@@ -308,17 +324,47 @@
   .partner-scale__title {
     grid-column: 2;
     margin: 0;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .partner-scale__toggle {
+    padding-block: 8px;
   }
 
   .partner-scale__detail {
     grid-column: 1 / -1;
     width: auto;
-    max-height: calc(var(--focus) * 30em);
+    opacity: 1;
+    transform: none;
+    cursor: auto;
+  }
+
+  /* The details slide open by growing their grid row from 0 to its natural
+     height. Without JS everything stays open. */
+  .js .partner-scale__model {
+    grid-template-rows: auto 0fr;
+    transition: color 0.35s, background-color 0.3s, grid-template-rows 0.35s var(--ease-out);
+  }
+
+  .js .partner-scale__model.is-active {
+    grid-template-rows: auto 1fr;
+  }
+
+  .js .partner-scale__detail {
+    min-height: 0;
     overflow: hidden;
+    visibility: hidden;
+    transition: visibility 0s 0.35s;
+  }
+
+  .js .partner-scale__model.is-active .partner-scale__detail {
+    visibility: visible;
+    transition-delay: 0s;
   }
 
   .partner-scale__body {
-    margin: calc(var(--focus) * 16px) 0 0;
+    margin: 12px 0 0;
   }
 
   .partner-scale__includes {
@@ -330,10 +376,34 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  /* The plus stays visible, and turns into a cross while its model is open. */
   .partner-scale__more {
     position: static;
     grid-column: 3;
     grid-row: 1;
+    opacity: 1;
+    transition: transform 0.35s var(--ease-out), border-color 0.35s, background-color 0.3s, color 0.35s;
+  }
+
+  .partner-scale__model.is-active .partner-scale__more {
+    border-color: rgba(247, 246, 241, 0.4);
+    color: var(--color-cream);
+    transform: rotate(45deg);
+  }
+
+  .js .partner-scale:not(.is-ready) *,
+  .js .partner-scale:not(.is-ready) *::before {
+    transition: none !important;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .partner-scale__model,
+    .partner-scale__model::before,
+    .partner-scale__icon,
+    .partner-scale__more,
+    .js .partner-scale__detail {
+      transition: none !important;
+    }
   }
 }
 
@@ -352,47 +422,5 @@
 
   .partner-scale__includes ul {
     grid-template-columns: 1fr;
-  }
-
-  /* The cards stack vertically, so the slider runs vertically too, down the
-     left side. It has a fixed length and stays in view (sticky) while the
-     cards open and close, so it never moves under the finger. */
-  .partner-scale {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .partner-scale__models {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .partner-scale__rail {
-    order: -1;
-    flex: none;
-    position: sticky;
-    top: 96px;
-    width: 40px;
-    height: 260px;
-    margin: 0;
-  }
-
-  .partner-scale__stops {
-    inset: 18px 0;
-  }
-
-  .partner-scale__track {
-    inset: 18px auto 18px 50%;
-    width: 4px;
-    height: auto;
-    background: linear-gradient(180deg, var(--color-green-900), var(--color-green-500));
-    transform: translateX(-50%);
-  }
-
-  .partner-scale__tick,
-  .partner-scale__pin {
-    top: calc(var(--at) * 100%);
-    left: 50%;
   }
 }
