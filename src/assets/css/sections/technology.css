@@ -151,17 +151,12 @@
 
 @media (max-width: 809px) {
   .tech-intro {
-    padding: 140px 0 80px;
+    padding: 140px 0 64px;
   }
 
+  /* The cards are a desktop shortcut; on mobile the sections follow directly. */
   .tech-cards {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    margin-top: 28px;
-  }
-
-  .tech-card {
-    padding-block: 36px 24px;
+    display: none;
   }
 }
 
