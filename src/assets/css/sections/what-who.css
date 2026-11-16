@@ -3,9 +3,10 @@
   background: var(--color-cream);
 }
 
-/* Group labels sit a step above the site-wide 13px eyebrow. */
-.what-who .eyebrow--coral,
-.what-who .eyebrow--green {
+/* Group labels sit a step above the site-wide 13px eyebrow.
+   The section label in the intro stays at the shared size. */
+.what-who .sector-group > .eyebrow,
+.what-who .what-who__block > .eyebrow {
   font-size: 15px;
   font-weight: 700;
 }
@@ -32,7 +33,7 @@
   margin: 0;
 }
 
-/* Compiled graphic: the Dream Box in front, with the exploded lock and the app
+/* Compiled graphic: the Dream Box in front, with the board stack and the app
    tucked behind it, peeking out from the top left and top right. Layers are
    positioned as % of the stage so the group scales as one. */
 .embodiment__stage {
@@ -48,13 +49,10 @@
 }
 
 .embodiment__layer--lock {
-  left: 3%;
-  top: -5.25%;
-  width: 50%;
-  /* Pivot on the top-left so the right side drops and the group balances. */
-  transform-origin: top left;
-  transform: rotate(7deg);
-  filter: drop-shadow(0 10px 16px rgba(35, 37, 44, 0.14));
+  left: 11%;
+  top: 3%;
+  width: 29%;
+  filter: brightness(1.18) contrast(1.05) saturate(1.1) drop-shadow(0 10px 16px rgba(35, 37, 44, 0.14));
 }
 
 .embodiment__layer--app {
@@ -98,6 +96,12 @@
   color: var(--color-green-900);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.embodiment__link-arrow {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: -2px;
 }
 
 /* ---- Who it serves: three delivery sectors, then one open-ended card ---- */

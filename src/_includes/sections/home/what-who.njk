@@ -7,6 +7,7 @@
   <div class="container">
     <div class="what-who__intro">
       <header class="section-heading section-heading--start" data-reveal>
+        {{ eyebrow(s.eyebrow) }}
         <h2 class="section-heading__title">{{ s.title }}</h2>
         <p class="section-heading__body">{{ s.body }}</p>
       </header>
@@ -17,8 +18,7 @@
           <img class="embodiment__layer embodiment__layer--app" src="{{ e.app.src }}" alt="" width="{{ e.app.width }}" height="{{ e.app.height }}" loading="lazy">
           <img class="embodiment__layer embodiment__layer--box" src="{{ e.box.src }}" alt="" width="{{ e.box.width }}" height="{{ e.box.height }}" loading="lazy">        </div>
         <figcaption class="embodiment__caption">
-          <span class="embodiment__caption-star" aria-hidden="true">*</span>
-          <span>{{ e.caption }} <a href="{{ e.link.href }}" target="_blank" rel="noopener">{{ e.link.label }}</a></span>
+          <span>{{ e.caption }} <a href="{{ e.link.href }}" target="_blank" rel="noopener">{{ e.link.label }}<span class="embodiment__link-arrow" aria-hidden="true">{{ icon("arrow-right", 14, 2) }}</span></a></span>
         </figcaption>
       </figure>
     </div>

@@ -1,6 +1,10 @@
 {
   "primary": [
     {
+      "label": "Home",
+      "href": "/"
+    },
+    {
       "label": "Technology",
       "href": "/technology/"
     },

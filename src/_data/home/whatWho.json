@@ -1,15 +1,16 @@
 {
   "id": "what-who",
+  "eyebrow": "Veranda Overview",
   "title": "One platform for every unattended handoff.",
   "body": "The Veranda platform combines hardware, software, and intelligent networking to let a box, locker, or door open for the right person, and record what happened.",
   "embodiment": {
-    "caption": "DreamBox is a product embodiment built with Veranda.",
-    "alt": "The Veranda platform: the Dream Box smart drop box, the exploded smart lock inside it, and the Veranda app",
-    "lock": { "src": "/assets/images/smart-lock-exploded.png", "width": 2000, "height": 1332 },
+    "caption": "See how the Veranda platform is used for grocery deliveries with",
+    "alt": "The Veranda platform: the Dream Box smart drop box, the stack of Veranda circuit boards, and the Veranda app",
+    "lock": { "src": "/assets/images/board-stack/frame-1.webp", "width": 478, "height": 500 },
     "box": { "src": "/assets/images/evaluation-kit.png", "width": 925, "height": 656 },
     "app": { "src": "/assets/images/dashboard-app.png", "width": 887, "height": 1825 },
     "link": {
-      "label": "Visit the DreamBox site",
+      "label": "DreamBox",
       "href": "https://getveranda.com/"
     }
   },
