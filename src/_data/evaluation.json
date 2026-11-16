@@ -65,14 +65,7 @@
         { "name": "email", "label": "Work email", "type": "email", "placeholder": "jane@business.com", "required": true, "half": true, "autocomplete": "email" },
         { "name": "company", "label": "Company", "type": "text", "placeholder": "Company name", "required": true, "half": true, "autocomplete": "organization" },
         { "name": "role", "label": "Role", "type": "text", "placeholder": "Head of Operations", "half": true, "autocomplete": "organization-title" },
-        { "name": "evaluating", "label": "What would you like to evaluate?", "type": "textarea", "placeholder": "Your product or delivery program, the problem you're solving, and what would help you decide" },
-        {
-          "name": "timing",
-          "label": "When are you looking to start?",
-          "type": "select",
-          "placeholder": "Select a timeframe",
-          "options": ["As soon as possible", "Within 3 months", "Within 6 months", "Just exploring"]
-        }
+        { "name": "evaluating", "label": "What would you like to evaluate?", "type": "textarea", "placeholder": "Your product or delivery program, the problem you're solving, and what would help you decide" }
       ]
     }
   },
