@@ -10,6 +10,6 @@
     { "src": "/assets/video/hero/porch.mp4", "poster": "/assets/video/hero/porch.jpg", "label": "Packages & Groceries" },
     { "src": "/assets/video/hero/logistics.mp4", "poster": "/assets/video/hero/logistics.jpg", "label": "Business Exchanges" },
     { "src": "/assets/video/hero/healthcare.mp4", "poster": "/assets/video/hero/healthcare.jpg", "label": "Pharmaceuticals & Healthcare" },
-    { "src": "/assets/video/hero/access.mp4", "poster": "/assets/video/hero/access.jpg", "label": "Authorized Entry" }
+    { "src": "/assets/video/hero/access.mp4", "poster": "/assets/video/hero/access.jpg", "label": "Authorized Entry", "position": "10% 50%" }
   ]
 }

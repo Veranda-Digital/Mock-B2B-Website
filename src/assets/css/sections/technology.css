@@ -143,6 +143,10 @@
   color: var(--text-body);
 }
 
+/* Phones swap the cards for three pill links to the same sections. */
+.tech-pills {
+  display: none;
+}
 @media (max-width: 1199px) {
   .tech-card {
     padding-inline: 16px;
@@ -154,15 +158,52 @@
     padding: 140px 0 64px;
   }
 
-  /* The cards are a desktop shortcut; on mobile the sections follow directly. */
   .tech-cards {
     display: none;
+  }
+
+  .tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tech-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid rgba(28, 81, 65, 0.25);
+    border-radius: var(--radius-pill);
+    background: var(--color-white);
+    font-size: var(--fs-body);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-green-900);
+    transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+  }
+
+  .tech-pill__arrow {
+    display: inline-grid;
+    transform: rotate(90deg);
+  }
+
+  .tech-pill:active {
+    border-color: var(--color-green-900);
+    background: var(--color-green-900);
+    color: var(--color-cream);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .tech-card,
-  .tech-card__arrow {
+  .tech-card__arrow,
+  .tech-pill {
     transition: none;
   }
 }

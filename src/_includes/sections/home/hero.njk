@@ -6,7 +6,7 @@
   {%- if hero.videos %}
   <div class="hero__media" data-hero-video aria-hidden="true">
     {%- for v in hero.videos %}
-    <video class="hero__video{% if loop.first %} is-active{% endif %}" src="{{ v.src }}" poster="{{ v.poster }}" muted playsinline preload="{{ 'auto' if loop.first else 'none' }}"></video>
+    <video class="hero__video{% if loop.first %} is-active{% endif %}" src="{{ v.src }}" poster="{{ v.poster }}" muted playsinline preload="{{ 'auto' if loop.first else 'none' }}"{% if v.position %} style="object-position: {{ v.position }}"{% endif %}></video>
     {%- endfor %}
     <div class="hero__scrim"></div>
   </div>

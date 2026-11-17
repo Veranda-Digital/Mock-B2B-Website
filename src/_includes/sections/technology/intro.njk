@@ -24,5 +24,10 @@
       </li>
       {%- endfor %}
     </ul>
+    <ul class="tech-pills" aria-label="Jump to a section" data-reveal>
+      {%- for c in s.cards %}
+      <li><a class="tech-pill" href="{{ c.href }}">{{ c.label }}<span class="tech-pill__arrow" aria-hidden="true">{{ icon("arrow-right", 14, 2) }}</span></a></li>
+      {%- endfor %}
+    </ul>
   </div>
 </section>
