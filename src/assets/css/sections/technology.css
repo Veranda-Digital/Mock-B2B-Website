@@ -147,7 +147,6 @@
 .tech-pills {
   display: none;
 }
-
 @media (max-width: 1199px) {
   .tech-card {
     padding-inline: 16px;
