@@ -15,8 +15,8 @@
             <span class="icon-tile partner-scale__icon">{{ icon(m.icon, 22) }}</span>
             <span class="partner-scale__index">{{ "0" + loop.index }}</span>
           </div>
-          <h5 class="partner-scale__title">{{ m.title }}</h5>
-          <div class="partner-scale__detail">
+          <h5 class="partner-scale__title"><button class="partner-scale__toggle" type="button" aria-expanded="{{ 'true' if loop.index0 == s.start else 'false' }}" aria-controls="partner-detail-{{ loop.index }}">{{ m.title }}</button></h5>
+          <div class="partner-scale__detail" id="partner-detail-{{ loop.index }}">
             <p class="partner-scale__body">{{ m.body }}</p>
             <div class="partner-scale__includes">
               <span class="partner-scale__includes-label">{{ s.includesLabel }}</span>

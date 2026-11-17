@@ -1,0 +1,38 @@
+{% from "components/section-heading.njk" import sectionHeading %}
+{% from "components/badge.njk" import pillBadge %}
+{% from "components/icon.njk" import icon %}
+{%- set s = technology.receptacle -%}
+{%- set item = s.showcase -%}
+<section class="receptacle" id="{{ s.id }}">
+  <div class="container">
+    {{ sectionHeading({ eyebrow: s.eyebrow, title: s.title, body: s.body }) }}
+
+    <div class="feature-grid receptacle__grid">
+      {%- for form in s.forms %}
+      <article class="capability-card receptacle__card" data-reveal>
+        <span class="capability-card__head">
+          <span class="icon-tile icon-tile--xs">{{ icon(form.icon, 16) }}</span>
+          <h5 class="capability-card__label">{{ form.title }}</h5>
+        </span>
+        <p class="receptacle__card-body">{{ form.body }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <div class="receptacle__showcase">
+      <figure class="receptacle__photo" data-reveal>
+        <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" width="{{ item.image.width }}" height="{{ item.image.height }}" loading="lazy">
+      </figure>
+      <div class="receptacle__text" data-reveal>
+        {{ pillBadge(item.badge.label, item.badge.icon) }}
+        <h3 class="receptacle__title">{{ item.title }}</h3>
+        <p class="receptacle__body">{{ item.body }}</p>
+        <ul class="receptacle__tags">
+          {%- for tag in item.tags %}
+          <li>{{ tag }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

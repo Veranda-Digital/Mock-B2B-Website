@@ -1,6 +1,8 @@
-// Partnership scale: a draggable pin runs along a rail, and the model nearest
-// the pin grows to take focus. The first time the scale scrolls into view the
-// pin glides in from the far left and settles on [data-start].
+// Partnership scale. On wide screens a draggable pin runs along a rail, and the
+// model nearest the pin grows to take focus; the first time the scale scrolls
+// into view the pin glides in from the far left and settles on [data-start].
+// On phones and tablets the models stack as a plain accordion instead: no rail,
+// the first model starts open, and each one slides open or closed on tap.
 export function initPartnerScale(root) {
   const models = [...root.querySelectorAll("[data-model]")];
   const rail = root.querySelector("[data-rail]");
@@ -20,8 +22,17 @@ export function initPartnerScale(root) {
   let frame = 0;
   let introPlayed = false;
 
-  // Phones stack the cards, so the rail runs vertically beside them.
-  const vertical = window.matchMedia("(max-width: 809px)");
+  // Below this width the cards stack as an accordion (see partners.css).
+  const accordion = window.matchMedia("(max-width: 1023px)");
+
+  const titleOf = (model) => model.querySelector(".partner-scale__title")?.textContent.trim() || "";
+  const toggleOf = (model) => model.querySelector(".partner-scale__toggle");
+
+  function setOpen(model, open) {
+    model.classList.toggle("is-active", open);
+    model.style.setProperty("--focus", open ? "1" : "0");
+    toggleOf(model)?.setAttribute("aria-expanded", String(open));
+  }
 
   function render(next) {
     pos = clamp(next);
@@ -33,10 +44,11 @@ export function initPartnerScale(root) {
     const nearest = Math.round(pos);
     if (nearest === active) return;
     active = nearest;
+    models.forEach((model, i) => toggleOf(model)?.setAttribute("aria-expanded", String(i === nearest)));
     models.forEach((model, i) => model.classList.toggle("is-active", i === nearest));
     ticks.forEach((tick, i) => tick.classList.toggle("is-active", i === nearest));
     pin.setAttribute("aria-valuenow", String(nearest));
-    pin.setAttribute("aria-valuetext", models[nearest].querySelector(".partner-scale__title")?.textContent.trim() || "");
+    pin.setAttribute("aria-valuetext", titleOf(models[nearest]));
   }
 
   // Each animation gets a run id; starting another (or stopping) bumps it,
@@ -95,13 +107,12 @@ export function initPartnerScale(root) {
   // Pointer dragging anywhere on the rail.
   const posFromPointer = (event) => {
     const rect = stops.getBoundingClientRect();
-    if (vertical.matches) return ((event.clientY - rect.top) / rect.height) * last;
     return ((event.clientX - rect.left) / rect.width) * last;
   };
 
   let dragging = false;
   rail.addEventListener("pointerdown", (event) => {
-    if (event.button !== 0) return;
+    if (accordion.matches || event.button !== 0) return;
     takeOver();
     dragging = true;
     root.classList.add("is-dragging");
@@ -125,13 +136,21 @@ export function initPartnerScale(root) {
   rail.addEventListener("pointercancel", release);
 
   models.forEach((model, i) => {
-    model.addEventListener("click", () => {
+    model.addEventListener("click", (event) => {
+      if (accordion.matches) {
+        // Accordion: tapping the header toggles that one model; the open
+        // details are plain content and don't react to taps.
+        if (event.target.closest(".partner-scale__detail")) return;
+        setOpen(model, !model.classList.contains("is-active"));
+        return;
+      }
       takeOver();
       animateTo(i, 600);
     });
   });
 
   pin.addEventListener("keydown", (event) => {
+    if (accordion.matches) return;
     const current = Math.round(pos);
     const keys = {
       ArrowLeft: current - 1,
@@ -147,19 +166,38 @@ export function initPartnerScale(root) {
     animateTo(keys[event.key], 400);
   });
 
-  if (reducedMotion || !("IntersectionObserver" in window)) {
-    render(start);
-    return;
+  let observer = null;
+
+  function applyMode() {
+    if (accordion.matches) {
+      // Accordion: first model open, the rest closed.
+      takeOver();
+      observer?.disconnect();
+      models.forEach((model, i) => setOpen(model, i === 0));
+      return;
+    }
+    // Slider: rest on the starting model, or glide in from the left the first
+    // time the scale comes into view.
+    interrupted = false;
+    active = -1;
+    observer?.disconnect();
+    const glide = !introPlayed && !reducedMotion && "IntersectionObserver" in window;
+    render(glide ? 0 : start);
+    if (!glide) return;
+    observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting) || introPlayed) return;
+        observer.disconnect();
+        playIntro();
+      },
+      { threshold: 0.6 }
+    );
+    observer.observe(root);
   }
 
-  render(0);
-  const observer = new IntersectionObserver(
-    (entries) => {
-      if (!entries.some((entry) => entry.isIntersecting) || introPlayed) return;
-      observer.disconnect();
-      playIntro();
-    },
-    { threshold: 0.6 }
-  );
-  observer.observe(root);
+  applyMode();
+  accordion.addEventListener("change", applyMode);
+  // Transitions stay off until the initial state is in place, so the first
+  // model doesn't visibly slide open on load.
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add("is-ready")));
 }

@@ -1,15 +1,28 @@
 {% from "components/section-heading.njk" import eyebrow %}
-{% from "components/button.njk" import button %}
+{% from "components/icon.njk" import icon %}
 {%- set s = technology.page.intro -%}
 <section class="tech-intro" id="hero">
   <div class="container tech-intro__inner">
     {{ eyebrow(s.eyebrow, "green") }}
     <h1 class="tech-intro__title" data-reveal>{{ s.title }}</h1>
     <p class="tech-intro__body" data-reveal>{{ s.body }}</p>
-    <div class="hero__actions" data-reveal>
-      {%- for b in s.buttons %}
-      {{ button(b.label, b.href, b.variant) }}
+    <ul class="tech-cards" data-reveal>
+      {%- for c in s.cards %}
+      <li class="tech-cards__item">
+        <a class="tech-card tech-card--{{ c.id }}" href="{{ c.href }}">
+          <span class="tech-card__circle pillars__circle" aria-hidden="true">
+            {%- if c.back %}
+            <img class="pillars__img pillars__img--back" src="{{ c.back.src }}" alt="" width="{{ c.back.width }}" height="{{ c.back.height }}" loading="lazy">
+            {%- endif %}
+            <img class="pillars__img" src="{{ c.image.src }}" alt="" width="{{ c.image.width }}" height="{{ c.image.height }}" loading="lazy">
+          </span>
+          <span class="tech-card__text">
+            <span class="tech-card__label">{{ c.label }}<span class="tech-card__arrow" aria-hidden="true">{{ icon("arrow-right", 16, 2) }}</span></span>
+            <span class="tech-card__caption">{{ c.caption }}</span>
+          </span>
+        </a>
+      </li>
       {%- endfor %}
-    </div>
+    </ul>
   </div>
 </section>

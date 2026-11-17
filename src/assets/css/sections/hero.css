@@ -55,9 +55,19 @@
 }
 
 /* ---- Video background hero ---- */
+/* Exactly one visible viewport. 100vh is the large viewport and, with page
+   zoom, paints past the window; svh/dvh stay within it. JS refines this. */
 .hero--video {
-  padding-bottom: 92px;
+  height: calc(100svh / var(--zoom));
+  min-height: 0;
+  padding-bottom: 108px;
   background: var(--color-ink-900);
+}
+
+@supports (height: 100dvh) {
+  .hero--video {
+    height: calc(100dvh / var(--zoom));
+  }
 }
 
 .hero__media {
@@ -114,15 +124,18 @@
 
 .hero__scenes {
   position: absolute;
-  left: 50%;
+  left: 24px;
+  right: 24px;
   bottom: 28px;
   z-index: 1;
   display: flex;
-  gap: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 22px;
+  row-gap: 14px;
   margin: 0;
   padding: 0;
   list-style: none;
-  transform: translateX(-50%);
 }
 
 .hero__scene {

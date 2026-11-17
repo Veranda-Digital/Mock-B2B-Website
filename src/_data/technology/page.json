@@ -3,9 +3,29 @@
     "eyebrow": "Technology",
     "title": "How the Veranda platform works.",
     "body": "Modular hardware, connected software, and open integration, designed to work as one system or to be built into your own product.",
-    "buttons": [
-      { "label": "See the hardware", "href": "#hardware", "variant": "primary" },
-      { "label": "See the software", "href": "#software", "variant": "dark" }
+    "cards": [
+      {
+        "id": "software",
+        "label": "Software",
+        "caption": "The Dashboard app, API, and SDK",
+        "href": "#software",
+        "image": { "src": "/assets/images/dashboard-app.png", "width": 887, "height": 1825 },
+        "back": { "src": "/assets/images/sdk-api.png", "width": 1041, "height": 751 }
+      },
+      {
+        "id": "hardware",
+        "label": "Hardware",
+        "caption": "Modular boards for access, sensing, and power",
+        "href": "#hardware",
+        "image": { "src": "/assets/images/board-stack/frame-1.webp", "width": 478, "height": 500 }
+      },
+      {
+        "id": "receptacle",
+        "label": "Receptacle",
+        "caption": "Custom-built, off-the-shelf, or your own product",
+        "href": "#receptacle",
+        "image": { "src": "/assets/images/evaluation-kit.png", "width": 925, "height": 656 }
+      }
     ]
   },
   "cta": {

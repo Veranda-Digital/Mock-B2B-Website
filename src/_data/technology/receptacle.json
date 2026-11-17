@@ -1,0 +1,41 @@
+{
+  "id": "receptacle",
+  "eyebrow": "Receptacle",
+  "title": "A home for the platform, in any form factor.",
+  "forms": [
+    {
+      "icon": "box",
+      "title": "Custom-built",
+      "body": "Veranda designs and builds a receptacle around your requirements, with our hardware and sensors integrated from the start."
+    },
+    {
+      "icon": "locker",
+      "title": "Off-the-shelf",
+      "body": "Our hardware and software can be integrated into standard coolers, boxes, and lockers. This is the approach we use for field trials."
+    },
+    {
+      "icon": "puzzle",
+      "title": "Your own product",
+      "body": "Veranda can be built into a product you already make or sell, adding secure access and monitoring to a form factor your customers already know."
+    }
+  ],
+  "showcase": {
+    "badge": {
+      "label": "Custom-built receptacles",
+      "icon": "box"
+    },
+    "title": "Built around the job, and the budget",
+    "body": "Each custom receptacle is designed around how it will be used and what it needs to cost, from simple, low-cost housings to fully insulated boxes for temperature-sensitive goods. The DreamBox is one example: an insulated cooler with a smart lock and sensors built in. Whichever you choose, our hardware and software are purpose-built to integrate into a variety of form factors.",
+    "tags": [
+      "Metal or plastic",
+      "Insulated or not",
+      "Sized and priced to fit"
+    ],
+    "image": {
+      "src": "/assets/images/evaluation-kit.png",
+      "alt": "A Veranda custom-built receptacle",
+      "width": 925,
+      "height": 656
+    }
+  }
+}

@@ -1,5 +1,7 @@
 .software {
   padding: 84px 0 72px;
+  /* Same stone background as the homepage Value section. */
+  background: var(--color-stone);
 }
 
 /* Equal halves: phone on the left, copy on the right, centered in the row. */

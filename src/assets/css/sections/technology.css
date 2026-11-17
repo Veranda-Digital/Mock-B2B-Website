@@ -24,8 +24,145 @@
   line-height: 1.4;
 }
 
+/* ---- Section cards: the three pillars, each linking down the page ---- */
+.tech-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  width: 100%;
+  max-width: 960px;
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  height: 100%;
+  padding: 40px 24px 28px;
+  border: 1px solid rgba(35, 37, 44, 0.08);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  color: var(--color-ink);
+  text-align: center;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out), border-color 0.35s;
+}
+
+.tech-card:hover,
+.tech-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgba(28, 81, 65, 0.3);
+  box-shadow: 0 18px 40px -20px rgba(35, 37, 44, 0.25);
+}
+
+.tech-card:focus-visible {
+  outline: 2px solid var(--color-green-900);
+  outline-offset: 3px;
+}
+
+/* Same green disc and spilling product images as the homepage overview. */
+.tech-card__circle {
+  flex: none;
+  width: 150px;
+}
+
+.tech-card:hover .pillars__circle,
+.tech-card:focus-visible .pillars__circle {
+  transform: scale(1.06);
+  box-shadow: inset 0 1px 40px 0 var(--color-green-500), 0 0 50px -4px rgba(51, 209, 107, 0.8);
+}
+
+.tech-card:hover .pillars__img,
+.tech-card:focus-visible .pillars__img {
+  transform: scale(1.04);
+}
+
+.tech-card--hardware .pillars__img {
+  width: 92%;
+  left: 4%;
+  top: 0%;
+  filter: brightness(1.18) contrast(1.05) saturate(1.1) drop-shadow(0 10px 14px rgba(0, 0, 0, 0.3));
+}
+
+.tech-card--software .pillars__img--back {
+  width: 92%;
+  left: -16%;
+  top: 8%;
+  border-radius: 8px;
+  filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.35));
+}
+
+.tech-card--software .pillars__img:not(.pillars__img--back) {
+  width: 48%;
+  left: 44%;
+  top: -8%;
+  filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.38));
+}
+
+.tech-card--receptacle .pillars__img {
+  width: 150%;
+  left: -25%;
+  top: -4%;
+  filter: drop-shadow(0 14px 16px rgba(0, 0, 0, 0.32));
+}
+
+.tech-card__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.tech-card__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-h5);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-green-900);
+}
+
+.tech-card__arrow {
+  display: inline-grid;
+  transition: transform 0.35s var(--ease-out);
+}
+
+.tech-card:hover .tech-card__arrow,
+.tech-card:focus-visible .tech-card__arrow {
+  transform: translateY(3px) rotate(90deg);
+}
+
+.tech-card__caption {
+  max-width: 240px;
+  font-size: var(--fs-small);
+  line-height: 1.45;
+  color: var(--text-body);
+}
+
+@media (max-width: 1199px) {
+  .tech-card {
+    padding-inline: 16px;
+  }
+}
+
 @media (max-width: 809px) {
   .tech-intro {
-    padding: 140px 0 80px;
+    padding: 140px 0 64px;
+  }
+
+  /* The cards are a desktop shortcut; on mobile the sections follow directly. */
+  .tech-cards {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-card,
+  .tech-card__arrow {
+    transition: none;
   }
 }

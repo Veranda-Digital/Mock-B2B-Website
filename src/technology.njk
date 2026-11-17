@@ -4,10 +4,13 @@ permalink: /technology/
 title: Technology | Veranda Digital
 description: How the Veranda platform works. Modular hardware, connected software, and an API and SDK for integrating access, monitoring, and automation into your product.
 pageClass: technology
+showSectionNav: true
+navKey: technology
 sections:
   - intro
-  - hardware
   - software
+  - hardware
+  - receptacle
 ---
 {% for section in sections %}
 {% include "sections/technology/" + section + ".njk" %}

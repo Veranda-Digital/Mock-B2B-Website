@@ -1,17 +1,15 @@
 {
   "id": "what-who",
+  "eyebrow": "Veranda Overview",
   "title": "One platform for every unattended handoff.",
-  "body": "The Veranda platform combines hardware, software, and intelligent networking to let a box, locker, or door open for the right person, and record what happened.",
+  "body": "The Veranda platform combines hardware, software, and intelligent networking to let a box, locker, or door open for the right person, and record what happened. Our patent-pending state machine keeps the entire system efficient, fast, and secure.",
   "embodiment": {
-    "caption": "DreamBox is a product embodiment built with Veranda.",
-    "alt": "The Veranda platform: the Dream Box smart drop box, the exploded smart lock inside it, and the Veranda app",
-    "lock": { "src": "/assets/images/smart-lock-exploded.png", "width": 2000, "height": 1332 },
-    "box": { "src": "/assets/images/evaluation-kit.png", "width": 925, "height": 656 },
-    "app": { "src": "/assets/images/dashboard-app.png", "width": 887, "height": 1825 },
-    "link": {
-      "label": "Visit the DreamBox site",
-      "href": "https://getveranda.com/"
-    }
+    "alt": "The three pillars of the Veranda platform: Hardware, Software, and Receptacle",
+    "pillars": [
+      { "id": "hardware", "label": "Hardware", "href": "/technology/#hardware", "image": { "src": "/assets/images/board-stack/frame-1.webp", "width": 478, "height": 500 } },
+      { "id": "software", "label": "Software", "href": "/technology/#software", "image": { "src": "/assets/images/dashboard-app.png", "width": 887, "height": 1825 }, "back": { "src": "/assets/images/sdk-api.png", "width": 1041, "height": 751 } },
+      { "id": "receptacle", "label": "Receptacle", "href": "/technology/#receptacle", "image": { "src": "/assets/images/evaluation-kit.png", "width": 925, "height": 656 } }
+    ]
   },
   "delivery": {
     "label": "Who it serves: Delivery",
@@ -19,6 +17,7 @@
       {
         "title": "Last-mile delivery & logistics",
         "illustration": "/assets/illustrations/home-delivery.svg",
+        "photo": { "src": "/assets/images/sectors/last-mile.jpg", "alt": "A courier leaving a parcel at a front door", "position": "50% 50%" },
         "benefits": [
           "First-attempt delivery",
           "No one needs to be home",
@@ -28,6 +27,7 @@
       {
         "title": "Healthcare & cold chain",
         "illustration": "/assets/illustrations/cold-chain.svg",
+        "photo": { "src": "/assets/images/sectors/healthcare.jpg", "alt": "A customer talking with a pharmacist at a pharmacy counter", "position": "50% 50%" },
         "benefits": [
           "Monitored conditions",
           "Logged chain of custody",
@@ -37,6 +37,7 @@
       {
         "title": "Field service & industrial",
         "illustration": "/assets/illustrations/field-service.svg",
+        "photo": { "src": "/assets/images/sectors/field-service.jpg", "alt": "Auto parts being handed over in a workshop", "position": "50% 60%" },
         "benefits": [
           "Parts ready before the shift",
           "Overnight drop-offs",
@@ -51,6 +52,7 @@
       {
         "title": "Facilities & entry control",
         "illustration": "/assets/illustrations/special-access.svg",
+        "photo": { "src": "/assets/images/sectors/facilities.jpg", "alt": "A card reader on a concrete wall beside a closed door", "position": "50% 50%" },
         "benefits": [
           "Scheduled, timed entry",
           "No keys or codes to share",
@@ -59,7 +61,7 @@
       }
     ],
     "open": {
-      "title": "Access-restricted products & assets",
+      "title": "Your business or product",
       "icons": [
         "lock",
         "box",

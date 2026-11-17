@@ -2,6 +2,7 @@ import { initReveal } from "./reveal.js";
 import { initHeader } from "./header.js";
 import { initSectionNav } from "./section-nav.js";
 import { initHeroVideo } from "./hero-video.js";
+import { initHeroFit } from "./hero-fit.js";
 import { initBoardStack } from "./board-stack.js";
 import { initCounters } from "./counters.js";
 import { initPartnerScale } from "./partner-scale.js";
@@ -14,6 +15,7 @@ const nav = document.querySelector("[data-section-nav]");
 if (nav) initSectionNav(nav);
 
 document.querySelectorAll("[data-hero-video]").forEach(initHeroVideo);
+document.querySelectorAll(".hero--video").forEach(initHeroFit);
 document.querySelectorAll("[data-board-stack]").forEach(initBoardStack);
 document.querySelectorAll("[data-partner-scale]").forEach(initPartnerScale);
 document.querySelectorAll("[data-eval-form]").forEach(initEvalForm);

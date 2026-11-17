@@ -1,0 +1,120 @@
+/* Technology: Receptacle. A lighter, shorter section on the cream page
+   background that follows the dark hardware stack. */
+.receptacle {
+  padding: 96px 0 24px;
+  background: var(--bg-page);
+}
+
+.receptacle__showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+  margin: 24px 0 8px;
+}
+
+.receptacle__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.receptacle__title {
+  margin-top: 4px;
+  color: var(--color-ink);
+}
+
+.receptacle__body {
+  margin: 0;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+.receptacle__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.receptacle__tags li {
+  padding: 6px 14px;
+  border: 1px solid rgba(28, 81, 65, 0.25);
+  border-radius: var(--radius-pill);
+  background: rgba(51, 209, 107, 0.12);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--color-green-900);
+}
+
+/* Product shot of just the box, straight on the page background. */
+.receptacle__photo {
+  justify-self: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0;
+}
+
+.receptacle__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.receptacle__grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  margin-top: 40px;
+}
+
+.receptacle .capability-card__label {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  color: var(--color-green-900);
+}
+
+.receptacle__card-body {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+@media (max-width: 1199px) {
+  .receptacle {
+    padding: 72px 0 16px;
+  }
+
+  .receptacle__showcase {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 809px) {
+  .receptacle {
+    padding: 64px 0 8px;
+  }
+
+  .receptacle__showcase {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 24px 0 8px;
+  }
+
+  .receptacle__photo {
+    max-width: 380px;
+  }
+
+  .receptacle__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .receptacle .capability-card {
+    padding: 16px 18px;
+    gap: 8px;
+  }
+}

@@ -3,9 +3,10 @@
   background: var(--color-cream);
 }
 
-/* Group labels sit a step above the site-wide 13px eyebrow. */
-.what-who .eyebrow--coral,
-.what-who .eyebrow--green {
+/* Group labels sit a step above the site-wide 13px eyebrow.
+   The section label in the intro stays at the shared size. */
+.what-who .sector-group > .eyebrow,
+.what-who .what-who__block > .eyebrow {
   font-size: 15px;
   font-weight: 700;
 }
@@ -32,72 +33,177 @@
   margin: 0;
 }
 
-/* Compiled graphic: the Dream Box in front, with the exploded lock and the app
-   tucked behind it, peeking out from the top left and top right. Layers are
-   positioned as % of the stage so the group scales as one. */
-.embodiment__stage {
-  position: relative;
+/* Three pillars of the platform as a triangle: Hardware and Software on top,
+   Receptacle below, every pair joined by a line. Each circle links to its
+   section on the Technology page. The stage is a fixed 560 x 345 drawing that
+   scales as one, so the SVG lines always meet the circle centres. */
+.embodiment {
   width: 100%;
   max-width: 560px;
-  aspect-ratio: 100 / 60;
+  margin: 0;
+  container-type: inline-size;
 }
 
-.embodiment__layer {
-  position: absolute;
-  height: auto;
-}
-
-.embodiment__layer--lock {
-  left: 3%;
-  top: -5.25%;
-  width: 50%;
-  /* Pivot on the top-left so the right side drops and the group balances. */
-  transform-origin: top left;
-  transform: rotate(7deg);
-  filter: drop-shadow(0 10px 16px rgba(35, 37, 44, 0.14));
-}
-
-.embodiment__layer--app {
-  left: 71%;
-  top: 8.4%;
-  width: 19%;
-  border-radius: 14px;
-  filter: drop-shadow(0 12px 20px rgba(35, 37, 44, 0.18));
-}
-
-.embodiment__layer--box {
-  left: 12%;
-  top: 13.65%;
-  width: 80%;
-}
-
-
-.embodiment__caption {
-  /* The product image overflows the stage and paints above in-flow text. */
+.pillars {
   position: relative;
-  z-index: 1;
+  width: 100%;
+  aspect-ratio: 560 / 345;
+}
+
+.pillars__links {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.pillars__links line {
+  stroke: var(--color-green-500);
+  stroke-width: 2;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.pillars__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Circles are 150/560 of the stage wide; positions are centre-based. */
+.pillars__item {
+  position: absolute;
+  width: 26.79%;
+}
+
+.pillars__item--hardware { left: 8.04%; top: 7.83%; }
+.pillars__item--software { left: 65.18%; top: 7.83%; }
+.pillars__item--receptacle { left: 36.61%; top: 43.48%; }
+
+.pillars__link {
+  position: relative;
   display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 5px;
-  font-size: 12px;
-  line-height: 1.5;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
   color: var(--color-ink);
 }
 
-.embodiment__caption-star {
-  font-size: 1.4em;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--color-green-500);
+/* Green disc (same look as the Technology page) with the product image
+   spilling out past its edge. */
+.pillars__circle {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%, #2fae5d 0%, #279650 45%, #1f7a44 100%);
+  box-shadow: inset 0 1px 40px 0 var(--color-green-500), 0 0 36px -8px rgba(51, 209, 107, 0.55);
+  transition: transform 0.45s var(--ease-out), box-shadow 0.45s var(--ease-out);
 }
 
-.embodiment__caption a {
-  font-weight: 500;
+.pillars__img {
+  position: absolute;
+  height: auto;
+  max-width: none;
+  transition: transform 0.45s var(--ease-out);
+}
+
+/* Board stack spills out on all sides. */
+.pillars__item--hardware .pillars__img {
+  width: 92%;
+  left: 4%;
+  top: 0%;
+  filter: brightness(1.18) contrast(1.05) saturate(1.1) drop-shadow(0 10px 14px rgba(0, 0, 0, 0.3));
+}
+
+/* Software: the API docs window sits behind, the app in front of it, rising
+   out of the top of the disc. */
+.pillars__item--software .pillars__img--back {
+  width: 92%;
+  left: -16%;
+  top: 8%;
+  border-radius: 8px;
+  filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.35));
+}
+
+.pillars__item--software .pillars__img:not(.pillars__img--back) {
+  width: 48%;
+  left: 44%;
+  top: -8%;
+  filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.38));
+}
+
+/* Box sits across the disc, wider than it. */
+.pillars__item--receptacle .pillars__img {
+  width: 150%;
+  left: -25%;
+  top: -4%;
+  filter: drop-shadow(0 14px 16px rgba(0, 0, 0, 0.32));
+}
+
+.pillars__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: var(--fs-h5);
+  font-weight: 600;
+  line-height: 1.2;
   color: var(--color-green-900);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  transition: transform 0.45s var(--ease-out);
+}
+
+.pillars__arrow {
+  display: inline-grid;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: width 0.35s var(--ease-out), opacity 0.35s, margin 0.35s var(--ease-out);
+}
+
+.pillars__link:focus-visible {
+  outline: none;
+}
+
+.pillars__link:focus-visible .pillars__circle {
+  outline: 2px solid var(--color-green-900);
+  outline-offset: 4px;
+}
+
+@media (hover: hover) {
+  .pillars__link:hover .pillars__circle,
+  .pillars__link:focus-visible .pillars__circle {
+    transform: scale(1.18);
+    box-shadow: inset 0 1px 40px 0 var(--color-green-500), 0 0 50px -4px rgba(51, 209, 107, 0.8);
+  }
+
+  .pillars__link:hover .pillars__img,
+  .pillars__link:focus-visible .pillars__img {
+    transform: scale(1.05);
+  }
+
+  /* The circle grows from its centre, so the label steps down to clear it. */
+  .pillars__link:hover .pillars__label,
+  .pillars__link:focus-visible .pillars__label {
+    transform: translateY(calc(2.4cqi + 2px));
+  }
+}
+
+.pillars__link:hover .pillars__arrow,
+.pillars__link:focus-visible .pillars__arrow {
+  width: 14px;
+  margin-left: 4px;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pillars__circle,
+  .pillars__img,
+  .pillars__label,
+  .pillars__arrow {
+    transition: none;
+  }
 }
 
 /* ---- Who it serves: three delivery sectors, then one open-ended card ---- */
@@ -159,10 +265,46 @@
   box-shadow: 0 18px 40px -20px rgba(35, 37, 44, 0.25);
 }
 
+/* The illustration slot. On hover-capable screens a real-world photo of the sector
+   fades in over the illustration; the title and benefits stay put. */
+.sector-card__media {
+  position: relative;
+  height: 140px;
+  margin: 4px 0 0;
+}
+
+.sector-card__photo {
+  display: none;
+}
+
+@media (hover: hover) {
+  .sector-card__photo {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+  }
+
+  .sector-card:hover .sector-card__photo {
+    opacity: 1;
+  }
+}
+
 .sector-card__art {
   width: 140px;
   height: 140px;
   margin: 4px auto 0;
+}
+
+.sector-card__media .sector-card__art {
+  display: block;
+  margin: 0 auto;
 }
 
 .sector-card__title {
@@ -253,8 +395,8 @@
   gap: 10px;
   padding: 22px;
   border-radius: var(--radius-lg);
-  background: var(--color-green-900);
-  color: var(--text-on-dark);
+  background: var(--color-stone);
+  color: var(--color-ink);
 }
 
 .capability__head {
@@ -270,22 +412,22 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius-md);
-  background: var(--color-green-500);
-  color: var(--color-green-900);
+  background: var(--color-green-900);
+  color: var(--color-cream);
 }
 
 .capability__label {
   font-size: var(--fs-h5);
   line-height: 1.2;
-  color: var(--text-on-dark);
+  color: var(--color-ink);
 }
 
 .capability__title {
   font-size: var(--fs-small);
   line-height: 1.5;
   letter-spacing: 0;
-  color: var(--text-on-dark);
-  opacity: 0.9;
+  color: var(--color-ink);
+  opacity: 0.8;
 }
 
 .capability__preview {
@@ -294,7 +436,7 @@
   margin: auto 0 0;
   padding: 10px;
   border-radius: var(--radius-md);
-  background: rgba(0, 0, 0, 0.22);
+  background: var(--color-green-900);
   list-style: none;
 }
 
@@ -305,7 +447,7 @@
   gap: 8px;
   padding: 7px 10px;
   border-radius: var(--radius-sm);
-  background: rgba(247, 246, 241, 0.08);
+  background: rgba(247, 246, 241, 0.16);
   font-family: var(--font-mono);
   font-size: 12px;
   line-height: 1.2;
@@ -314,7 +456,7 @@
 /* Long labels wrap instead of clipping, so the previews hold up at any card width. */
 .capability__row span {
   min-width: 0;
-  color: rgba(247, 246, 241, 0.85);
+  color: var(--color-cream);
 }
 
 .capability__row strong {
@@ -326,7 +468,7 @@
 
 .capability__row--ok strong { color: var(--color-green-500); }
 .capability__row--warn strong { color: var(--color-yellow-100); }
-.capability__row--off strong { color: rgba(247, 246, 241, 0.6); }
+.capability__row--off strong { color: rgba(247, 246, 241, 0.65); }
 
 @media (max-width: 1199px) {
   .what-who {
@@ -350,10 +492,6 @@
   .what-who__intro {
     grid-template-columns: 1fr;
     gap: 32px;
-  }
-
-  .embodiment__stage {
-    max-width: 400px;
   }
 
   .sector-groups,
@@ -380,6 +518,13 @@
     column-gap: 16px;
     row-gap: 10px;
     padding: 18px;
+  }
+
+  .sector-group .sector-card__media {
+    grid-area: art;
+    width: 72px;
+    height: 72px;
+    margin: 0;
   }
 
   .sector-group .sector-card__art {
