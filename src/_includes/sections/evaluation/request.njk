@@ -12,6 +12,12 @@
 
     <div class="eval-request__grid">
       <form class="form-card eval-form" action="{{ site.evaluationForm.action }}" method="{{ site.evaluationForm.method }}" data-eval-form data-mailto="{{ email }}" data-reveal>
+        {%- if site.evaluationForm.accessKey %}
+        <input type="hidden" name="access_key" value="{{ site.evaluationForm.accessKey }}">
+        <input type="hidden" name="subject" value="New Evaluation Kit request">
+        <input type="hidden" name="from_name" value="{{ site.name }} website">
+        <input type="checkbox" name="botcheck" class="eval-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        {%- endif %}
         <div class="form-card__grid">
           {%- for field in s.form.fields %}
           {{ formField(field) }}

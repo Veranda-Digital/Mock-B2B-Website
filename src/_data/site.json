@@ -16,8 +16,9 @@
     "meetingUrl": ""
   },
   "evaluationForm": {
-    "action": "",
-    "method": "POST"
+    "action": "https://api.web3forms.com/submit",
+    "method": "POST",
+    "accessKey": "66f3f8e1-f9f8-41a7-8ffb-57e1cd0afb7c"
   },
   "copyright": "Copyright © Veranda Digital Inc. All rights reserved."
 }

@@ -326,6 +326,19 @@ section.eval-request {
   color: var(--color-ink);
 }
 
+.eval-form__status--error {
+  background: #fdecea;
+  color: #7a1c14;
+}
+
+.eval-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
 .eval-form__status[hidden] {
   display: none;
 }
