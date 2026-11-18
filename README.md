@@ -44,9 +44,10 @@ src/
 - **Reorder / remove a homepage section:** edit the `sections` list in `src/index.njk`.
 - **Re-theme:** change values in `src/assets/css/theme/tokens.css`.
 - **Add an icon:** add a path to the `paths` map in `src/_includes/components/icon.njk`.
-- **Hook up the Evaluation Kit form:** set `evaluationForm.action` in `src/_data/site.json`
-  (e.g. a Formspree, Netlify Forms, or your own endpoint). Until an action is set, the form
-  opens the visitor's email app with the request pre-filled for `contact.email`.
+- **Evaluation Kit form:** submits to [Web3Forms](https://web3forms.com) using
+  `evaluationForm.action` and `evaluationForm.accessKey` in `src/_data/site.json`. Submissions
+  are emailed to the address registered with the access key. If `action` is cleared, the form
+  falls back to opening the visitor's email app with the request pre-filled for `contact.email`.
 - **Add a booking link:** set `contact.meetingUrl` in `src/_data/site.json` (e.g. a Calendly or
   HubSpot meetings URL). Until then, "Book a meeting" opens an email to `contact.email`.
 - `/investors/` is a redirect stub to `/eval-kit/`, kept so old links keep working.
